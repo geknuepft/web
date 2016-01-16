@@ -5,9 +5,10 @@
   <link rel="stylesheet" type="text/css" href="static/css/layout.css">
   <link rel="stylesheet" type="text/css" href="static/css/nav.css">
   <link rel="stylesheet" type="text/css" href="static/css/content.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
-<body>
+<body ng-app>
   <div id="header">
     <img class="logo" alt="gekn&uuml;pft.ch" src="static/pictures/logo.png" />
 
@@ -34,129 +35,134 @@
       </ul>
     </div>
     <div id="content">
-     <h1>Armb&auml;nder</h1>
-      <p>Armb&auml;nder schm&uuml;cken Dein Handgelenk. Ob als Freundschaftsband, Farbtupf zu Deinem Outfitt oder einfach nur so; unsere B&auml;ndeli tragen sich bequem. Und
-hier steht noch mehr text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
-text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
-text text text text text.</p>
-     <h2>Unser Angebot im Onlineshop</h2>
-      <p>Gef&auml;llt Dir das Muster, aber die Farben nicht? Brauchst Du das B&auml;ndeli in einer andern L&auml;nge oder mit einem anderen Verschluss?
-Nimm mit uns Kontakt auf! Wir kn&uuml;pfen Dir gerne Dein individuelles B&auml;ndeli.</p>
-    </div>
-    <div id="menu-right">
-      <div class="filter-block">
-        <ul class="filter">
-          <li class="all">
-            <span class="desc">alle Farben</span>
-            <span class="numb">389</span>
-          </li>
-          <li class="">
-            <span class="desc">gelb</span>
-            <span class="numb">33</span>
-          </li>
-          <li class="">
-            <span class="desc">orange</span>
-            <span class="numb">39</span>
-          </li>
-          <li class="">
-            <span class="desc">rot</span>
-            <span class="numb">89</span>
-          </li>
-          <li class="">
-            <span class="desc">gr&uuml;n</span>
-            <span class="numb">2</span>
-          </li>
-          <li class="">
-            <span class="desc">grau</span>
-            <span class="numb">33</span>
-          </li>
-        </ul>
-      </div>
-      <div class="filter-block">
-        <ul class="filter">
-          <li class="all">
-            <span class="desc">alle Preise</span>
-            <span class="numb">400</span>
-          </li>
-          <li class="">
-            <span class="desc">&lt;10 CHF</span>
-            <span class="numb">313</span>
-          </li>
-          <li class="">
-            <span class="desc">11-15 CHF</span>
-            <span class="numb">39</span>
-          </li>
-          <li class="">
-            <span class="desc">16-20 CHF</span>
-            <span class="numb">89</span>
-          </li>
-          <li class="">
-            <span class="desc">21-25 CHF</span>
-            <span class="numb">2</span>
-          </li>
-          <li class="">
-            <span class="desc">&gt;26 CHF</span>
-            <span class="numb">33</span>
-          </li>
-        </ul>
-      </div>
-      <div class="filter-block">
-        <ul class="filter">
-          <li class="all">
-            <span class="desc">alle Längen</span>
-            <span class="numb">250</span>
-          </li>
-          <li class="">
-            <span class="desc">&lt;5 cm</span>
-            <span class="numb">3</span>
-          </li>
-          <li class="">
-            <span class="desc">6-10 cm</span>
-            <span class="numb">39</span>
-          </li>
-          <li class="">
-            <span class="desc">11-15 cm</span>
-            <span class="numb">89</span>
-          </li>
-          <li class="">
-            <span class="desc">16-20 cm</span>
-            <span class="numb">2</span>
-          </li>
-          <li class="">
-            <span class="desc">&gt;20 cm</span>
-            <span class="numb">33</span>
-          </li>
-        </ul>
-      </div>
-      <div class="filter-block">
-        <ul class="filter">
-          <li class="all">
-            <span class="desc">alle Themen</span>
-            <span class="numb">20</span>
-          </li>
-          <li class="">
-            <span class="desc">Winterkollektion</span>
-            <span class="numb">15</span>
-          </li>
-          <li class="">
-            <span class="desc">Musik</span>
-            <span class="numb">2</span>
-          </li>
-          <li class="">
-            <span class="desc">Tiere</span>
-            <span class="numb">3</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div id="footer">
-    <ul class="nav">
-      <li><a href="/faq">FAQ</a></li>
-      <li><a href="/agb">AGB</a></li>
-      <li><a href="/impressum">Impressum</a></li>
-    </ul>
-  </div>
-</body>
+      <p>Input something in the input box:</p>
+      <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+      <h1>Hello {{name}}</h1>
+      <p>The name is <span ng-bind="name"></span></p>
 
-</html>
+      <h1>Armb&auml;nder </h1>
+      <p>Armb&auml;nder schm&uuml;cken Dein Handgelenk. Ob als Freundschaftsband, Farbtupf zu Deinem Outfitt oder einfach nur so; unsere B&auml;ndeli tragen sich bequem. Und
+        hier steht noch mehr text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
+        text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
+        text text text text text.</p>
+        <h2>Unser Angebot im Onlineshop</h2>
+        <p>Gef&auml;llt Dir das Muster, aber die Farben nicht? Brauchst Du das B&auml;ndeli in einer andern L&auml;nge oder mit einem anderen Verschluss?
+          Nimm mit uns Kontakt auf! Wir kn&uuml;pfen Dir gerne Dein individuelles B&auml;ndeli.</p>
+        </div>
+        <div id="menu-right">
+          <div class="filter-block">
+            <ul class="filter">
+              <li class="all">
+                <span class="desc">alle Farben</span>
+                <span class="numb">{{ 389 + 11 }}</span>
+              </li>
+              <li class="">
+                <span class="desc">gelb</span>
+                <span class="numb">33</span>
+              </li>
+              <li class="">
+                <span class="desc">orange</span>
+                <span class="numb">39</span>
+              </li>
+              <li class="">
+                <span class="desc">rot</span>
+                <span class="numb">89</span>
+              </li>
+              <li class="">
+                <span class="desc">gr&uuml;n</span>
+                <span class="numb">2</span>
+              </li>
+              <li class="">
+                <span class="desc">grau</span>
+                <span class="numb">33</span>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-block">
+            <ul class="filter">
+              <li class="all">
+                <span class="desc">alle Preise</span>
+                <span class="numb">400</span>
+              </li>
+              <li class="">
+                <span class="desc">&lt;10 CHF</span>
+                <span class="numb">313</span>
+              </li>
+              <li class="">
+                <span class="desc">11-15 CHF</span>
+                <span class="numb">39</span>
+              </li>
+              <li class="">
+                <span class="desc">16-20 CHF</span>
+                <span class="numb">89</span>
+              </li>
+              <li class="">
+                <span class="desc">21-25 CHF</span>
+                <span class="numb">2</span>
+              </li>
+              <li class="">
+                <span class="desc">&gt;26 CHF</span>
+                <span class="numb">33</span>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-block">
+            <ul class="filter">
+              <li class="all">
+                <span class="desc">alle Längen</span>
+                <span class="numb">250</span>
+              </li>
+              <li class="">
+                <span class="desc">&lt;5 cm</span>
+                <span class="numb">3</span>
+              </li>
+              <li class="">
+                <span class="desc">6-10 cm</span>
+                <span class="numb">39</span>
+              </li>
+              <li class="">
+                <span class="desc">11-15 cm</span>
+                <span class="numb">89</span>
+              </li>
+              <li class="">
+                <span class="desc">16-20 cm</span>
+                <span class="numb">2</span>
+              </li>
+              <li class="">
+                <span class="desc">&gt;20 cm</span>
+                <span class="numb">33</span>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-block">
+            <ul class="filter">
+              <li class="all">
+                <span class="desc">alle Themen</span>
+                <span class="numb">20</span>
+              </li>
+              <li class="">
+                <span class="desc">Winterkollektion</span>
+                <span class="numb">15</span>
+              </li>
+              <li class="">
+                <span class="desc">Musik</span>
+                <span class="numb">2</span>
+              </li>
+              <li class="">
+                <span class="desc">Tiere</span>
+                <span class="numb">3</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <ul class="nav">
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/agb">AGB</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+        </ul>
+      </div>
+    </body>
+
+    </html>
