@@ -1,0 +1,34 @@
+/* this file describes the basic layout of the page */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+div#header {
+  width: 100%;
+  height: 200px;
+}
+
+/* main box */
+div#main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+div#menu-left {
+  width: 250px;
+}
+
+div#content {
+}
+
+div#menu-right {
+  width: 250px;
+}
+
+/* footer */
+div#footer {
+  width: 100%;
+}
