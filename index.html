@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>gekn&uuml;pft.ch</title>
     <link rel="stylesheet" type="text/css" href="static/css/layout.css">
     <link rel="stylesheet" type="text/css" href="static/css/nav.css">
     <link rel="stylesheet" type="text/css" href="static/css/content.css">
     <script src="bower_components/angular/angular.js"></script>
+    <script>typeof angular != 'undefined' || document.write('<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">\x3C/script>');</script>
     <script src="static/js/app.js"></script>
     <script src="static/js/filterMain.js"></script>
 </head>
@@ -26,7 +28,7 @@
     <div id="main">
         <div id="menu-left">
             <ul class="filter" ng-controller="filterMain">
-                <li ng-repeat="entry in entries">{{ entry.name }}</li>
+                <li ng-repeat="entry in entries | orderBy:'name'">{{ entry.name }}</li>
             </ul>
         </div>
         <div id="content">
