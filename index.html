@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>gekn&uuml;pft.ch</title>
+
+    <!-- include css files -->
     <link rel="stylesheet" type="text/css" href="static/css/layout.css">
     <link rel="stylesheet" type="text/css" href="static/css/nav.css">
     <link rel="stylesheet" type="text/css" href="static/css/content.css">
+
+    <!-- include angular js files -->
     <script src="bower_components/angular/angular.js"></script>
     <script>typeof angular != 'undefined' || document.write('<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">\x3C/script>');</script>
     <script src="static/js/app.js"></script>
@@ -32,14 +36,7 @@
             </ul>
         </div>
         <div id="content">
-            <p>Input something in the input box:</p>
-            <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
-            <h1>Hello {{name}}</h1>
-            <p>The name is <span ng-bind="name"></span></p>
-
             <h1>Armb&auml;nder </h1>
-
-
             <h2>Unser Angebot im Onlineshop</h2>
             <p>Gef&auml;llt Dir das Muster, aber die Farben nicht? Brauchst Du das B&auml;ndeli in einer andern L&auml;nge oder mit einem anderen Verschluss?
                 Nimm mit uns Kontakt auf! Wir kn&uuml;pfen Dir gerne Dein individuelles B&auml;ndeli.</p>
