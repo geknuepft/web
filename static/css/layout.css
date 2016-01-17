@@ -5,20 +5,28 @@
 }
 
 /* header */
-div#header {
-  width: 100%;
+div.header {
   height: 60px;
   padding: 20px;
   border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-div#header img.logo {
-    float: left;
+div.header div.logo {
+  flex: 1 1 290px;
 }
 
-div#header ul.nav {
-  margin-top: 50px;
-  margin-left: 240px;
+#header ul.nav {
+/*  margin-top: 50px;
+  margin-left: 50px; */
+  flex: 2 1 auto;
+}
+
+div.shop {
+    flex: 1 1 290px;
 }
 
 /* main box */

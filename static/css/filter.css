@@ -1,0 +1,17 @@
+/* the layout of the filters right and left */
+
+ul.filter li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+ul.filter div.numb {
+}
+
+ul.filter div.desc {
+}
+
+ul.filter li.all {
+  font-weight: bold;
+}
