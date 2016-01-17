@@ -1,11 +1,11 @@
 /* the layout of the header and footer navigations */
 ul.nav li {
-  float: left;
-  list-style: none;
-  margin-right: 3ex;
+    float: left;
+    list-style: none;
+    margin-right: 3ex;
 }
 
 ul.nav a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
