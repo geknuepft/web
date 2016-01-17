@@ -5,24 +5,24 @@
 }
 
 /* header */
-div.header {
-  height: 60px;
-  padding: 20px;
-  border-bottom: 2px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+#header {
+    height: 60px;
+    padding: 20px;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-div.header div.logo {
-  flex: 1 1 290px;
+#header div.logo {
+    flex: 1 1 290px;
 }
 
 #header ul.nav {
-/*  margin-top: 50px;
-  margin-left: 50px; */
-  flex: 2 1 auto;
+    /*  margin-top: 50px;
+    margin-left: 50px; */
+    flex: 2 1 auto;
 }
 
 div.shop {
@@ -30,34 +30,34 @@ div.shop {
 }
 
 /* main box */
-div#main {
-  margin-top: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+#main {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
-div#main > div {
-  padding: 15px;
+#main > div {
+    padding: 15px;
 }
 
-div#menu-left {
-  width: 285px;
+#menu-left {
+    width: 285px;
 }
 
-div#content {
+#content {
 }
 
-div#menu-right {
-  width: 250px;
+#menu-right {
+    width: 250px;
 }
 
 /* footer */
-div#footer {
-  width: 100%;
-  border-top: 2px solid black;
+#footer {
+    width: 100%;
+    border-top: 2px solid black;
 }
 
-div#footer ul.nav {
-  float: right;
+#footer ul.nav {
+    float: right;
 }
