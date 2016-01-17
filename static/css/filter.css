@@ -1,14 +1,23 @@
 /* the layout of the filters right and left */
 
-ul.filter li {
-    display: flex;
-    flex-direction: row;
+
+div.filter-block {
+    margin-bottom: 20px;
+    padding-left: 15px;
 }
 
-ul.filter div.numb {
+ul.filter li {
+    display: flex;
+    list-style: none;
 }
 
 ul.filter div.desc {
+    flex: 1 1 auto;
+}
+
+ul.filter div.numb {
+    flex: 0 0 6ex;
+    text-align: right;
 }
 
 ul.filter li.all {
