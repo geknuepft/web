@@ -14,6 +14,7 @@
 
 #logo {
     flex: 0 0 240px;
+    padding-right: 30px;
 }
 
 #menu {
@@ -23,6 +24,7 @@
 
 #shop {
     flex: 0 0 240px;
+    padding-left: 50px;
 }
 
 /* main box */
@@ -33,6 +35,7 @@
 
 #filter-main {
     flex: 0 0 240px;
+    padding-right: 30px;
 }
 
 #content {
@@ -41,6 +44,7 @@
 
 #filter-sub {
     flex: 0 0 240px;
+    padding-left: 50px;
 }
 
 /* footer */

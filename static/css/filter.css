@@ -3,7 +3,6 @@
 
 div.filter-block {
     margin-bottom: 20px;
-    padding-left: 15px;
 }
 
 ul.filter li {
@@ -13,6 +12,7 @@ ul.filter li {
 
 ul.filter div.desc {
     flex: 1 1 auto;
+    display:list-item;
 }
 
 ul.filter div.numb {
@@ -25,5 +25,5 @@ ul.filter li.all {
 }
 
 ul.filter li.selected {
-    list-style: square;
+    list-style-type: square;
 }
