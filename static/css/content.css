@@ -31,5 +31,14 @@ ul.filter-abbr li {
 }
 
 div.gallery {
-    display:flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+div.article {
+    display: block;
+    padding-left: 10px;
+    padding-bottom: 30px;
 }
