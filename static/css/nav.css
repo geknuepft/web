@@ -3,6 +3,7 @@ ul.nav li {
     float: left;
     list-style: none;
     margin-right: 3ex;
+    font-size: 120%
 }
 
 ul.nav a {

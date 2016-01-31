@@ -1,6 +1,11 @@
-/* the layout of the filters right and left */
+/*the layout of the filter main*/
+
+#filter-main ul.filter {
+    font-size: 120%
+}
 
 
+/* the layout of the filter sub*/
 div.filter-block {
     margin-bottom: 20px;
 }
