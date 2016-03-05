@@ -6,9 +6,8 @@
 
 /* header */
 #header {
-    border-bottom: 2px solid black;
     display: flex;
-    margin: 10px;
+    margin: 20px 20px 5px 20px;
 
 }
 
@@ -27,10 +26,16 @@
     padding-left: 50px;
 }
 
+/* line */
+
+#line {
+    border-top: 2px solid black;
+}
+
 /* main box */
 #main {
     display: flex;
-    margin: 10px
+    margin: 20px
 }
 
 #filter-main {
@@ -52,14 +57,5 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    border-top: 2px solid black;
-    margin: 10px
-}
-
-h1 {
-    font-size: 140%;
-}
-
-h2 {
-    font-size: 120%;
+    margin: 5px 20px 20px 20px;
 }

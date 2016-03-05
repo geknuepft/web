@@ -3,6 +3,14 @@
     font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
+h1 {
+    font-size: 140%;
+}
+
+h2 {
+    font-size: 120%;
+}
+
 div.content-head {
     padding-bottom: 20px;
 }
