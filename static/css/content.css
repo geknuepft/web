@@ -39,6 +39,19 @@ div.gallery {
 
 div.article {
     display: block;
-    padding-left: 10px;
+    padding-right: 15px;
     padding-bottom: 30px;
+}
+
+div.article-titel {
+    padding-top: 10px;
+}
+
+div.article-desc {
+    font-size: 90%;
+}
+
+div.article-prize {
+    font-weight: bold;
+    padding-top: 5px;
 }
