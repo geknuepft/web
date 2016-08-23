@@ -1,0 +1,40 @@
+/* this file contains the layout for the central gallery */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(24,14,14,0.6);
+    background-size: cover;
+    overflow: visible;
+}
+
+#frame {
+  display: flex;
+  flex-direction: column;
+  border: black solid 3px;
+  margin: 60px;
+  padding: 10px;
+}
+
+#details {
+  display: flex;
+  height: 400px;
+}
+
+#details_desc {
+  flex: 3 1 auto; /*grow, shrink, basis*/
+  border: black solid 1px;
+}
+
+#details_foto {
+  flex: 1 1 auto; /*grow, shrink, basis*/
+  width: 200px;
+  border: red solid 2px;
+}
+
+#minigallery {
+  width: 100%;
+  border: blue solid 1px;
+}
