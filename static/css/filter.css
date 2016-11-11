@@ -6,8 +6,7 @@ div#filter {
 }
 
 div.filter-box {
-  padding: 5px;
-  margin:10px;
+  margin-right: 50px;
   /*border: 1px solid black*/
 }
 
