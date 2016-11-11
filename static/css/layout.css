@@ -36,21 +36,7 @@
 #main {
     display: flex;
     margin: 20px
-}
 
-#filter-main {
-    flex: 0 0 240px;
-    padding-right: 30px;
-}
-
-#content {
-    flex: 1 1 auto;
-}
-
-#filter-sub {
-    flex: 0 0 240px;
-    padding-left: 50px;
-}
 
 /* footer */
 #footer {

@@ -11,47 +11,13 @@ h2 {
     font-size: 120%;
 }
 
-div.content-head {
-    padding-bottom: 20px;
-}
-
-div.filter-selection {
-    padding-bottom: 20px;
-}
-
-div.filter-selection p {
-    clear:both;
-}
-
-ul.filter-abbr {
-    padding-top: 6px;
-    padding-bottom: 28px;
-}
-
-
-ul.filter-abbr li {
-    float: left;
-    list-style: none;
-    margin-right: 2ex;
-    padding: 1px 4px 2px 4px;
-    font-size: 90%;
-    border: 1px solid black;
-}
-
-div.gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
 div.article {
     display: block;
     padding-right: 15px;
     padding-bottom: 30px;
 }
 
-div.article-titel {
+div.article-title {
     padding-top: 10px;
 }
 

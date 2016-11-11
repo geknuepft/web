@@ -6,29 +6,3 @@
 
 
 /* the layout of the filter sub*/
-div.filter-block {
-    margin-bottom: 20px;
-}
-
-ul.filter li {
-    display: flex;
-    list-style: none;
-}
-
-ul.filter div.desc {
-    flex: 1 1 auto;
-    display:list-item;
-}
-
-ul.filter div.numb {
-    flex: 0 0 6ex;
-    text-align: right;
-}
-
-ul.filter li.all {
-    font-weight: bold;
-}
-
-ul.filter li.selected {
-    list-style-type: square;
-}
