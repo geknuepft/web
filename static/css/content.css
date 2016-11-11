@@ -29,3 +29,7 @@ div.article-prize {
     font-weight: bold;
     padding-top: 5px;
 }
+
+img.img-output {
+  width: 150px;
+}
