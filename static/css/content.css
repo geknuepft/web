@@ -25,14 +25,28 @@ li {
   padding-bottom: 4px;
 }
 
+/*design the output */
+
+div#output-desc {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+div#output {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 div.article {
     display: block;
-    padding-right: 15px;
+    text-align: center;
+    padding-right: 35px;
     padding-bottom: 30px;
 }
 
 div.article-title {
+    font-weight: bold;
+    font-size: 90%;
     padding-top: 10px;
 }
 
@@ -46,5 +60,5 @@ div.article-prize {
 }
 
 img.img-output {
-  width: 150px;
+  height: 150px;
 }
