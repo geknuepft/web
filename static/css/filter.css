@@ -33,5 +33,5 @@ ul.filter-list div.ruler {
 ul.filter-list div.numb {
   flex: 1 1 auto;
   text-align: right;
-  padding-left: 3ex;
+  padding-left: 4ex;
 }
