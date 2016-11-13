@@ -3,17 +3,19 @@
 div#filter {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 div.filter-box {
-  margin-right: 50px;
+  margin: 10px 10px 10px 10px;
   /*border: 1px solid black*/
 }
 
 ul.filter-list li {
   display: flex;
   list-style: none;
-  padding-left: 3ex;
+  padding-left: 6ex;
 }
 
 ul.filter-list li.selected {
