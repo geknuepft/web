@@ -34,37 +34,52 @@ div.filter-desc {
 
 ul.article {
   display: flex;
+  text-align: center;
   flex-wrap: wrap;
+  font-size: 85%;
 }
 
 ul.article li {
-    display: block;
-    text-align: center;
+    display: inline-block;
     list-style: none;
-    padding: 10px;
-    padding-bottom: 30px;
+    width: 150px;
+    margin: 10px 15px 10px 15px;
+    padding: 3px;
+}
+
+ul.article li:hover {
+      background-color: #DDDDDD;
+}
+
+ul.article table {
+  width: 100%;
+}
+
+ul.article tr {
+  text-align: left;
+}
+
+div.article-img {
+  background-color: #FFFFFF;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 7px;
 }
 
 div.article-title {
     font-weight: bold;
-    font-size: 90%;
-    padding-top: 10px;
+    text-align: left;
+    padding-top: 3px;
+    padding-bottom: 7px;
 }
 
-div.article-desc {
-    font-size: 90%;
-}
-
-div.article-def {
-    display: flex;
-    align-items: flex-end;
-    padding-top: 5px;
-}
-
-div.article-nr {
-  padding-right: 20px;
+td.article-desc {
+    text-align: right;
 }
 
 div.article-prize {
     font-weight: bold;
+    text-align: right;
+    padding-top: 7px;
 }
