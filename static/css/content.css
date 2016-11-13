@@ -27,20 +27,20 @@ li {
 
 /*design the output */
 
-div#output-desc {
+div.filter-desc {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-div#output {
+ul.article {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
-div.article {
+ul.article li {
     display: block;
     text-align: center;
+    list-style: none;
     padding: 10px;
     padding-bottom: 30px;
 }
@@ -55,11 +55,16 @@ div.article-desc {
     font-size: 90%;
 }
 
-div.article-prize {
-    font-weight: bold;
+div.article-def {
+    display: flex;
+    align-items: flex-end;
     padding-top: 5px;
 }
 
-img.img-output {
-  height: 150px;
+div.article-nr {
+  padding-right: 20px;
+}
+
+div.article-prize {
+    font-weight: bold;
 }
