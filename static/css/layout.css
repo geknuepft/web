@@ -26,6 +26,11 @@ body, html {
     padding-right: 30px;
 }
 
+#menu {
+  width: 100%;
+  margin-top: 32px;
+}
+
 #search {
     margin-top: 32px;
     align-items: center;
@@ -35,14 +40,6 @@ body, html {
     margin-top: 32px;
     padding-left: 30px;
 }
-
-/* menu */
-
-#menu {
-  width: 100%;
-  margin: 0px 20px 0px 20px;
-}
-
 
 /* line */
 
