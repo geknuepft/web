@@ -8,12 +8,12 @@
     <link rel="stylesheet" type="text/css" href="static/css/layout.css">
     <link rel="stylesheet" type="text/css" href="static/css/nav.css">
     <link rel="stylesheet" type="text/css" href="static/css/content.css">
+    <link rel="stylesheet" type="text/css" href="static/css/gallery.css">
 
     <!-- include angular js files -->
     <script src="bower_components/angular/angular.js"></script>
     <script>typeof angular != 'undefined' || document.write('<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">\x3C/script>');</script>
     <script src="static/js/app.js"></script>
-    <script src="static/js/filterMain.js"></script>
 </head>
 
 <body ng-app="myApp">
@@ -40,8 +40,16 @@
             <h2>Unser Angebot im Onlineshop</h2>
             <p>Gef&auml;llt Dir das Muster, aber die Farben nicht? Brauchst Du das B&auml;ndeli in einer andern L&auml;nge oder mit einem anderen Verschluss?
                 Nimm mit uns Kontakt auf! Wir kn&uuml;pfen Dir gerne Dein individuelles B&auml;ndeli.</p>
-            </div>
-            <div id="menu-right">
+
+            <ul class="gallery" ng-controller="gallery">
+                <li ng-repeat="article in articles">
+                  {{ article.article_id }}
+                  <img ng-show="article.picture" src="http://pics0.geknuepft.ch/120p/{{ article.picture.path }}" alt="{{ article.picture.type }}" />
+                </li>
+            </ul>
+        </div>
+
+           <div id="menu-right">
                 <div class="filter-block">
                     <ul class="filter">
                         <li class="all">
