@@ -1,39 +1,39 @@
 /*the layout of the filter*/
 
 div#filter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 div.filter-box {
-  padding: 10px;
-  /*border: 1px solid black*/
+    padding: 10px;
+    /*border: 1px solid black*/
 }
 
 ul.filter-list li {
-  display: flex;
-  list-style: none;
-  padding-left: 6ex;
+    display: flex;
+    list-style: none;
+    padding-left: 6ex;
 }
 
 ul.filter-list li.selected {
-  list-style: square;
+    list-style: square;
 }
 
 ul.filter-list div.desc {
-  flex: 1 1 auto;
-  display: list-item;
+    flex: 1 1 auto;
+    display: list-item;
 }
 
 ul.filter-list div.ruler {
-  flex: 1 1 auto;
-  padding-left: 3ex;
+    flex: 1 1 auto;
+    padding-left: 3ex;
 }
 
 ul.filter-list div.numb {
-  flex: 1 1 auto;
-  text-align: right;
-  padding-left: 4ex;
+    flex: 1 1 auto;
+    text-align: right;
+    padding-left: 4ex;
 }

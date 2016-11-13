@@ -1,21 +1,23 @@
 /* this file describes the basic layout of the page */
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body, html {
-  width: 90%;
-  margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #page {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 
 /* header */
+
 #header {
     display: flex;
     justify-content: space-between;
@@ -27,8 +29,8 @@ body, html {
 }
 
 #menu {
-  width: 100%;
-  margin-top: 32px;
+    width: 100%;
+    margin-top: 32px;
 }
 
 #search {
@@ -41,20 +43,25 @@ body, html {
     padding-left: 30px;
 }
 
+
 /* line */
 
 #line {
     border-top: 2px solid black;
 }
 
+
 /* main box */
+
 #main {
     display: flex;
     flex-direction: column;
     margin: 20px;
 }
 
+
 /* footer */
+
 #footer {
     margin: 50px 20px 0px 20px;
 }

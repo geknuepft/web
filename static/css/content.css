@@ -1,6 +1,7 @@
 /* design the text, links, titles, paragraphs etc. */
+
 * {
-    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
 h1 {
@@ -18,25 +19,26 @@ h4 {
 }
 
 p {
-  padding-bottom: 3px;
+    padding-bottom: 3px;
 }
 
 li {
-  padding-bottom: 4px;
+    padding-bottom: 4px;
 }
+
 
 /*design the output */
 
 div.filter-desc {
-  padding-top: 20px;
-  padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 ul.article {
-  display: flex;
-  text-align: center;
-  flex-wrap: wrap;
-  font-size: 85%;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 85%;
 }
 
 ul.article li {
@@ -48,23 +50,23 @@ ul.article li {
 }
 
 ul.article li:hover {
-      background-color: #DDDDDD;
+    background-color: #DDDDDD;
 }
 
 ul.article table {
-  width: 100%;
+    width: 100%;
 }
 
 ul.article tr {
-  text-align: left;
+    text-align: left;
 }
 
 div.article-img {
-  background-color: #FFFFFF;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  margin-bottom: 7px;
+    background-color: #FFFFFF;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 7px;
 }
 
 div.article-title {
