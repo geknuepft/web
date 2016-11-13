@@ -28,14 +28,14 @@ li {
 /*design the output */
 
 div#output-desc {
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
 div#output {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  justify-content: space-between;
 }
 
 div.article {
