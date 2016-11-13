@@ -26,18 +26,6 @@ li {
     padding-bottom: 4px;
 }
 
-
-/* design the text between filter and article list */
-
-div.filter-desc {
-    margin: 20px 10px 20px 10px;
-}
-
-div.filter-desc span {
-    font-weight: bolder;
-}
-
-
 /*design the list of the article */
 
 ul.article {
