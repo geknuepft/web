@@ -8,9 +8,15 @@
     <link rel="stylesheet" type="text/css" href="static/css/content.css">
     <link rel="stylesheet" type="text/css" href="static/css/filter.css">
     <link rel="stylesheet" type="text/css" href="static/css/shop.css">
+
+    <!-- include angular js files -->
+    <script src="bower_components/angular/angular.js"></script>
+
+    <!-- include our angular code -->
+    <script src="static/js/app.js"></script>
 </head>
 
-<body>
+<body ng-app="myApp">
     <div id=page>
         <div id="header">
             <div id="logo">
@@ -191,6 +197,12 @@
             <div class="filter-desc">
                 <p>Ihre Filterauswahl umfasst folgende <span>304</span> Aritkel:</p>
             </div>
+            <ul class="gallery" ng-controller="gallery">
+                <li ng-repeat="article in articles">
+                    {{ article.article_id }}
+                    <img ng-show="article.picture" src="http://pics0.geknuepft.ch/150p/{{ article.picture.path }}" alt="{{ article.picture.type }}" />
+                </li>
+            </ul>
             <ul class="article">
                 <li>
                     <div class="article-img">
