@@ -6,7 +6,7 @@ app.controller('filterMain', function($scope, $http) {
 });
 
 app.controller('gallery', function($scope, $http) {
-    $http.get("http://localhost:8001/v0/articles").then(function(response) {
+    $http.get("http://api0.geknuepft.ch/v0/articles").then(function(response) {
         $scope.articles = response.data;
 
         $scope.articles.map(
