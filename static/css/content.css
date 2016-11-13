@@ -26,13 +26,14 @@ li {
     padding-bottom: 4px;
 }
 
-
-/*design the output */
+/* design the text between filter and article list */
 
 div.filter-desc {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+/*design the list of the article */
 
 ul.article {
     display: flex;
@@ -46,11 +47,12 @@ ul.article li {
     list-style: none;
     width: 150px;
     margin: 10px 15px 10px 15px;
-    padding: 3px;
+    padding: 4px;
+    border-radius: 5px;
 }
 
 ul.article li:hover {
-    background-color: #DDDDDD;
+    background-color: #EEEEEE ;
 }
 
 ul.article table {
@@ -71,7 +73,7 @@ div.article-img {
 
 div.article-title {
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     padding-top: 3px;
     padding-bottom: 7px;
 }
