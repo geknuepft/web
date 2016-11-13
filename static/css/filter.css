@@ -5,21 +5,32 @@ div#filter {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    font-size: 90%;
 }
 
 div.filter-box {
-    padding: 10px;
-    /*border: 1px solid black*/
+    width: 200px;
+    margin: 10px;
 }
 
 ul.filter-list li {
     display: flex;
     list-style: none;
-    padding-left: 6ex;
+    margin: 2px;
+    padding: 2px 6px 2px 6px;
+    border-radius: 5px;
 }
 
 ul.filter-list li.selected {
-    list-style: square;
+    background-color: #85C1E9;
+}
+
+ul.filter-list li:hover {
+    background-color: #EEEEEE;
+}
+
+ul.filter-list li.empty {
+    background-color: #BBBBBB;
 }
 
 ul.filter-list div.desc {
@@ -27,13 +38,6 @@ ul.filter-list div.desc {
     display: list-item;
 }
 
-ul.filter-list div.ruler {
-    flex: 1 1 auto;
-    padding-left: 3ex;
-}
-
 ul.filter-list div.numb {
-    flex: 1 1 auto;
     text-align: right;
-    padding-left: 4ex;
 }

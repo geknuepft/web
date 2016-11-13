@@ -26,12 +26,13 @@ li {
     padding-bottom: 4px;
 }
 
+
 /* design the text between filter and article list */
 
 div.filter-desc {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin: 20px 10px 20px 10px;
 }
+
 
 /*design the list of the article */
 
@@ -52,7 +53,7 @@ ul.article li {
 }
 
 ul.article li:hover {
-    background-color: #EEEEEE ;
+    background-color: #EEEEEE;
 }
 
 ul.article table {
