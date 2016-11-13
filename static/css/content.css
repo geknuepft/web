@@ -41,7 +41,7 @@ ul.article li {
     width: 150px;
     margin: 4px 7px 4px 7px;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 ul.article li:hover {
