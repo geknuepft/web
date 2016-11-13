@@ -10,10 +10,10 @@ ul.nav li {
 }
 
 ul.nav a {
-    color: black;
+    color: #424242;
     text-decoration: none;
 }
 
 ul.nav a:hover {
-    color: #5D6D7E;
+    color: black;
 }
