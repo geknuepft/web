@@ -8,12 +8,3 @@ ul.nav li {
     padding: 6px 10px 6px 10px;
     border-radius: 8px;
 }
-
-ul.nav a {
-    color: #424242;
-    text-decoration: none;
-}
-
-ul.nav a:hover {
-    color: black;
-}
