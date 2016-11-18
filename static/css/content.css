@@ -5,11 +5,13 @@
 }
 
 h1 {
-    font-size: 140%;
+    font-size: 110%;
+    padding-bottom: 12px;
 }
 
 h2 {
-    font-size: 120%;
+    font-size: 110%;
+    padding-bottom: 6px;
 }
 
 h4 {
@@ -24,9 +26,60 @@ p {
 
 li {
     padding-bottom: 4px;
+    text-decoration: none;
 }
 
-/*design the list of the article */
+a {
+    text-decoration: none;
+    color: #424242;
+}
+
+a:hover {
+    color: black;
+}
+
+
+/* design the head */
+
+div.head {
+    background-image: url(../../pictures/marktstand.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 170px;
+    font-size: 250%;
+    color: #FFFFFF;
+    padding: 15px;
+}
+
+
+/* design an info-box */
+
+div.info-box-wrap {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+div.info-box-table {
+    width: 50%;
+}
+
+div.info-box-table td.title {
+    width: 100px;
+}
+
+div.info-box-img img {
+    width: 500px;
+    height: 250px;
+}
+
+
+/* design the gallery of articles */
 
 ul.article {
     display: flex;
