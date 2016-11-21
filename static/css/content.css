@@ -39,6 +39,13 @@ a:hover {
     color: black;
 }
 
+span.bold {
+    font-weight: bold;
+}
+
+span.underline {
+  text-decoration: underline;
+}
 
 /* design the head */
 
@@ -86,25 +93,6 @@ div.intro-pre div {
     background-color: #EEEEEE;
 }
 
-div.intro-pre span {
-    font-weight: bold;
-}
-
-div.intro-status {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 30px 0px 30px;
-}
-
-div.intro-status img {
-  width: auto;
-  height: 80px;
-  margin: 10px;
-}
-
-
 /* design the box */
 
 table.box {
@@ -121,11 +109,12 @@ table.box td.box-title {
 
 table.box td.box-img {
     text-align: right;
+    width: 50%;
 }
 
 table.box td.box-img img {
-    width: 500px;
-    height: 250px;
+    width: 100%;
+    height: auto;
     margin-left: 20px;
 }
 
