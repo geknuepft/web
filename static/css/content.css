@@ -44,8 +44,9 @@ span.bold {
 }
 
 span.underline {
-  text-decoration: underline;
+    text-decoration: underline;
 }
+
 
 /* design the head */
 
@@ -61,7 +62,7 @@ div.head {
     font-size: 250%;
     color: #FFFFFF;
     padding: 0px 15px 8px 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 
@@ -70,7 +71,7 @@ div.head {
 div.intro {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 div.intro-desc {
@@ -83,14 +84,6 @@ div.intro-pre {
     flex: 1 1 auto;
     width: 50%;
     padding-left: 25px;
-}
-
-div.intro-pre div {
-    text-align: center;
-    margin-top: 15px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 3px;
-    background-color: #EEEEEE;
 }
 
 /* design the box */
@@ -172,4 +165,46 @@ div.article-prize {
     font-weight: bold;
     text-align: right;
     padding-top: 7px;
+}
+
+
+/* design the contact form */
+
+div.contact-form {
+    width: 50%;
+    min-width: 500px;
+}
+
+div.contact-form input {
+    display: block;
+    width: 100%;
+    font-size: 100%;
+    margin: 12px 0px 12px 0px;
+    padding: 3px;
+    box-shadow: none;
+    box-sizing: border-box;
+    border: 1px solid #929497;
+}
+
+div.contact-form textarea {
+    display: block;
+    width: 100%;
+    font-size: 100%;
+    margin: 12px 0px 12px 0px;
+    padding: 3px;
+    box-shadow: none;
+    box-sizing: border-box;
+    border: 1px solid #929497;
+}
+
+div.contact-form button {
+    display: block;
+    float: right;
+    font-size: 100%;
+    margin: 5px 0px 5px 0px;
+    padding: 3px 4px 3px 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid #929497;
 }
