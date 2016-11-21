@@ -111,6 +111,11 @@ table.box td.box-img img {
     margin-left: 20px;
 }
 
+/* design the article page */
+
+div.article-main {
+  margin-bottom: 20px;
+}
 
 /* design the gallery of articles */
 

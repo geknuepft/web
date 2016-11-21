@@ -62,13 +62,3 @@ div.filter-delete span {
 div.filter-delete span:hover {
   background-color: #F5B7B1;
 }
-
-/* design the text between filter and article list */
-
-div.filter-desc {
-    margin: 20px 10px 20px 10px;
-}
-
-div.filter-desc span {
-    font-weight: bolder;
-}
