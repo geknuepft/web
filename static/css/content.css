@@ -175,6 +175,32 @@ div.article-prize {
     background-color: #FFFFFF;
 }
 
+/* design the detail view of an article */
+
+div.detail {
+  width: 100%;
+  box-sizing: border-box;
+  border: 3px solid #EEEEEE;
+}
+
+div.detail-img {
+  width: 50%;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+
+div.detail-img img {
+  height: auto !important;
+  height: 100%;
+  max-height: 500px;
+  float: left;
+  clear: both;
+}
+
+div.detail-desc {
+  width: 50%;
+}
 
 /* design the contact form */
 
