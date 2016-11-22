@@ -129,9 +129,9 @@ ul.article {
 ul.article li {
     display: inline-block;
     list-style: none;
-    width: 150px;
+    width: 164px;
     margin: 4px 7px 4px 7px;
-    padding: 15px;
+    padding: 5px;
     border-radius: 3px;
 }
 
@@ -141,6 +141,8 @@ ul.article li:hover {
 
 ul.article table {
     width: 100%;
+    background-color: #FFFFFF;
+    padding: 0px 7px 0px 7px;
 }
 
 ul.article tr {
@@ -152,14 +154,14 @@ div.article-img {
     width: 150px;
     height: 150px;
     overflow: hidden;
-    margin-bottom: 7px;
+    padding: 7px;
 }
 
 div.article-title {
     font-weight: bold;
     text-align: center;
-    padding-top: 3px;
-    padding-bottom: 7px;
+    padding: 3px 7px 7px 7px;
+    background-color: #FFFFFF;
 }
 
 td.article-desc {
@@ -169,7 +171,8 @@ td.article-desc {
 div.article-prize {
     font-weight: bold;
     text-align: right;
-    padding-top: 7px;
+    padding: 7px;
+    background-color: #FFFFFF;
 }
 
 
