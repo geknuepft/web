@@ -208,7 +208,7 @@
             <ul class="article" ng-controller="gallery">
                 <li ng-repeat="article in articles">
                     <div class="article-img">
-                        <img ng-if="article.picture" src="http://pics0.geknuepft.ch/150p/{{ article.picture.path }}" alt="{{ article.picture.type }}" />
+                        <img ng-if="article.picture" src="http://api0.geknuepft.ch/v0/Image/150p/{{ article.picture.path }}" alt="{{ article.picture.type }}" />
                     </div>
                     <div class="article-title">{{ article.name }}</div>
                     <table>
