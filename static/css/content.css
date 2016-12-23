@@ -196,7 +196,7 @@ div.detail-desc {
 }
 
 div.detail-desc table {
-    width: 100%;
+    width: 200px;
 }
 
 div.detail-desc td.article-status {
