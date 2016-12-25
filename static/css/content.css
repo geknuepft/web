@@ -56,15 +56,50 @@ div.head {
     background-size: cover;
     overflow: hidden;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    height: 170px;
-    font-size: 250%;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 180px;
     color: #FFFFFF;
-    padding: 0px 15px 8px 20px;
     margin-bottom: 30px;
+    border-radius: 2px;
 }
 
+div.head span {
+  font-size: 250%;
+  padding-left: 2%;
+}
+
+div.head ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    font-size: 120%;
+    background: rgba(255, 255, 255); /* Fall-back for browsers that don't support rgba */
+    background: rgba(255, 255, 255, 0.7);
+}
+
+div.head li {
+  align-items: center;
+  padding: 5px 2% 5px 2%;
+  border-right: 1px solid #F0E1DC;
+}
+
+div.head li:hover {
+  background-color: #CC0000;
+  opacity: 0.7;
+  filter: alpha(opacity=70); /*Fall-back for IE*/
+}
+
+div.head a {
+  padding: 5px;
+  color: black;
+}
+
+div.head a:hover {
+  color: #FFFFFF;
+}
 
 /* design the intro */
 
