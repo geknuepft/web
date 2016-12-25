@@ -216,17 +216,24 @@ div.detail {
   display: flex;
   width: 100%;
   padding: 20px;
-  border: 5px solid #EEEEEE;
+  border: 2px solid #EEEEEE;
 }
 
 div.detail-img {
   text-align: center;
-  width: 50%;
+  width: 40%;
   padding-right: 30px;
 }
 
+div.detail-img img {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+}
+
+
 div.detail-desc {
-  width: 50%;
+  width: 52%;
   padding-left: 15px;
 }
 
