@@ -13,7 +13,32 @@
     <span>Legen Sie die gew&uuml;nschte L&auml;nge fest:</span>
     <p>Diese ist sp&auml;ter noch beliebig &auml;nderbar. Lesen Sie <a>hier</a> mehr &uuml;ber die &uuml;blichen L&auml;ngenmasse f&uuml;r Ihren Artikel.
     <p>Finden Sie Ihren Artikel, indem Sie weitere Filter setzen:
-    <div id="filter">
+    <div id="filter" ng-controller="filterMain">
+      <div ng-repeat="filter in filters" class="filter-box" ng-class="'filter-box-' + filter.filter">
+        <h4>{{ filter.filter_de }}:</h4>
+        <ul ng-if="filter.filter_type == 'id'" class="filter-list">
+          <li ng-repeat="category in filter.category">
+            <div class="desc">{{ category.de }}</div>
+            <div class="numb">todo</div>
+          </li>
+        </ul>
+
+        <ul ng-if="filter.filter_type == 'range'" class="filter-list">
+          <li ng-repeat="range in filter.range">
+            <div ng-if="filter.filter == 'price' && range.geq === null && range.leq !== null" class="desc">bis {{ (range.leq / 100) |number:2 }}</div>
+            <div ng-if="filter.filter == 'price' && range.geq !== null && range.leq !== null" class="desc">{{ (range.geq / 100) | number:2 }} bis {{ (range.leq / 100) |number:2 }}</div>
+            <div ng-if="filter.filter == 'price' && range.geq !== null && range.leq === null" class="desc">&uuml;ber {{ (range.geq / 100) | number:2 }}</div>
+
+            <div ng-if="filter.filter != 'price' && range.geq === null" class="desc">bis {{ (range.leq / 10) | number }}</div>
+            <div ng-if="filter.filter != 'price'" class="desc">{{ (range.geq / 10) | number }} bis {{ (range.leq / 10) | number }}</div>
+            <div ng-if="filter.filter != 'price' && range.leq === null" class="desc">&uuml;ber {{ (range.geq / 10) | number }}</div>
+
+            <div class="numb">todo</div>
+          </li>
+        </ul>
+      </div>
+
+
         <div id="filter-category" class="filter-box">
             <h4>Kategorie:</h4>
             <ul class="filter-list">

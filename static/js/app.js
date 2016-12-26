@@ -34,8 +34,8 @@ app.controller('navMain', function($scope, $location) {
 });
 
 app.controller('filterMain', function($scope, $http) {
-    $http.get("http://localhost:8000/static/json/filterMain.json").then(function(response) {
-        $scope.entries = response.data.entries;
+    $http.get("http://api0.geknuepft.ch/v0/filters").then(function(response) {
+        $scope.filters = response.data;
     });
 });
 
