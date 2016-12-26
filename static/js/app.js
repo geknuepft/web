@@ -27,6 +27,12 @@ app.config(function($routeProvider) {
         });
 });
 
+app.controller('navMain', function($scope, $location) {
+    $scope.isActive = function(viewLocation) {
+        return viewLocation === $location.path();
+    };
+});
+
 app.controller('filterMain', function($scope, $http) {
     $http.get("http://localhost:8000/static/json/filterMain.json").then(function(response) {
         $scope.entries = response.data.entries;

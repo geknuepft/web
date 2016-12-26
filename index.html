@@ -22,10 +22,10 @@
             <div id="logo">
                 <img alt="gekn&uuml;pft.ch" src="static/pictures/logo.png" />
             </div>
-            <div id="menu">
+            <div id="menu" ng-controller="navMain">
                 <ul class="nav">
                     <li><a href="#!/home">Home</a></li>
-                    <li><a href="#!/artikel">Artikel</a></li>
+                    <li><a ng-class="{ active: isActive('/artikel') }" href="#!/artikel">Artikel</a></li>
                     <li><a href="#!/herstellung">Herstellung</a></li>
                     <li><a href="#!/material">Materialien</a></li>
                     <li><a href="#!/markt">Markttage</a></li>

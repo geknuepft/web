@@ -14,3 +14,7 @@ ul.nav-footer li {
     margin-left: 3ex;
     padding: 6px 0px 6px 10px;
 }
+
+ul.nav a.active {
+  color: red;
+}

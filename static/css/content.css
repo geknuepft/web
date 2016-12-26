@@ -94,15 +94,14 @@ div.head li:hover {
     /*Fall-back for IE*/
 }
 
+div.head li:hover a {
+    color: #FFFFFF;
+}
+
 div.head a {
     padding: 5px;
     color: black;
 }
-
-div.head a:hover {
-    color: #FFFFFF;
-}
-
 
 /* design the intro */
 
