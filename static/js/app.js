@@ -1,4 +1,32 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngRoute']);
+
+
+// configure our routes
+app.config(function($routeProvider) {
+    $routeProvider
+        .when('/home', {
+            templateUrl: 'pages/home.html'
+        })
+        .when('/artikel', {
+            templateUrl: 'pages/artikel.html'
+        })
+        .when('/herstellung', {
+            templateUrl: 'pages/herstellung.html'
+        })
+        .when('/material', {
+            templateUrl: 'pages/material.html'
+        })
+        .when('/markt', {
+            templateUrl: 'pages/markt.html'
+        })
+        .when('/kontakt', {
+            templateUrl: 'pages/kontakt.html'
+        })
+        .otherwise({
+            templateUrl: 'pages/home.html'
+        });
+});
+
 app.controller('filterMain', function($scope, $http) {
     $http.get("http://localhost:8000/static/json/filterMain.json").then(function(response) {
         $scope.entries = response.data.entries;
