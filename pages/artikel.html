@@ -173,7 +173,11 @@
     </div>
     <p>Die Filterauswahl umfasst folgende <span class="bold">304</span> Aritkel:</p>
 </div>
-<div class="detail">
+<div class="detail-wrap">
+    <div class="close-button">
+      <button class="close" title="verkleinern">X</button>
+    </div>
+    <div class="detail">
     <div class="detail-img">
         <img src="http://api0.geknuepft.ch/v0/Image/600p/cma0/160523_1/IMG_3079.JPG" />
     </div>
@@ -181,7 +185,7 @@
         <span class="detail-desc-title">Handgekn&uuml;pftes Armband</span>
         <table class="tech-data">
             <tr>
-                <td>Artikelbezeichnung</td>
+                <td>Artikel-Nr.</td>
                 <td class="article-desc">682</td>
             </tr>
             <tr>
@@ -220,6 +224,7 @@
             <button type="submit">bestellen</button>
         </div>
     </div>
+  </div>
 </div>
 <ul class="article" ng-controller="gallery">
     <li ng-repeat="article in articles">
@@ -238,11 +243,7 @@
             </tr>
             <tr ng-if="article.width_mm !== null">
                 <td>Breite</td>
-                <td class="article-desc">{{ (article.width_mm / 10)| number }} cm</td>
-            </tr>
-            <tr ng-if="article.height_mm !== null">
-                <td>H&ouml;he</td>
-                <td class="article-desc">{{ (article.height_mm / 10)| number }} cm</td>
+                <td class="article-desc">~{{ (article.width_mm / 10)| number }} cm</td>
             </tr>
         </table>
         <div class="article-prize">CHF {{ (article.price_cchf / 100)| number:2 }}</div>
