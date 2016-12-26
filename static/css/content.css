@@ -65,8 +65,8 @@ div.head {
 }
 
 div.head span {
-  font-size: 250%;
-  padding-left: 2%;
+    font-size: 250%;
+    padding-left: 2%;
 }
 
 div.head ul {
@@ -76,30 +76,33 @@ div.head ul {
     width: 100%;
     list-style: none;
     font-size: 120%;
-    background: rgba(255, 255, 255); /* Fall-back for browsers that don't support rgba */
+    background: rgba(255, 255, 255);
+    /* Fall-back for browsers that don't support rgba */
     background: rgba(255, 255, 255, 0.7);
 }
 
 div.head li {
-  align-items: center;
-  padding: 5px 2% 5px 2%;
-  border-right: 1px solid #F0E1DC;
+    align-items: center;
+    padding: 5px 2% 5px 2%;
+    border-right: 1px solid #F0E1DC;
 }
 
 div.head li:hover {
-  background-color: #CC0000;
-  opacity: 0.7;
-  filter: alpha(opacity=70); /*Fall-back for IE*/
+    background-color: #CC0000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    /*Fall-back for IE*/
 }
 
 div.head a {
-  padding: 5px;
-  color: black;
+    padding: 5px;
+    color: black;
 }
 
 div.head a:hover {
-  color: #FFFFFF;
+    color: #FFFFFF;
 }
+
 
 /* design the intro */
 
@@ -120,6 +123,7 @@ div.intro-pre {
     width: 50%;
     padding-left: 25px;
 }
+
 
 /* design the box */
 
@@ -146,11 +150,13 @@ table.box td.box-img img {
     margin-left: 20px;
 }
 
+
 /* design the article page */
 
 div.article-main {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
+
 
 /* design the gallery of articles */
 
@@ -210,46 +216,75 @@ div.article-prize {
     background-color: #FFFFFF;
 }
 
+
 /* design the detail view of an article */
 
 div.detail {
-  display: flex;
-  width: 100%;
-  padding: 20px;
-  border: 2px solid #EEEEEE;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #EEEEEE;
 }
 
 div.detail-img {
-  text-align: center;
-  width: 40%;
-  padding-right: 30px;
+    text-align: center;
+    width: 40%;
+    padding: 20px;
 }
 
 div.detail-img img {
-  width: 90%;
-  max-width: 600px;
-  height: auto;
+    width: 90%;
+    max-width: 600px;
+    height: auto;
 }
-
 
 div.detail-desc {
-  width: 52%;
-  padding-left: 15px;
+    width: 52%;
+    padding: 20px;
 }
 
-div.detail-desc table {
-    width: 200px;
+span.detail-desc-title {
+    display: block;
+    font-size: 140%;
+    padding-bottom: 15px;
 }
 
-div.detail-desc td.article-status {
-  text-align: center;
+div.detail-desc table.tech-data {
+    width: 50%;
+    min-width: 250px;
+    padding-bottom: 15px;
 }
 
-div.article-desc-color {
-  float: right;
-  width: 15px;
-  height: 15px;
+div.selection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 25px;
 }
+
+div.selection-pre {
+    padding-right: 15px;
+}
+
+div.selection-prize {
+    align-self: flex-end;
+    text-align: right;
+    width: 100px;
+    padding-left: 15px;
+}
+
+div.selection button {
+    width: 100px;
+    align-self: flex-end;
+    font-size: 100%;
+    margin: 5px 0px 5px 0px;
+    padding: 3px 4px 3px 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid #929497;
+}
+
 
 /* design the contact form */
 
