@@ -126,27 +126,41 @@ div.intro-pre {
 
 /* design the box */
 
-table.box {
+table.box-container {
     width: 100%;
 }
 
-table.box td {
+table.box-container table {
+    margin-bottom: 15px;
+}
+
+table.box-container td {
     vertical-align: top;
 }
 
-table.box td.box-title {
+table.box-container td.box-text {
+  padding-right: 25px;
+  width: 50%;
+}
+
+table.box-container td.box-title {
     width: 80px;
+    margin-bottom: 5px;
 }
 
-table.box td.box-img {
-    text-align: right;
+table.box-container td.box-img {
+    padding-left: 25px;
     width: 50%;
+    overflow: hidden;
 }
 
-table.box td.box-img img {
+table.box-container td.box-img img {
     width: 100%;
     height: auto;
-    margin-left: 20px;
+}
+
+tr.box-spacer {
+  height: 45px;
 }
 
 
