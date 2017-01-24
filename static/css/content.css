@@ -124,6 +124,49 @@ div.intro-pre {
     padding-left: 25px;
 }
 
+/* design the overview */
+
+div.overview {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+div.overview-image-1 {
+    flex: 1 1 auto;
+    width: 50%;
+    position: relative;
+    padding-right: 25px;
+}
+
+div.overview-image-1 img {
+    width: 100%;
+    height: auto;
+}
+
+div.overview-image-2 {
+    flex: 1 1 auto;
+    width: 50%;
+    position: relative;
+    padding-left: 25px;
+}
+
+div.overview-image-2 img {
+    width: 100%;
+    height: auto;
+}
+
+div.overview-text {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 300%;
+    color: #FFFFFF;
+}
 
 /* design the box */
 
@@ -152,10 +195,14 @@ table.box-container td.box-title {
 table.box-container td.box-img {
     padding-left: 25px;
     width: 50%;
-    overflow: hidden;
 }
 
 table.box-container td.box-img img {
+    width: 100%;
+    height: auto;
+}
+
+table.box-container td.box-text img {
     width: 100%;
     height: auto;
 }
