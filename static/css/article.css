@@ -8,22 +8,21 @@ ul.article {
 }
 
 ul.article li {
-    display: inline-block;
     list-style: none;
-    width: 164px;
-    margin: 4px 7px 4px 7px;
-    padding: 5px;
+    width: 150px;
+    margin: 4px 12px 4px 12px;
+    padding: 15px;
     border-radius: 3px;
+    border: 2px solid #FFFFFF;
+    box-sizing: content-box;
 }
 
 ul.article li:hover {
-    background-color: #EEEEEE;
+    border: 2px solid #EEEEEE;
 }
 
 ul.article table {
     width: 100%;
-    background-color: #FFFFFF;
-    padding: 0px 7px 0px 7px;
 }
 
 ul.article tr {
@@ -31,18 +30,15 @@ ul.article tr {
 }
 
 div.article-img {
-    background-color: #FFFFFF;
     width: 150px;
     height: 150px;
     overflow: hidden;
-    padding: 7px;
 }
 
 div.article-title {
     font-weight: bold;
     text-align: center;
-    padding: 3px 7px 7px 7px;
-    background-color: #FFFFFF;
+    padding: 7px 0px 7px 0px;
 }
 
 td.article-desc {
@@ -52,8 +48,7 @@ td.article-desc {
 div.article-prize {
     font-weight: bold;
     text-align: right;
-    padding: 7px;
-    background-color: #FFFFFF;
+    padding-top: 7px;
 }
 
 
@@ -63,6 +58,7 @@ div.detail-wrap {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: 4px 12px 4px 12px;
     padding: 10px;
     border: 2px solid #EEEEEE;
 }
