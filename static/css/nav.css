@@ -15,6 +15,7 @@ ul.nav-footer li {
     padding: 6px 0px 6px 10px;
 }
 
-ul.nav a.active {
-  color: red;
+#header a.active {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
