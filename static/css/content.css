@@ -59,13 +59,13 @@ div.intro {
 div.intro-desc {
     flex: 1 1 auto;
     width: 50%;
-    padding-right: 25px;
+    padding-right: 30px;
 }
 
 div.intro-pre {
     flex: 1 1 auto;
     width: 50%;
-    padding-left: 25px;
+    padding-left: 30px;
 }
 
 
@@ -82,7 +82,7 @@ div.overview-image-1 {
     flex: 1 1 auto;
     width: 50%;
     position: relative;
-    padding-right: 25px;
+    padding-right: 30px;
 }
 
 div.overview-image-1 img {
@@ -94,7 +94,7 @@ div.overview-image-2 {
     flex: 1 1 auto;
     width: 50%;
     position: relative;
-    padding-left: 25px;
+    padding-left: 30px;
 }
 
 div.overview-image-2 img {
@@ -201,4 +201,13 @@ div.contact-form button {
     box-sizing: border-box;
     background: transparent;
     border: 1px solid #929497;
+}
+
+/* design the slider */
+
+div.slider {
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+  text-align: center;
+  border-bottom: 3px solid black;
 }
