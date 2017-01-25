@@ -33,7 +33,7 @@
                 </ul>
             </div>
             <div id="cart">
-                <a href="#!/home">Warenkorb<br/>(leer)</a>
+                <a ng-class="{ active: isActive('/warenkorb') }" href="#!/warenkorb">Warenkorb<br/>(leer)</a>
             </div>
         </div>
         <div id="line">
@@ -45,9 +45,9 @@
         </div>
         <div id="footer">
             <ul class="nav nav-footer">
-                <li><a href="/faq">FAQ</a></li>
-                <li><a href="/agb">AGB</a></li>
-                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="#!/faq">FAQ</a></li>
+                <li><a href="#!/agb">AGB</a></li>
+                <li><a href="#!/impressum">Impressum</a></li>
             </ul>
         </div>
     </div>

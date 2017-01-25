@@ -22,7 +22,19 @@ app.config(function($routeProvider) {
         .when('/kontakt', {
             templateUrl: 'pages/kontakt.html'
         })
-        .otherwise({
+        .when('/warenkorb', {
+            templateUrl: 'pages/warenkorb.html'
+        })
+        .when('/faq', {
+            templateUrl: 'pages/faq.html'
+        })
+        .when('/agb', {
+            templateUrl: 'pages/agb.html'
+        })
+        .when('/impressum', {
+            templateUrl: 'pages/impressum.html'
+        })
+                .otherwise({
             templateUrl: 'pages/home.html'
         });
 });
