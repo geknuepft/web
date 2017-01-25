@@ -22,13 +22,14 @@ ul.article li:hover {
     border: 2px solid #EEEEEE;
 }
 
-ul.article li.empty { /* because of space-between to fix the last line */
-  list-style: none;
-  width: 184px;
-  height: 0px;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: content-box;
+ul.article li.empty {
+    /* because of space-between to fix the last line */
+    list-style: none;
+    width: 184px;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
 }
 
 ul.article table {
@@ -37,6 +38,10 @@ ul.article table {
 
 ul.article tr {
     text-align: left;
+}
+
+ul.article td.article-desc {
+    text-align: right;
 }
 
 div.article-img {
@@ -49,10 +54,6 @@ div.article-title {
     font-weight: bold;
     text-align: center;
     padding: 7px 0px 7px 0px;
-}
-
-td.article-desc {
-    text-align: right;
 }
 
 div.article-prize {
@@ -92,8 +93,8 @@ div.detail {
 
 div.detail-img {
     text-align: center;
-    width: 40%;
-    padding: 20px;
+    width: 50%;
+    padding: 10px 30px 10px 30px;
 }
 
 div.detail-img img {
@@ -103,8 +104,20 @@ div.detail-img img {
 }
 
 div.detail-desc {
-    width: 52%;
-    padding: 20px;
+    width: 50%;
+    padding: 10px 30px 10px 30px;
+}
+
+div.article-computed {
+    width: 100%;
+    max-width: 400px;
+    padding-bottom: 50px;
+}
+
+div.article-exist {
+    width: 100%;
+    max-width: 400px;
+    padding-bottom: 40px;
 }
 
 span.detail-desc-title {
@@ -113,35 +126,25 @@ span.detail-desc-title {
     padding-bottom: 15px;
 }
 
-div.detail-desc table.tech-data {
-    width: 50%;
-    min-width: 250px;
-    padding-bottom: 15px;
-}
-
-div.selection {
-    display: flex;
-    flex-direction: column;
+table.tech-data {
     width: 100%;
-    margin-top: 25px;
+    padding-bottom: 5px;
 }
 
-div.selection-pre {
-    padding-right: 15px;
-}
-
-div.selection-prize {
-    align-self: flex-end;
+table.tech-data td.article-desc {
     text-align: right;
-    width: 100px;
-    padding-left: 15px;
 }
 
-div.selection button {
-    width: 100px;
-    align-self: flex-end;
-    font-size: 100%;
-    margin: 5px 0px 5px 0px;
+td.article-button {
+    width: 100%;
+}
+
+div.detail-desc button {
+    display: inline-block;
+    float: right;
+    width: 30%;
+    min-width: 150px;
+    font-size: 80%;
     padding: 3px 4px 3px 4px;
     box-shadow: none;
     box-sizing: border-box;
