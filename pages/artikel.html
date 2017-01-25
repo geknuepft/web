@@ -4,15 +4,17 @@
         <li><a href="home.html">Armb&auml;nder</a></li>
         <li><a href="home.html">Buchzeichen</a></li>
         <li><a href="home.html">Schl&uuml;sselanh&auml;nger</a></li>
-        <li><a href="home.html">Kraniche</a></li>
-        <li><a href="home.html">Schachteln</a></li>
         <li><a href="home.html">Marktplatz</a></li>
     </ul>
 </div>
-<div class="article-main">
-    <span>Legen Sie die gew&uuml;nschte L&auml;nge fest:</span>
-    <p>Diese ist sp&auml;ter noch beliebig &auml;nderbar. Lesen Sie <a>hier</a> mehr &uuml;ber die &uuml;blichen L&auml;ngenmasse f&uuml;r Ihren Artikel.
-    <p>Finden Sie Ihren Artikel, indem Sie weitere Filter setzen:
+<div class="intro">
+    <div class="intro-desc">
+      <p>Diese ist sp&auml;ter noch beliebig &auml;nderbar. Lesen Sie <a>hier</a> mehr &uuml;ber die &uuml;blichen L&auml;ngenmasse f&uuml;r Ihren Artikel.
+    </div>
+    <div class="intro-pre">
+      <p>Legen Sie die gew&uuml;nschte L&auml;nge fest:</p>
+    </div>
+</div>
     <div id="filter" ng-controller="filterMain">
       <div ng-repeat="filter in filters" class="filter-box" ng-class="'filter-box-' + filter.filter">
         <h4>{{ filter.filter_de }}:</h4>
@@ -39,7 +41,6 @@
         </div>
     </div>
     <p>Die Filterauswahl umfasst folgende <span class="bold">304</span> Aritkel:</p>
-</div>
 <div class="detail-wrap">
     <div class="close-button">
       <button class="close" title="verkleinern">X</button>
