@@ -5,6 +5,7 @@ ul.article {
     text-align: center;
     flex-wrap: wrap;
     font-size: 85%;
+    justify-content: space-between;
 }
 
 ul.article li {
@@ -19,6 +20,15 @@ ul.article li {
 
 ul.article li:hover {
     border: 2px solid #EEEEEE;
+}
+
+ul.article li.empty { /* because of space-between to fix the last line */
+  list-style: none;
+  width: 184px;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
 }
 
 ul.article table {
@@ -57,7 +67,6 @@ div.article-prize {
 div.detail-wrap {
     display: flex;
     flex-direction: column;
-    width: 100%;
     margin: 4px 12px 4px 12px;
     padding: 10px;
     border: 2px solid #EEEEEE;
