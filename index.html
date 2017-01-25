@@ -33,13 +33,15 @@
                 </ul>
             </div>
             <div id="cart">
-                <a ng-class="{ active: isActive('/warenkorb') }" href="#!/warenkorb">Warenkorb<br/>(leer)</a>
+                <ul class="nav">
+                    <li><a ng-class="{ active: isActive('/warenkorb') }" href="#!/warenkorb">Warenkorb<span>(leer)</span></a></li>
+                </ul>
             </div>
         </div>
         <div id="line">
         </div>
         <div id="main">
-          <div ng-view></div>
+            <div ng-view></div>
         </div>
         <div id="line">
         </div>

@@ -9,6 +9,11 @@ ul.nav li {
     border-radius: 8px;
 }
 
+ul.nav span {
+    display: block;
+    font-size: 80%;
+}
+
 ul.nav-footer li {
     margin-right: 0px;
     margin-left: 3ex;
