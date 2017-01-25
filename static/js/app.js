@@ -25,9 +25,6 @@ app.config(function($routeProvider) {
         .when('/warenkorb', {
             templateUrl: 'pages/warenkorb.html'
         })
-        .when('/faq', {
-            templateUrl: 'pages/faq.html'
-        })
         .when('/agb', {
             templateUrl: 'pages/agb.html'
         })
