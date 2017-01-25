@@ -18,19 +18,26 @@ body, html {
 
 /* header */
 
+#logo {
+    padding-right: 30px;
+}
+
 #header {
     display: flex;
     justify-content: space-between;
     margin: 20px 20px 5px 20px;
 }
 
-#logo {
-    padding-right: 30px;
-}
-
 #menu {
     width: 100%;
     margin-top: 23px;
+}
+
+#cart {
+    text-align: center;
+    width: 200px;
+    padding-left: 30px;
+    margin-top: 15px;
 }
 
 
