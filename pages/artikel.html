@@ -9,90 +9,90 @@
 </div>
 <div class="intro">
     <div class="intro-desc">
-      <p>Diese ist sp&auml;ter noch beliebig &auml;nderbar. Lesen Sie <a>hier</a> mehr &uuml;ber die &uuml;blichen L&auml;ngenmasse f&uuml;r Ihren Artikel.
+        <p>Diese ist sp&auml;ter noch beliebig &auml;nderbar. Lesen Sie <a>hier</a> mehr &uuml;ber die &uuml;blichen L&auml;ngenmasse f&uuml;r Ihren Artikel.
     </div>
     <div class="intro-pre">
-      <p>Legen Sie die gew&uuml;nschte L&auml;nge fest:</p>
+        <p>Legen Sie die gew&uuml;nschte L&auml;nge fest:</p>
     </div>
 </div>
-    <div id="filter" ng-controller="filterMain">
-      <div ng-repeat="filter in filters" class="filter-box" ng-class="'filter-box-' + filter.filter">
+<div id="filter" ng-controller="filterMain">
+    <div ng-repeat="filter in filters" class="filter-box" ng-class="'filter-box-' + filter.filter">
         <h4>{{ filter.filter_de }}:</h4>
         <ul ng-if="filter.filter_type == 'id'" class="filter-list">
-          <li ng-repeat="category in filter.category">
-            <div class="desc">{{ category.de }}</div>
-            <div class="numb">todo</div>
-          </li>
+            <li ng-repeat="category in filter.category">
+                <div class="desc">{{ category.de }}</div>
+                <div class="numb">todo</div>
+            </li>
         </ul>
         <ul ng-if="filter.filter_type == 'range'" class="filter-list">
-          <li ng-repeat="range in filter.range">
-            <div ng-if="filter.filter == 'price' && range.geq === null && range.leq !== null" class="desc">bis {{ (range.leq / 100) |number:2 }}</div>
-            <div ng-if="filter.filter == 'price' && range.geq !== null && range.leq !== null" class="desc">{{ (range.geq / 100) | number:2 }} bis {{ (range.leq / 100) |number:2 }}</div>
-            <div ng-if="filter.filter == 'price' && range.geq !== null && range.leq === null" class="desc">&uuml;ber {{ (range.geq / 100) | number:2 }}</div>
-            <div ng-if="filter.filter != 'price' && range.geq === null && range.leq !== null" class="desc">bis {{ (range.leq / 10) | number }}</div>
-            <div ng-if="filter.filter != 'price' && range.geq !== null && range.leq !== null" class="desc">{{ (range.geq / 10) | number }} bis {{ (range.leq / 10) | number }}</div>
-            <div ng-if="filter.filter != 'price' && range.geq !== null && range.leq === null" class="desc">&uuml;ber {{ (range.geq / 10) | number }}</div>
-            <div class="numb">todo</div>
-          </li>
+            <li ng-repeat="range in filter.range">
+                <div ng-if="filter.filter == 'price' && range.geq === null && range.leq !== null" class="desc">bis {{ (range.leq / 100) |number:2 }}</div>
+                <div ng-if="filter.filter == 'price' && range.geq !== null && range.leq !== null" class="desc">{{ (range.geq / 100) | number:2 }} bis {{ (range.leq / 100) |number:2 }}</div>
+                <div ng-if="filter.filter == 'price' && range.geq !== null && range.leq === null" class="desc">&uuml;ber {{ (range.geq / 100) | number:2 }}</div>
+                <div ng-if="filter.filter != 'price' && range.geq === null && range.leq !== null" class="desc">bis {{ (range.leq / 10) | number }}</div>
+                <div ng-if="filter.filter != 'price' && range.geq !== null && range.leq !== null" class="desc">{{ (range.geq / 10) | number }} bis {{ (range.leq / 10) | number }}</div>
+                <div ng-if="filter.filter != 'price' && range.geq !== null && range.leq === null" class="desc">&uuml;ber {{ (range.geq / 10) | number }}</div>
+                <div class="numb">todo</div>
+            </li>
         </ul>
-      </div>
-        <div class="filter-delete">
-            <span>alle Filter zurücksetzen</span>
-        </div>
     </div>
-    <p>Die Filterauswahl umfasst folgende <span class="bold">304</span> Aritkel:</p>
+    <div class="filter-delete">
+        <span>alle Filter zurücksetzen</span>
+    </div>
+</div>
+<p>Die Filterauswahl umfasst folgende <span class="bold">304</span> Aritkel:</p>
 <div class="detail-wrap">
     <div class="close-button">
-      <button class="close" title="verkleinern">X</button>
+        <button class="close" title="verkleinern">X</button>
     </div>
     <div class="detail">
-    <div class="detail-img">
-        <img src="http://api0.geknuepft.ch/v0/Image/600p/cma0/160523_1/IMG_3079.JPG" />
-    </div>
-    <div class="detail-desc">
-        <span class="detail-desc-title">Handgekn&uuml;pftes Armband</span>
-        <table class="tech-data">
-            <tr>
-                <td>Artikel-Nr.</td>
-                <td class="article-desc">682</td>
-            </tr>
-            <tr>
-                <td>Muster</td>
-                <td class="article-desc">302</td>
-            </tr>
-            <tr>
-                <td>Anzahl F&auml;den</td>
-                <td class="article-desc">18</td>
-            </tr>
-            <tr>
-                <td>Garn</td>
-                <td class="article-desc">Catania</td>
-            </tr>
-            <tr>
-                <td>Breite</td>
-                <td class="article-desc">5 cm</td>
-            </tr>
-        </table>
-        <div class="selection">
-            <div class="selection-pre">
-                <p>Dieser Artikel in Ihrer gew&uuml;nschte L&auml;nge von <span class="bold">14cm</span> kn&uuml;pfen wir auf Bestellung <span class="bold">neu</span>. Lieferzeit ca. 14 Tage.</p>
-            </div>
-            <div class="selection-prize">
-                <p>CHF 18.-</p>
-            </div>
-            <button type="submit">bestellen</button>
+        <div class="detail-img">
+            <img src="http://api0.geknuepft.ch/v0/Image/600p/cma0/160523_1/IMG_3079.JPG" />
         </div>
-        <div class="selection">
-            <div class="selection-pre">
-                <p>&Uuml;brigens, dieser Artikel ist bereits gekn&uuml;pft, aber in einer L&auml;nge von <span class="bold">15cm</span>. Profitieren Sie von den Vorzugspreisen auf unserem Marktplatz. Lieferzeit ca. 3 Werktage.</p>
+        <div class="detail-desc">
+            <span class="detail-desc-title">Handgekn&uuml;pftes Armband</span>
+            <table class="tech-data">
+                <tr>
+                    <td>Artikel-Nr.</td>
+                    <td class="article-desc">682</td>
+                </tr>
+                <tr>
+                    <td>Muster</td>
+                    <td class="article-desc">302</td>
+                </tr>
+                <tr>
+                    <td>Anzahl F&auml;den</td>
+                    <td class="article-desc">18</td>
+                </tr>
+                <tr>
+                    <td>Garn</td>
+                    <td class="article-desc">Catania</td>
+                </tr>
+                <tr>
+                    <td>Breite</td>
+                    <td class="article-desc">5 cm</td>
+                </tr>
+            </table>
+            <div class="selection">
+                <div class="selection-pre">
+                    <p>Dieser Artikel in Ihrer gew&uuml;nschte L&auml;nge von <span class="bold">14cm</span> kn&uuml;pfen wir auf Bestellung <span class="bold">neu</span>. Lieferzeit ca. 14 Tage.</p>
+                </div>
+                <div class="selection-prize">
+                    <p>CHF 18.-</p>
+                </div>
+                <button type="submit">bestellen</button>
             </div>
-            <div class="selection-prize">
-                <p>CHF 16.-</p>
+            <div class="selection">
+                <div class="selection-pre">
+                    <p>&Uuml;brigens, dieser Artikel ist bereits gekn&uuml;pft, aber in einer L&auml;nge von <span class="bold">15cm</span>. Profitieren Sie von den Vorzugspreisen auf unserem Marktplatz. Lieferzeit ca. 3 Werktage.</p>
+                </div>
+                <div class="selection-prize">
+                    <p>CHF 16.-</p>
+                </div>
+                <button type="submit">bestellen</button>
             </div>
-            <button type="submit">bestellen</button>
         </div>
     </div>
-  </div>
 </div>
 <ul class="article" ng-controller="gallery">
     <li ng-repeat="article in articles">
