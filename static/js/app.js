@@ -104,47 +104,6 @@ app.config(function($stateProvider) {
 
 });
 
-
-// configure our routes
-/*
-  app.config(function($routeProvider) {
-  $routeProvider
-  .when('/home', {
-  templateUrl: 'pages/home.html'
-  })
-  .when('/artikel', {
-  templateUrl: 'pages/artikel.html'
-  })
-  .when('/herstellung', {
-  templateUrl: 'pages/herstellung.html'
-  })
-  .when('/artikel/garne', {
-  templateUrl: 'pages/garne.html'
-  })
-  .when('/artikel', {
-  templateUrl: 'pages/artikel.html'
-  })
-  .when('/markt', {
-  templateUrl: 'pages/markt.html'
-  })
-  .when('/kontakt', {
-  templateUrl: 'pages/kontakt.html'
-  })
-  .when('/warenkorb', {
-  templateUrl: 'pages/warenkorb.html'
-  })
-  .when('/agb', {
-  templateUrl: 'pages/agb.html'
-  })
-  .when('/impressum', {
-  templateUrl: 'pages/impressum.html'
-  })
-  .otherwise({
-  templateUrl: 'pages/home.html'
-  });
-  });
-*/
-
 app.controller('navMain', function($scope, $location) {
 });
 
