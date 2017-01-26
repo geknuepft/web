@@ -108,8 +108,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 });
 
-app.controller('navMain', function($scope, $location) {
-});
+app.controller('navMain', function($scope, $location) {});
 
 app.controller('filterMain', function($scope, $http) {
     $http.get("http://api0.geknuepft.ch/v0/filters").then(function(response) {
@@ -119,10 +118,12 @@ app.controller('filterMain', function($scope, $http) {
             minValue: 2,
             maxValue: 3,
             options: {
-                floor: 0.2,
+                floor: 0,
                 ceil: 6,
                 step: 0.1,
+                minLimit: 0.2,
                 precision: 1,
+                showTicks: 1,
                 translate: function(value) {
                     return value + ' mm';
                 },
@@ -137,6 +138,7 @@ app.controller('filterMain', function($scope, $http) {
                 ceil: 50,
                 step: 0.5,
                 precision: 1,
+                showTicks: 1,
                 translate: function(value) {
                     return value + ' CHF';
                 },

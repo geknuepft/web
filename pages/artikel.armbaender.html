@@ -2,7 +2,7 @@
     <div class="intro-desc" ng-controller="propertiesMain">
         <p>Legen Sie die gew&uuml;nschte <span class="bold">L&auml;nge</span> für ihr Armband fest:</p>
         <div class="slider">
-            <rzslider rz-slider-model="lengthSlider.value" rz-slider-options="lengthSlider.options"></rzslider>
+            <rzslider class="custom-slider" rz-slider-model="lengthSlider.value" rz-slider-options="lengthSlider.options"></rzslider>
         </div>
     </div>
     <div class="intro-pre">
@@ -21,14 +21,18 @@
             </li>
         </ul>
     </div>
-    <div class="filter-slider">
-        <h4>Breite:</h4>
-        <rzslider rz-slider-model="widthSlider.minValue" rz-slider-high="widthSlider.maxValue" rz-slider-options="widthSlider.options"></rzslider>
-        <h4>Preis:</h4>
-        <rzslider rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
-        <div class="filter-delete">
-            <span>alle Filter zurücksetzen</span>
+    <div class="slider-wrap">
+        <div class="filter-slider">
+            <h4>Breite:</h4>
+            <rzslider class="custom-slider" rz-slider-model="widthSlider.minValue" rz-slider-high="widthSlider.maxValue" rz-slider-options="widthSlider.options"></rzslider>
         </div>
+        <div class="filter-slider">
+            <h4>Preis:</h4>
+            <rzslider class="custom-slider" rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
+        </div>
+    </div>
+    <div class="filter-delete">
+        <span>alle Filter zurücksetzen</span>
     </div>
 </div>
 <p>Die Filterauswahl umfasst folgende <span class="bold">304</span> Aritkel:</p>
