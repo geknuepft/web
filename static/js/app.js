@@ -1,15 +1,18 @@
 var app = angular.module('myApp', ['ui.router']);
 
-app.config(function($stateProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider.state({
         name: 'home',
-        url: '/home',
+        url: '/',
         templateUrl: 'pages/home.html'
     });
 
     $stateProvider.state({
         name: 'artikel',
+        abstract: true,
         templateUrl: 'pages/artikel.html'
     });
 
@@ -50,6 +53,7 @@ app.config(function($stateProvider) {
     });
 
     $stateProvider.state({
+        abstract: true,
         name: 'material',
         templateUrl: 'pages/material.html'
     });
