@@ -1,10 +1,10 @@
 <div class="head" style="background-image:url(http://api0.geknuepft.ch/v0/Image/800p/content/head_artikel.jpg);">
     <span>Artikel</span>
     <ul>
-        <li><a ui-sref="artikel.armbaender">Armb&auml;nder</a></li>
-        <li><a ui-sref="artikel.schluessel">Schl&uuml;sselanh&auml;nger</a></li>
-        <li><a ui-sref="artikel.buchzeichen">Buchzeichen</a></li>
-        <li><a ui-sref="artikel.marktplatz">Marktplatz</a></li>
+        <li ui-sref-active="active" ui-nested><a ui-sref="artikel.armbaender">Armb&auml;nder</a></li>
+        <li ui-sref-active="active" ui-nested><a ui-sref="artikel.schluessel">Schl&uuml;sselanh&auml;nger</a></li>
+        <li ui-sref-active="active" ui-nested><a ui-sref="artikel.buchzeichen">Buchzeichen</a></li>
+        <li ui-sref-active="active" ui-nested><a ui-sref="artikel.marktplatz">Marktplatz</a></li>
     </ul>
 </div>
 <ui-view></ui-view>
