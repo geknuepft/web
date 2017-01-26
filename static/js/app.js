@@ -146,7 +146,7 @@ app.controller('filterMain', function($scope, $http) {
     });
 });
 
-app.controller('propertiesMain', function($scope) {
+app.controller('propertiesMain', function($scope,$rootScope) {
     $scope.lengthSlider = {
         value: 14,
         options: {
@@ -158,25 +158,37 @@ app.controller('propertiesMain', function($scope) {
             translate: function(value) {
                 return value + ' cm';
             },
+            onChange(id, value)  {
+                $rootScope.$emit('propertiesUpdate', {lengthSlider: value});
+            }
         }
     };
 });
 
-app.controller('gallery', function($scope, $http) {
-    $http.get("http://api0.geknuepft.ch/v0/articles").then(function(response) {
-        $scope.articles = response.data;
+app.controller('gallery', function($scope, $rootScope,$http) {
+    var sendRequest = function(length_mm) {
+        $http.get("http://localhost:3000/v0/articles?length_mm=" + length_mm).then(function(response) {
+            $scope.articles = response.data;
 
-        $scope.articles.map(
-            function(v, i) {
-                if (typeof v.pictures != 'undefined') {
-                    if ('cma0' in v.pictures) {
-                        v.picture = v.pictures['cma0'];
-                    } else if ('rma0' in v.pictures) {
-                        v.picture = v.pictures['rma0'];
+            $scope.articles.map(
+                function(v, i) {
+                    if (typeof v.pictures != 'undefined') {
+                        if ('cma0' in v.pictures) {
+                            v.picture = v.pictures['cma0'];
+                        } else if ('rma0' in v.pictures) {
+                            v.picture = v.pictures['rma0'];
+                        }
                     }
+                    return v;
                 }
-                return v;
-            }
-        )
+            )
+        });
+    };
+
+    sendRequest(140);
+
+    $rootScope.$on('propertiesUpdate', function(event, args) {
+        sendRequest(10 * args.lengthSlider);
     });
+
 });
