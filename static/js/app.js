@@ -1,47 +1,107 @@
 var app = angular.module('myApp', ['ui.router']);
 
 app.config(function($stateProvider) {
-    var homeState = {
+
+    $stateProvider.state({
         name: 'home',
         url: '/home',
         templateUrl: 'pages/home.html'
-    }
+    });
 
-    var materialState = {
+    $stateProvider.state({
+        name: 'artikel',
+        templateUrl: 'pages/artikel.html'
+    });
+
+    $stateProvider.state({
+        name: 'artikel.default',
+        url: '/artikel',
+        templateUrl: 'pages/artikel.default.html'
+    });
+
+    $stateProvider.state({
+        name: 'artikel.armbaender',
+        url: '/artikel/armbänder',
+        templateUrl: 'pages/artikel.armbaender.html'
+    });
+
+    $stateProvider.state({
+        name: 'artikel.schluessel',
+        url: '/artikel/schlüsselanhänger',
+        templateUrl: 'pages/artikel.schluessel.html'
+    });
+
+    $stateProvider.state({
+        name: 'artikel.buchzeichen',
+        url: '/artikel/buchzeichen',
+        templateUrl: 'pages/artikel.buchzeichen.html'
+    });
+
+    $stateProvider.state({
+        name: 'artikel.marktplatz',
+        url: '/artikel/marktplatz',
+        templateUrl: 'pages/artikel.marktplatz.html'
+    });
+
+    $stateProvider.state({
+        name: 'herstellung',
+        url: '/herstellung',
+        templateUrl: 'pages/herstellung.html'
+    });
+
+    $stateProvider.state({
         name: 'material',
         templateUrl: 'pages/material.html'
-    }
+    });
 
-    var materialDefaultState = {
+    $stateProvider.state({
         name: 'material.default',
         url: '/material',
         templateUrl: 'pages/material.default.html'
-    }
+    });
 
-    var materialGarneState = {
+    $stateProvider.state({
         name: 'material.garne',
         url: '/material/garne',
         templateUrl: 'pages/material.garne.html'
-    }
+    });
 
-    var materialPerlenState = {
+    $stateProvider.state({
         name: 'material.perlen',
-        url: '/material/perlen,'
+        url: '/material/perlen',
         templateUrl: 'pages/material.perlen.html'
-    }
+    });
 
-    var kontaktState = {
+    $stateProvider.state({
+        name: 'markttage',
+        url: '/markttage',
+        templateUrl: 'pages/markttage.html'
+    });
+
+    $stateProvider.state({
         name: 'kontakt',
         url: '/kontakt',
         templateUrl: 'pages/kontakt.html'
-    }
+    });
 
-    $stateProvider.state(homeState);
-    $stateProvider.state(materialState);
-    $stateProvider.state(materialDefaultState);
-    $stateProvider.state(materialGarneState);
-    $stateProvider.state(materialPerlenState);
-    $stateProvider.state(kontaktState);
+    $stateProvider.state({
+        name: 'warenkorb',
+        url: '/warenkorb',
+        templateUrl: 'pages/warenkorb.html'
+    });
+
+    $stateProvider.state({
+        name: 'agb',
+        url: '/agb',
+        templateUrl: 'pages/agb.html'
+    });
+
+    $stateProvider.state({
+        name: 'impressum',
+        url: '/impressum',
+        templateUrl: 'pages/impressum.html'
+    });
+
 });
 
 
@@ -58,11 +118,11 @@ app.config(function($stateProvider) {
   .when('/herstellung', {
   templateUrl: 'pages/herstellung.html'
   })
-  .when('/material/garne', {
+  .when('/artikel/garne', {
   templateUrl: 'pages/garne.html'
   })
-  .when('/material', {
-  templateUrl: 'pages/material.html'
+  .when('/artikel', {
+  templateUrl: 'pages/artikel.html'
   })
   .when('/markt', {
   templateUrl: 'pages/markt.html'

@@ -26,16 +26,16 @@
             <div id="menu" ng-controller="navMain">
                 <ul class="nav">
                     <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
-                    <li><a ui-sref="artikel" ui-sref-active="active">Artikel</a></li>
+                    <li><a ui-sref="artikel.default" ui-sref-active="active">Artikel</a></li>
                     <li><a ui-sref="herstellung" ui-sref-active="active">Herstellung</a></li>
                     <li><a ui-sref="material.default" ui-sref-active="active">Materialen</a></li>
-                    <li><a ui-sref="markt" ui-sref-active="active">Markttage</a></li>
+                    <li><a ui-sref="markttage" ui-sref-active="active">Markttage</a></li>
                     <li><a ui-sref="kontakt" ui-sref-active="active">Kontakt</a></li>
                 </ul>
             </div>
             <div id="cart">
                 <ul class="nav">
-                    <li><a ng-class="{ active: isActive('/warenkorb') }" href="#!/warenkorb">Warenkorb<span>(leer)</span></a></li>
+                    <li><a ui-sref="warenkorb" ui-sref-active="active">Warenkorb<span>(leer)</span></a></li>
                 </ul>
             </div>
         </div>
@@ -48,8 +48,8 @@
         </div>
         <div id="footer">
             <ul class="nav nav-footer">
-                <li><a href="#!/agb">AGB</a></li>
-                <li><a href="#!/impressum">Impressum</a></li>
+                <li><a ui-sref="agb" ui-sref-active="active">AGB</a></li>
+                <li><a ui-sref="impressum" ui-sref-active="active">Impressum</a></li>
             </ul>
         </div>
     </div>
