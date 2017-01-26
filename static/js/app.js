@@ -167,7 +167,7 @@ app.controller('propertiesMain', function($scope,$rootScope) {
 
 app.controller('gallery', function($scope, $rootScope,$http) {
     var sendRequest = function(length_mm) {
-        $http.get("http://localhost:3000/v0/articles?length_mm=" + length_mm).then(function(response) {
+        $http.get("http://api0.geknuepft.ch/v0/articles?length_mm=" + length_mm).then(function(response) {
             $scope.articles = response.data;
 
             $scope.articles.map(
