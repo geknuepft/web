@@ -1,7 +1,11 @@
 <div class="intro">
-    <div class="intro-desc">
-        <p>Legen Sie die gew&uuml;nschte L&auml;nge für ihr Armband fest:</p>
-        <div class="slider">hier hat's Platz für einen Slider</div>
+    <div class="intro-desc" ng-controller="propertiesMain">
+      <p>Legen Sie die gew&uuml;nschte L&auml;nge für ihr Armband fest:</p>
+      <div class="slider">
+      <rzslider
+         rz-slider-model="lengthSlider.value"
+         rz-slider-options="lengthSlider.options"></rzslider>
+      </div>
     </div>
     <div class="intro-pre">
         <p><a>Lesen Sie hier mehr &uuml;ber die &uuml;blichen L&auml;ngenmasse f&uuml;r ein Armband.</a></p>

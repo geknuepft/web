@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ui.router']);
+var app = angular.module('myApp', ['ui.router', 'rzModule']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -115,6 +115,22 @@ app.controller('filterMain', function($scope, $http) {
     $http.get("http://api0.geknuepft.ch/v0/filters").then(function(response) {
         $scope.filters = response.data;
     });
+});
+
+app.controller('propertiesMain', function($scope) {
+    $scope.lengthSlider = {
+        value: 14,
+        options: {
+            floor: 9,
+            ceil: 20,
+            step: 0.5,
+            precision: 1,
+            showTicks: 1,
+            translate: function(value) {
+                return value + ' cm';
+            },
+        }
+    };
 });
 
 app.controller('gallery', function($scope, $http) {

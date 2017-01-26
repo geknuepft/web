@@ -1,12 +1,13 @@
 {
-    "name": "geknuepft-web",
-    "description": "web frontend of geknuepft.ch",
-    "version": "0.0.0",
-    "homepage": "https://github.com/geknuepft/web",
-    "license": "none",
-    "private": true,
-    "dependencies": {
-        "angular": "~1.6",
-        "angular-ui-router": "~1"
-    }
+  "name": "geknuepft-web",
+  "description": "web frontend of geknuepft.ch",
+  "version": "0.0.0",
+  "homepage": "https://github.com/geknuepft/web",
+  "license": "none",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.6",
+    "angular-ui-router": "~1",
+    "angularjs-slider": "^6.0.0"
+  }
 }
