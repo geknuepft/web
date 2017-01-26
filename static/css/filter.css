@@ -9,8 +9,15 @@ div#filter {
 }
 
 div.filter-box {
-    width: 200px;
+    min-width: 200px;
     margin: 10px;
+}
+
+div.filter-slider {
+    flex: 1 1 auto;
+    min-width: 400px;
+    padding-left: 40px;
+    padding-bottom: 30px;
 }
 
 ul.filter-list li {

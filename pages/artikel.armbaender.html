@@ -1,11 +1,9 @@
 <div class="intro">
     <div class="intro-desc" ng-controller="propertiesMain">
-      <p>Legen Sie die gew&uuml;nschte L&auml;nge für ihr Armband fest:</p>
-      <div class="slider">
-      <rzslider
-         rz-slider-model="lengthSlider.value"
-         rz-slider-options="lengthSlider.options"></rzslider>
-      </div>
+        <p>Legen Sie die gew&uuml;nschte <span class="bold">L&auml;nge</span> für ihr Armband fest:</p>
+        <div class="slider">
+            <rzslider rz-slider-model="lengthSlider.value" rz-slider-options="lengthSlider.options"></rzslider>
+        </div>
     </div>
     <div class="intro-pre">
         <p><a>Lesen Sie hier mehr &uuml;ber die &uuml;blichen L&auml;ngenmasse f&uuml;r ein Armband.</a></p>
@@ -14,28 +12,23 @@
     </div>
 </div>
 <div id="filter" ng-controller="filterMain">
-    <div ng-repeat="filter in filters" class="filter-box" ng-class="'filter-box-' + filter.filter">
+    <div ng-repeat="filter in filters" ng-if="filter.filter_type == 'id' && filter.filter != 'category'" class="filter-box" ng-class="'filter-box-' + filter.filter">
         <h4>{{ filter.filter_de }}:</h4>
-        <ul ng-if="filter.filter_type == 'id'" class="filter-list">
+        <ul class="filter-list">
             <li ng-repeat="category in filter.category">
                 <div class="desc">{{ category.de }}</div>
                 <div class="numb">todo</div>
             </li>
         </ul>
-        <ul ng-if="filter.filter_type == 'range'" class="filter-list">
-            <li ng-repeat="range in filter.range">
-                <div ng-if="filter.filter == 'price' && range.geq === null && range.leq !== null" class="desc">bis {{ (range.leq / 100) |number:2 }}</div>
-                <div ng-if="filter.filter == 'price' && range.geq !== null && range.leq !== null" class="desc">{{ (range.geq / 100) | number:2 }} bis {{ (range.leq / 100) |number:2 }}</div>
-                <div ng-if="filter.filter == 'price' && range.geq !== null && range.leq === null" class="desc">&uuml;ber {{ (range.geq / 100) | number:2 }}</div>
-                <div ng-if="filter.filter != 'price' && range.geq === null && range.leq !== null" class="desc">bis {{ (range.leq / 10) | number }}</div>
-                <div ng-if="filter.filter != 'price' && range.geq !== null && range.leq !== null" class="desc">{{ (range.geq / 10) | number }} bis {{ (range.leq / 10) | number }}</div>
-                <div ng-if="filter.filter != 'price' && range.geq !== null && range.leq === null" class="desc">&uuml;ber {{ (range.geq / 10) | number }}</div>
-                <div class="numb">todo</div>
-            </li>
-        </ul>
     </div>
-    <div class="filter-delete">
-        <span>alle Filter zurücksetzen</span>
+    <div class="filter-slider">
+        <h4>Breite:</h4>
+        <rzslider rz-slider-model="widthSlider.minValue" rz-slider-high="widthSlider.maxValue" rz-slider-options="widthSlider.options"></rzslider>
+        <h4>Preis:</h4>
+        <rzslider rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
+        <div class="filter-delete">
+            <span>alle Filter zurücksetzen</span>
+        </div>
     </div>
 </div>
 <p>Die Filterauswahl umfasst folgende <span class="bold">304</span> Aritkel:</p>

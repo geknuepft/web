@@ -114,6 +114,35 @@ app.controller('navMain', function($scope, $location) {
 app.controller('filterMain', function($scope, $http) {
     $http.get("http://api0.geknuepft.ch/v0/filters").then(function(response) {
         $scope.filters = response.data;
+
+        $scope.widthSlider = {
+            minValue: 2,
+            maxValue: 3,
+            options: {
+                floor: 0.2,
+                ceil: 6,
+                step: 0.1,
+                precision: 1,
+                translate: function(value) {
+                    return value + ' mm';
+                },
+            }
+        };
+
+        $scope.priceSlider = {
+            minValue: 10,
+            maxValue: 15,
+            options: {
+                floor: 4,
+                ceil: 50,
+                step: 0.5,
+                precision: 1,
+                translate: function(value) {
+                    return value + ' CHF';
+                },
+            }
+        };
+
     });
 });
 
