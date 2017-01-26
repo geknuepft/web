@@ -1,1 +1,140 @@
-<h2>Marktlatz!</h2>
+<div class="intro">
+    <div class="intro-desc">
+        <p>Legen Sie die gew&uuml;nschte L&auml;nge für ihr Armband fest:</p>
+        <div class="slider">hier hat's Platz für einen Slider</div>
+    </div>
+    <div class="intro-pre">
+        <p><a>Lesen Sie hier mehr &uuml;ber die &uuml;blichen L&auml;ngenmasse f&uuml;r ein Armband.</a></p>
+        <br/>
+        <p>Wissen Sie die ben&ouml;tigte L&auml;nge noch nicht, lassen sie die Standardeinstellung von 14 cm stehen. Sie k&ouml;nnen die L&auml;nge auch sp&auml;ter noch &auml;ndern.
+    </div>
+</div>
+<div id="filter" ng-controller="filterMain">
+    <div ng-repeat="filter in filters" class="filter-box" ng-class="'filter-box-' + filter.filter">
+        <h4>{{ filter.filter_de }}:</h4>
+        <ul ng-if="filter.filter_type == 'id'" class="filter-list">
+            <li ng-repeat="category in filter.category">
+                <div class="desc">{{ category.de }}</div>
+                <div class="numb">todo</div>
+            </li>
+        </ul>
+        <ul ng-if="filter.filter_type == 'range'" class="filter-list">
+            <li ng-repeat="range in filter.range">
+                <div ng-if="filter.filter == 'price' && range.geq === null && range.leq !== null" class="desc">bis {{ (range.leq / 100) |number:2 }}</div>
+                <div ng-if="filter.filter == 'price' && range.geq !== null && range.leq !== null" class="desc">{{ (range.geq / 100) | number:2 }} bis {{ (range.leq / 100) |number:2 }}</div>
+                <div ng-if="filter.filter == 'price' && range.geq !== null && range.leq === null" class="desc">&uuml;ber {{ (range.geq / 100) | number:2 }}</div>
+                <div ng-if="filter.filter != 'price' && range.geq === null && range.leq !== null" class="desc">bis {{ (range.leq / 10) | number }}</div>
+                <div ng-if="filter.filter != 'price' && range.geq !== null && range.leq !== null" class="desc">{{ (range.geq / 10) | number }} bis {{ (range.leq / 10) | number }}</div>
+                <div ng-if="filter.filter != 'price' && range.geq !== null && range.leq === null" class="desc">&uuml;ber {{ (range.geq / 10) | number }}</div>
+                <div class="numb">todo</div>
+            </li>
+        </ul>
+    </div>
+    <div class="filter-delete">
+        <span>alle Filter zurücksetzen</span>
+    </div>
+</div>
+<p>Die Filterauswahl umfasst folgende <span class="bold">304</span> Aritkel:</p>
+<div class="detail-wrap">
+    <div class="close-button">
+        <button class="close" title="verkleinern">X</button>
+    </div>
+    <div class="detail">
+        <div class="detail-img">
+            <img src="http://api0.geknuepft.ch/v0/Image/600p/cma0/160523_1/IMG_3079.JPG" />
+        </div>
+        <div class="detail-desc">
+            <div class="article-computed">
+                <span class="detail-desc-title">Armband</span>
+                <table class="tech-data">
+                    <tr>
+                        <td>Artikel-Nr.</td>
+                        <td class="article-desc">682</td>
+                    </tr>
+                    <tr>
+                        <td>Muster</td>
+                        <td class="article-desc">302</td>
+                    </tr>
+                    <tr>
+                        <td>Garntyp</td>
+                        <td class="article-desc">Catania</td>
+                    </tr>
+                    <tr>
+                        <td>Musterwiederholung</td>
+                        <td class="article-desc">4 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl F&auml;den</td>
+                        <td class="article-desc">18</td>
+                    </tr>
+                    <tr>
+                        <td>Breite</td>
+                        <td class="article-desc">5 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Gew&uuml;nschte L&auml;nge</td>
+                        <td class="article-desc">14 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Lieferzeit</td>
+                        <td class="article-desc">14 Tage</td>
+                    </tr>
+                    <tr>
+                        <td>Preis</td>
+                        <td class="article-desc"><span class="bold">CHF 18.-</span></td>
+                    </tr>
+                </table>
+                <button type="submit">in den Warenkorb</button>
+            </div>
+            <div class="article-exist">
+                <p>&Uuml;brigens, dieser Artikel ist bereits gekn&uuml;pft und kann wie folgt geliefert werden:</p>
+                <table class="tech-data">
+                    <tr>
+                        <td>L&auml;nge</td>
+                        <td class="article-desc">15 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Lieferzeit</td>
+                        <td class="article-desc">3 Werktage</td>
+                    </tr>
+                    <tr>
+                        <td>Preis</td>
+                        <td class="article-desc"><span class="bold">CHF 16.-</span></td>
+                    </tr>
+                </table>
+                <button type="submit">in den Warenkorb</button>
+            </div>
+        </div>
+    </div>
+</div>
+<ul class="article" ng-controller="gallery">
+    <li ng-repeat="article in articles">
+        <div class="article-img">
+            <img ng-if="article.picture" src="http://api0.geknuepft.ch/v0/Image/150p/{{ article.picture.path }}" alt="{{ article.picture.type }}" />
+        </div>
+        <div class="article-title">{{ article.name }}</div>
+        <table>
+            <tr>
+                <td>Artikel-Nr.</td>
+                <td class="article-desc">{{ article.article_id }}</td>
+            </tr>
+            <tr>
+                <td>L&auml;nge</td>
+                <td class="article-desc">{{ (article.length_mm / 10)| number }} cm</td>
+            </tr>
+            <tr ng-if="article.width_mm !== null">
+                <td>Breite</td>
+                <td class="article-desc">~{{ (article.width_mm / 10)| number }} cm</td>
+            </tr>
+        </table>
+        <div class="article-prize">CHF {{ (article.price_cchf / 100)| number:2 }}</div>
+    </li>
+    <li class="empty"></li>
+    <li class="empty"></li>
+    <li class="empty"></li>
+    <li class="empty"></li>
+    <li class="empty"></li>
+    <li class="empty"></li>
+    <li class="empty"></li>
+    <li class="empty"></li>
+</ul>
