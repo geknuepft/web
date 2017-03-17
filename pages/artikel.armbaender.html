@@ -11,16 +11,8 @@
         <p>Wissen Sie die ben&ouml;tigte L&auml;nge noch nicht, lassen sie die Standardeinstellung von 14 cm stehen. Sie k&ouml;nnen die L&auml;nge auch sp&auml;ter noch &auml;ndern.
     </div>
 </div>
+<p>Schr&auml;nken Sie Ihre Auswahl weiter ein:</p>
 <div id="filter" ng-controller="filterMain">
-    <div ng-repeat="filter in filters" ng-if="filter.filter_type == 'id' && filter.filter != 'category'" class="filter-box" ng-class="'filter-box-' + filter.filter">
-        <h4>{{ filter.filter_de }}:</h4>
-        <ul class="filter-list">
-            <li ng-repeat="category in filter.category">
-                <div class="desc">{{ category.de }}</div>
-                <div class="numb">todo</div>
-            </li>
-        </ul>
-    </div>
     <div class="slider-wrap">
         <div class="filter-slider">
             <h4>Breite:</h4>
@@ -31,9 +23,20 @@
             <rzslider class="custom-slider" rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
         </div>
     </div>
-    <div class="filter-delete">
-        <span>alle Filter zurücksetzen</span>
+    <div class="filter-wrap">
+        <div ng-repeat="filter in filters" ng-if="filter.filter_type == 'id' && filter.filter != 'category'" class="filter-box" ng-class="'filter-box-' + filter.filter">
+            <h4>{{ filter.filter_de }}:</h4>
+            <ul class="filter-list">
+                <li ng-repeat="category in filter.category">
+                    <div class="desc">{{ category.de }}</div>
+                    <div class="numb">todo</div>
+                </li>
+            </ul>
+        </div>
     </div>
+</div>
+<div class="filter-delete">
+    <span>alle Filter zurücksetzen</span>
 </div>
 <p>Die Filterauswahl umfasst folgende <span class="bold">304</span> Aritkel:</p>
 <div ng-if="false" class="detail-wrap">

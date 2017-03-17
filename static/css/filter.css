@@ -2,25 +2,27 @@
 
 div#filter {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
     font-size: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.slider-wrap {
+  flex: 1 1 auto;
+  width: 50%;
+  padding-right: 30px;
+}
+
+div.filter-wrap {
+  flex: 1 1 auto;
+  width: 50%;
+  padding-left: 30px;
 }
 
 div.filter-box {
     min-width: 200px;
     margin: 10px;
-}
-
-div.slider-wrap {
-    width: 50%;
-    padding-left: 40px;
-}
-
-div.filter-slider {
-    min-width: 400px;
-    padding-bottom: 30px;
 }
 
 ul.filter-list li {
@@ -63,6 +65,7 @@ div.filter-delete {
     align-self: flex-end;
     text-align: right;
     width: 100%;
+    margin-top: 30px;
 }
 
 div.filter-delete span {
