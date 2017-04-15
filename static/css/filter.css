@@ -34,10 +34,16 @@ div.filter-box {
 
 /* design the filter-list for a normal list */
 
+ul.filter-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
 ul.filter-list li {
     display: flex;
     list-style: none;
-    margin: 2px;
+    margin: 5px;
     padding: 2px 6px 2px 6px;
     border-radius: 3px;
 }
@@ -112,6 +118,20 @@ ul.filter-list-color .tooltip:hover .tooltiptext {
 }
 
 
+/* desgin the filter for the garn */
+
+ul.filter-list-garn {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+ul.filter-list-garn li {
+    list-style: none;
+    margin: 5px;
+}
+
+
 /* design the button Filter zurücksetzen */
 
 div.filter-delete {
@@ -123,7 +143,7 @@ div.filter-delete {
 
 div.filter-delete span {
     padding: 2px 6px 2px 6px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 div.filter-delete span:hover {
