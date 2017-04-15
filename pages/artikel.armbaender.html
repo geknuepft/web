@@ -1,19 +1,20 @@
 <div class="intro">
-    <div class="intro-desc" ng-controller="propertiesMain">
-        <p>Legen Sie die gew&uuml;nschte <span class="bold">L&auml;nge</span> für ihr Armband fest:</p>
-        <div class="slider">
-            <rzslider class="custom-slider" rz-slider-model="lengthSlider.value" rz-slider-options="lengthSlider.options"></rzslider>
-        </div>
+    <div class="intro-desc">
+        <p>Hier finden Sie alle Muster und die passenden Suchfunktionen f&uuml;r ein Armband. Sind Sie unsicher, wie lange Ihr Armband sein soll? <a>Lesen Sie hier mehr darüber!</a></p></br>
+        <p>Möchten Sie ein besonders langes Armand bzw. das Armband doppelt oder dreifach um das Handgelenk wickeln, w&auml;hlen Sie die &Uuml;berl&auml;nge aus.</p>
+
     </div>
     <div class="intro-pre">
-        <p><a>Lesen Sie hier mehr &uuml;ber die &uuml;blichen L&auml;ngenmasse f&uuml;r ein Armband.</a></p>
-        <br/>
-        <p>Wissen Sie die ben&ouml;tigte L&auml;nge noch nicht, lassen sie die Standardeinstellung von 14 cm stehen. Sie k&ouml;nnen die L&auml;nge auch sp&auml;ter noch &auml;ndern.
+        <p>
     </div>
 </div>
-<p>Schr&auml;nken Sie Ihre Auswahl weiter ein:</p>
 <div id="filter" ng-controller="filterMain">
     <div class="filter-slider-wrap">
+        <div class="filter-slider" ng-controller="propertiesMain">
+            <div class="tag">&Uuml;berl&auml;nge</div>
+            <h4>L&auml;nge:</h4>
+            <rzslider class="custom-slider" rz-slider-model="lengthSlider.value" rz-slider-options="lengthSlider.options"></rzslider>
+          </div>
         <div class="filter-slider">
             <h4>Breite:</h4>
             <rzslider class="custom-slider" rz-slider-model="widthSlider.minValue" rz-slider-high="widthSlider.maxValue" rz-slider-options="widthSlider.options"></rzslider>
@@ -31,7 +32,7 @@
                     <div class="color-pix tooltip" style="background-color:#FFFFFF;"><span class="tooltiptext">weiss</span></div>
                 </li>
                 <li>
-                    <div class="color-pix tooltip" style="background-color:#808080;"><span class="tooltiptext">grau</span></div>
+                    <div class="color-pix tooltip selected" style="background-color:#808080;"><span class="tooltiptext">grau</span></div>
                 </li>
                 <li>
                     <div class="color-pix tooltip" style="background-color:#000000;"><span class="tooltiptext">schwarz</span></div>
@@ -68,7 +69,7 @@
         <div class="filter-box">
             <h4>Garn:</h4>
             <ul class="filter-list">
-                <li>
+                <li class="selected">
                     <div class="desc">d&uuml;nneres Garn</div>
                 </li>
                 <li>

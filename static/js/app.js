@@ -125,7 +125,7 @@ app.controller('filterMain', function($scope, $http) {
                 precision: 1,
                 showTicks: 1,
                 translate: function(value) {
-                    return value + ' mm';
+                    return value + ' cm';
                 },
             }
         };
@@ -134,11 +134,12 @@ app.controller('filterMain', function($scope, $http) {
             minValue: 10,
             maxValue: 15,
             options: {
-                floor: 4,
-                ceil: 50,
+                floor: 0,
+                ceil: 70,
                 step: 0.5,
+                minLimit: 4,
                 precision: 1,
-                showTicks: 1,
+                showTicks: 5,
                 translate: function(value) {
                     return value + ' CHF';
                 },
@@ -152,8 +153,8 @@ app.controller('propertiesMain', function($scope,$rootScope) {
     $scope.lengthSlider = {
         value: 14,
         options: {
-            floor: 9,
-            ceil: 20,
+            floor: 10,
+            ceil: 18,
             step: 0.5,
             precision: 1,
             showTicks: 1,

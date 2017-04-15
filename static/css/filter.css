@@ -20,6 +20,23 @@ div.filter-slider {
     text-align: left;
 }
 
+div.filter-slider div.tag {
+    float: right;
+    top: -10px;
+    padding: 2px 6px 2px 6px;
+    border-radius: 3px;
+}
+
+div.filter-slider div.selected {
+    font-weight: bold;
+    background-color: #85C1E9;
+}
+
+div.filter-slider div.tag:hover {
+    font-weight: bold;
+    background-color: #EEEEEE;
+}
+
 div.filter-wrap {
     flex: 1 1 auto;
     width: 50%;
@@ -56,14 +73,6 @@ ul.filter-list li:hover {
     background-color: #EEEEEE;
 }
 
-ul.filter-list li.empty {
-    color: #BBBBBB;
-}
-
-ul.filter-list li.empty:hover {
-    background-color: #FFFFFF;
-}
-
 ul.filter-list div.desc {
     flex: 1 1 auto;
     display: list-item;
@@ -97,6 +106,11 @@ ul.filter-list-color div.color-pix {
 
 ul.filter-list-color div.color-pix:hover {
     border-radius: 3px;
+    border: 2px solid #EEEEEE;
+}
+
+ul.filter-list-color div.selected {
+    border-radius: 3px;
     border: 2px solid #85C1E9;
 }
 
@@ -116,21 +130,6 @@ ul.filter-list-color .tooltip .tooltiptext {
 ul.filter-list-color .tooltip:hover .tooltiptext {
     visibility: visible;
 }
-
-
-/* desgin the filter for the garn */
-
-ul.filter-list-garn {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-}
-
-ul.filter-list-garn li {
-    list-style: none;
-    margin: 5px;
-}
-
 
 /* design the button Filter zurücksetzen */
 
