@@ -48,8 +48,32 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state({
         name: 'herstellung',
-        url: '/herstellung',
+        abstract: true,
         templateUrl: 'pages/herstellung.html'
+    });
+
+    $stateProvider.state({
+        name: 'herstellung.default',
+        url: '/herstellung',
+        templateUrl: 'pages/herstellung.default.html'
+    });
+
+    $stateProvider.state({
+        name: 'herstellung.armband',
+        url: '/herstellung/ein_armband_entsteht',
+        templateUrl: 'pages/herstellung.armband.html'
+    });
+
+    $stateProvider.state({
+        name: 'herstellung.abschluss',
+        url: '/herstellung/abschlüsse',
+        templateUrl: 'pages/herstellung.abschluss.html'
+    });
+
+    $stateProvider.state({
+        name: 'herstellung.laenge',
+        url: '/herstellung/länge',
+        templateUrl: 'pages/herstellung.laenge.html'
     });
 
     $stateProvider.state({
