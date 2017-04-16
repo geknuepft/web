@@ -133,7 +133,7 @@ table.box-container td {
 }
 
 table.box-container td.box-text {
-    padding-right: 25px;
+    padding-right: 30px;
     width: 50%;
 }
 
@@ -143,7 +143,7 @@ table.box-container td.box-title {
 }
 
 table.box-container td.box-img {
-    padding-left: 25px;
+    padding-left: 30px;
     width: 50%;
 }
 
@@ -162,14 +162,15 @@ tr.box-spacer {
 }
 
 
-/* design the contact form */
+/* design a form */
 
-div.contact-form {
+div.form-wrap {
+    padding-right: 30px;
     width: 50%;
     min-width: 500px;
 }
 
-div.contact-form input {
+div.form-wrap input {
     display: block;
     width: 100%;
     font-size: 100%;
@@ -180,7 +181,7 @@ div.contact-form input {
     border: 1px solid #929497;
 }
 
-div.contact-form textarea {
+div.form-wrap textarea {
     display: block;
     width: 100%;
     font-size: 100%;
@@ -191,7 +192,7 @@ div.contact-form textarea {
     border: 1px solid #929497;
 }
 
-div.contact-form button {
+div.form-wrap button {
     display: block;
     float: right;
     font-size: 100%;
