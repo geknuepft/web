@@ -1,7 +1,119 @@
 <div class="head" style="background-image:url(http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg);">
     <span>Warenkorb</span>
 </div>
-<div class="form-wrap">
+<div class="form-wrap wide">
     <h4>Es befinden sich folgende Artikel in Ihrem Warenkorb:</h4>
-    
+    <table class="cart">
+        <tr>
+            <th colspan="2">&nbsp;</th>
+            <th>Preis</th>
+            <th colspan="2">Anzahl</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td class="center img"><img src="http://api0.geknuepft.ch/v0/Image/150p/cma0/160523_1/IMG_3079.JPG" /></td>
+            <td class="left">
+                <h4>Armband</h4>
+                <p>Länge: 15cm</p>
+                <p>Abschluss: Zopf</p>
+                <p>wird neu geknüpft, Lieferzeit: 14 Tage</p>
+            </td>
+            <td class="price">CHF 15.00</td>
+            <td class="quantity">2</td>
+            <td class="quantity-button">
+                <div><a>+</a></div>
+                <div><a>-</a></div>
+            </td>
+            <td class="price">CHF 30.00</td>
+        </tr>
+        <tr>
+            <td class="center img"><img src="http://api0.geknuepft.ch/v0/Image/150p/cma0/160523_1/IMG_3232.JPG" /></td>
+            <td class="left">
+                <h4>Armband</h4>
+                <p>Länge: 15cm</p>
+                <p>Abschluss: Zopf</p>
+                <p>ab Lager, Lieferzeit: 2-5 Tage</p>
+            </td>
+            <td class="price">CHF 38.00</td>
+            <td class="quantity">1</td>
+            <td class="quantity-button">
+                <div><a>+</a></div>
+                <div><a>-</a></div>
+            </td>
+            <td class="price">CHF 38.00</td>
+        </tr>
+        <tr>
+            <td class="spacer" colspan="6"></td>
+        </tr>
+        <tr>
+            <td class="left total" colspan="5">
+                <h4>Zwischentotal Artikel</h4></th>
+                <td class="price total">CHF 68.00</td>
+        </tr>
+        <tr>
+            <td class="left" colspan="6">
+                <h4>Versand und Verpackung</h4></td>
+        </tr>
+        <tr>
+            <td class="left" colspan="5">
+                <div>
+                    Wählen Sie Ihr Lieferland:
+                    <select class="small">
+                      <option value="swiss">Schweiz</option>
+                      <option value="germany">Deutschland</option>
+                      <option value="austria">&Ouml;sterreich</option>
+                    </select>
+                </div>
+                <p></p>
+            </td>
+            <td class="price"> CHF 2.00</td>
+        </tr>
+        <tr>
+            <td class="spacer" colspan="6"></td>
+        </tr>
+        <tr>
+            <td class="left total" colspan="5">
+                <h4>Total</h4></th>
+                <td class="price total"><span class="bold">CHF 70.00</span></td>
+        </tr>
+    </table>
+    <div class="intro">
+        <div class="intro-desc">
+            <div class="form-wrap wide">
+                <h4>Ihre Lieferadresse:</h4>
+                <form>
+                    <select name="anrede" value placeholder="Anrede">
+                      <option selected disabled>Anrede</option>
+                      <option value="w">Frau</option>
+                      <option value="m">Herr</option>
+                    </select>
+                    <input type="text" name="firstname" value placeholder="Vorname">
+                    <input type="text" name="name" value placeholder="Nachname">
+                    <input type="text" name="street" value placeholder="Strasse">
+                    <input type="number" name="streetnumber" value placeholder="Hausnummer">
+                    <input type="number" name="plz" value placeholder="Postleitzahl">
+                    <input type="text" name="city" value placeholder="Stadt">
+                    <p><a>Klicke Sie bitte hier, sollte die Lieferadresse von der Rechnungsadresse abweichen</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="intro-pre">
+            <div class="form-wrap wide" ng-if="false">
+                <h4>Ihre Rechnungsadresse:</h4>
+                <form>
+                    <select name="anrede" value placeholder="Anrede">
+                <option selected disabled>Anrede</option>
+                <option value="w">Frau</option>
+                <option value="m">Herr</option>
+              </select>
+                    <input type="text" name="firstname" value placeholder="Vorname">
+                    <input type="text" name="name" value placeholder="Nachname">
+                    <input type="text" name="street" value placeholder="Strasse">
+                    <input type="number" name="streetnumber" value placeholder="Hausnummer">
+                    <input type="number" name="plz" value placeholder="Postleitzahl">
+                    <input type="text" name="city" value placeholder="Stadt">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
