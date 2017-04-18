@@ -79,11 +79,24 @@
     </table>
     <div class="intro">
         <div class="intro-desc">
-            <div class="form-wrap wide">
+            <div class="form-wrap">
+                <h4>Ihre Kontaktdaten:</h4>
+                <form>
+                    <input type="text" name="mail" value placeholder="E-Mail-Adresse">
+                    <input type="number" name="phone" value placeholder="Telefon">
+                </form>
+            </div>
+        </div>
+        <div class="intro-pre">
+        </div>
+    </div>
+    <div class="intro">
+        <div class="intro-desc">
+            <div class="form-wrap">
                 <h4>Ihre Lieferadresse:</h4>
                 <form>
-                    <select name="anrede" value placeholder="Anrede">
-                      <option selected disabled>Anrede</option>
+                    <select required>
+                      <option value="" selected disabled>Anrede</option>
                       <option value="w">Frau</option>
                       <option value="m">Herr</option>
                     </select>
@@ -93,25 +106,46 @@
                     <input type="number" name="streetnumber" value placeholder="Hausnummer">
                     <input type="number" name="plz" value placeholder="Postleitzahl">
                     <input type="text" name="city" value placeholder="Stadt">
+                    <input type="text" name="country" value placeholder="Land">
                     <p><a>Klicke Sie bitte hier, sollte die Lieferadresse von der Rechnungsadresse abweichen</a></p>
                 </form>
             </div>
         </div>
         <div class="intro-pre">
-            <div class="form-wrap wide" ng-if="false">
+            <div class="form-wrap" ng-if="true">
                 <h4>Ihre Rechnungsadresse:</h4>
                 <form>
-                    <select name="anrede" value placeholder="Anrede">
-                <option selected disabled>Anrede</option>
-                <option value="w">Frau</option>
-                <option value="m">Herr</option>
-              </select>
+                    <select required>
+                      <option value="" selected disabled>Anrede</option>
+                      <option value="w">Frau</option>
+                      <option value="m">Herr</option>
+                    </select>
                     <input type="text" name="firstname" value placeholder="Vorname">
                     <input type="text" name="name" value placeholder="Nachname">
                     <input type="text" name="street" value placeholder="Strasse">
                     <input type="number" name="streetnumber" value placeholder="Hausnummer">
                     <input type="number" name="plz" value placeholder="Postleitzahl">
                     <input type="text" name="city" value placeholder="Stadt">
+                    <input type="text" name="country" value placeholder="Land">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="intro">
+        <div class="intro-desc">
+            <div class="form-wrap">
+                <form>
+                    <textarea name="message" rows="8" cols="10" value placeholder="Ihre Nachricht"></textarea>
+                </form>
+            </div>
+        </div>
+        <div class="intro-pre">
+            <div class="form-wrap">
+                <form>
+                    <label>
+            <input type="checkbox" name="agb">Ich habe die <a>Allgemeinen Gesch&auml;ftsbedingungen</a> gelesen und bin damit einverstanden.</input>
+          </label>
+                    <button type="submit">Bestellung senden</button>
                 </form>
             </div>
         </div>
