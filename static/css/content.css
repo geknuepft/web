@@ -68,6 +68,21 @@ div.intro-pre {
     padding-left: 30px;
 }
 
+div.intro-pre img {
+    width: 100%;
+    height: auto;
+}
+
+div.intro table {
+    margin-bottom: 15px;
+}
+
+div.intro th {
+    width: 80px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
 
 /* design the overview */
 
@@ -118,50 +133,6 @@ div.overview-text a {
 }
 
 
-/* design the box */
-
-table.box-container {
-    width: 100%;
-}
-
-table.box-container table {
-    margin-bottom: 15px;
-}
-
-table.box-container td {
-    vertical-align: top;
-}
-
-table.box-container td.box-text {
-    padding-right: 30px;
-    width: 50%;
-}
-
-table.box-container td.box-title {
-    width: 80px;
-    margin-bottom: 5px;
-}
-
-table.box-container td.box-img {
-    padding-left: 30px;
-    width: 50%;
-}
-
-table.box-container td.box-img img {
-    width: 100%;
-    height: auto;
-}
-
-table.box-container td.box-text img {
-    width: 100%;
-    height: auto;
-}
-
-tr.box-spacer {
-    height: 45px;
-}
-
-
 /* design a form */
 
 div.form-wrap {
@@ -188,7 +159,8 @@ input, textarea, select {
     box-shadow: none;
     box-sizing: border-box;
     border: 1px solid #929497;
-    overflow: hidden; /* for IE */
+    overflow: hidden;
+    /* for IE */
 }
 
 button {
@@ -214,6 +186,7 @@ input:focus, textarea:focus, button:focus, select:focus {
     border: 1px solid black;
 }
 
+
 /* design value placeholder for a select */
 
 select:required:invalid {
@@ -227,6 +200,7 @@ option[value=""][disabled] {
 option {
     color: black;
 }
+
 
 /* design the warenkorb */
 
