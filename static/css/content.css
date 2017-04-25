@@ -83,6 +83,8 @@ div.wide {
     min-width: 500px;
 }
 
+
+
 /* design the overview */
 
 div.overview {
@@ -119,8 +121,11 @@ input, textarea, select {
     box-shadow: none;
     box-sizing: border-box;
     border: 1px solid #929497;
-    overflow: hidden;
-    /* for IE */
+    overflow: hidden;    /* for IE */
+}
+
+textarea {
+    resize: vertical;
 }
 
 button {
@@ -165,9 +170,11 @@ option {
 /* design the warenkorb */
 
 table.cart {
-    width: 100%;
-    text-align: right;
-    margin-bottom: 30px;
+    margin: auto;
+    width: calc(100% - 40px);
+    padding: 0px 10px 0px 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 table.cart .left {
@@ -186,9 +193,16 @@ table.cart td.total {
     padding-bottom: 20px;
 }
 
+table.cart th {
+    padding-left: 5px;
+    min-width: 50px;
+    text-align: right;
+}
+
 table.cart td {
     padding-left: 5px;
     min-width: 50px;
+    text-align: right;
 }
 
 table.cart td.img {
@@ -197,7 +211,7 @@ table.cart td.img {
     padding: 10px 20px 10px 0px;
 }
 
-table.cart td.quantity-button {
+table.cart td.qty-button {
     min-width: 10px;
 }
 
