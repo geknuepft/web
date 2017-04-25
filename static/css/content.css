@@ -104,7 +104,7 @@ div.overview-text {
     left: 0;
     position: absolute;
     text-align: center;
-    top: 34%;
+    top: 20%;
     vertical-align: middle;
     width: 100%;
 }
@@ -114,13 +114,17 @@ div.overview img {
 }
 
 div.overview-text a {
-    font-size: 300%;
+    font-size: 3vw;
     color: #353535;
     text-shadow: 2px 2px 10px #FFFFFF;
 }
 
 div.overview-text a:hover {
     color: black;
+}
+
+div.overview span {
+    font-size: 75%;
 }
 
 /* design the general layout of input, textarea, button and select */

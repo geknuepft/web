@@ -1,15 +1,29 @@
 <div class="intro">
     <div class="intro-desc">
-        <p>Legen Sie die gew&uuml;nschte L&auml;nge für ihr Armband fest:</p>
-        <div class="slider">hier hat's Platz für einen Slider</div>
+        <p>Über 1400 verschiedene Armbänder, Schlüsselanhänger und Buchzeichen bieten wir an. Stöbern Sie auf dem <a ui-sref="artikel.marktplatz">Marktplatz</a> oder suchen Sie gezielt nach einem Muster und wir knüpfen es Ihnen in Ihrer gewünschten Länge.</p>
     </div>
     <div class="intro-desc">
-        <p><a>Lesen Sie hier mehr &uuml;ber die &uuml;blichen L&auml;ngenmasse f&uuml;r ein Armband.</a></p>
-        <br/>
-        <p>Wissen Sie die ben&ouml;tigte L&auml;nge noch nicht, lassen sie die Standardeinstellung von 14 cm stehen. Sie k&ouml;nnen die L&auml;nge auch sp&auml;ter noch &auml;ndern.
     </div>
 </div>
-<div id="filter" ng-controller="filterMain">
+<div class="intro">
+    <div class="intro-desc overview">
+      <img src="http://api0.geknuepft.ch/v0/Image/800p/content/coll_11.jpg" alt="türkisblauer Sandstrand" />
+      <div class="overview-text">
+          <a ui-sref="article.armband"><span>Unsere neuste Kollektion:</span><br/>Türkisblauer Sandstrand</a>
+      </div>
+    </div>
+    <div class="intro-desc overview">
+      <img src="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg" alt="Marktstand" />
+      <div class="overview-text">
+          <a ui-sref="artikel.marktplatz"><span></span><br/>Marktplatz</a>
+      </div>
+    </div>
+</div>
+
+
+
+
+<div id="filter" ng-controller="filterMain" ng-if="false">
     <div ng-repeat="filter in filters" class="filter-box" ng-class="'filter-box-' + filter.filter">
         <h4>{{ filter.filter_de }}:</h4>
         <ul ng-if="filter.filter_type == 'id'" class="filter-list">
