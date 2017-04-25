@@ -4,88 +4,103 @@
         </br>
         <p>Möchten Sie ein besonders langes Armand bzw. das Armband doppelt oder dreifach um das Handgelenk wickeln, w&auml;hlen Sie die &Uuml;berl&auml;nge aus.</p>
     </div>
-    <div class="intro-pre">
+    <div class="intro-desc">
         <p>
     </div>
 </div>
-<div id="filter" ng-controller="filterMain">
-    <div class="filter-slider-wrap">
-        <div class="filter-slider" ng-controller="propertiesMain">
-            <div class="tag">&Uuml;berl&auml;nge</div>
-            <h4>L&auml;nge:</h4>
-            <rzslider class="custom-slider" rz-slider-model="lengthSlider.value" rz-slider-options="lengthSlider.options"></rzslider>
-        </div>
-        <div class="filter-slider">
-            <h4>Breite:</h4>
-            <rzslider class="custom-slider" rz-slider-model="widthSlider.minValue" rz-slider-high="widthSlider.maxValue" rz-slider-options="widthSlider.options"></rzslider>
-        </div>
-        <div class="filter-slider">
-            <h4>Preis:</h4>
-            <rzslider class="custom-slider" rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
+<div class="intro">
+    <div class="intro-desc">
+        <div id="filter" ng-controller="filterMain">
+            <div class="filter-slider-wrap">
+                <div class="filter-slider" ng-controller="propertiesMain">
+                    <div class="tag">&Uuml;berl&auml;nge</div>
+                    <h4>L&auml;nge:</h4>
+                    <rzslider class="custom-slider" rz-slider-model="lengthSlider.value" rz-slider-options="lengthSlider.options"></rzslider>
+                </div>
+                <div class="filter-slider">
+                    <h4>Breite:</h4>
+                    <rzslider class="custom-slider" rz-slider-model="widthSlider.minValue" rz-slider-high="widthSlider.maxValue" rz-slider-options="widthSlider.options"></rzslider>
+                </div>
+                <div class="filter-slider">
+                    <h4>Preis:</h4>
+                    <rzslider class="custom-slider" rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="filter-wrap">
-        <div class="filter-box">
-            <h4>Farben:</h4>
-            <ul class="filter-list-color">
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#FFFFFF;"><span class="tooltiptext">weiss</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip selected" style="background-color:#808080;"><span class="tooltiptext">grau</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#000000;"><span class="tooltiptext">schwarz</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#802B00;"><span class="tooltiptext">braun</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#990099;"><span class="tooltiptext">violett</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#FF0066;"><span class="tooltiptext">pink</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#0000FF;"><span class="tooltiptext">blau</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#40E0D0;"><span class="tooltiptext">türkis</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#009900;"><span class="tooltiptext">grün</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#FFFF00;"><span class="tooltiptext">gelb</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#FF9900;"><span class="tooltiptext">orange</span></div>
-                </li>
-                <li>
-                    <div class="color-pix tooltip" style="background-color:#FF0000;"><span class="tooltiptext">rot</span></div>
-                </li>
-            </ul>
-        </div>
-        <div class="filter-box">
-            <h4>Garn:</h4>
-            <ul class="filter-list">
-                <li class="selected">
-                    <div class="desc">d&uuml;nneres Garn</div>
-                </li>
-                <li>
-                    <div class="desc">dickeres Garn</div>
-                </li>
-            </ul>
+    <div class="intro-desc">
+        <div class="filter-wrap">
+            <div class="filter-box">
+                <h4>Farben:</h4>
+                <ul class="filter-list-color">
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#FFFFFF;"><span class="tooltiptext">weiss</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip selected" style="background-color:#808080;"><span class="tooltiptext">grau</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#000000;"><span class="tooltiptext">schwarz</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#802B00;"><span class="tooltiptext">braun</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#990099;"><span class="tooltiptext">violett</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#FF0066;"><span class="tooltiptext">pink</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#0000FF;"><span class="tooltiptext">blau</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#40E0D0;"><span class="tooltiptext">türkis</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#009900;"><span class="tooltiptext">grün</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#FFFF00;"><span class="tooltiptext">gelb</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#FF9900;"><span class="tooltiptext">orange</span></div>
+                    </li>
+                    <li>
+                        <div class="color-pix tooltip" style="background-color:#FF0000;"><span class="tooltiptext">rot</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="filter-box">
+                <h4>Garn:</h4>
+                <ul class="filter-list">
+                    <li class="selected">
+                        <div class="desc">d&uuml;nneres Garn</div>
+                    </li>
+                    <li>
+                        <div class="desc">dickeres Garn</div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
-<div class="filter-delete">
-    <span>alle Filter zurücksetzen</span>
+<div class="intro">
+    <div class="intro-desc wide">
+        <div class="filter-delete">
+            <span>alle Filter zurücksetzen</span>
+        </div>
+    </div>
 </div>
-<p>Ihre Auswahl umfasst folgende <span class="bold">304</span> Aritkel:</p>
+<div class="intro">
+    <div class="intro-desc wide">
+        <p>Ihre Auswahl umfasst folgende <span class="bold">304</span> Aritkel:</p>
+    </div>
+</div>
 <div class="detail-wrap">
     <div class="close-button">
-        <a><img src="pictures/verkleinern.svg"></img></a>
+        <a><img src="pictures/verkleinern.svg"></img>
+        </a>
     </div>
     <div class="detail">
         <div class="detail-img">

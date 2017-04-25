@@ -37,12 +37,6 @@ div.filter-slider div.tag:hover {
     background-color: #EEEEEE;
 }
 
-div.filter-wrap {
-    flex: 1 1 auto;
-    width: 50%;
-    padding-left: 30px;
-}
-
 div.filter-box {
     min-width: 200px;
     margin: 10px;

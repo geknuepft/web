@@ -53,22 +53,16 @@ span.underline {
 div.intro {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 div.intro-desc {
     flex: 1 1 auto;
     width: 50%;
-    padding-right: 30px;
+    padding: 0px 20px 0px 20px;
 }
 
-div.intro-pre {
-    flex: 1 1 auto;
-    width: 50%;
-    padding-left: 30px;
-}
-
-div.intro-pre img {
+div.intro img {
     width: 100%;
     height: auto;
 }
@@ -83,45 +77,25 @@ div.intro th {
     text-align: left;
 }
 
+div.wide {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    min-width: 500px;
+}
 
 /* design the overview */
 
 div.overview {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-div.overview-image-1 {
     flex: 1 1 auto;
     width: 50%;
     position: relative;
-    padding-right: 30px;
-}
-
-div.overview-image-1 img {
-    width: 100%;
-    height: auto;
-}
-
-div.overview-image-2 {
-    flex: 1 1 auto;
-    width: 50%;
-    position: relative;
-    padding-left: 30px;
-}
-
-div.overview-image-2 img {
-    width: 100%;
-    height: auto;
 }
 
 div.overview-text {
     left: 0;
     position: absolute;
     text-align: center;
-    top: 40%;
+    top: 34%;
     vertical-align: middle;
     width: 100%;
 }
@@ -130,20 +104,6 @@ div.overview-text a {
     font-size: 300%;
     color: #FFFFFF;
     text-shadow: 2px 2px 10px #424242;
-}
-
-
-/* design a form */
-
-div.form-wrap {
-    padding-right: 30px;
-    width: 50%;
-    min-width: 500px;
-}
-
-div.wide {
-    padding: 0px;
-    width: 100%;
 }
 
 

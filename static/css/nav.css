@@ -37,7 +37,7 @@ div.head {
     flex-direction: column;
     justify-content: flex-end;
     height: 180px;
-    margin-bottom: 30px;
+    margin: 0px 20px 30px 20px;
     border-radius: 2px;
 }
 
