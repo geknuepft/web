@@ -1,18 +1,17 @@
 /*the layout of the filter*/
 
-div#filter {
+div.filter {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     font-size: 90%;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
-div.filter-slider-wrap {
-    flex: 1 1 auto;
-    width: 50%;
-    padding-right: 30px;
+div.filter-box {
+    min-width: 200px;
+    margin: 10px;
 }
+
+/* design the slider */
 
 div.filter-slider {
     width: 100%;
@@ -35,11 +34,6 @@ div.filter-slider div.selected {
 div.filter-slider div.tag:hover {
     font-weight: bold;
     background-color: #EEEEEE;
-}
-
-div.filter-box {
-    min-width: 200px;
-    margin: 10px;
 }
 
 
@@ -130,8 +124,6 @@ ul.filter-list-color .tooltip:hover .tooltiptext {
 div.filter-delete {
     align-self: flex-end;
     text-align: right;
-    width: 100%;
-    margin-top: 30px;
 }
 
 div.filter-delete span {

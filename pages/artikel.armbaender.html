@@ -10,26 +10,24 @@
 </div>
 <div class="intro">
     <div class="intro-desc">
-        <div id="filter" ng-controller="filterMain">
-            <div class="filter-slider-wrap">
-                <div class="filter-slider" ng-controller="propertiesMain">
-                    <div class="tag">&Uuml;berl&auml;nge</div>
-                    <h4>L&auml;nge:</h4>
-                    <rzslider class="custom-slider" rz-slider-model="lengthSlider.value" rz-slider-options="lengthSlider.options"></rzslider>
-                </div>
-                <div class="filter-slider">
-                    <h4>Breite:</h4>
-                    <rzslider class="custom-slider" rz-slider-model="widthSlider.minValue" rz-slider-high="widthSlider.maxValue" rz-slider-options="widthSlider.options"></rzslider>
-                </div>
-                <div class="filter-slider">
-                    <h4>Preis:</h4>
-                    <rzslider class="custom-slider" rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
-                </div>
+        <div class="filter" ng-controller="filterMain">
+            <div class="filter-slider" ng-controller="propertiesMain">
+                <div class="tag">&Uuml;berl&auml;nge</div>
+                <h4>L&auml;nge:</h4>
+                <rzslider class="custom-slider" rz-slider-model="lengthSlider.value" rz-slider-options="lengthSlider.options"></rzslider>
+            </div>
+            <div class="filter-slider">
+                <h4>Breite:</h4>
+                <rzslider class="custom-slider" rz-slider-model="widthSlider.minValue" rz-slider-high="widthSlider.maxValue" rz-slider-options="widthSlider.options"></rzslider>
+            </div>
+            <div class="filter-slider">
+                <h4>Preis:</h4>
+                <rzslider class="custom-slider" rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
             </div>
         </div>
     </div>
     <div class="intro-desc">
-        <div class="filter-wrap">
+        <div class="filter">
             <div class="filter-box">
                 <h4>Farben:</h4>
                 <ul class="filter-list-color">
@@ -86,10 +84,8 @@
     </div>
 </div>
 <div class="intro">
-    <div class="intro-desc wide">
-        <div class="filter-delete">
-            <span>alle Filter zurücksetzen</span>
-        </div>
+    <div class="intro-desc wide filter-delete">
+        <span>alle Filter zurücksetzen</span>
     </div>
 </div>
 <div class="intro">
