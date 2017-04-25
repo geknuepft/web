@@ -73,32 +73,6 @@ div.detail-wrap {
     border: 2px solid #EEEEEE;
 }
 
-div.close-button {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: 0px;
-}
-
-div.close-button a {
-    width: 22px;
-    height: 22px;
-    background-color: white;
-    border: 1px solid white;
-    box-sizing: padding-box;
-}
-
-div.close-button img {
-    width: 90%;
-    height: 90%;
-    margin: 1px;
-    opacity: 0.7;
-}
-
-div.close-button a:hover {
-    border: 1px solid black;
-}
-
 div.detail {
     display: flex;
     width: 100%;
@@ -147,21 +121,4 @@ table.tech-data {
 
 table.tech-data td.article-desc {
     text-align: right;
-}
-
-td.article-button {
-    width: 100%;
-}
-
-div.detail-desc button {
-    display: inline-block;
-    float: right;
-    width: 30%;
-    min-width: 150px;
-    font-size: 80%;
-    padding: 3px 4px 3px 4px;
-    box-shadow: none;
-    box-sizing: border-box;
-    background: transparent;
-    border: 1px solid #929497;
 }
