@@ -138,12 +138,14 @@
             <textarea name="message" rows="8" cols="10" value placeholder="Ihre Nachricht"></textarea>
         </form>
     </div>
-    <div class="intro-desc">
-        <form>
-            <label>
-            <input type="checkbox" name="agb">Ich habe die <a>Allgemeinen Gesch&auml;ftsbedingungen</a> gelesen und bin damit einverstanden.</input>
-          </label>
-            <button type="submit">Bestellung senden</button>
-        </form>
+    <div class="intro-desc center">
+        <div class="agb">
+            <div class="check">
+                <input type="checkbox" value="None" id="check" name="check" />
+                <label for="check"></label>
+            </div>
+            <p>Ich habe die <a>Allgemeinen Gesch&auml;ftsbedingungen</a> gelesen und bin damit einverstanden.</p>
+        </div>
+        <button type="submit" class="order">Bestellung senden</button>
     </div>
 </div>
