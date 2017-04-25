@@ -19,6 +19,7 @@ ul.article li {
 }
 
 ul.article li:hover {
+    cursor: pointer;
     border: 2px solid #EEEEEE;
 }
 
