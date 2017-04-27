@@ -111,13 +111,13 @@ div.detail-desc {
 
 div.article-computed {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     padding-bottom: 50px;
 }
 
 div.article-exist {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     padding-bottom: 5px;
 }
 
@@ -129,9 +129,30 @@ span.detail-desc-title {
 
 table.tech-data {
     width: 100%;
+    padding-bottom: 15px;
+}
+
+table.tech-data td {
     padding-bottom: 5px;
 }
 
 table.tech-data td.article-desc {
     text-align: right;
+}
+
+table.tech-data td.article-desc input {
+    display: inline;
+    width: 55px;
+    margin: 0px 5px 0px 5px;
+}
+
+table.tech-data td.article-desc select {
+    display: inline;
+    width: auto;
+    margin: 5px;
+}
+
+table.tech-data td.spacer {
+    border-top: 1px solid black;
+    padding-bottom: 10px;
 }

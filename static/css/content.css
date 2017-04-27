@@ -166,6 +166,10 @@ input:focus, textarea:focus {
     border: 1px solid black;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
 button:focus, select:focus {
     cursor: pointer;
     outline: none;
@@ -211,7 +215,6 @@ select.small {
     width: auto;
     margin: 5px 5px 5px 5px;
 }
-
 
 /* design the checkbox */
 

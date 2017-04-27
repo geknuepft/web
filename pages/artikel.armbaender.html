@@ -149,58 +149,71 @@
                 <span class="detail-desc-title">Armband</span>
                 <table class="tech-data">
                     <tr>
-                        <td>Artikel-Nr.</td>
-                        <td class="article-desc">682</td>
-                    </tr>
-                    <tr>
-                        <td>Muster</td>
-                        <td class="article-desc">302</td>
-                    </tr>
-                    <tr>
-                        <td>Garntyp</td>
-                        <td class="article-desc">Catania</td>
-                    </tr>
-                    <tr>
-                        <td>Musterwiederholung</td>
-                        <td class="article-desc">4 cm</td>
+                        <td>Breite</td>
+                        <td class="article-desc">&#126; 5 cm</td>
                     </tr>
                     <tr>
                         <td>Anzahl F&auml;den</td>
                         <td class="article-desc">18</td>
                     </tr>
                     <tr>
-                        <td>Breite</td>
-                        <td class="article-desc">5 cm</td>
+                        <td>Musterwiederholung</td>
+                        <td class="article-desc">4 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Garntyp</td>
+                        <td class="article-desc">Catania</td>
                     </tr>
                     <tr>
                         <td>Gew&uuml;nschte L&auml;nge</td>
-                        <td class="article-desc">14 cm</td>
+                        <td class="article-desc">
+                            <input type="number" step="0.5" name="length" value="14.5" min="10" max="30" />cm
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Abschluss</td>
+                        <td class="article-desc">
+                          <select required>
+                                <option value="zopf">Zopf</option>
+                                <option value="lose">lose F&auml;den</option>
+                          </select>
+                        </td>
                     </tr>
                     <tr>
                         <td>Lieferzeit</td>
                         <td class="article-desc">14 Tage</td>
                     </tr>
                     <tr>
+                      <td class ="spacer" colspan="2"></td>
+                    </tr>
+                    <tr>
                         <td>Preis</td>
-                        <td class="article-desc"><span class="bold">CHF 18.-</span></td>
+                        <td class="article-desc"><span class="bold">CHF 18.00</span></td>
                     </tr>
                 </table>
                 <button type="submit">in den Warenkorb</button>
             </div>
             <div class="article-exist">
-                <p>&Uuml;brigens, dieser Artikel ist bereits gekn&uuml;pft und kann wie folgt geliefert werden:</p>
+                <p>&Uuml;brigens, dieses Armband ist bereits gekn&uuml;pft und kann wie folgt geliefert werden:</p>
                 <table class="tech-data">
                     <tr>
                         <td>L&auml;nge</td>
                         <td class="article-desc">15 cm</td>
                     </tr>
                     <tr>
+                        <td>Abschluss</td>
+                        <td class="article-desc">Zopf</td>
+                    </tr>
+                    <tr>
                         <td>Lieferzeit</td>
                         <td class="article-desc">3 Werktage</td>
                     </tr>
                     <tr>
+                      <td class ="spacer" colspan="2"></td>
+                    </tr>
+                    <tr>
                         <td>Preis</td>
-                        <td class="article-desc"><span class="bold">CHF 16.-</span></td>
+                        <td class="article-desc"><span class="bold">CHF 16.00</span></td>
                     </tr>
                 </table>
                 <button type="submit">in den Warenkorb</button>
@@ -225,7 +238,7 @@
             </tr>
             <tr ng-if="article.width_mm !== null">
                 <td>Breite</td>
-                <td class="article-desc">~{{ (article.width_mm / 10)| number }} cm</td>
+                <td class="article-desc">&#126;{{ (article.width_mm / 10)| number }} cm</td>
             </tr>
         </table>
         <div class="article-prize">CHF {{ (article.price_cchf / 100)| number:2 }}</div>
