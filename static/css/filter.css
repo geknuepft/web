@@ -1,5 +1,16 @@
 /*the layout of the filter*/
 
+div.filter-wrap {
+    margin: auto;
+    width: calc(100% - 60px);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+div.filter-wrap div.intro-desc {
+    padding: 0px 30px 0px 30px;
+}
+
 div.filter {
     display: flex;
     flex-direction: column;
@@ -20,22 +31,11 @@ div.filter-slider {
 }
 
 div.filter-slider div.tag {
+    position: relative;
     float: right;
-    top: -10px;
-    padding: 2px 6px 2px 6px;
-    border-radius: 3px;
-}
+    top: -9px;
 
-div.filter-slider div.selected {
-    font-weight: bold;
-    background-color: #85C1E9;
 }
-
-div.filter-slider div.tag:hover {
-    font-weight: bold;
-    background-color: #EEEEEE;
-}
-
 
 /* design the filter-list for a normal list */
 
@@ -58,6 +58,7 @@ ul.filter-list li.selected {
 }
 
 ul.filter-list li:hover {
+    cursor: pointer;
     background-color: #EEEEEE;
 }
 
@@ -93,12 +94,11 @@ ul.filter-list-color div.color-pix {
 }
 
 ul.filter-list-color div.color-pix:hover {
-    border-radius: 3px;
+    cursor: pointer;
     border: 2px solid #EEEEEE;
 }
 
 ul.filter-list-color div.selected {
-    border-radius: 3px;
     border: 2px solid #85C1E9;
 }
 
@@ -122,15 +122,11 @@ ul.filter-list-color .tooltip:hover .tooltiptext {
 /* design the button Filter zurücksetzen */
 
 div.filter-delete {
+    font-size: 90%;
     align-self: flex-end;
-    text-align: right;
+    margin-bottom: 15px;
 }
 
-div.filter-delete span {
-    padding: 2px 6px 2px 6px;
-    border-radius: 3px;
-}
-
-div.filter-delete span:hover {
+div.filter-delete button:hover {
     background-color: #F5B7B1;
 }

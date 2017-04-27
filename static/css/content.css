@@ -151,6 +151,7 @@ button {
     display: block;
     float: right;
     font-size: 100%;
+    color: #424242;
     margin: 5px 0px 5px 0px;
     padding: 3px 4px 3px 4px;
     box-shadow: none;
@@ -168,12 +169,14 @@ input:focus, textarea:focus {
 button:focus, select:focus {
     cursor: pointer;
     outline: none;
+    color: black;
     border: 1px solid black;
 }
 
 button:hover {
     cursor: pointer;
     outline: none;
+    color: black;
     border: 1px solid black;
 }
 
