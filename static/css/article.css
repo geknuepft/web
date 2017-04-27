@@ -70,7 +70,7 @@ div.detail-wrap {
     display: flex;
     flex-direction: column;
     margin: 4px 12px 4px 12px;
-    padding: 20px;
+    padding: 10px;
     border: 2px solid #EEEEEE;
 }
 
@@ -81,20 +81,32 @@ div.detail {
 }
 
 div.detail-img {
-    text-align: center;
     width: 50%;
-    padding: 10px 30px 10px 30px;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+span.detail-img-title {
+    display: block;
+    font-size: 100%;
+    padding: 10px 0px 25px 0px;
 }
 
 div.detail-img img {
-    width: 90%;
-    max-width: 600px;
-    height: auto;
+    position: relative;
+    height: 40vw;
+    max-height: 600px;
+    width: auto;
 }
 
 div.detail-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
-    padding: 10px 30px 10px 30px;
+    margin: 10px 20px 10px 20px;
+    padding: 10px 10px 10px 30px;
+    border-left: 2px solid #EEEEEE;
 }
 
 div.article-computed {
@@ -106,7 +118,7 @@ div.article-computed {
 div.article-exist {
     width: 100%;
     max-width: 400px;
-    padding-bottom: 40px;
+    padding-bottom: 5px;
 }
 
 span.detail-desc-title {
