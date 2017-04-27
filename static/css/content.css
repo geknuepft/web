@@ -127,6 +127,7 @@ div.overview span {
     font-size: 75%;
 }
 
+
 /* design the general layout of input, textarea, button and select */
 
 input, textarea, select {
@@ -164,10 +165,6 @@ button {
 input:focus, textarea:focus {
     outline: none;
     border: 1px solid black;
-}
-
-input[type=number]::-webkit-inner-spin-button {
-    opacity: 1
 }
 
 button:focus, select:focus {
@@ -229,6 +226,23 @@ button.info {
     font-family: sans-serif;
 }
 
+input.inline {
+    display: inline;
+    width: 55px;
+    margin: 0px 5px 0px 5px;
+}
+
+input.inline[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
+select.inline {
+    display: inline;
+    width: auto;
+    margin: 5px;
+}
+
+
 /* design the checkbox */
 
 input[type=checkbox] {
@@ -287,6 +301,7 @@ div.check input[type=checkbox]:checked+label:after {
     opacity: 1;
 }
 
+
 /* desgin the button at right upper edge */
 
 div.button-wrap {
@@ -314,10 +329,11 @@ div.button-wrap img {
 }
 
 div.button-wrap img:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-  opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
 }
+
 
 /* design the buttons for a imgages gallery */
 
@@ -388,6 +404,7 @@ div.gallery-button button.prev:hover::after {
     opacity: 1;
 }
 
+
 /* design value placeholder for a select */
 
 select:required:invalid {
@@ -401,6 +418,7 @@ option[value=""][disabled] {
 option {
     color: black;
 }
+
 
 /* design the tooltip */
 
@@ -474,7 +492,28 @@ table.cart td.img {
 }
 
 table.cart td.qty-button {
-    min-width: 10px;
+    min-width: 17px;
+}
+
+div.qty-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+div.qty-button button {
+    width: 14px;
+    height: 17px;
+    margin: 2px;
+    padding: 1px 1px 2px 1px;
+    border-radius: 5px;
+    font-size: 90%;
+    font-family: sans-serif;
+}
+
+div.qty-button span {
+    position: relative;
+    top: -3px;
 }
 
 table.cart td.spacer {

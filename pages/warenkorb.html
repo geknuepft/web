@@ -2,12 +2,12 @@
     <span>Warenkorb</span>
 </div>
 <div ng-if="false">
-  <div class="intro">
-      <div class="intro-desc wide center">
-          <h4>Vielen Dank für Ihre Bestellung!</h4>
-          <p>Sie erhalten demnächst eine Bestellbestätigung auf Ihre angegebene E-Mail-Adresse.</p>
-      </div>
-  </div>
+    <div class="intro">
+        <div class="intro-desc wide center">
+            <h4>Vielen Dank für Ihre Bestellung!</h4>
+            <p>Sie erhalten demnächst eine Bestellbestätigung auf Ihre angegebene E-Mail-Adresse.</p>
+        </div>
+    </div>
 </div>
 <div ng-if="true">
     <div class="intro">
@@ -26,15 +26,24 @@
             <td class="center img"><img src="http://api0.geknuepft.ch/v0/Image/150p/cma0/160523_1/IMG_3079.JPG" /></td>
             <td class="left">
                 <h4>Armband</h4>
-                <p>Länge: 15cm</p>
-                <p>Abschluss: Zopf</p>
+                <p>Länge:
+                    <input type="number" step="0.5" name="length" value="14.5" min="10" max="30" class="inline" />cm
+                </p>
+                <p>Abschluss:
+                    <select required class="inline">
+                        <option value="zopf">Zopf</option>
+                        <option value="lose">lose F&auml;den</option>
+                    </select>
+                </p>
                 <p>wird neu geknüpft, Lieferzeit: 14 Tage</p>
             </td>
             <td class="price">CHF 15.00</td>
             <td class="qty">2</td>
             <td class="qty-button">
-                <div><a>+</a></div>
-                <div><a>-</a></div>
+              <div class="qty-button">
+                <button><span>&#43;</span></button>
+                <button><span>&#45;</span></button>
+              </div>
             </td>
             <td class="price">CHF 30.00</td>
         </tr>
@@ -44,13 +53,15 @@
                 <h4>Armband</h4>
                 <p>Länge: 15cm</p>
                 <p>Abschluss: Zopf</p>
-                <p>ab Lager, Lieferzeit: 2-5 Tage</p>
+                <p>ab Lager, Lieferzeit: 3 Werktage</p>
             </td>
             <td class="price">CHF 38.00</td>
             <td class="qty">1</td>
             <td class="qty-button">
-                <div><a>+</a></div>
-                <div><a>-</a></div>
+              <div class="qty-button">
+                <button><span>&#43;</span></button>
+                <button><span>&#45;</span></button>
+              </div>
             </td>
             <td class="price">CHF 38.00</td>
         </tr>
