@@ -133,6 +133,7 @@ table.tech-data {
 }
 
 table.tech-data td {
+    text-align: left;
     padding-bottom: 5px;
 }
 

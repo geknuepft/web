@@ -216,6 +216,19 @@ select.small {
     margin: 5px 5px 5px 5px;
 }
 
+button.info {
+    display: inline;
+    float: none;
+    width: 15px;
+    height: 15px;
+    margin: 0px 5px 0px 5px;
+    padding: 1px;
+    border-radius: 10px;
+    font-size: 65%;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
 /* design the checkbox */
 
 input[type=checkbox] {
@@ -387,6 +400,32 @@ option[value=""][disabled] {
 
 option {
     color: black;
+}
+
+/* design the tooltip */
+
+div.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    top: 160%;
+    font-size: 100%;
+    color: #424242;
+    margin: 12px 0px 12px 0px;
+    padding: 3px;
+    box-shadow: none;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid #929497;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 

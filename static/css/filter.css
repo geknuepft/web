@@ -102,23 +102,6 @@ ul.filter-list-color div.selected {
     border: 2px solid #85C1E9;
 }
 
-ul.filter-list-color div.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-ul.filter-list-color .tooltip .tooltiptext {
-    visibility: hidden;
-    color: #55637D;
-    position: absolute;
-    top: 150%;
-    z-index: 1;
-}
-
-ul.filter-list-color .tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
 /* design the button Filter zurücksetzen */
 
 div.filter-delete {
