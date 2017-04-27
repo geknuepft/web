@@ -57,10 +57,23 @@ div.intro {
     margin-bottom: 30px;
 }
 
+@media (max-width : 799px) {
+    div.intro {
+        flex-direction: column;
+    }
+}
+
 div.intro-desc {
     flex: 1 1 auto;
     width: 50%;
     padding: 0px 20px 0px 20px;
+}
+
+@media (max-width: 799px) {
+    div.intro-desc {
+      width: 100%;
+      padding: 10px 20px 10px 20px;
+    }
 }
 
 div.intro img {
