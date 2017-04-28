@@ -11,8 +11,8 @@ ul.article {
 ul.article li {
     list-style: none;
     width: 150px;
-    margin: 4px 12px 4px 12px;
-    padding: 15px;
+    margin: 0.2em 0.8em 0.2em 0.8em;
+    padding: 0.9em;
     border-radius: 3px;
     border: 2px solid #FFFFFF;
     box-sizing: content-box;
@@ -26,10 +26,10 @@ ul.article li:hover {
 ul.article li.empty {
     /* because of space-between to fix the last line */
     list-style: none;
-    width: 184px;
-    height: 0px;
-    margin: 0px;
-    padding: 0px;
+    width: 181px;
+    height: 0;
+    margin: 0;
+    padding: 0;
     box-sizing: content-box;
 }
 
@@ -54,13 +54,13 @@ div.article-img {
 div.article-title {
     font-weight: bold;
     text-align: center;
-    padding: 7px 0px 7px 0px;
+    padding: 0.5em 0 0.5em 0;
 }
 
 div.article-prize {
     font-weight: bold;
     text-align: right;
-    padding-top: 7px;
+    padding-top: 0.5em;
 }
 
 
@@ -69,8 +69,8 @@ div.article-prize {
 div.detail-wrap {
     display: flex;
     flex-direction: column;
-    margin: 4px 12px 4px 12px;
-    padding: 10px;
+    margin: 0.8em;
+    padding: 0.6em;
     border: 2px solid #EEEEEE;
 }
 
@@ -83,13 +83,13 @@ div.detail {
 div.detail-img {
     width: 50%;
     text-align: center;
-    padding: 10px 0px 10px 0px;
+    padding: 0.6em 0 0.6em 0;
 }
 
 span.detail-img-title {
     display: block;
     font-size: 100%;
-    padding: 10px 0px 25px 0px;
+    padding: 0.6em 0 1.5em 0;
 }
 
 div.detail-img img {
@@ -104,37 +104,37 @@ div.detail-desc {
     flex-direction: column;
     align-items: center;
     width: 50%;
-    margin: 10px 20px 10px 20px;
-    padding: 10px 10px 10px 30px;
+    margin: 0.6em 1.2em 0.6em 1.2em;
+    padding: 0.6em 0.6em 0.6em 1.8em;
     border-left: 2px solid #EEEEEE;
 }
 
 div.article-computed {
     width: 100%;
     max-width: 500px;
-    padding-bottom: 50px;
+    padding-bottom: 3em;
 }
 
 div.article-exist {
     width: 100%;
     max-width: 500px;
-    padding-bottom: 5px;
+    padding-bottom: 0.3em;
 }
 
 span.detail-desc-title {
     display: block;
     font-size: 140%;
-    padding-bottom: 15px;
+    padding-bottom: 0.9em;
 }
 
 table.tech-data {
     width: 100%;
-    padding-bottom: 15px;
+    padding-bottom: 0.9em;
 }
 
 table.tech-data td {
     text-align: left;
-    padding-bottom: 5px;
+    padding-bottom: 0.3em;
 }
 
 table.tech-data td.article-desc {
@@ -143,5 +143,5 @@ table.tech-data td.article-desc {
 
 table.tech-data td.spacer {
     border-top: 1px solid black;
-    padding-bottom: 10px;
+    padding-bottom: 0.6em;
 }
