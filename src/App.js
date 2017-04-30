@@ -8,6 +8,7 @@ import Herstellung from './Herstellung';
 import Materialien from './Materialien';
 import Markttage from './Markttage';
 import Kontakt from './Kontakt';
+import Warenkorb from './Warenkorb';
 import Agb from './Agb';
 import Impressum from './Impressum';
 
@@ -26,9 +27,7 @@ class App extends Component {
                         <NavigationElement name="Kontakt"/>
                     </Navigation>
                     <div id="cart">
-                        <ul className="navigation">
-                            <li><a >Warenkorb<span>(leer)</span></a></li>
-                        </ul>
+                        <NavigationElement name="Warenkorb"/>
                     </div>
                 </div>
                 <div id="line">
@@ -39,6 +38,7 @@ class App extends Component {
                     <Route path='/Materialien' component={Materialien}/>
                     <Route path='/Markttage' component={Markttage}/>
                     <Route path='/Kontakt' component={Kontakt}/>
+                    <Route path='/Kontakt' component={Warenkorb}/>
                     <Route path='/AGB' component={Agb}/>
                     <Route path='/Impressum' component={Impressum}/>
                 </div>
