@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import './App.css';
-import {Navigation, NavigationElement} from './Navigation'
-import {Route} from 'react-router-dom'
-import logo from './logo.png'
-import Herstellung from './Herstellung'
-import Markttage from './Markttage'
-import Kontakt from './Kontakt'
-import Agb from './Agb'
+import {Navigation, NavigationElement} from './Navigation';
+import {Route} from 'react-router-dom';
+import logo from './logo.png';
+import Herstellung from './Herstellung';
+import Materialien from './Materialien';
+import Markttage from './Markttage';
+import Kontakt from './Kontakt';
+import Agb from './Agb';
+import Impressum from './Impressum';
 
 class App extends Component {
     render() {
@@ -18,7 +20,7 @@ class App extends Component {
                         <NavigationElement name="Home"/>
                         <NavigationElement name="Artikel"/>
                         <NavigationElement name="Herstellung"/>
-                        <NavigationElement name="Materialen"/>
+                        <NavigationElement name="Materialien"/>
                         <NavigationElement name="Markttage"/>
                         <NavigationElement name="Kontakt"/>
                     </Navigation>
@@ -31,10 +33,12 @@ class App extends Component {
                 <div id="line">
                 </div>
                 <div id="main">
-                    <Route path='/Markttage' component={Markttage}/>
                     <Route path='/Herstellung' component={Herstellung}/>
+                    <Route path='/Materialien' component={Materialien}/>
+                    <Route path='/Markttage' component={Markttage}/>
                     <Route path='/Kontakt' component={Kontakt}/>
                     <Route path='/AGB' component={Agb}/>
+                    <Route path='/Impressum' component={Impressum}/>
                 </div>
                 <div id="line">
                 </div>

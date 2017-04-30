@@ -1,25 +1,7 @@
 import React from 'react';
-import Page from './Page'
-import {Navigation, NavigationElement} from './Navigation'
-import {Route} from 'react-router-dom'
-
-const Herstellung = () => (
-    <Page
-        title="Herstellung"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head_herstellung3.jpg"
-        navigation={
-            <Navigation>
-                <NavigationElement pathPrefix="/Herstellung/" name="Armband" title="Ein Armband entsteht"/>
-                <NavigationElement pathPrefix="/Herstellung/" name="Abschlüsse"/>
-                <NavigationElement pathPrefix="/Herstellung/" name="Länge"/>
-            </Navigation>
-        }>
-        <Route exact path="/Herstellung" component={HerstellungDefault}/>
-        <Route path="/Herstellung/Armband" component={HerstellungArmband}/>
-        <Route path="/Herstellung/Abschlüsse" component={HerstellungAbschluesse}/>
-        <Route path="/Herstellung/Länge" component={HerstellungLaenge}/>
-    </Page>
-);
+import Page from './Page';
+import {Navigation, NavigationElement} from './Navigation';
+import {Route} from 'react-router-dom';
 
 const HerstellungDefault = () => (
     <div className="intro">
@@ -146,6 +128,24 @@ const HerstellungAbschluesse = () => (
 
 const HerstellungLaenge = () => (
     <h4>Länge</h4>
+);
+
+const Herstellung = () => (
+    <Page
+        title="Herstellung"
+        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head_herstellung3.jpg"
+        navigation={
+            <Navigation>
+                <NavigationElement pathPrefix="/Herstellung/" name="Armband" title="Ein Armband entsteht"/>
+                <NavigationElement pathPrefix="/Herstellung/" name="Abschlüsse"/>
+                <NavigationElement pathPrefix="/Herstellung/" name="Länge"/>
+            </Navigation>
+        }>
+        <Route exact path="/Herstellung" component={HerstellungDefault}/>
+        <Route path="/Herstellung/Armband" component={HerstellungArmband}/>
+        <Route path="/Herstellung/Abschlüsse" component={HerstellungAbschluesse}/>
+        <Route path="/Herstellung/Länge" component={HerstellungLaenge}/>
+    </Page>
 );
 
 export default Herstellung;
