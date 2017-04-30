@@ -14,7 +14,7 @@ ul.nav span {
     font-size: 80%;
 }
 
-ul.nav-footer li {
+div.footer ul.nav li {
     margin-right: 0;
     margin-left: 3ex;
     padding: 0.4em 0 0.4em 0.6em;

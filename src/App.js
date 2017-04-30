@@ -1,16 +1,21 @@
 import React, {Component} from 'react';
 import './App.css';
-import Navigation from './Navigation'
+import {Navigation, NavigationElement} from './Navigation'
 
 class App extends Component {
     render() {
         return (
             <div id="page">
                 <div id="header">
-                    <div id="logo">
-                        <img alt="gekn&uuml;pft.ch" src="static/pictures/logo.png"/>
-                    </div>
-                    <Navigation />
+                    <Logo/>
+                    <Navigation>
+                        <NavigationElement name="Home"/>
+                        <NavigationElement name="Artikel"/>
+                        <NavigationElement name="Herstellung"/>
+                        <NavigationElement name="Materialen"/>
+                        <NavigationElement name="Markttage"/>
+                        <NavigationElement name="Kontakt"/>
+                    </Navigation>
                     <div id="cart">
                         <ul className="nav">
                             <li><a >Warenkorb<span>(leer)</span></a></li>
@@ -24,11 +29,21 @@ class App extends Component {
                 <div id="line">
                 </div>
                 <div id="footer">
-                    <ul className="nav nav-footer">
-                        <li><a >AGB</a></li>
-                        <li><a >Impressum</a></li>
-                    </ul>
+                    <Navigation>
+                        <NavigationElement name="AGB"/>
+                        <NavigationElement name="Impressum"/>
+                    </Navigation>
                 </div>
+            </div>
+        );
+    }
+}
+
+class Logo extends Component {
+    render() {
+        return (
+            <div id="logo">
+                <img alt="gekn&uuml;pft.ch" src="static/pictures/logo.png"/>
             </div>
         );
     }
