@@ -5,8 +5,7 @@ const Markttage = () => (
     <Page
         title="Markttage"
         headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head_markt.jpg"
-        >
-    <div>
+    >
         <div className="intro">
             <div className="intro-desc">
                 <p>Unsere handgefertigkten Artikel pr&auml;sentieren wir regelm&auml;ssig an verschiedenen M&auml;rkten
@@ -73,8 +72,7 @@ const Markttage = () => (
                 <img src="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg" alt="Marktstand"/>
             </div>
         </div>
-    </div>
-</Page>
+    </Page>
 );
 
 export default Markttage;

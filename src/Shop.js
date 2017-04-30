@@ -176,7 +176,7 @@ const ShopArmbaender = () => (
         </div>
         <div className="detail-wrap">
             <div className="button-wrap">
-                <button type="submit" className="close"><img src="pictures/verkleinern.svg" /></button>
+                <button type="submit" className="close"><img src="pictures/verkleinern.svg" alt="verkleinern" /></button>
             </div>
             <div className="detail">
                 <div className="detail-img">
@@ -189,7 +189,7 @@ const ShopArmbaender = () => (
                         </div>
                     </div>
                     <span className="detail-img-title">Nahaufnahme</span>
-                    <img src="http://api0.geknuepft.ch/v0/Image/600p/cma0/161116_4/IMG_4080.JPG">
+                    <img src="http://api0.geknuepft.ch/v0/Image/600p/cma0/161116_4/IMG_4080.JPG" alt="Artikel">
                     </img>
                 </div>
                 <div className="detail-desc">
@@ -246,7 +246,7 @@ const ShopArmbaender = () => (
                                 <td className="article-desc">14 Tage</td>
                             </tr>
                             <tr>
-                                <td className="spacer" colspan="2"></td>
+                                <td className="spacer" colSpan={2}/>
                             </tr>
                             <tr>
                                 <td>Preis</td>
@@ -272,7 +272,7 @@ const ShopArmbaender = () => (
                                 <td className="article-desc">3 Werktage</td>
                             </tr>
                             <tr>
-                                <td className="spacer" colspan="2"></td>
+                                <td className="spacer" colSpan={2}/>
                             </tr>
                             <tr>
                                 <td>Preis</td>
@@ -303,14 +303,14 @@ const ShopArmbaender = () => (
                 </table>
                 <div className="article-prize">CHF 16.00</div>
             </li>
-            <li className="empty"></li>
-            <li className="empty"></li>
-            <li className="empty"></li>
-            <li className="empty"></li>
-            <li className="empty"></li>
-            <li className="empty"></li>
-            <li className="empty"></li>
-            <li className="empty"></li>
+            <li className="empty"/>
+            <li className="empty"/>
+            <li className="empty"/>
+            <li className="empty"/>
+            <li className="empty"/>
+            <li className="empty"/>
+            <li className="empty"/>
+            <li className="empty"/>
         </ul>
     </div>
 );

@@ -38,7 +38,7 @@ class App extends Component {
                     <Route path='/Materialien' component={Materialien}/>
                     <Route path='/Markttage' component={Markttage}/>
                     <Route path='/Kontakt' component={Kontakt}/>
-                    <Route path='/Kontakt' component={Warenkorb}/>
+                    <Route path='/Warenkorb' component={Warenkorb}/>
                     <Route path='/AGB' component={Agb}/>
                     <Route path='/Impressum' component={Impressum}/>
                 </div>
