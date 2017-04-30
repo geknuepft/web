@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Navigation.css';
+import {Link} from 'react-router-dom'
 
 class Navigation extends Component {
     render() {
@@ -14,7 +15,7 @@ class Navigation extends Component {
 }
 
 const NavigationElement = (props) => (
-    <li><a>{ props.name }</a></li>
+    <li><Link to={props.name}>{ props.name }</Link></li>
 );
 
 export {Navigation, NavigationElement};

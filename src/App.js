@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Navigation, NavigationElement} from './Navigation'
+import Agb from './Agb'
+import Kontakt from './Kontakt'
+import {Route} from 'react-router-dom'
 
 class App extends Component {
     render() {
@@ -25,6 +28,8 @@ class App extends Component {
                 <div id="line">
                 </div>
                 <div id="main">
+                    <Route path='/AGB' component={Agb}/>
+                    <Route path='/Kontakt' component={Kontakt}/>
                 </div>
                 <div id="line">
                 </div>
