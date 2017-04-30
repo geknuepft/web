@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Navigation, NavigationElement} from './Navigation'
-import Agb from './Agb'
-import Kontakt from './Kontakt'
-import Herstellung from './Herstellung'
 import {Route} from 'react-router-dom'
 import logo from './logo.png'
+import Herstellung from './Herstellung'
+import Markttage from './Markttage'
+import Kontakt from './Kontakt'
+import Agb from './Agb'
 
 class App extends Component {
     render() {
@@ -30,9 +31,10 @@ class App extends Component {
                 <div id="line">
                 </div>
                 <div id="main">
+                    <Route path='/Markttage' component={Markttage}/>
                     <Route path='/Herstellung' component={Herstellung}/>
-                    <Route path='/AGB' component={Agb}/>
                     <Route path='/Kontakt' component={Kontakt}/>
+                    <Route path='/AGB' component={Agb}/>
                 </div>
                 <div id="line">
                 </div>
