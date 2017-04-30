@@ -1,13 +1,15 @@
 import React from 'react';
-
-const headStyle = {
-    backgroundImage: "url(http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg)"
-};
+import Page from './Page'
 
 const Agb = () => (
-    <div className="head" style={ headStyle }>
-        <span>Allgemeine Geschäftsbedingungen</span>
-    </div>
+    <Page
+        title="Allgemeine Geschäftsbedingungen"
+        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg"
+    >
+        <p>
+            Hier kommen die AGBs rein.
+        </p>
+    </Page>
 );
 
 export default Agb;

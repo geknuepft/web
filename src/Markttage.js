@@ -75,7 +75,6 @@ const Markttage = () => (
         </div>
     </div>
 </Page>
-)
-;
+);
 
 export default Markttage;
