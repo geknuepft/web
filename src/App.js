@@ -3,6 +3,7 @@ import './App.css';
 import {Navigation, NavigationElement} from './Navigation'
 import Agb from './Agb'
 import Kontakt from './Kontakt'
+import Herstellung from './Herstellung'
 import {Route} from 'react-router-dom'
 
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
                         <NavigationElement name="Kontakt"/>
                     </Navigation>
                     <div id="cart">
-                        <ul className="nav">
+                        <ul className="navigation">
                             <li><a >Warenkorb<span>(leer)</span></a></li>
                         </ul>
                     </div>
@@ -28,6 +29,7 @@ class App extends Component {
                 <div id="line">
                 </div>
                 <div id="main">
+                    <Route path='/Herstellung' component={Herstellung}/>
                     <Route path='/AGB' component={Agb}/>
                     <Route path='/Kontakt' component={Kontakt}/>
                 </div>
