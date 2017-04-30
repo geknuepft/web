@@ -1,21 +1,38 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navigation from './Navigation'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div id="page">
+                <div id="header">
+                    <div id="logo">
+                        <img alt="gekn&uuml;pft.ch" src="static/pictures/logo.png"/>
+                    </div>
+                    <Navigation />
+                    <div id="cart">
+                        <ul className="nav">
+                            <li><a >Warenkorb<span>(leer)</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="line">
+                </div>
+                <div id="main">
+                </div>
+                <div id="line">
+                </div>
+                <div id="footer">
+                    <ul className="nav nav-footer">
+                        <li><a >AGB</a></li>
+                        <li><a >Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;

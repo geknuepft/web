@@ -9,7 +9,7 @@
 
   <!-- include custom css -->
   <link rel="stylesheet" type="text/css" href="static/css/layout.css">
-  <link rel="stylesheet" type="text/css" href="static/css/nav.css">
+  <link rel="stylesheet" type="text/css" href="src/Navigation.css">
   <link rel="stylesheet" type="text/css" href="static/css/content.css">
   <link rel="stylesheet" type="text/css" href="static/css/filter.css">
   <link rel="stylesheet" type="text/css" href="static/css/article.css">
@@ -25,41 +25,7 @@
 </head>
 
 <body ng-app="myApp">
-    <div id=page>
-        <div id="header">
-            <div id="logo">
-                <img alt="gekn&uuml;pft.ch" src="static/pictures/logo.png" />
-            </div>
-            <div id="menu" ng-controller="navMain">
-                <ul class="nav">
-                    <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
-                    <li><a ui-sref="artikel.default" ui-sref-active="active">Artikel</a></li>
-                    <li><a ui-sref="herstellung.default" ui-sref-active="active">Herstellung</a></li>
-                    <li><a ui-sref="material.default" ui-sref-active="active">Materialen</a></li>
-                    <li><a ui-sref="markttage" ui-sref-active="active">Markttage</a></li>
-                    <li><a ui-sref="kontakt" ui-sref-active="active">Kontakt</a></li>
-                </ul>
-            </div>
-            <div id="cart">
-                <ul class="nav">
-                    <li><a ui-sref="warenkorb" ui-sref-active="active">Warenkorb<span>(leer)</span></a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="line">
-        </div>
-        <div id="main">
-            <ui-view></ui-view>
-        </div>
-        <div id="line">
-        </div>
-        <div id="footer">
-            <ul class="nav nav-footer">
-                <li><a ui-sref="agb" ui-sref-active="active">AGB</a></li>
-                <li><a ui-sref="impressum" ui-sref-active="active">Impressum</a></li>
-            </ul>
-        </div>
-    </div>
+
 </body>
 
 </html>
