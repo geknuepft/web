@@ -5,6 +5,7 @@ import Agb from './Agb'
 import Kontakt from './Kontakt'
 import Herstellung from './Herstellung'
 import {Route} from 'react-router-dom'
+import logo from './logo.png'
 
 class App extends Component {
     render() {
@@ -46,14 +47,10 @@ class App extends Component {
     }
 }
 
-class Logo extends Component {
-    render() {
-        return (
-            <div id="logo">
-                <img alt="gekn&uuml;pft.ch" src="static/pictures/logo.png"/>
-            </div>
-        );
-    }
-}
+const Logo = () => (
+    <div id="logo">
+        <img src={logo} alt="geknüpft.ch"/>
+    </div>
+);
 
 export default App;
