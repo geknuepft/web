@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Navigation.css';
-import {Link} from 'react-router-dom'
+import {Link, Route} from 'react-router-dom'
 
 const Navigation = (props) => (
     <div className="navigation">
@@ -10,17 +10,23 @@ const Navigation = (props) => (
     </div>
 );
 
-const NavigationElement = (props) => {
-    const to = (props.pathPrefix ? props.pathPrefix : '/')
-        + props.name;
+class NavigationElement extends Component {
+    render() {
+        const to = (this.props.pathPrefix ? this.props.pathPrefix : '/')
+            + this.props.name;
 
-    return (
-        <li>
-            <Link to={ to }>
-                { props.title ? props.title : props.name }
-            </Link>
-        </li>
-    );
-};
+        return (
+            <li>
+                <Route path={to} children={
+                    ({match}) => (
+                        <Link to={to} className={this.props.className + match ? ' active' : ''}>
+                            { this.props.title ? this.props.title : this.props.name }
+                        </Link>
+                    )
+                }/>
+            </li>
+        );
+    };
+}
 
 export {Navigation, NavigationElement};
