@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from './Page'
+import './Warenkorb.css';
 import {Link} from 'react-router-dom';
 
 const Warenkorb = () => (

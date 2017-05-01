@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from './Page';
+import './Shop.css';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route, Link} from 'react-router-dom';
 
