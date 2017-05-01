@@ -16,26 +16,27 @@ div.head {
 div.head span {
     font-size: 250%;
     padding-left: 2%;
-    padding-bottom: 0.6em;
+    padding-bottom: 0.4em;
     color: #FFFFFF;
     text-shadow: 2px 2px 0.6em #424242;
 }
 
-div.head ul {
+div.head div.navigation ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     list-style: none;
-    font-size: 120%;
     background: rgba(255, 255, 255); /* Fall-back for browsers that don't support rgba */
     background: rgba(255, 255, 255, 0.7);
 }
 
-div.head li {
+div.head div.navigation li {
     align-items: center;
+    margin: 0;
     padding: 0.3em 2% 0.3em 2%;
     border-right: 1px solid #F0E1DC;
+    border-radius: 0;
     white-space: nowrap;
 }
 

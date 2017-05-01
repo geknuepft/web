@@ -87,7 +87,7 @@ const MaterialienPerlen = () => (
 const Materialien = () => (
     <Page
         title="Materialien"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/markttage.jpg"
+        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg"
         navigation={
             <Navigation>
                 <NavigationElement pathPrefix="/Materialien/" name="Garne"/>
