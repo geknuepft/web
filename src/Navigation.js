@@ -3,8 +3,8 @@ import './Navigation.css';
 import {Link} from 'react-router-dom'
 
 const Navigation = (props) => (
-    <div id="navigation">
-        <ul className="navigation">
+    <div className="navigation">
+        <ul>
             { props.children }
         </ul>
     </div>

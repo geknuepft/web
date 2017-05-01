@@ -1,6 +1,8 @@
-/* the layout of the header and footer navigations */
+div.navigation {
+    width: 100%;
+}
 
-ul.navigation li {
+div.navigation li {
     float: left;
     list-style: none;
     margin-right: 0.4em;
@@ -9,7 +11,7 @@ ul.navigation li {
     border-radius: 0.5em;
 }
 
-ul.navigation span {
+div.navigation span {
     display: block;
     font-size: 80%;
 }

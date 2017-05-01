@@ -18,16 +18,20 @@ class App extends Component {
             <div id="page">
                 <div id="header">
                     <Logo/>
-                    <Navigation>
-                        <NavigationElement name="Home"/>
-                        <NavigationElement name="Shop"/>
-                        <NavigationElement name="Herstellung"/>
-                        <NavigationElement name="Materialien"/>
-                        <NavigationElement name="Markttage"/>
-                        <NavigationElement name="Kontakt"/>
-                    </Navigation>
+                    <div id="navigation-main">
+                        <Navigation>
+                            <NavigationElement name="Home"/>
+                            <NavigationElement name="Shop"/>
+                            <NavigationElement name="Herstellung"/>
+                            <NavigationElement name="Materialien"/>
+                            <NavigationElement name="Markttage"/>
+                            <NavigationElement name="Kontakt"/>
+                        </Navigation>
+                    </div>
                     <div id="cart">
-                        <NavigationElement name="Warenkorb"/>
+                        <Navigation>
+                            <NavigationElement name="Warenkorb"/>
+                        </Navigation>
                     </div>
                 </div>
                 <div id="line">
@@ -51,14 +55,14 @@ class App extends Component {
                     </Navigation>
                 </div>
             </div>
-        );
+    );
     }
-}
+    }
 
-const Logo = () => (
-    <div id="logo">
-        <img src={logo} alt="geknüpft.ch"/>
-    </div>
-);
+    const Logo = () => (
+        <div id="logo">
+            <img src={logo} alt="geknüpft.ch"/>
+        </div>
+    );
 
-export default App;
+    export default App;
