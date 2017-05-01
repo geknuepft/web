@@ -5,7 +5,7 @@ import verkleinern from './verkleinern.svg';
 const Specifics = () => (
     <div className="detail-wrap">
         <div className="button-wrap">
-            <button type="submit" className="close"><img src={verkleinern.svg} alt="verkleinern"/></button>
+            <button type="submit" className="close"><img src={verkleinern} alt="verkleinern"/></button>
         </div>
         <div className="detail">
             <div className="detail-img">
