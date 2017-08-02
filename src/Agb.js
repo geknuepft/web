@@ -29,8 +29,9 @@ const Agb = () => (
                         vorbehalten. Unsere Angebote sind freibleibend.
                     </p>
                     <h3>Zahlung per Vorauskasse</h3>
-                    <p> Sie bezahlen nach Erhalt der Bestellbestätigung und der Rechnung auf das von uns angegebene
-                        Konto per E-Banking.
+                    <p> Sie bezahlen nach Erhalt der Bestellbestätigung und der Rechnung per E-Mail auf das von uns
+                        angegebene
+                        Konto per Onlineüberweisung.
                     </p>
                     <p> Möchten Sie mit einem Einzahlungsschein am Schalter einzahlen, senden wir Ihnen diesen zu gegen
                         eine zusätzliche Gebühr von 3.- Franken (1.- Franken Porto, 2.- Franken Einzahlungsgebühr).
@@ -62,7 +63,7 @@ const Agb = () => (
                     <p> Der Versand ins Ausland ist auf Anfrage möglich.
                     </p>
                     <h3>Eigentumsvorbehalt</h3>
-                    <p>Die gelieferte Ware bleibt bis zu deren Bezahlung im Eigentum von geknüpft.ch.
+                    <p>Bis zur vollständingen Zahlung des Kaufpreises bleiben alle Produkte im Eigentum von geknüpft.ch.
                     </p>
                     <h3>Mindestbestellmenge</h3>
                     <p>Es gibt keine Mindestbestellmenge.
@@ -90,13 +91,12 @@ const Agb = () => (
                         geändert werden. Die Änderungen gelten nicht für bereits getätigte Bestellungen.
                     </p>
                     <h3>Gerichtsstand</h3>
-                    <p>Gerichtsstand ist 8304 Wallisellen.
+                    <p>Gerichtsstand ist 8304 Wallisellen. Es gilt Schweizer Recht.
                     </p>
                     <h3>Schlussbestimmung</h3>
                     <p>Sollte eine Bestimmung dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen
-                        unberührt. Für
-                        Streitigkeiten die über diese AGB hinausgehen, findet das Schweizerische Obligationenrecht
-                        Anwendung.
+                        unberührt. Für Streitigkeiten die über diese AGB hinausgehen, findet das Schweizerische
+                        Obligationenrecht Anwendung.
                     </p>
                 </div>
             </div>

@@ -14,12 +14,13 @@ const Kontakt = () => (
                                               target="_top">info@geknüpft.ch</a></span></p>
             </div>
             <div className="intro-desc">
-                <p>Gerne nehmen wir Ihre ganz pers&ouml;nlichen W&uuml;nsche entgegen. Schreiben Sie uns eine E-Mail
-                    auf
-                    <a href="mailto:info@gekn&uuml;pft.ch?Subject=info@gekn&uuml;pft.ch"
-                       target="_top">info@gekn&uuml;
-                        pft.ch</a> oder nehmen Sie &uuml;ber das Formular
-                    mit uns Kontakt auf. Wir antworten Ihnen so rasch wie m&ouml;glich.</p>
+                <p>Gerne nehmen wir Ihre ganz pers&ouml;nlichen W&uuml;nsche entgegen.</p>
+                <p>Schreiben Sie uns eine E-Mail auf <a
+                    href="mailto:info@gekn&uuml;pft.ch?Subject=info@gekn&uuml;pft.ch"
+                    target="_top">info@geknüft.ch
+                </a> oder nehmen Sie &uuml;ber das Formular mit uns Kontakt auf.
+                    Wir antworten Ihnen so rasch wie m&ouml;glich.
+                </p>
             </div>
         </div>
         <div className="intro">
