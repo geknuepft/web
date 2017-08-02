@@ -104,7 +104,7 @@ const HerstellungLaenge = () => (
 const Herstellung = () => (
     <Page
         title="Herstellung"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/x.jpg"
+        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head_herstellung.jpg"
         navigation={
             <Navigation>
                 <NavigationElement pathPrefix="/Herstellung/" name="Armband" title="Ein Armband entsteht"/>

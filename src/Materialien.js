@@ -19,13 +19,13 @@ const MaterialienDefault = () => (
         </div>
         <div className="intro">
             <div className="intro-desc overview">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg" alt="Marktstand"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/garn.jpg" alt="Garn"/>
                 <div className="overview-text">
                     <Link to="/Materialien/Garne"><br/>Garne</Link>
                 </div>
             </div>
             <div className="intro-desc overview">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg" alt="Marktstand"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/perlen.jpg" alt="Perlen"/>
                 <div className="overview-text">
                     <Link to="/Materialien/Perlen"><br/>Perlen</Link>
                 </div>
@@ -61,7 +61,7 @@ const MaterialienGarne = () => (
                     da sich die einzelnen Zwirngarne gerne voneinander trennen. </p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg" alt="Muster"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/garn.jpg" alt="Garn"/>
             </div>
         </div>
         <div className="intro">
@@ -74,20 +74,57 @@ const MaterialienGarne = () => (
                     Bernetta.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg" alt="Marktstand"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/garn.jpg" alt="Garn"/>
             </div>
         </div>
     </div>
 );
 
 const MaterialienPerlen = () => (
-    <h4>Hier kommen die Perlen</h4>
+    <div>
+        <div className="intro">
+            <div className="intro-desc">
+                <p>Perlnen blabla.</p>
+            </div>
+            <div className="intro-desc">
+                <p></p>
+            </div>
+        </div>
+        <div className="intro">
+            <div className="intro-desc">
+                <h2>Das dickere Garn</h2>
+                <p>Unser hauptsächlich verwendetes Garn ist das Catania von Schachenmayr. Es ist in über 75 Farben
+                    erhältlich und uns gefällt seine Art, wie es in der Hand liegt und sich knüpfen lässt. Die Knoten
+                    werden fest und gerade. Gut kombinieren lässt es
+                    sich mit dem Capri von Katia und dem Quattro von Langyarns, welche die Farbpalette bereichern. Mehr
+                    Glanz bietet das Golf-Garn von Langyarns. Es ist noch etwas edler und leuchtet stark, dafür ist das
+                    Knüpfen mit ihm nicht ganz so einfach,
+                    da sich die einzelnen Zwirngarne gerne voneinander trennen. </p>
+            </div>
+            <div className="intro-desc">
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/garn.jpg" alt="Garn"/>
+            </div>
+        </div>
+        <div className="intro">
+            <div className="intro-desc">
+                <h2>Das feinere Garn</h2>
+                <p>Angefangen hat unsere Geschichte des Knüpfens aber mit dem Schulgarn von Langyarns. Dieses Garn ist
+                    relativ dünn und nicht ganz so fest, wie die andern beschriebenen Garne. Dafür werden die genküpften
+                    Muster feiner und die Armbänder dünner. Das
+                    Schulgarn von Langyarns kombinieren wir mit dem Catania fine von Schachenmayr und dem Schulgarn
+                    Bernetta.</p>
+            </div>
+            <div className="intro-desc">
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/garn.jpg" alt="Garn"/>
+            </div>
+        </div>
+    </div>
 );
 
 const Materialien = () => (
     <Page
         title="Materialien"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg"
+        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head_material.jpg"
         navigation={
             <Navigation>
                 <NavigationElement pathPrefix="/Materialien/" name="Garne"/>
