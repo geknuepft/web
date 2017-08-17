@@ -4,7 +4,7 @@ import Page from './Page'
 const Kontakt = () => (
     <Page
         title="Kontakt"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/coll.jpg"
+        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/artikel_2.jpg"
     >
         <div className="intro">
             <div className="intro-desc">
