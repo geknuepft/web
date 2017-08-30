@@ -50,13 +50,11 @@ const ShopDefault = () => (
             </div>
         </div>
         <div className="intro">
-            <div className="intro-desc">
+            <div className="intro-desc wide">
                 <p>Finden sie hier unsere neusten Kollektionen auf einen Blick. Klicken Sie auf jene Farbkombination,
                     die Ihnen am Besten gefällt, und sie gelangen direkt zu allen Artikel, die es mit diesen Farben
                     gibt.
                 </p>
-            </div>
-            <div className="intro-desc">
             </div>
         </div>
         <div className="intro">
@@ -67,11 +65,11 @@ const ShopDefault = () => (
                     <Link to="/Shop/Armbänder"><span>Unsere neuste Kollektion:</span><br/>Türkisblauer Sandstrand</Link>
                 </div>
             </div>
-        </div>
-        <div className="intro-desc overview">
-            <img src={config.get('apiUrl') + 'Image/800p/content/overview/coll_15.jpg'} alt="schwarzweiss"/>
-            <div className="overview-text">
-                <Link to="/Shop/Armbänder"><br/>schwarz-weiss</Link>
+            <div className="intro-desc overview">
+                <img src={config.get('apiUrl') + 'Image/800p/content/overview/coll_15.jpg'} alt="schwarzweiss"/>
+                <div className="overview-text">
+                    <Link to="/Shop/Armbänder"><br/>schwarz-weiss</Link>
+                </div>
             </div>
         </div>
         <div className="intro">
