@@ -4,7 +4,7 @@ import Page from './Page'
 const Agb = () => (
     <Page
         title="Allgemeine Geschäftsbedingungen"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg"
+        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head/artikel_13.jpg"
     >
         <div>
             <div className="intro">

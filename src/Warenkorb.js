@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const Warenkorb = () => (
     <Page
         title="Warenkorb"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg"
+        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head/artikel_19.jpg"
     >
         <div className="intro">
             <div className="intro-desc wide center">
@@ -171,7 +171,7 @@ const Warenkorb = () => (
                         <input type="checkbox" value="None" id="check" name="check"/>
                         <label htmlFor="check"/>
                     </div>
-                    <p>Ich habe die <Link to="/Agb">Allgemeinen Gesch&auml;ftsbedingungen</Link> gelesen und bin
+                    <p>Ich habe die <Link to="/Agb">Allgemeinen Geschäftsbedingungen</Link> gelesen und bin
                         damit
                         einverstanden.</p>
                 </div>

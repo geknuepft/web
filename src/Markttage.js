@@ -4,7 +4,7 @@ import Page from './Page'
 const Markttage = () => (
     <Page
         title="Markttage"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head_markt.jpg"
+        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head/artikel_7.jpg"
     >
         <div className="intro">
             <div className="intro-desc">
@@ -19,7 +19,7 @@ const Markttage = () => (
             </div>
             <div className="intro-desc">
                 <p>Das Wetter macht leider nicht immer mit. Spätestens am Vorabend jedes Marktes entscheiden wir, ob es
-                    genügend trocken ist, um am Markt teilzunehmen und schalten dies auf hier auf.</p>
+                    genügend trocken ist, um am Markt teilzunehmen und schalten dies hier auf.</p>
             </div>
         </div>
         <div className="intro">
@@ -28,7 +28,7 @@ const Markttage = () => (
                 <table>
                     <tr>
                         <th>Datum:</th>
-                        <td>22. April 2017</td>
+                        <td>15. September 2017</td>
                     </tr>
                     <tr>
                         <th>Zeit:</th>
@@ -44,20 +44,20 @@ const Markttage = () => (
                     selbst hergestellen Produkte.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg" alt="Marktstand"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/khw.jpg" alt="Marktstand Winterthur"/>
             </div>
         </div>
         <div className="intro">
             <div className="intro-desc">
-                <h2>Fr&uuml;hlingsmarkt Wallisellen</h2>
+                <h2>Riedenermarkt Wallisellen</h2>
                 <table>
                     <tr>
                         <th>Datum:</th>
-                        <th>13. Mai 2017</th>
+                        <th>30. September 2017</th>
                     </tr>
                     <tr>
                         <th>Zeit:</th>
-                        <td>9 Uhr bis 16 Uhr</td>
+                        <td>10 Uhr bis 17 Uhr</td>
                     </tr>
                     <tr>
                         <th>Ort:</th>
@@ -69,7 +69,30 @@ const Markttage = () => (
                     Bahnhofstrasse.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/marktstand.jpg" alt="Marktstand"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/wallisellen.jpg" alt="Marktstand Wallisellen"/>
+            </div>
+        </div>
+        <div className="intro">
+            <div className="intro-desc">
+                <h2>Kunst- und Handwerkermarkt Winterthur</h2>
+                <table>
+                    <tr>
+                        <th>Datum:</th>
+                        <th>30. Oktober 2017</th>
+                    </tr>
+                    <tr>
+                        <th>Zeit:</th>
+                        <td>9 Uhr bis 16 Uhr</td>
+                    </tr>
+                    <tr>
+                        <th>Ort:</th>
+                        <td><a href="http://map.search.ch/d/zdkodrmzd" target="_blank">Winterthur, im Neumarkt (s.
+                            Karte)</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div className="intro-desc">
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/khw_winter.jpg" alt="Marktstand Winterthur im Winter"/>
             </div>
         </div>
     </Page>

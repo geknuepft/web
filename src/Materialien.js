@@ -19,13 +19,13 @@ const MaterialienDefault = () => (
         </div>
         <div className="intro">
             <div className="intro-desc overview">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/garn.jpg" alt="Garn"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/overview/garn.jpg" alt="Garn"/>
                 <div className="overview-text">
                     <Link to="/Materialien/Garne"><br/>Garne</Link>
                 </div>
             </div>
             <div className="intro-desc overview">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/perlen.jpg" alt="Perlen"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/overview/perlen.jpg" alt="Perlen"/>
                 <div className="overview-text">
                     <Link to="/Materialien/Perlen"><br/>Perlen</Link>
                 </div>
@@ -41,8 +41,8 @@ const MaterialienGarne = () => (
                 <p>Die Garne, welche wir zum Knüpfen verwenden, bestehen aus reiner Baumwolle, welche nach der
                     Verzwirnung merceriert wurde. Die Merzerisation ist ein Veredelungsverfahren, welches die Struktur
                     der Baumwollfasern verändert und so zu einer höheren
-                    Festigkeit, mehr Glanz und einer besseren Färbbarkeit führt. Ausserdem ist Baumwolle sehr
-                    hautfreundlich.</p>
+                    Festigkeit, mehr Glanz und einer besseren Färbbarkeit führt.
+                </p>
             </div>
             <div className="intro-desc">
                 <p>Baumwolle ist sehr hautfreundlich. Anfänglich noch etwas steif, wird es mit längerem Tragen weicher
@@ -56,12 +56,13 @@ const MaterialienGarne = () => (
                     erhältlich und uns gefällt seine Art, wie es in der Hand liegt und sich knüpfen lässt. Die Knoten
                     werden fest und gerade. Gut kombinieren lässt es
                     sich mit dem Capri von Katia und dem Quattro von Langyarns, welche die Farbpalette bereichern. Mehr
-                    Glanz bietet das Golf-Garn von Langyarns. Es ist noch etwas edler und leuchtet stark, dafür ist das
+                    Glanz bietet das Golf-Garn von Langyarns. Es ist noch etwas edler und leuchtet stärker, dafür ist
+                    das
                     Knüpfen mit ihm nicht ganz so einfach,
                     da sich die einzelnen Zwirngarne gerne voneinander trennen. </p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/garn.jpg" alt="Garn"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/garn.jpg" alt="Garn"/>
             </div>
         </div>
         <div className="intro">
@@ -69,12 +70,12 @@ const MaterialienGarne = () => (
                 <h2>Das feinere Garn</h2>
                 <p>Angefangen hat unsere Geschichte des Knüpfens aber mit dem Schulgarn von Langyarns. Dieses Garn ist
                     relativ dünn und nicht ganz so fest, wie die andern beschriebenen Garne. Dafür werden die genküpften
-                    Muster feiner und die Armbänder dünner. Das
-                    Schulgarn von Langyarns kombinieren wir mit dem Catania fine von Schachenmayr und dem Schulgarn
-                    Bernetta.</p>
+                    Muster feiner und die Armbänder dünner. Das Schulgarn von Langyarns kombinieren wir mit dem Catania
+                    fine von Schachenmayr und dem Schulgarn Bernetta.
+                </p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/garn.jpg" alt="Garn"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/garn.jpg" alt="Garn"/>
             </div>
         </div>
     </div>
@@ -84,7 +85,7 @@ const MaterialienPerlen = () => (
     <div>
         <div className="intro">
             <div className="intro-desc">
-                <p>Perlnen blabla.</p>
+                <p>Perlen erfreuen sich zunehmender Beliebtheit.</p>
             </div>
             <div className="intro-desc">
                 <p></p>
@@ -92,30 +93,45 @@ const MaterialienPerlen = () => (
         </div>
         <div className="intro">
             <div className="intro-desc">
-                <h2>Das dickere Garn</h2>
-                <p>Unser hauptsächlich verwendetes Garn ist das Catania von Schachenmayr. Es ist in über 75 Farben
-                    erhältlich und uns gefällt seine Art, wie es in der Hand liegt und sich knüpfen lässt. Die Knoten
-                    werden fest und gerade. Gut kombinieren lässt es
-                    sich mit dem Capri von Katia und dem Quattro von Langyarns, welche die Farbpalette bereichern. Mehr
-                    Glanz bietet das Golf-Garn von Langyarns. Es ist noch etwas edler und leuchtet stark, dafür ist das
-                    Knüpfen mit ihm nicht ganz so einfach,
-                    da sich die einzelnen Zwirngarne gerne voneinander trennen. </p>
+                <h2>Steinperlen</h2>
+                <p>Perlen aus Stein bieten einen wunderschönen Anblick. Es gib sie in allen Grössen und Farben.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/garn.jpg" alt="Garn"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/stein.jpg" alt="Steinperlen"/>
             </div>
         </div>
         <div className="intro">
             <div className="intro-desc">
-                <h2>Das feinere Garn</h2>
-                <p>Angefangen hat unsere Geschichte des Knüpfens aber mit dem Schulgarn von Langyarns. Dieses Garn ist
-                    relativ dünn und nicht ganz so fest, wie die andern beschriebenen Garne. Dafür werden die genküpften
-                    Muster feiner und die Armbänder dünner. Das
-                    Schulgarn von Langyarns kombinieren wir mit dem Catania fine von Schachenmayr und dem Schulgarn
-                    Bernetta.</p>
+                <h2>Metallperlen</h2>
+                <p>Unter anderem verwenden wir Metallperlen aus Chirurgenstahl.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/garn.jpg" alt="Garn"/>
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/metall.jpg" alt="Steinperlen"/>
+            </div>
+        </div>
+        <div className="intro">
+            <div className="intro-desc">
+                <h2>Holzperlen</h2>
+                <p>Perlen aus Holz sind sehr beliebt und auch angenehm zum Tragen. Aufpassen muss man mit Kontakt mit
+                    Wasser, da die
+                    Holzperlen aufquellen können. Geknüpfte Bändeli & Co. mit eingearbeiteten Holzperlen sollte nicht in
+                    der Waschmaschine
+                    gewaschen und beim Baden ausgezogen werden.
+                </p>
+            </div>
+            <div className="intro-desc">
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/holz.jpg" alt="Holzperlen"/>
+            </div>
+        </div>
+        <div className="intro">
+            <div className="intro-desc">
+                <h2>Keramik- und andere Perlen</h2>
+                <p>Des Weiteren verwenden wir Perlen aus Keramik, Glas und Wachs. Diese gibt es in nahezu allen Farben
+                    und Formen.</p>
+            </div>
+            <div className="intro-desc">
+                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/keramik.jpg"
+                     alt="Keramik und andere Perlen"/>
             </div>
         </div>
     </div>
@@ -124,7 +140,7 @@ const MaterialienPerlen = () => (
 const Materialien = () => (
     <Page
         title="Materialien"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head_material.jpg"
+        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head/perlen.jpg"
         navigation={
             <Navigation>
                 <NavigationElement pathPrefix="/Materialien/" name="Garne"/>
