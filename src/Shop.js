@@ -5,6 +5,7 @@ import Gallery from './Gallery';
 import Specifics from './Specifics';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route, Link} from 'react-router-dom';
+import config from 'react-global-configuration';
 import './Shop.css';
 
 const ShopDefault = () => (
@@ -123,7 +124,7 @@ const ShopMarktplatz = () => (
 const Shop = () => (
     <Page
         title="Shop"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head/artikel_1.jpg"
+        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_1.jpg'}
         navigation={
             <Navigation>
                 <NavigationElement pathPrefix="/Shop/" name="Armbänder"/>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Gallery.css';
+import config from 'react-global-configuration';
 
 const Gallery = () => (
     <div>
@@ -11,7 +12,7 @@ const Gallery = () => (
         <ul className="article">
             <li>
                 <div className="article-img">
-                    <img src="http://api0.geknuepft.ch/v0/Image/150p/cma0/160523_1/IMG_3079.JPG"
+                    <img src={config.get('apiUrl') + '/Image/150p/cma0/160523_1/IMG_3079.JPG'}
                          alt="Makroaufnahme"/>
                 </div>
                 <div className="article-title">Artikel-Nr.</div>
