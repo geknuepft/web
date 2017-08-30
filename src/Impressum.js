@@ -1,10 +1,11 @@
 import React from 'react';
-import Page from './Page'
+import Page from './Page';
+import config from 'react-global-configuration';
 
 const Impressum = () => (
     <Page
         title="Impressum"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head/artikel_15.jpg"
+        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_15.jpg'}
     >
         <div>
             <div className="intro">

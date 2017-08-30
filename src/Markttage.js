@@ -1,10 +1,11 @@
 import React from 'react';
-import Page from './Page'
+import Page from './Page';
+import config from 'react-global-configuration';
 
 const Markttage = () => (
     <Page
         title="Markttage"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head/artikel_7.jpg"
+        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_7.jpg'}
     >
         <div className="intro">
             <div className="intro-desc">
@@ -44,7 +45,7 @@ const Markttage = () => (
                     selbst hergestellen Produkte.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/khw.jpg" alt="Marktstand Winterthur"/>
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/khw.jpg'} alt="Marktstand Winterthur"/>
             </div>
         </div>
         <div className="intro">
@@ -69,7 +70,7 @@ const Markttage = () => (
                     Bahnhofstrasse.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/wallisellen.jpg" alt="Marktstand Wallisellen"/>
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/wallisellen.jpg'} alt="Marktstand Wallisellen"/>
             </div>
         </div>
         <div className="intro">
@@ -92,7 +93,7 @@ const Markttage = () => (
                 </table>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/khw_winter.jpg" alt="Marktstand Winterthur im Winter"/>
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/khw_winter.jpg'} alt="Marktstand Winterthur im Winter"/>
             </div>
         </div>
     </Page>

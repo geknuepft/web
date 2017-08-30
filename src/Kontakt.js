@@ -1,10 +1,11 @@
 import React from 'react';
 import Page from './Page'
+import config from 'react-global-configuration';
 
 const Kontakt = () => (
     <Page
         title="Kontakt"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/artikel_2.jpg"
+        headImagePath={config.get('apiUrl') + 'Image/800p/content/artikel_2.jpg'}
     >
         <div className="intro">
             <div className="intro-desc">

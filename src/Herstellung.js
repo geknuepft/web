@@ -2,6 +2,7 @@ import React from 'react';
 import Page from './Page';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route} from 'react-router-dom';
+import config from 'react-global-configuration';
 
 const HerstellungDefault = () => (
     <div className="intro">
@@ -32,7 +33,7 @@ const HerstellungArmband = () => (
                 </p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/muster.jpg" alt="Muster"/>
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/muster.jpg'} alt="Muster"/>
             </div>
         </div>
         <div className="intro">
@@ -43,7 +44,7 @@ const HerstellungArmband = () => (
                 <p>Zuerst schneide ich die 38 F&auml;den zu. Da ich das Muster zum ersten Mal kn&uuml;pfe, w&auml;hle ich f&uuml;r alle F&auml;den 150 cm. Ich klebe sie sogf&auml;ltig in der richtigen Reihenfolge auf den Tisch. In diesem Fall habe ich zuerst die 22 crèmefarbenen F&auml;den aufgeklebt und anschliessend die andersfarbigen F&auml;den am richtigen Ort hinzugef&uuml;gt.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/herstellung1.jpg" alt="Vorbereitung"/>
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung1.jpg'} alt="Vorbereitung"/>
             </div>
         </div>
         <div className="intro">
@@ -54,7 +55,7 @@ const HerstellungArmband = () => (
                 <p>Inzwischen erkenne ich, in welcher Reihenfolge ich vorgehen muss, um mit einem Faden m&ouml;glichst lange Abschnitte zu kn&uuml;pfen. Meistens sind die Abschnitte begrenzt durch Wendekn&ouml;pfe, d.h. Knicke im Farbverlauf.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/herstellung2.jpg" alt="Anfang"/>
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung2.jpg'} alt="Anfang"/>
             </div>
         </div>
         <div className="intro">
@@ -65,7 +66,7 @@ const HerstellungArmband = () => (
                 <p>Habe ich die gew&uuml;nschte L&auml;nge erreicht, gleiche ich mit zus&auml;tzlichen Kn&ouml;pfen oder dem &ouml;ffnen von Kn&ouml;pfen auf beiden Seiten den Rand aus, sodass er gerade wird.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/herstellung3.jpg" alt="Knüpfen"/>
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung3.jpg'} alt="Knüpfen"/>
             </div>
         </div>
         <div className="intro">
@@ -76,7 +77,7 @@ const HerstellungArmband = () => (
                 <p>Ich kehre das Armband und z&ouml;pfle auch die andere Seite. Dabei achte ich darauf, dass alle Z&ouml;pfe gleich lange werden. Ganz am Schluss, schneide ich die &uuml;berstehenden F&auml;den ab.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/herstellung4.jpg" alt="Abschluss"/>
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung4.jpg'} alt="Abschluss"/>
             </div>
         </div>
         <div className="intro">
@@ -87,7 +88,7 @@ const HerstellungArmband = () => (
                 <p>Lesen Sie hier mehr dar&uuml;ber, welche Abschl&uuml;sse auch noch m&ouml;glich sind.</p>
             </div>
             <div className="intro-desc">
-                <img src="http://api0.geknuepft.ch/v0/Image/800p/content/box/herstellung5.jpg" alt="Fertig"/>
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung5.jpg'} alt="Fertig"/>
             </div>
         </div>
     </div>
@@ -104,7 +105,7 @@ const HerstellungLaenge = () => (
 const Herstellung = () => (
     <Page
         title="Herstellung"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head/artikel_18.jpg"
+        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_18.jpg'}
         navigation={
             <Navigation>
                 <NavigationElement pathPrefix="/Herstellung/" name="Armband" title="Ein Armband entsteht"/>

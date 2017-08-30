@@ -2,11 +2,12 @@ import React from 'react';
 import Page from './Page'
 import './Warenkorb.css';
 import {Link} from 'react-router-dom';
+import config from 'react-global-configuration';
 
 const Warenkorb = () => (
     <Page
         title="Warenkorb"
-        headImagePath="http://api0.geknuepft.ch/v0/Image/800p/content/head/artikel_19.jpg"
+        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_19.jpg'}
     >
         <div className="intro">
             <div className="intro-desc wide center">
@@ -28,7 +29,7 @@ const Warenkorb = () => (
             </tr>
             <tr>
                 <td className="center img"><img
-                    src="http://api0.geknuepft.ch/v0/Image/150p/cma0/160523_1/IMG_3079.JPG" alt="Artikel"/></td>
+                    src={config.get('apiUrl') + 'Image/150p/cma0/160523_1/IMG_3079.JPG'} alt="Artikel"/></td>
                 <td className="left">
                     <h4>Armband</h4>
                     <p>Länge:
@@ -55,7 +56,7 @@ const Warenkorb = () => (
             </tr>
             <tr>
                 <td className="center img"><img
-                    src="http://api0.geknuepft.ch/v0/Image/150p/cma0/160523_1/IMG_3232.JPG" alt="Artikel"/></td>
+                    src={config.get('apiUrl') + 'Image/150p/cma0/160523_1/IMG_3232.JPG'} alt="Artikel"/></td>
                 <td className="left">
                     <h4>Armband</h4>
                     <p>Länge: 15cm</p>

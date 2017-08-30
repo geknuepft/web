@@ -1,6 +1,7 @@
 import React from 'react';
 import './Specifics.css';
 import verkleinern from './verkleinern.svg';
+import config from 'react-global-configuration';
 
 const Specifics = () => (
     <div className="detail-wrap">
@@ -18,7 +19,7 @@ const Specifics = () => (
                     </div>
                 </div>
                 <span className="detail-img-title">Nahaufnahme</span>
-                <img src="http://api0.geknuepft.ch/v0/Image/600p/cma0/161116_4/IMG_4080.JPG" alt="Artikel">
+                <img src={config.get('apiUrl') + 'Image/600p/cma0/161116_4/IMG_4080.JPG" alt="Artikel'}>
                 </img>
             </div>
             <div className="detail-desc">
