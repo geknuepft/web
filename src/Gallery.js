@@ -19,7 +19,7 @@ const Gallery = () => (
                 <table>
                     <tbody>
                     <tr>
-                        <td>L&auml;nge</td>
+                        <td>Länge</td>
                         <td className="article-desc">Länge in cm</td>
                     </tr>
                     <tr>

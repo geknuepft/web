@@ -39,7 +39,7 @@ const Warenkorb = () => (
                     <p>Abschluss:
                         <select required className="inline">
                             <option value="zopf">Zopf</option>
-                            <option value="lose">lose F&auml;den</option>
+                            <option value="lose">lose Fäden</option>
                         </select>
                     </p>
                     <p>wird neu geknüpft, Lieferzeit: 14 Tage</p>

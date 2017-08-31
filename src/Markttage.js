@@ -9,14 +9,14 @@ const Markttage = () => (
     >
         <div className="intro">
             <div className="intro-desc">
-                <p>Unsere handgefertigkten Artikel pr&auml;sentieren wir regelm&auml;ssig an verschiedenen M&auml;rkten
+                <p>Unsere handgefertigkten Artikel präsentieren wir regelmässig an verschiedenen Märkten
                     in
-                    der Region Winterthur und Z&uuml;rich, u.a. am Kunst- und Handwerkermarkt in Winterthur, am
+                    der Region Winterthur und Zürich, u.a. am Kunst- und Handwerkermarkt in Winterthur, am
                     Walliseller
-                    Fr&uuml;hlingsmarkt und am Weltmarkt
-                    in Z&uuml;rich Oerlikon. Die genauen Daten, Zeiten und Lokalit&auml;ten sind untenstehend zu finden
+                    Frühlingsmarkt und am Weltmarkt
+                    in Zürich Oerlikon. Die genauen Daten, Zeiten und Lokalitäten sind untenstehend zu finden
                     und
-                    werden laufend erg&auml;nzt. Wir freuen uns auf Ihren pers&ouml;nlichen Besuch!</p>
+                    werden laufend ergänzt. Wir freuen uns auf Ihren persönlichen Besuch!</p>
             </div>
             <div className="intro-desc">
                 <p>Das Wetter macht leider nicht immer mit. Spätestens am Vorabend jedes Marktes entscheiden wir, ob es
@@ -41,7 +41,7 @@ const Markttage = () => (
                             Karte)</a></td>
                     </tr>
                 </table>
-                <p>Am Kunst- und Handwerkermarkt pr&auml;sentieren zwischen 10 und 20 St&auml;nden aus der Region ihre
+                <p>Am Kunst- und Handwerkermarkt präsentieren zwischen 10 und 20 Ständen aus der Region ihre
                     selbst hergestellen Produkte.</p>
             </div>
             <div className="intro-desc">

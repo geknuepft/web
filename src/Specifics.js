@@ -24,7 +24,7 @@ const Specifics = () => (
             </div>
             <div className="detail-desc">
                 <div className="article-computed">
-                    <span className="detail-desc-title">Armband mit eingekn&uuml;pften Japanischen Roccailles</span>
+                    <span className="detail-desc-title">Armband mit eingeknüpften Japanischen Roccailles</span>
                     <table className="tech-data">
                         <tbody>
                         <tr>
@@ -32,7 +32,7 @@ const Specifics = () => (
                             <td className="article-desc">&#126; 5 cm</td>
                         </tr>
                         <tr>
-                            <td>Anzahl F&auml;den</td>
+                            <td>Anzahl Fäden</td>
                             <td className="article-desc">18</td>
                         </tr>
                         <tr>
@@ -44,7 +44,7 @@ const Specifics = () => (
                             <td className="article-desc">5</td>
                         </tr>
                         <tr>
-                            <td>Anzahl eingekn&uuml;pfter Japanischer Roccailles</td>
+                            <td>Anzahl eingeknüpfter Japanischer Roccailles</td>
                             <td className="article-desc">20</td>
                         </tr>
                         <tr>
@@ -57,7 +57,7 @@ const Specifics = () => (
                             <td className="article-desc">4 cm</td>
                         </tr>
                         <tr>
-                            <td>Gew&uuml;nschte L&auml;nge</td>
+                            <td>Gewünschte Länge</td>
                             <td className="article-desc">
                                 <input type="number" step="0.5" name="length" defaultValue={14.5} min="10" max="30"
                                        className="inline"/>cm
@@ -68,7 +68,7 @@ const Specifics = () => (
                             <td className="article-desc">
                                 <select required className="inline">
                                     <option value="zopf">Zopf</option>
-                                    <option value="lose">lose F&auml;den</option>
+                                    <option value="lose">lose Fäden</option>
                                 </select>
                             </td>
                         </tr>
@@ -88,12 +88,12 @@ const Specifics = () => (
                     <button type="submit">in den Warenkorb</button>
                 </div>
                 <div className="article-exist">
-                    <p>&Uuml;brigens, dieses Armband ist bereits gekn&uuml;pft und kann wie folgt geliefert
+                    <p>&Uuml;brigens, dieses Armband ist bereits geknüpft und kann wie folgt geliefert
                         werden:</p>
                     <table className="tech-data">
                         <tbody>
                         <tr>
-                            <td>L&auml;nge</td>
+                            <td>Länge</td>
                             <td className="article-desc">15 cm</td>
                         </tr>
                         <tr>
