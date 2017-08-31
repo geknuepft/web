@@ -33,10 +33,10 @@ const ShopDefault = () => (
         </div>
         <div className="intro">
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/coll_11.jpg'}
-                     alt="türkisblauer Sandstrand"/>
+                <img src={config.get('apiUrl') + 'Image/800p/content/overview/herstellung5.jpg'}
+                     alt="Armband"/>
                 <div className="overview-text">
-                    <Link to="/Shop/Armbänder"><span>Unsere neuste Kollektion:</span><br/>Türkisblauer Sandstrand</Link>
+                    <Link to="/Shop/Armbänder"><br/>Armbänder</Link>
                 </div>
             </div>
             <div className="intro-desc overview">
