@@ -1,6 +1,18 @@
 import React from 'react';
 import Page from './Page';
-import Filter from './Filter';
+import {
+    FilterContainer,
+    LengthFilter,
+    OverlengthFilter,
+    WidthFilter,
+    PriceFilter,
+    ColorFilter,
+    CategoryFilter,
+    ThemeFilter,
+    GarnFilter,
+    EingeknuepftesFilter,
+    DeleteFilter
+} from './Filter';
 import Gallery from './Gallery';
 import Specifics from './Specifics';
 import {Navigation, NavigationElement} from './Navigation';
@@ -52,8 +64,7 @@ const ShopDefault = () => (
         <div className="intro">
             <div className="intro-desc wide">
                 <p>Finden sie hier unsere neusten Kollektionen auf einen Blick. Klicken Sie auf jene Farbkombination,
-                    die Ihnen am Besten gefällt, und sie gelangen direkt zu allen Artikel, die es mit diesen Farben
-                    gibt.
+                    die Ihnen am Besten gefällt, und sie gelangen direkt zu allen Artikel, die es mit diesen Farbe gibt.
                 </p>
             </div>
         </div>
@@ -96,27 +107,137 @@ const ShopArmbaender = () => (
             <div className="intro-desc">
                 <p>Hier finden Sie alle Muster und die passenden Suchfunktionen für ein Armband. Sind Sie unsicher,
                     wie lange Ihr Armband sein soll? <a>Lesen Sie hier mehr darüber!</a></p>
-                <br/>
+            </div>
+            <div className="intro-desc">
                 <p>Möchten Sie ein besonders langes Armand bzw. das Armband doppelt oder dreifach um das Handgelenk
                     wickeln, wählen Sie die Überlänge aus.</p>
             </div>
         </div>
-        <Filter/>
+        <FilterContainer>
+            <DeleteFilter/>
+            <div className="intro">
+                <div className="intro-desc">
+                    <div className="filter">
+                        <OverlengthFilter/>
+                        <WidthFilter/>
+                        <PriceFilter/>
+                    </div>
+                </div>
+                <div className="intro-desc">
+                    <div className="filter">
+                        <ColorFilter/>
+                        <GarnFilter/>
+                        <EingeknuepftesFilter/>
+                    </div>
+                </div>
+            </div>
+        </FilterContainer>
         <Gallery/>
         <Specifics/>
     </div>
 );
 
 const ShopBuchzeichen = () => (
-    <h4>Buchzeichen</h4>
+    <div>
+        <div className="intro">
+            <div className="intro-desc">
+                <p>Hier finden Sie alle Muster und die passenden Suchfunktionen für unsere Buchzeichen.</p>
+            </div>
+            <div className="intro-desc">
+                <p></p>
+            </div>
+        </div>
+        <FilterContainer>
+            <DeleteFilter/>
+            <div className="intro">
+                <div className="intro-desc">
+                    <div className="filter">
+                        <LengthFilter/>
+                        <WidthFilter/>
+                        <PriceFilter/>
+                    </div>
+                </div>
+                <div className="intro-desc">
+                    <div className="filter">
+                        <ColorFilter/>
+                        <GarnFilter/>
+                    </div>
+                </div>
+            </div>
+        </FilterContainer>
+        <Gallery/>
+        <Specifics/>
+    </div>
 );
 
 const ShopSchluesselanhaenger = () => (
-    <h4>Schlüsselanhänger</h4>
+    <div>
+        <div className="intro">
+            <div className="intro-desc">
+                <p>Hier finden Sie alle Muster und die passenden Suchfunktionen für unsere Schlüsselanhänger.</p>
+            </div>
+            <div className="intro-desc">
+                <p></p>
+            </div>
+        </div>
+        <FilterContainer>
+            <DeleteFilter/>
+            <div className="intro">
+                <div className="intro-desc">
+                    <div className="filter">
+                        <LengthFilter/>
+                        <WidthFilter/>
+                        <PriceFilter/>
+                    </div>
+                </div>
+                <div className="intro-desc">
+                    <div className="filter">
+                        <ColorFilter/>
+                        <GarnFilter/>
+                        <EingeknuepftesFilter/>
+                    </div>
+                </div>
+            </div>
+        </FilterContainer>
+        <Gallery/>
+        <Specifics/>
+    </div>
 );
 
 const ShopMarktplatz = () => (
-    <h4>Marktplatz</h4>
+    <div>
+        <div className="intro">
+            <div className="intro-desc">
+                <p>Stöbern Sie auf unserem Marktplatz. Sie finden hier alle Artikel, die wir bereits geknüpft haben und
+                    an Lager sind. Wir liefern innerhalb von 3-5 Werktagen.</p>
+            </div>
+            <div className="intro-desc">
+                <p></p>
+            </div>
+        </div>
+        <FilterContainer>
+            <DeleteFilter/>
+            <div className="intro">
+                <div className="intro-desc">
+                    <div className="filter">
+                        <LengthFilter/>
+                        <WidthFilter/>
+                        <PriceFilter/>
+                    </div>
+                </div>
+                <div className="intro-desc">
+                    <div className="filter">
+                        <CategoryFilter/>
+                        <ColorFilter/>
+                        <GarnFilter/>
+                        <EingeknuepftesFilter/>
+                    </div>
+                </div>
+            </div>
+        </FilterContainer>
+        <Gallery/>
+        <Specifics/>
+    </div>
 );
 
 const Shop = () => (
