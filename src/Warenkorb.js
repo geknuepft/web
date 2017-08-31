@@ -92,7 +92,7 @@ const Warenkorb = () => (
                         <select className="small">
                             <option value="swiss">Schweiz</option>
                             <option value="germany">Deutschland</option>
-                            <option value="austria">&Ouml;sterreich</option>
+                            <option value="austria">Österreich</option>
                         </select>
                     </div>
                 </td>

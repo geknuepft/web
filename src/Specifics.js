@@ -88,7 +88,7 @@ const Specifics = () => (
                     <button type="submit">in den Warenkorb</button>
                 </div>
                 <div className="article-exist">
-                    <p>&Uuml;brigens, dieses Armband ist bereits geknüpft und kann wie folgt geliefert
+                    <p>Übrigens, dieses Armband ist bereits geknüpft und kann wie folgt geliefert
                         werden:</p>
                     <table className="tech-data">
                         <tbody>
