@@ -3,17 +3,17 @@
 }
 
 h1 {
-    font-size: 110%;
+    font-size: 1.5em;
+    padding-bottom: 0.8em;
 }
 
-padding-bottom: 0.8em;
 h2 {
-    font-size: 110%;
+    font-size: 1.5em;
     padding-bottom: 0.4em;
 }
 
 h3 {
-    font-size: 110%;
+    font-size: 1.5em;
     padding-top: 1em;
     padding-bottom: 0.4em;
 }
@@ -21,6 +21,13 @@ h3 {
 h4 {
     font-size: 100%;
     font-weight: bold;
+    padding-bottom: 0.4em;
+}
+
+h5 {
+    font-size: 100%;
+    font-weight: bold;
+    padding-top: 1em;
     padding-bottom: 0.4em;
 }
 
