@@ -3,6 +3,7 @@ import './App.css';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route} from 'react-router-dom';
 import logo from './logo.png';
+import Home from './Home';
 import Shop from './Shop';
 import Herstellung from './Herstellung';
 import Materialien from './Materialien';
@@ -37,6 +38,7 @@ class App extends Component {
                 <div id="line">
                 </div>
                 <div id="main">
+                    <Route path='/Home' component={Home}/>
                     <Route path='/Shop' component={Shop}/>
                     <Route path='/Herstellung' component={Herstellung}/>
                     <Route path='/Materialien' component={Materialien}/>
