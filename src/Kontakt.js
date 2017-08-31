@@ -5,7 +5,7 @@ import config from 'react-global-configuration';
 const Kontakt = () => (
     <Page
         title="Kontakt"
-        headImagePath={config.get('apiUrl') + 'Image/800p/content/artikel_2.jpg'}
+        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_2.jpg'}
     >
         <div className="intro">
             <div className="intro-desc">
