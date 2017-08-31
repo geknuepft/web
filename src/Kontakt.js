@@ -15,7 +15,7 @@ const Kontakt = () => (
                                               target="_top">info@geknüpft.ch</a></span></p>
             </div>
             <div className="intro-desc">
-                <p>Gerne nehmen wir Ihre ganz persönlichen Wünsche entgegen.</p>
+                <h>Gerne nehmen wir Ihre ganz persönlichen Wünsche entgegen.</h>
                 <p>Schreiben Sie uns eine E-Mail auf <a
                     href="mailto:info@geknüpft.ch?Subject=info@geknüpft.ch"
                     target="_top">info@geknüft.ch
