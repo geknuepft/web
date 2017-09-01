@@ -3,6 +3,105 @@ import './Specifics.css';
 import verkleinern from './verkleinern.svg';
 import config from 'react-global-configuration';
 
+const ArticleComputed = () => (
+    <div className="article-computed">
+        <span className="detail-desc-title">Armband mit eingeknüpften Japanischen Roccailles</span>
+        <table className="tech-data">
+            <tbody>
+            <tr>
+                <td>Breite</td>
+                <td className="article-desc">&#126; 5 cm</td>
+            </tr>
+            <tr>
+                <td>Anzahl Fäden</td>
+                <td className="article-desc">18</td>
+            </tr>
+            <tr>
+                <td>Garntyp</td>
+                <td className="article-desc">Catania fine</td>
+            </tr>
+            <tr>
+                <td>Anzahl Farben</td>
+                <td className="article-desc">5</td>
+            </tr>
+            <tr>
+                <td>Anzahl eingeknüpfter Japanischer Roccailles</td>
+                <td className="article-desc">20</td>
+            </tr>
+            <tr>
+                <td>Musterwiederholung
+                    <div className="tooltip">
+                        <button className="info">i</button>
+                        <span className="tooltiptext">Info</span>
+                    </div>
+                </td>
+                <td className="article-desc">4 cm</td>
+            </tr>
+            <tr>
+                <td>Gewünschte Länge</td>
+                <td className="article-desc">
+                    <input type="number" step="0.5" name="length" defaultValue={14.5} min="10" max="30"
+                           className="inline"/>cm
+                </td>
+            </tr>
+            <tr>
+                <td>Abschluss</td>
+                <td className="article-desc">
+                    <select required className="inline">
+                        <option value="zopf">Zopf</option>
+                        <option value="lose">lose Fäden</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Lieferzeit</td>
+                <td className="article-desc">14 Tage</td>
+            </tr>
+            <tr>
+                <td className="spacer" colSpan={2}/>
+            </tr>
+            <tr>
+                <td>Preis</td>
+                <td className="article-desc"><span className="bold">CHF 18.00</span></td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit">in den Warenkorb</button>
+    </div>
+)
+
+const ArticleExist = () => (
+    <div className="article-exist">
+        <p>Übrigens, dieses Armband ist bereits geknüpft und kann wie folgt geliefert
+            werden:</p>
+        <table className="tech-data">
+            <tbody>
+            <tr>
+                <td>Länge</td>
+                <td className="article-desc">15 cm</td>
+            </tr>
+            <tr>
+                <td>Abschluss</td>
+                <td className="article-desc">Zopf</td>
+            </tr>
+            <tr>
+                <td>Lieferzeit</td>
+                <td className="article-desc">3 Werktage</td>
+            </tr>
+            <tr>
+                <td className="spacer" colSpan={2}/>
+            </tr>
+            <tr>
+                <td>Preis</td>
+                <td className="article-desc"><span className="bold">CHF 16.00</span></td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit">in den Warenkorb</button>
+    </div>
+)
+
+
 const Specifics = () => (
     <div className="detail-wrap">
         <div className="button-wrap">
@@ -23,98 +122,7 @@ const Specifics = () => (
                 </img>
             </div>
             <div className="detail-desc">
-                <div className="article-computed">
-                    <span className="detail-desc-title">Armband mit eingeknüpften Japanischen Roccailles</span>
-                    <table className="tech-data">
-                        <tbody>
-                        <tr>
-                            <td>Breite</td>
-                            <td className="article-desc">&#126; 5 cm</td>
-                        </tr>
-                        <tr>
-                            <td>Anzahl Fäden</td>
-                            <td className="article-desc">18</td>
-                        </tr>
-                        <tr>
-                            <td>Garntyp</td>
-                            <td className="article-desc">Catania fine</td>
-                        </tr>
-                        <tr>
-                            <td>Anzahl Farben</td>
-                            <td className="article-desc">5</td>
-                        </tr>
-                        <tr>
-                            <td>Anzahl eingeknüpfter Japanischer Roccailles</td>
-                            <td className="article-desc">20</td>
-                        </tr>
-                        <tr>
-                            <td>Musterwiederholung
-                                <div className="tooltip">
-                                    <button className="info">i</button>
-                                    <span className="tooltiptext">Info</span>
-                                </div>
-                            </td>
-                            <td className="article-desc">4 cm</td>
-                        </tr>
-                        <tr>
-                            <td>Gewünschte Länge</td>
-                            <td className="article-desc">
-                                <input type="number" step="0.5" name="length" defaultValue={14.5} min="10" max="30"
-                                       className="inline"/>cm
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Abschluss</td>
-                            <td className="article-desc">
-                                <select required className="inline">
-                                    <option value="zopf">Zopf</option>
-                                    <option value="lose">lose Fäden</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Lieferzeit</td>
-                            <td className="article-desc">14 Tage</td>
-                        </tr>
-                        <tr>
-                            <td className="spacer" colSpan={2}/>
-                        </tr>
-                        <tr>
-                            <td>Preis</td>
-                            <td className="article-desc"><span className="bold">CHF 18.00</span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <button type="submit">in den Warenkorb</button>
-                </div>
-                <div className="article-exist">
-                    <p>Übrigens, dieses Armband ist bereits geknüpft und kann wie folgt geliefert
-                        werden:</p>
-                    <table className="tech-data">
-                        <tbody>
-                        <tr>
-                            <td>Länge</td>
-                            <td className="article-desc">15 cm</td>
-                        </tr>
-                        <tr>
-                            <td>Abschluss</td>
-                            <td className="article-desc">Zopf</td>
-                        </tr>
-                        <tr>
-                            <td>Lieferzeit</td>
-                            <td className="article-desc">3 Werktage</td>
-                        </tr>
-                        <tr>
-                            <td className="spacer" colSpan={2}/>
-                        </tr>
-                        <tr>
-                            <td>Preis</td>
-                            <td className="article-desc"><span className="bold">CHF 16.00</span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <button type="submit">in den Warenkorb</button>
-                </div>
+                <ArticleComputed/>
             </div>
         </div>
     </div>
