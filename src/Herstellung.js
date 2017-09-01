@@ -13,7 +13,8 @@ const HerstellungDefault = () => (
             </div>
             <div className="intro-desc">
                 <p>Haben Sie auch schon geknüpft und eine Frage dazu oder kommen Sie bei einem Muster nicht weiter?
-                    Wir helfen Ihnen gerne. Kommen Sie doch mit Ihrer Arbeit am nächsten Markttage vorbei.</p>
+                    Wir helfen Ihnen gerne. Kommen Sie doch mit Ihrer Arbeit am nächsten Markttage vorbei oder besuchen
+                    Sie einen unserer Kurse.</p>
             </div>
         </div>
         <div className="intro">
@@ -38,21 +39,15 @@ const HerstellungArmband = () => (
     <div>
         <div className="intro">
             <div className="intro-desc">
-                <p>Wie und wo knüpfen wir?</p>
-            </div>
-            <div className="intro-desc">
-            </div>
-        </div>
-        <div className="intro">
-            <div className="intro-desc">
                 <h2>Muster- und Farbauswahl</h2>
                 <p>Das eine ist vom andern nicht wegzudenken. Manchmal wähle ich zuerst das Muster und suche
                     passende Farben. Manchmal möchte ich unbedingt mit gewissen Farben etwas knüpfn und suche
                     mir ein entsprechendes Muster.</p>
                 <br/>
                 <p>Um später ein Muster nachknüpfen zu können, ist es hilfreich, einen Plan zu zeichnen,
-                    auf dem alle Fäden und Knöpfe ersichtlich sind. Hilfreich hierbei sind auch Generatoren,
-                    wie friendship-bracelet.net, ihn zur Verfügung stellt.
+                    auf dem alle Fäden und Knöpfe ersichtlich sind. Hilfreich hierbei sind auch Programme (Bracelet
+                    Generatoren), welche das
+                    Zeichnen erleichtern.
                 </p>
             </div>
             <div className="intro-desc">
@@ -62,7 +57,9 @@ const HerstellungArmband = () => (
         <div className="intro">
             <div className="intro-desc">
                 <h2>Vorbereitung</h2>
-                <p>Ich habe mich für ein Muster von friendship-bracelets.net entschieden, denn es ist mit 38
+                <p>Ich habe mich für ein Muster von <a href="http://friendship-bracelets.net/im/gen/normal/49451.gif"
+                                                       target="blank">friendship-bracelets.net</a> entschieden, denn es
+                    ist mit 38
                     Fäden eher breit und ermöglicht in drei Farbnuancen zu knüpfen. Als Hintergrundfarben
                     dienen mir crème und braun.</p>
                 <br/>
@@ -95,11 +92,11 @@ const HerstellungArmband = () => (
             <div className="intro-desc">
                 <h2>Knüpfen</h2>
                 <p>Während dem Knüpfen achte ich darauf, möglichst gleichmässig die Knoten
-                    anzuziehen. Das ist nicht immer einfach. Gerade die Wendeknöpfe geraten meist etwas grö
-                    sser. Passiert mir einen Fehler, hilft eine stumpfe Nadel.</p>
+                    anzuziehen. Das ist nicht immer einfach. Gerade die Wendeknöpfe geraten meist etwas grösser.
+                    Passiert mir einen Fehler, hilft eine stumpfe Nadel zum Öffnen der Knoten.</p>
                 <br/>
                 <p>Habe ich die gewünschte Länge erreicht, gleiche ich mit zusätzlichen Knöpfen oder
-                    dem öffnen von Knöpfen auf beiden Seiten den Rand aus, sodass er gerade wird.</p>
+                    dem Öffnen von Knöpfen auf beiden Seiten den Rand aus, sodass er gerade wird.</p>
             </div>
             <div className="intro-desc">
                 <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung3.jpg'} alt="Knüpfen"/>
@@ -108,8 +105,8 @@ const HerstellungArmband = () => (
         <div className="intro">
             <div className="intro-desc">
                 <h2>Abschluss</h2>
-                <p>Bin ich mit der Länge zufrieden, klebe ich das Armband so auf den Tisch, dass die losen Fä
-                    den zu mir zeigen. In diesem Fall, bei 38 Fäden, teile ich die losen Fäden durch 3 und
+                <p>Bin ich mit der Länge zufrieden, klebe ich das Armband so auf den Tisch, dass die losen Fäden zu mir
+                    zeigen. In diesem Fall, bei 38 Fäden, teile ich die losen Fäden durch 3 und
                     stelle also 3 Zöpfe her. Bei dünnen Armbändern ist ein Zopf ausreichend, bei
                     mitteldicken zwei Zöpfe. Um den Zopf abzuschliessen, ziehe ich einen festen Knoten.</p>
                 <br/>
@@ -126,7 +123,8 @@ const HerstellungArmband = () => (
                 <h2>Und fertig...</h2>
                 <p>...ist das Armband. </p>
                 <br/>
-                <p>Lesen Sie hier mehr darüber, welche Abschlüsse auch noch möglich sind.</p>
+                <p>Lesen Sie hier mehr darüber, welche <Link to="/Herstellung/Abschluss">Abschlüsse</Link> auch noch
+                    möglich sind.</p>
             </div>
             <div className="intro-desc">
                 <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung5.jpg'} alt="Fertig"/>
@@ -136,7 +134,40 @@ const HerstellungArmband = () => (
 );
 
 const HerstellungAbschluesse = () => (
-    <h4>Abschluss</h4>
+    <div>
+        <div className="intro">
+            <div className="intro-desc">
+                <h2>Der Zopf</h2>
+                <p>Der traditionelle Abschluss eines Freundschaft-Armbandes ist der Zopf. Steht die Länge fest, wird der
+                    restliche Faden durch einen Zopf und einen abschliessenden, festen Knoten zusammengehalten. Dies
+                    erlaubt eine flexible Anpassung des Armbandes um jedes Handgelenk.</p>
+            </div>
+            <div className="intro-desc">
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/armband.jpg'} alt="Zopf"/>
+            </div>
+        </div>
+        <div className="intro">
+            <div className="intro-desc">
+                <h2>Lose Fäden</h2>
+                <p>Alternativ können die Fäden auch lose gelassen werden. Gerade bei sehr dünnen Bändeli oder Bändeli
+                    aus bloss zwei Fäden eignet sich diese Variante.</p>
+            </div>
+            <div className="intro-desc">
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung3.jpg'} alt="Lose Fäden"/>
+            </div>
+        </div>
+        <div className="intro">
+            <div className="intro-desc">
+                <h2>Teppich</h2>
+                <p>Möchte man das Genküpfte nicht umbinden oder befestigen, so können 3-4 Fäden satt verknotet werden
+                    und der überschüssige Faden wird abgeschnitten. So entsteht ein Teppich oder der Abschluss für die
+                    Schlüsselanhänger.</p>
+            </div>
+            <div className="intro-desc">
+                <img src={config.get('apiUrl') + 'Image/800p/content/box/schluessel.jpg'} alt="Anfang"/>
+            </div>
+        </div>
+    </div>
 );
 
 const HerstellungLaenge = () => (
