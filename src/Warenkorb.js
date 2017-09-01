@@ -7,7 +7,7 @@ import config from 'react-global-configuration';
 const Warenkorb = () => (
     <Page
         title="Warenkorb"
-        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_19.jpg'}
+        headImagePath={config.get('imageUrl') + '800p/content/head/artikel_19.jpg'}
     >
         <div className="intro">
             <div className="intro-desc wide center">
@@ -29,7 +29,7 @@ const Warenkorb = () => (
             </tr>
             <tr>
                 <td className="center img"><img
-                    src={config.get('apiUrl') + 'Image/150p/cma0/160523_1/IMG_3079.JPG'} alt="Artikel"/></td>
+                    src={config.get('imageUrl') + '150p/cma0/160523_1/IMG_3079.JPG'} alt="Artikel"/></td>
                 <td className="left">
                     <h4>Armband</h4>
                     <p>Länge:
@@ -56,7 +56,7 @@ const Warenkorb = () => (
             </tr>
             <tr>
                 <td className="center img"><img
-                    src={config.get('apiUrl') + 'Image/150p/cma0/160523_1/IMG_3232.JPG'} alt="Artikel"/></td>
+                    src={config.get('imageUrl') + '150p/cma0/160523_1/IMG_3232.JPG'} alt="Artikel"/></td>
                 <td className="left">
                     <h4>Armband</h4>
                     <p>Länge: 15cm</p>

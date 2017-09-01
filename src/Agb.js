@@ -5,7 +5,7 @@ import config from 'react-global-configuration';
 const Agb = () => (
     <Page
         title="Allgemeine Geschäftsbedingungen"
-        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_13.jpg'}
+        headImagePath={config.get('imageUrl') + '800p/content/head/artikel_13.jpg'}
     >
         <div className="intro">
             <div className="intro-desc wide">

@@ -6,7 +6,8 @@ import {BrowserRouter} from 'react-router-dom'
 import config from 'react-global-configuration';
 
 config.set({
-    apiUrl: 'http://192.168.1.2:8002/v0/'
+    apiUrl: 'http://192.168.1.2:8002/v0/',
+    imageUrl: 'http://192.168.1.2:8002/v0/Image/',
 });
 
 ReactDOM.render(

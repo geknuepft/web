@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const Home = () => (
     <Page
         title="Willkommen"
-        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_1.jpg'}
+        headImagePath={config.get('imageUrl') + '800p/content/head/artikel_1.jpg'}
         >
         <div>
             <div className="intro">
@@ -20,14 +20,14 @@ const Home = () => (
             </div>
             <div className="intro">
                 <div className="intro-desc overview">
-                    <img src={config.get('apiUrl') + 'Image/800p/content/overview/herstellung5.jpg'}
+                    <img src={config.get('imageUrl') + '800p/content/overview/herstellung5.jpg'}
                          alt="Armband"/>
                     <div className="overview-text">
                         <Link to="/Shop/Armbänder"><br/>Armbänder</Link>
                     </div>
                 </div>
                 <div className="intro-desc overview">
-                    <img src={config.get('apiUrl') + 'Image/800p/content/overview/wallisellen.jpg'} alt="Marktstand"/>
+                    <img src={config.get('imageUrl') + '800p/content/overview/wallisellen.jpg'} alt="Marktstand"/>
                     <div className="overview-text">
                         <Link to="/Shop/Marktplatz"><br/>Marktplatz</Link>
                     </div>
@@ -35,13 +35,13 @@ const Home = () => (
             </div>
             <div className="intro">
                 <div className="intro-desc overview">
-                    <img src={config.get('apiUrl') + 'Image/800p/content/overview/buchzeichen.jpg'} alt="Buchzeichen"/>
+                    <img src={config.get('imageUrl') + '800p/content/overview/buchzeichen.jpg'} alt="Buchzeichen"/>
                     <div className="overview-text">
                         <Link to="/Shop/Buchzeichen"><br/>Buchzeichen</Link>
                     </div>
                 </div>
                 <div className="intro-desc overview">
-                    <img src={config.get('apiUrl') + 'Image/800p/content/overview/schluessel.jpg'}
+                    <img src={config.get('imageUrl') + '800p/content/overview/schluessel.jpg'}
                          alt="Schlüsselanhänger"/>
                     <div className="overview-text">
                         <Link to="/Shop/Schlüsselanhänger"><br/>Schlüsselanhänger</Link>

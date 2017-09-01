@@ -20,13 +20,13 @@ const MaterialienDefault = () => (
         </div>
         <div className="intro">
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/garn.jpg'} alt="Garn"/>
+                <img src={config.get('imageUrl') + '800p/content/overview/garn.jpg'} alt="Garn"/>
                 <div className="overview-text">
                     <Link to="/Materialien/Garne"><br/>Garne</Link>
                 </div>
             </div>
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/perlen.jpg'} alt="Perlen"/>
+                <img src={config.get('imageUrl') + '800p/content/overview/perlen.jpg'} alt="Perlen"/>
                 <div className="overview-text">
                     <Link to="/Materialien/Perlen"><br/>Perlen</Link>
                 </div>
@@ -63,7 +63,7 @@ const MaterialienGarne = () => (
                     da sich die einzelnen Zwirngarne gerne voneinander trennen. </p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/garn.jpg'} alt="Garn"/>
+                <img src={config.get('imageUrl') + '800p/content/box/garn.jpg'} alt="Garn"/>
             </div>
         </div>
         <div className="intro">
@@ -76,7 +76,7 @@ const MaterialienGarne = () => (
                 </p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/garn.jpg'} alt="Garn"/>
+                <img src={config.get('imageUrl') + '800p/content/box/garn.jpg'} alt="Garn"/>
             </div>
         </div>
     </div>
@@ -98,7 +98,7 @@ const MaterialienPerlen = () => (
                 <p>Perlen aus Stein bieten einen wunderschönen Anblick. Es gib sie in allen Grössen und Farben.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/stein.jpg'} alt="Steinperlen"/>
+                <img src={config.get('imageUrl') + '800p/content/box/stein.jpg'} alt="Steinperlen"/>
             </div>
         </div>
         <div className="intro">
@@ -107,7 +107,7 @@ const MaterialienPerlen = () => (
                 <p>Unter anderem verwenden wir Metallperlen aus Chirurgenstahl.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/metall.jpg'} alt="Steinperlen"/>
+                <img src={config.get('imageUrl') + '800p/content/box/metall.jpg'} alt="Steinperlen"/>
             </div>
         </div>
         <div className="intro">
@@ -121,7 +121,7 @@ const MaterialienPerlen = () => (
                 </p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/holz.jpg'} alt="Holzperlen"/>
+                <img src={config.get('imageUrl') + '800p/content/box/holz.jpg'} alt="Holzperlen"/>
             </div>
         </div>
         <div className="intro">
@@ -131,7 +131,7 @@ const MaterialienPerlen = () => (
                     und Formen.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/keramik.jpg'}
+                <img src={config.get('imageUrl') + '800p/content/box/keramik.jpg'}
                      alt="Keramik und andere Perlen"/>
             </div>
         </div>
@@ -141,7 +141,7 @@ const MaterialienPerlen = () => (
 const Materialien = () => (
     <Page
         title="Materialien"
-        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/perlen.jpg'}
+        headImagePath={config.get('imageUrl') + '800p/content/head/perlen.jpg'}
         navigation={
             <Navigation>
                 <NavigationElement pathPrefix="/Materialien/" name="Garne"/>

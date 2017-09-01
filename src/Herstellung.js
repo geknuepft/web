@@ -17,14 +17,14 @@ const HerstellungDefault = () => (
         </div>
         <div className="intro">
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/herstellung5.jpg'}
+                <img src={config.get('imageUrl') + '800p/content/overview/herstellung5.jpg'}
                      alt="Ein Armband entsteht"/>
                 <div className="overview-text">
                     <Link to="/Herstellung/Armband"><br/>Ein Armband entsteht</Link>
                 </div>
             </div>
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/wallisellen.jpg'} alt="Länge"/>
+                <img src={config.get('imageUrl') + '800p/content/overview/wallisellen.jpg'} alt="Länge"/>
                 <div className="overview-text">
                     <Link to="/Herstellung/Abschlüsse"><br/>Abschlüsse</Link>
                 </div>
@@ -49,7 +49,7 @@ const HerstellungArmband = () => (
                 </p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/muster.jpg'} alt="Muster"/>
+                <img src={config.get('imageUrl') + '800p/content/box/muster.jpg'} alt="Muster"/>
             </div>
         </div>
         <div className="intro">
@@ -67,7 +67,7 @@ const HerstellungArmband = () => (
                     anschliessend die andersfarbigen Fäden am richtigen Ort hinzugefügt.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung1.jpg'} alt="Vorbereitung"/>
+                <img src={config.get('imageUrl') + '800p/content/box/herstellung1.jpg'} alt="Vorbereitung"/>
             </div>
         </div>
         <div className="intro">
@@ -83,7 +83,7 @@ const HerstellungArmband = () => (
                     Knicke im Farbverlauf.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung2.jpg'} alt="Anfang"/>
+                <img src={config.get('imageUrl') + '800p/content/box/herstellung2.jpg'} alt="Anfang"/>
             </div>
         </div>
         <div className="intro">
@@ -97,7 +97,7 @@ const HerstellungArmband = () => (
                     dem Öffnen von Knöpfen auf beiden Seiten den Rand aus, sodass er gerade wird.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung3.jpg'} alt="Knüpfen"/>
+                <img src={config.get('imageUrl') + '800p/content/box/herstellung3.jpg'} alt="Knüpfen"/>
             </div>
         </div>
         <div className="intro">
@@ -113,7 +113,7 @@ const HerstellungArmband = () => (
                     ab.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung4.jpg'} alt="Abschluss"/>
+                <img src={config.get('imageUrl') + '800p/content/box/herstellung4.jpg'} alt="Abschluss"/>
             </div>
         </div>
         <div className="intro">
@@ -125,7 +125,7 @@ const HerstellungArmband = () => (
                     möglich sind.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung5.jpg'} alt="Fertig"/>
+                <img src={config.get('imageUrl') + '800p/content/box/herstellung5.jpg'} alt="Fertig"/>
             </div>
         </div>
     </div>
@@ -141,7 +141,7 @@ const HerstellungAbschluesse = () => (
                     erlaubt eine flexible Anpassung des Armbandes um jedes Handgelenk.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/armband.jpg'} alt="Zopf"/>
+                <img src={config.get('imageUrl') + '800p/content/box/armband.jpg'} alt="Zopf"/>
             </div>
         </div>
         <div className="intro">
@@ -151,7 +151,7 @@ const HerstellungAbschluesse = () => (
                     aus bloss zwei Fäden eignet sich diese Variante.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/herstellung3.jpg'} alt="Lose Fäden"/>
+                <img src={config.get('imageUrl') + '800p/content/box/herstellung3.jpg'} alt="Lose Fäden"/>
             </div>
         </div>
         <div className="intro">
@@ -162,7 +162,7 @@ const HerstellungAbschluesse = () => (
                     Schlüsselanhänger.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('apiUrl') + 'Image/800p/content/box/schluessel.jpg'} alt="Anfang"/>
+                <img src={config.get('imageUrl') + '800p/content/box/schluessel.jpg'} alt="Anfang"/>
             </div>
         </div>
     </div>
@@ -180,7 +180,7 @@ const HerstellungLaenge = () => (
             </p>
         </div>
         <div className="intro-desc">
-            <img src={config.get('apiUrl') + 'Image/800p/content/box/armband.jpg'} alt="Armband"/>
+            <img src={config.get('imageUrl') + '800p/content/box/armband.jpg'} alt="Armband"/>
         </div>
     </div>
 );
@@ -188,7 +188,7 @@ const HerstellungLaenge = () => (
 const Herstellung = () => (
     <Page
         title="Herstellung"
-        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_18.jpg'}
+        headImagePath={config.get('imageUrl') + '800p/content/head/artikel_18.jpg'}
         navigation={
             <Navigation>
                 <NavigationElement pathPrefix="/Herstellung/" name="Armband" title="Ein Armband entsteht"/>

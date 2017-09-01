@@ -6,7 +6,7 @@ import config from 'react-global-configuration';
 const Impressum = () => (
     <Page
         title="Impressum"
-        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_15.jpg'}
+        headImagePath={config.get('imageUrl') + '800p/content/head/artikel_15.jpg'}
     >
         <div className="intro">
             <div className="intro-desc wide">

@@ -22,7 +22,7 @@ const Gallery = () => (
         <ul className="article">
             <li>
                 <div className="article-img">
-                    <img src={config.get('apiUrl') + '/Image/150p/cma0/160523_1/IMG_3079.JPG'}
+                    <img src={config.get('imageUrl') + '150p/cma0/160523_1/IMG_3079.JPG'}
                          alt="Makroaufnahme"/>
                 </div>
                 <div className="article-title">Artikel-Nr.</div>

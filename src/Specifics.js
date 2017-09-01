@@ -144,7 +144,7 @@ const Specifics = () => (
                     </div>
                 </div>
                 <span className="detail-img-title">Nahaufnahme</span>
-                <img src={config.get('apiUrl') + 'Image/600p/cma0/161116_4/IMG_4080.JPG'} alt="Artikel">
+                <img src={config.get('imageUrl') + '600p/cma0/161116_4/IMG_4080.JPG'} alt="Artikel">
                 </img>
             </div>
             <div className="detail-desc">

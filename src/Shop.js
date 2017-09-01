@@ -33,14 +33,14 @@ const ShopDefault = () => (
         </div>
         <div className="intro">
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/herstellung5.jpg'}
+                <img src={config.get('imageUrl') + '800p/content/overview/herstellung5.jpg'}
                      alt="Armband"/>
                 <div className="overview-text">
                     <Link to="/Shop/Armbänder"><br/>Armbänder</Link>
                 </div>
             </div>
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/wallisellen.jpg'} alt="Marktstand"/>
+                <img src={config.get('imageUrl') + '800p/content/overview/wallisellen.jpg'} alt="Marktstand"/>
                 <div className="overview-text">
                     <Link to="/Shop/Marktplatz"><br/>Marktplatz</Link>
                 </div>
@@ -48,13 +48,13 @@ const ShopDefault = () => (
         </div>
         <div className="intro">
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/buchzeichen.jpg'} alt="Buchzeichen"/>
+                <img src={config.get('imageUrl') + '800p/content/overview/buchzeichen.jpg'} alt="Buchzeichen"/>
                 <div className="overview-text">
                     <Link to="/Shop/Buchzeichen"><br/>Buchzeichen</Link>
                 </div>
             </div>
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/schluessel.jpg'}
+                <img src={config.get('imageUrl') + '800p/content/overview/schluessel.jpg'}
                      alt="Schlüsselanhänger"/>
                 <div className="overview-text">
                     <Link to="/Shop/Schlüsselanhänger"><br/>Schlüsselanhänger</Link>
@@ -70,14 +70,14 @@ const ShopDefault = () => (
         </div>
         <div className="intro">
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/coll_11.jpg'}
+                <img src={config.get('imageUrl') + '800p/content/overview/coll_11.jpg'}
                      alt="türkisblauer Sandstrand"/>
                 <div className="overview-text">
                     <Link to="/Shop/Armbänder"><span>Unsere neuste Kollektion:</span><br/>Türkisblauer Sandstrand</Link>
                 </div>
             </div>
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/coll_15.jpg'} alt="schwarzweiss"/>
+                <img src={config.get('imageUrl') + '800p/content/overview/coll_15.jpg'} alt="schwarzweiss"/>
                 <div className="overview-text">
                     <Link to="/Shop/Armbänder"><br/>schwarz-weiss</Link>
                 </div>
@@ -85,14 +85,14 @@ const ShopDefault = () => (
         </div>
         <div className="intro">
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/coll_18.jpg'}
+                <img src={config.get('imageUrl') + '800p/content/overview/coll_18.jpg'}
                      alt="rot"/>
                 <div className="overview-text">
                     <Link to="/Shop/Armbänder"><br/>Rottöne</Link>
                 </div>
             </div>
             <div className="intro-desc overview">
-                <img src={config.get('apiUrl') + 'Image/800p/content/overview/coll_24.jpg'} alt="Steinperlen"/>
+                <img src={config.get('imageUrl') + '800p/content/overview/coll_24.jpg'} alt="Steinperlen"/>
                 <div className="overview-text">
                     <Link to="/Shop/Armbänder"><br/>mit Steinperlen</Link>
                 </div>
@@ -243,7 +243,7 @@ const ShopMarktplatz = () => (
 const Shop = () => (
     <Page
         title="Shop"
-        headImagePath={config.get('apiUrl') + 'Image/800p/content/head/artikel_1.jpg'}
+        headImagePath={config.get('imageUrl') + '800p/content/head/artikel_1.jpg'}
         navigation={
             <Navigation>
                 <NavigationElement pathPrefix="/Shop/" name="Armbänder"/>
