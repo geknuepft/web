@@ -120,6 +120,11 @@ div.center {
     align-items: center;
 }
 
+div.right {
+    align-items: right;
+    text-align: right;
+}
+
 /* design the overview */
 
 div.overview {

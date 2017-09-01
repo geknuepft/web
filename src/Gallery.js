@@ -5,8 +5,18 @@ import config from 'react-global-configuration';
 const Gallery = () => (
     <div>
         <div className="intro">
-            <div className="intro-desc wide">
+            <div className="intro-desc">
                 <p>Ihre Auswahl umfasst folgende <span className="bold">304</span> Aritkel:</p>
+            </div>
+            <div className="intro-desc right">
+                <p>sortieren nach:
+                    <select className="inline">
+                        <option value="new">Neuste zuoberst</option>
+                        <option value="old">Älteste zuoberst</option>
+                        <option value="price_up">Preis aufsteigend</option>
+                        <option value="price_down">Preis absteigend</option>
+                    </select>
+                </p>
             </div>
         </div>
         <ul className="article">

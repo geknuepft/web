@@ -89,7 +89,7 @@ const Warenkorb = () => (
                 <td className="left" colSpan={5}>
                     <div>
                         Wählen Sie Ihr Lieferland:
-                        <select className="small">
+                        <select className="inline">
                             <option value="swiss">Schweiz</option>
                             <option value="germany">Deutschland</option>
                             <option value="austria">Österreich</option>

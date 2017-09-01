@@ -116,7 +116,7 @@ select:hover {
     cursor: pointer;
 }
 
-select.small {
+select.inline {
     display: inline;
     width: auto;
     margin: 0.3em;
@@ -130,12 +130,6 @@ input.inline {
 
 input.inline[type=number]::-webkit-inner-spin-button {
     opacity: 1
-}
-
-select.inline {
-    display: inline;
-    width: auto;
-    margin: 0.3em 0 0.3em 0;
 }
 
 /* design value placeholder for a select */
