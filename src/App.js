@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route} from 'react-router-dom';
-import logo from './logo.png';
+import logo from '../public/logo.png';
 import Home from './Home';
 import Shop from './Shop';
 import Herstellung from './Herstellung';

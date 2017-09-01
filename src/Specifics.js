@@ -1,6 +1,6 @@
 import React from 'react';
 import './Specifics.css';
-import verkleinern from './verkleinern.svg';
+import verkleinern from '../public/verkleinern.svg';
 import config from 'react-global-configuration';
 
 const ArticleExist = () => (
