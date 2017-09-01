@@ -88,7 +88,7 @@ const ArticleExist = () => (
         </table>
         <button type="submit">in den Warenkorb</button>
     </div>
-)
+);
 
 const ArticleComputed = () => (
     <div className="article-computed">
@@ -125,8 +125,7 @@ const ArticleComputed = () => (
         </table>
         <button type="submit">in den Warenkorb</button>
     </div>
-)
-
+);
 
 const Specifics = () => (
     <div className="detail-wrap">
@@ -149,6 +148,7 @@ const Specifics = () => (
             </div>
             <div className="detail-desc">
                 <ArticleExist/>
+                <ArticleComputed/>
             </div>
         </div>
     </div>
