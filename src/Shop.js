@@ -8,7 +8,6 @@ import {
     PriceFilter,
     ColorFilter,
     CategoryFilter,
-    ThemeFilter,
     GarnFilter,
     EingeknuepftesFilter,
     DeleteFilter
