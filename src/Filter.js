@@ -58,6 +58,37 @@ const CategoryFilter = () => (
     </MultiselectFilter>
 );
 
+const GarnFilter = () => (
+    <MultiselectFilter name_de="Garn">
+        <MultiselectFilterItem name_de="dünneres Garn"/>
+        <MultiselectFilterItem name_de="dickeres Garn"/>
+    </MultiselectFilter>
+);
+
+const EingeknuepftesFilter = () => (
+    <MultiselectFilter name_de="Eingeknüpftes">
+        <MultiselectFilterItem name_de="Steinperlen"/>
+        <MultiselectFilterItem name_de="Holzperlen"/>
+        <MultiselectFilterItem name_de="Wachsperlen"/>
+        <MultiselectFilterItem name_de="Metallperlen"/>
+    </MultiselectFilter>
+);
+
+const CollectionFilter = () => (
+    <MultiselectFilter name_de="Kollektion">
+        <MultiselectFilterItem name_de="Phlox und Flieder"/>
+        <MultiselectFilterItem name_de="Türkisblauer Sandstrand"/>
+        <MultiselectFilterItem name_de="Roter Ocean"/>
+        <MultiselectFilterItem name_de="Kornblumenwiese"/>
+        <MultiselectFilterItem name_de="Mango auf Moos"/>
+        <MultiselectFilterItem name_de="Regenbogen"/>
+        <MultiselectFilterItem name_de="Aprikosenduft"/>
+        <MultiselectFilterItem name_de="Weihnachtszeit"/>
+        <MultiselectFilterItem name_de="Sand am Meer"/>
+        <MultiselectFilterItem name_de="Burgunder Beeren"/>
+    </MultiselectFilter>
+);
+
 const ColorFilter = () => (
     <div className="filter-box">
         <h4>Farben:</h4>
@@ -114,29 +145,13 @@ const ColorFilter = () => (
     </div>
 );
 
-const GarnFilter = () => (
-    <MultiselectFilter name_de="Garn">
-        <MultiselectFilterItem name_de="dünneres Garn"/>
-        <MultiselectFilterItem name_de="dickeres Garn"/>
-    </MultiselectFilter>
-);
-
-const ThemeFilter = () => (
-    <MultiselectFilter name_de="Thema">
-        <MultiselectFilterItem name_de="Musik"/>
-        <MultiselectFilterItem name_de="Tiere"/>
-        <MultiselectFilterItem name_de="Jahreszeiten"/>
-    </MultiselectFilter>
-);
-
-const EingeknuepftesFilter = () => (
-    <MultiselectFilter name_de="Eingeknüpftes">
-        <MultiselectFilterItem name_de="Steinperlen"/>
-        <MultiselectFilterItem name_de="Holzperlen"/>
-        <MultiselectFilterItem name_de="Wachsperlen"/>
-        <MultiselectFilterItem name_de="Metallperlen"/>
-    </MultiselectFilter>
-);
+const PatternFilter = () => (
+    <div className="filter-box">
+        <form>
+            <input type="number" name="pattern" value="" placeholder="Suche nach einem Muster"/>
+        </form>
+    </div>
+)
 
 const DeleteFilter = () => (
     <div className="intro filter-delete">
@@ -152,10 +167,11 @@ export {
     OverlengthFilter,
     WidthFilter,
     PriceFilter,
-    ColorFilter,
     CategoryFilter,
-    ThemeFilter,
     GarnFilter,
     EingeknuepftesFilter,
+    CollectionFilter,
+    ColorFilter,
+    PatternFilter,
     DeleteFilter
 };

@@ -6,10 +6,12 @@ import {
     OverlengthFilter,
     WidthFilter,
     PriceFilter,
-    ColorFilter,
     CategoryFilter,
     GarnFilter,
     EingeknuepftesFilter,
+    CollectionFilter,
+    PatternFilter,
+    ColorFilter,
     DeleteFilter
 } from './Filter';
 import Gallery from './Gallery';
@@ -127,6 +129,7 @@ const ShopArmbaender = () => (
                         <ColorFilter/>
                         <GarnFilter/>
                         <EingeknuepftesFilter/>
+                        <CollectionFilter/>
                     </div>
                 </div>
             </div>
@@ -160,6 +163,7 @@ const ShopBuchzeichen = () => (
                     <div className="filter">
                         <ColorFilter/>
                         <GarnFilter/>
+                        <CollectionFilter/>
                     </div>
                 </div>
             </div>
@@ -194,6 +198,7 @@ const ShopSchluesselanhaenger = () => (
                         <ColorFilter/>
                         <GarnFilter/>
                         <EingeknuepftesFilter/>
+                        <CollectionFilter/>
                     </div>
                 </div>
             </div>
@@ -222,6 +227,7 @@ const ShopMarktplatz = () => (
                         <LengthFilter/>
                         <WidthFilter/>
                         <PriceFilter/>
+                        <PatternFilter/>
                     </div>
                 </div>
                 <div className="intro-desc">
@@ -230,6 +236,7 @@ const ShopMarktplatz = () => (
                         <ColorFilter/>
                         <GarnFilter/>
                         <EingeknuepftesFilter/>
+                        <CollectionFilter/>
                     </div>
                 </div>
             </div>
