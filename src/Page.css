@@ -55,13 +55,13 @@ div.head li:hover a {
     color: #FFFFFF;
 }
 
-div.head li.active {
+div.head li a.active {
     background-color: #CC0000;
     opacity: 0.7;
     filter: alpha(opacity=70); /*Fall-back for IE*/
 }
 
-div.head li.active a {
+div.head a.active {
     color: #FFFFFF;
 }
 
