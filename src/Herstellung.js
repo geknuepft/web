@@ -8,13 +8,11 @@ const HerstellungDefault = () => (
     <div>
         <div className="intro">
             <div className="intro-desc">
-                <p>Knopf um Knopf stellen wir alles selber her. Vom Zuschneiden der Fäden in der richtigen Lä
-                    nge bis zum abschliessenden Zöpfeln ist jeder Artikel von uns selbst geknüpft.</p>
+                <p>Knopf um Knopf stellen wir alles selber her. Vom Zuschneiden der Fäden in der richtigen Länge bis zum
+                    abschliessenden Zöpfeln ist jeder Artikel von uns selbst geknüpft.</p>
             </div>
             <div className="intro-desc">
-                <p>Haben Sie auch schon geknüpft und eine Frage dazu oder kommen Sie bei einem Muster nicht weiter?
-                    Wir helfen Ihnen gerne. Kommen Sie doch mit Ihrer Arbeit am nächsten Markttage vorbei oder besuchen
-                    Sie einen unserer Kurse.</p>
+                <p></p>
             </div>
         </div>
         <div className="intro">
@@ -28,7 +26,7 @@ const HerstellungDefault = () => (
             <div className="intro-desc overview">
                 <img src={config.get('apiUrl') + 'Image/800p/content/overview/wallisellen.jpg'} alt="Länge"/>
                 <div className="overview-text">
-                    <Link to="/Herstellung/Länge"><br/>Die richtige Länge für ein Armband</Link>
+                    <Link to="/Herstellung/Abschlüsse"><br/>Abschlüsse</Link>
                 </div>
             </div>
         </div>
@@ -171,7 +169,20 @@ const HerstellungAbschluesse = () => (
 );
 
 const HerstellungLaenge = () => (
-    <h4>Länge</h4>
+    <div className="intro">
+        <div className="intro-desc">
+            <h2>Die richtige Länge</h2>
+            <p>Messe den Umfang des Handgelenkes oder -fussgelenkes aus und addiere einen halben bis einen ganzen
+                Zentimeter. So erhälst Du die richtige Länge für Dein Bändeli.</p>
+            <br/>
+            <p>Wählst Du ein Bändeli mit dem Zopfabschluss, bist Du sehr flexibel in der Anpassung. Für andere
+                Abschlüsse, siehe <Link to="/Herstellung/Abschlüsse"><br/>Abschlüsse</Link>.
+            </p>
+        </div>
+        <div className="intro-desc">
+            <img src={config.get('apiUrl') + 'Image/800p/content/box/armband.jpg'} alt="Armband"/>
+        </div>
+    </div>
 );
 
 const Herstellung = () => (
