@@ -16,15 +16,15 @@ class NavigationElement extends Component {
             + this.props.name;
 
         return (
-            <li>
-                <Route path={to} children={
-                    ({match}) => (
-                        <Link to={to} className={this.props.className + match ? ' active' : ''}>
+            <Route path={to} children={
+                ({match}) => (
+                    <li className={this.props.className + match ? ' active' : ''}>
+                        <Link to={to}>
                             { this.props.title ? this.props.title : this.props.name }
                         </Link>
-                    )
-                }/>
-            </li>
+                    </li>
+                )
+            }/>
         );
     };
 }

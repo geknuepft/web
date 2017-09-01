@@ -22,12 +22,12 @@ div.footer ul.navigation li {
     padding: 0.4em 0 0.4em 0.6em;
 }
 
-#header a.active {
+#header li.active a {
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
 
-#footer a.active {
+#footer li.active a {
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
