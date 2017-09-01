@@ -57,14 +57,14 @@ class App extends Component {
                     </Navigation>
                 </div>
             </div>
-    );
+        );
     }
-    }
+}
 
-    const Logo = () => (
-        <div id="logo">
-            <img src={logo} alt="geknüpft.ch"/>
-        </div>
-    );
+const Logo = () => (
+    <div id="logo">
+        <img src={logo} alt="geknüpft.ch"/>
+    </div>
+);
 
-    export default App;
+export default App;
