@@ -20,6 +20,7 @@ import {Navigation, NavigationElement} from './Navigation';
 import {Route, Link} from 'react-router-dom';
 import config from 'react-global-configuration';
 import './Shop.css';
+import NavigationImage from "./NavigationImage";
 
 const ShopDefault = () => (
     <div>
@@ -33,34 +34,28 @@ const ShopDefault = () => (
             </div>
         </div>
         <div className="intro">
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/herstellung5.jpg'}
-                     alt="Armband"/>
-                <div className="overview-text">
-                    <Link to="/Shop/Armbänder"><br/>Armbänder</Link>
-                </div>
-            </div>
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/wallisellen.jpg'} alt="Marktstand"/>
-                <div className="overview-text">
-                    <Link to="/Shop/Marktplatz"><br/>Marktplatz</Link>
-                </div>
-            </div>
+            <NavigationImage
+                imagePath="herstellung5.jpg"
+                target="/Shop/Armbänder"
+                caption="Armbänder"
+            />
+            <NavigationImage
+                imagePath="wallisellen.jpg"
+                target="/Shop/Marktplatz"
+                caption="Marktplatz"
+            />
         </div>
         <div className="intro">
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/buchzeichen.jpg'} alt="Buchzeichen"/>
-                <div className="overview-text">
-                    <Link to="/Shop/Buchzeichen"><br/>Buchzeichen</Link>
-                </div>
-            </div>
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/schluessel.jpg'}
-                     alt="Schlüsselanhänger"/>
-                <div className="overview-text">
-                    <Link to="/Shop/Schlüsselanhänger"><br/>Schlüsselanhänger</Link>
-                </div>
-            </div>
+            <NavigationImage
+                imagePath="buchzeichen.jpg"
+                target="/Shop/Buchzeichen"
+                caption="Buchzeichen"
+            />
+            <NavigationImage
+                imagePath="schluessel.jpg"
+                target="/Shop/Schlüsselanhänger"
+                caption="Schlüsselanhänger"
+            />
         </div>
         <div className="intro">
             <div className="intro-desc wide">
@@ -70,34 +65,30 @@ const ShopDefault = () => (
             </div>
         </div>
         <div className="intro">
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/coll_11.jpg'}
-                     alt="türkisblauer Sandstrand"/>
-                <div className="overview-text">
-                    <Link to="/Shop/Armbänder"><span>Unsere neuste Kollektion:</span><br/>Türkisblauer Sandstrand</Link>
-                </div>
-            </div>
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/coll_15.jpg'} alt="schwarzweiss"/>
-                <div className="overview-text">
-                    <Link to="/Shop/Armbänder"><br/>schwarz-weiss</Link>
-                </div>
-            </div>
+            <NavigationImage
+                imagePath="coll_11.jpg"
+                target="/Shop/Armbänder"
+                caption="Türkisblauer Sandstrand"
+                additionalText="Unsere neuste Kollektion:"
+            />
+            <NavigationImage
+                imagePath="coll_15.jpg"
+                target="/Shop/Armbänder"
+                caption="schwarz-weiss"
+            />
         </div>
         <div className="intro">
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/coll_18.jpg'}
-                     alt="rot"/>
-                <div className="overview-text">
-                    <Link to="/Shop/Armbänder"><br/>Rottöne</Link>
-                </div>
-            </div>
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/coll_24.jpg'} alt="Steinperlen"/>
-                <div className="overview-text">
-                    <Link to="/Shop/Armbänder"><br/>mit Steinperlen</Link>
-                </div>
-            </div>
+            <NavigationImage
+                imagePath="coll_24.jpg"
+                target="/Shop/Armbänder"
+                caption="mit Steinperlen"
+            />
+            <NavigationImage
+                imagePath="coll_18.jpg"
+                target="/Shop/Armbänder"
+                caption="Rottöne"
+                additionalText="Der Klassiker:"
+            />
         </div>
     </div>
 );

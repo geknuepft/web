@@ -1,0 +1,35 @@
+/* design the navigation image */
+
+div.navigationimage {
+    flex: 1 1 auto;
+    width: 50%;
+    position: relative;
+}
+
+div.navigationimage img {
+    opacity: 0.6;
+}
+
+div.navigationimage-text {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 3vw;
+    color: #353535;
+    text-shadow: 2px 2px 0.6em #FFFFFF;
+}
+
+div.navigationimage-text span.additionaltext {
+    font-size: 75%;
+}
+
+div.navigationimage:hover img {
+    opacity: 1;
+}
+
+div.navigationimage:hover span {
+    display: none;
+}

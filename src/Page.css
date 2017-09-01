@@ -125,44 +125,6 @@ div.right {
     text-align: right;
 }
 
-/* design the overview */
-
-div.overview {
-    flex: 1 1 auto;
-    width: 50%;
-    position: relative;
-}
-
-div.overview-text {
-    left: 0;
-    position: absolute;
-    text-align: center;
-    top: 20%;
-    vertical-align: middle;
-    width: 100%;
-}
-
-div.overview img {
-    opacity: 0.6;
-}
-
-div.overview-text a {
-    font-size: 3vw;
-    color: #353535;
-    text-shadow: 2px 2px 0.6em #FFFFFF;
-}
-
-div.overview span {
-    font-size: 75%;
-}
-
-div.overview:hover a{
-    opacity: 0;
-}
-
-div.overview:hover img {
-    opacity: 1;
-}
 /* design the tooltip */
 
 div.tooltip {

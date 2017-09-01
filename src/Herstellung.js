@@ -3,6 +3,7 @@ import Page from './Page';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route, Link} from 'react-router-dom';
 import config from 'react-global-configuration';
+import NavigationImage from "./NavigationImage";
 
 const HerstellungDefault = () => (
     <div>
@@ -16,19 +17,16 @@ const HerstellungDefault = () => (
             </div>
         </div>
         <div className="intro">
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/herstellung5.jpg'}
-                     alt="Ein Armband entsteht"/>
-                <div className="overview-text">
-                    <Link to="/Herstellung/Armband"><br/>Ein Armband entsteht</Link>
-                </div>
-            </div>
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/wallisellen.jpg'} alt="Länge"/>
-                <div className="overview-text">
-                    <Link to="/Herstellung/Abschlüsse"><br/>Abschlüsse</Link>
-                </div>
-            </div>
+            <NavigationImage
+                imagePath="herstellung5.jpg"
+                target="/Herstellung/Armband"
+                caption="Ein Armband entsteht"
+            />
+            <NavigationImage
+                imagePath="herstellung5.jpg"
+                target="/Shop/Abschlüsse"
+                caption="Abschlüsse"
+            />
         </div>
     </div>
 );

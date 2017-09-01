@@ -3,6 +3,7 @@ import Page from './Page';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route, Link} from 'react-router-dom';
 import config from 'react-global-configuration';
+import NavigationImage from "./NavigationImage";
 
 const MaterialienDefault = () => (
     <div>
@@ -19,18 +20,16 @@ const MaterialienDefault = () => (
             </div>
         </div>
         <div className="intro">
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/garn.jpg'} alt="Garn"/>
-                <div className="overview-text">
-                    <Link to="/Materialien/Garne"><br/>Garne</Link>
-                </div>
-            </div>
-            <div className="intro-desc overview">
-                <img src={config.get('imageUrl') + '800p/content/overview/perlen.jpg'} alt="Perlen"/>
-                <div className="overview-text">
-                    <Link to="/Materialien/Perlen"><br/>Perlen</Link>
-                </div>
-            </div>
+            <NavigationImage
+                imagePath="garn.jpg"
+                target="/Materialien/Garne"
+                caption="Garne"
+            />
+            <NavigationImage
+                imagePath="perlen.jpg"
+                target="/Materialien/Perlen"
+                caption="Perlen"
+            />
         </div>
     </div>
 );
