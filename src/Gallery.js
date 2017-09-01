@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Gallery.css';
 import axios from 'axios';
 import config from 'react-global-configuration';
+import {Chf, Mm, Cm} from "./Number";
 
 const GallerySorter = () => (
     <select className="inline">
@@ -61,16 +62,17 @@ class GalleryItem extends Component {
                     <tbody>
                     <tr>
                         <td>Länge</td>
-                        <td className="article-desc">{props.lengthMm / 10} cm</td>
+                        <td className="article-desc"><Cm valueMm={props.lengthMm}/></td>
                     </tr>
                     <tr>
                         <td>Breite</td>
-                        <td className="article-desc">&#126;{props.widthMm} mm</td>
+                        <td className="article-desc">&#126;<Mm valueMm={props.widthMm}/></td>
                     </tr>
                     </tbody>
                 </table>
-                <div className="article-prize">CHF {(props.priceCchf - props.discountCchf) / 100}
-                    <span>({props.discountCchf / 100} Rabatt)</span>
+                <div className="article-prize">
+                    <Chf value={(props.priceCchf - props.discountCchf) / 100}/>
+                    (<Chf value={props.discountCchf / 100}/> Rabatt)
                 </div>
             </li>
         );
@@ -111,13 +113,7 @@ class Gallery extends Component {
                     {this.state.instanceList.map((instance) =>
                         <GalleryItem
                             key={instance.instanceId}
-                            instanceId={instance.instanceId}
-                            articleId={instance.articleId}
-                            lengthMm={instance.lengthMm}
-                            widthMm={instance.widthMm}
-                            picture0={instance.picture0}
-                            priceCchf={instance.priceCchf}
-                            discountCchf={instance.discountCchf}
+                            {...instance}
                         />
                     )}
                     <li className="empty"/>
