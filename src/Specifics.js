@@ -3,14 +3,30 @@ import './Specifics.css';
 import verkleinern from './verkleinern.svg';
 import config from 'react-global-configuration';
 
-const ArticleComputed = () => (
-    <div className="article-computed">
-        <span className="detail-desc-title">Armband mit eingeknüpften Japanischen Roccailles</span>
+const ArticleExist = () => (
+    <div className="article-exist">
+        <span className="detail-desc-title">Armband mit Eingeknüpftem</span>
         <table className="tech-data">
             <tbody>
             <tr>
+                <td>Artikel-Nr.</td>
+                <td className="article-desc">1100</td>
+            </tr>
+            <tr>
+                <td>Instanz-Nr.</td>
+                <td className="article-desc">1234</td>
+            </tr>
+            <tr>
+                <td>Länge</td>
+                <td className="article-desc">&#126; 14 cm</td>
+            </tr>
+            <tr>
                 <td>Breite</td>
                 <td className="article-desc">&#126; 5 cm</td>
+            </tr>
+            <tr>
+                <td>Höhe</td>
+                <td className="article-desc">&#126; 1 cm</td>
             </tr>
             <tr>
                 <td>Anzahl Fäden</td>
@@ -22,11 +38,19 @@ const ArticleComputed = () => (
             </tr>
             <tr>
                 <td>Anzahl Farben</td>
-                <td className="article-desc">5</td>
+                <td className="article-desc">4</td>
             </tr>
             <tr>
-                <td>Anzahl eingeknüpfter Japanischer Roccailles</td>
-                <td className="article-desc">20</td>
+                <td>Farbnamen</td>
+                <td className="article-desc">mango, créme, weiss, schwarz</td>
+            </tr>
+            <tr>
+                <td>Eingeknüpftes</td>
+                <td className="article-desc">20x Japanische Roccailles<br/>1x Silberfaden</td>
+            </tr>
+            <tr>
+                <td>Muster</td>
+                <td className="article-desc">Nr. 209</td>
             </tr>
             <tr>
                 <td>Musterwiederholung
@@ -37,6 +61,39 @@ const ArticleComputed = () => (
                 </td>
                 <td className="article-desc">4 cm</td>
             </tr>
+            <tr>
+                <td>Abschluss</td>
+                <td className="article-desc">Zopf</td>
+            </tr>
+            <tr>
+                <td>Lieferzeit</td>
+                <td className="article-desc">2-5 Tage</td>
+            </tr>
+            <tr>
+                <td className="spacer" colSpan={2}/>
+            </tr>
+            <tr>
+                <td>Preis</td>
+                <td className="article-desc">CHF 18.00</td>
+            </tr>
+            <tr>
+                <td>Rabatt</td>
+                <td className="article-desc">20%</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td className="article-desc"><span className="bold">CHF 16.00</span></td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit">in den Warenkorb</button>
+    </div>
+)
+
+const ArticleComputed = () => (
+    <div className="article-computed">
+        <table className="tech-data">
+            <tbody>
             <tr>
                 <td>Gewünschte Länge</td>
                 <td className="article-desc">
@@ -56,37 +113,6 @@ const ArticleComputed = () => (
             <tr>
                 <td>Lieferzeit</td>
                 <td className="article-desc">14 Tage</td>
-            </tr>
-            <tr>
-                <td className="spacer" colSpan={2}/>
-            </tr>
-            <tr>
-                <td>Preis</td>
-                <td className="article-desc"><span className="bold">CHF 18.00</span></td>
-            </tr>
-            </tbody>
-        </table>
-        <button type="submit">in den Warenkorb</button>
-    </div>
-)
-
-const ArticleExist = () => (
-    <div className="article-exist">
-        <p>Übrigens, dieses Armband ist bereits geknüpft und kann wie folgt geliefert
-            werden:</p>
-        <table className="tech-data">
-            <tbody>
-            <tr>
-                <td>Länge</td>
-                <td className="article-desc">15 cm</td>
-            </tr>
-            <tr>
-                <td>Abschluss</td>
-                <td className="article-desc">Zopf</td>
-            </tr>
-            <tr>
-                <td>Lieferzeit</td>
-                <td className="article-desc">3 Werktage</td>
             </tr>
             <tr>
                 <td className="spacer" colSpan={2}/>
@@ -122,7 +148,7 @@ const Specifics = () => (
                 </img>
             </div>
             <div className="detail-desc">
-                <ArticleComputed/>
+                <ArticleExist/>
             </div>
         </div>
     </div>
