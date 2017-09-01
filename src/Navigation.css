@@ -26,3 +26,8 @@ div.footer ul.navigation li {
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
+
+#footer a.active {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
