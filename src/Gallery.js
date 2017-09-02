@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Gallery.css';
 import axios from 'axios';
 import config from 'react-global-configuration';
+import InfiniteScroll from 'react-infinite-scroller';
 import {Chf, Mm, Cm} from "./Number";
 
 const GallerySorter = () => (
@@ -85,14 +86,16 @@ class Gallery extends Component {
         super(props);
 
         this.state = {
-            instanceList: null,
+            instances: null,
+            items: [],
+            hasMoreItems: true,
         }
     }
 
     fetchDataFromApi = () => {
         axios.get(config.get('apiUrl') + 'Instance')
             .then(res => {
-                this.setState({instanceList: res.data});
+                this.setState({instances: res.data});
             });
     };
 
@@ -100,30 +103,58 @@ class Gallery extends Component {
         this.fetchDataFromApi();
     }
 
+    loadItems(page) {
+        let items = this.state.items;
+        for (let i = 0; i < 10 && this.state.instances.length > 0; ++i) {
+            items.push(this.state.instances.pop());
+        }
+        this.setState({
+            items: items,
+            hasMoreItems: this.state.instances.length > 0,
+        });
+
+    }
+
     render() {
         // render nothing if list is not loaded
-        if (this.state.instanceList === null) {
+        if (this.state.instances === null) {
             return null;
         }
 
+        const loader = <li>Lade ...</li>;
+
         return (
             <div>
-                <GalleryIntro numberOfItems={this.state.instanceList.length}/>
+                <GalleryIntro numberOfItems={this.state.instances.length}/>
                 <ul className="article">
-                    {this.state.instanceList.map((instance) =>
-                        <GalleryItem
-                            key={instance.instanceId}
-                            {...instance}
-                        />
-                    )}
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
+                    <InfiniteScroll
+                        pageStart={0}
+                        loadMore={this.loadItems.bind(this)}
+                        hasMore={this.state.hasMoreItems}
+                        loader={loader}
+                    >
+                        {this.state.items.map((instance) =>
+                            <GalleryItem
+                                key={instance.instanceId}
+                                {...instance}
+                            />
+                        )}
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                        <li className="empty"/>
+                    </InfiniteScroll>
+
                 </ul>
             </div>
         );
