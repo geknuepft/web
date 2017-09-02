@@ -144,6 +144,29 @@ div.detail-desc {
     border-left: 2px solid #EEEEEE;
 }
 
+span.detail-desc-title {
+    display: block;
+    font-size: 140%;
+    padding-bottom: 0.1em;
+}
+
+div.detail-desc-ids {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    width: 100%;
+    padding-bottom: 0.9em;
+}
+
+div.detail-desc-ids div {
+    padding: 0 0.5em 0 0.5em;
+    font-size: 70%;
+}
+
+div.detail-desc-de {
+    padding-bottom: 0.9em;
+}
+
 div.article-computed {
     width: 100%;
     max-width: 500px;
@@ -156,12 +179,6 @@ div.article-exist {
     padding-bottom: 0.3em;
 }
 
-span.detail-desc-title {
-    display: block;
-    font-size: 140%;
-    padding-bottom: 0.9em;
-}
-
 table.tech-data {
     width: 100%;
     padding-bottom: 0.9em;
@@ -169,6 +186,7 @@ table.tech-data {
 
 table.tech-data td {
     text-align: left;
+    vertical-align: top;
     padding-bottom: 0.3em;
 }
 
@@ -177,6 +195,10 @@ table.tech-data td.article-desc {
 }
 
 table.tech-data td.spacer {
-    border-top: 1px solid black;
     padding-bottom: 0.6em;
+}
+
+table.tech-data td.spacer-line {
+    border-top: 1px solid black;
+    padding-bottom: 0.3em;
 }
