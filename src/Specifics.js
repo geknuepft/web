@@ -45,7 +45,8 @@ class InstanceProperty extends Component {
             </tr>
         );
     }
-};
+}
+;
 
 class Instance extends Component {
 
@@ -66,7 +67,7 @@ class Instance extends Component {
     render() {
         return (
             <div className="article-exist">
-                <span className="detail-desc-title">{this.props.articleName}</span>
+                <div className="detail-desc-title">{this.props.articleName}</div>
                 <div className="detail-desc-ids">
                     <div>A {this.props.articleId}</div>
                     <div>I {this.props.instanceId}</div>

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import config from 'react-global-configuration';
 import './GalleryItem.css';
 import verkleinern from '../public/verkleinern.svg';
-
 import {Chf, Mm, Cm} from "./Number";
 import Specifics from './Specifics';
 

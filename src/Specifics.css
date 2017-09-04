@@ -1,3 +1,104 @@
+/* design the detail view of an article */
+
+div.detail {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+div.detail-img {
+    width: 50%;
+    text-align: center;
+    padding: 0.6em 0 0.6em 0;
+}
+
+span.detail-img-title {
+    display: block;
+    font-size: 100%;
+    padding: 0.6em 0 1.5em 0;
+}
+
+div.detail-img img {
+    position: relative;
+    height: 40vw;
+    max-height: 600px;
+    width: auto;
+}
+
+div.detail-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0.6em 1.2em 0.6em 1.2em;
+    padding: 0.6em 0.6em 0.6em 1.8em;
+    border-left: 2px solid #EEEEEE;
+}
+
+div.detail-desc-title {
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding-bottom: 0.1em;
+}
+
+div.detail-desc-ids {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    width: 100%;
+    padding-bottom: 0.9em;
+}
+
+div.detail-desc-ids div {
+    padding-right:1.5em;
+    font-size: 70%;
+}
+
+div.detail-desc-de {
+    padding-bottom: 0.9em;
+}
+
+div.article-computed {
+    width: 100%;
+    max-width: 500px;
+    padding-bottom: 3em;
+}
+
+div.article-exist {
+    width: 100%;
+    max-width: 500px;
+    padding-bottom: 0.3em;
+}
+
+table.tech-data {
+    width: 100%;
+    padding-bottom: 0.9em;
+}
+
+table.tech-data td {
+    text-align: left;
+    vertical-align: top;
+    padding-bottom: 0.3em;
+}
+
+table.tech-data td.article-desc {
+    text-align: right;
+}
+
+table.tech-data td.price {
+    font-weight: bold;
+}
+
+table.tech-data td.spacer {
+    padding-bottom: 0.6em;
+}
+
+table.tech-data td.spacer-line {
+    border-top: 1px solid black;
+    padding-bottom: 0.3em;
+}
+
 /* design the buttons for a imgages gallery */
 
 div.gallery-button {
@@ -65,103 +166,4 @@ div.gallery-button button.next:hover::after {
 
 div.gallery-button button.prev:hover::after {
     opacity: 1;
-}
-
-/* design the detail view of an article */
-div.detail {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-div.detail-img {
-    width: 50%;
-    text-align: center;
-    padding: 0.6em 0 0.6em 0;
-}
-
-span.detail-img-title {
-    display: block;
-    font-size: 100%;
-    padding: 0.6em 0 1.5em 0;
-}
-
-div.detail-img img {
-    position: relative;
-    height: 40vw;
-    max-height: 600px;
-    width: auto;
-}
-
-div.detail-desc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    margin: 0.6em 1.2em 0.6em 1.2em;
-    padding: 0.6em 0.6em 0.6em 1.8em;
-    border-left: 2px solid #EEEEEE;
-}
-
-span.detail-desc-title {
-    display: block;
-    font-size: 140%;
-    padding-bottom: 0.1em;
-}
-
-div.detail-desc-ids {
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    width: 100%;
-    padding-bottom: 0.9em;
-}
-
-div.detail-desc-ids div {
-    padding: 0 0.5em 0 0.5em;
-    font-size: 70%;
-}
-
-div.detail-desc-de {
-    padding-bottom: 0.9em;
-}
-
-div.article-computed {
-    width: 100%;
-    max-width: 500px;
-    padding-bottom: 3em;
-}
-
-div.article-exist {
-    width: 100%;
-    max-width: 500px;
-    padding-bottom: 0.3em;
-}
-
-table.tech-data {
-    width: 100%;
-    padding-bottom: 0.9em;
-}
-
-table.tech-data td {
-    text-align: left;
-    vertical-align: top;
-    padding-bottom: 0.3em;
-}
-
-table.tech-data td.article-desc {
-    text-align: right;
-}
-
-table.tech-data td.price {
-    font-weight: bold;
-}
-
-table.tech-data td.spacer {
-    padding-bottom: 0.6em;
-}
-
-table.tech-data td.spacer-line {
-    border-top: 1px solid black;
-    padding-bottom: 0.3em;
 }

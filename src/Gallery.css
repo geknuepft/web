@@ -26,6 +26,7 @@ div.gallery li.overview:hover {
 
 div.gallery li.specifics {
     width: 100%;
+    padding: 0.4em;
     border: 2px solid #EEEEEE;
 }
 
