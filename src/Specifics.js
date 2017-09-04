@@ -4,16 +4,13 @@ import './Specifics.css';
 import axios from 'axios';
 import config from 'react-global-configuration';
 import {Chf, Mm, Cm} from "./Number";
+import {ButtonNext, ButtonPrevious} from "./Button";
 
 const ImageScroller = () => (
     <div className="detail-img">
         <div className="button-wrap">
-            <div className="gallery-button">
-                <button type="submit" className="prev"/>
-            </div>
-            <div className="gallery-button">
-                <button type="submit" className="next"/>
-            </div>
+            <ButtonPrevious/>
+            <ButtonNext/>
         </div>
         <span className="detail-img-title">Nahaufnahme</span>
         <img src={config.get('imageUrl') + '600p/cma0/161116_4/IMG_4080.JPG'} alt="Artikel"/>
