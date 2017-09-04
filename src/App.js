@@ -8,6 +8,7 @@ import Shop from './Shop';
 import Herstellung from './Herstellung';
 import Materialien from './Materialien';
 import Markttage from './Markttage';
+import Kurse from './Kurse';
 import Kontakt from './Kontakt';
 import Warenkorb from './Warenkorb';
 import Agb from './Agb';
@@ -26,6 +27,7 @@ class App extends Component {
                             <NavigationElement name="Herstellung"/>
                             <NavigationElement name="Materialien"/>
                             <NavigationElement name="Markttage"/>
+                            <NavigationElement name="Kurse"/>
                             <NavigationElement name="Kontakt"/>
                         </Navigation>
                     </div>
@@ -38,11 +40,12 @@ class App extends Component {
                 <div id="line">
                 </div>
                 <div id="main">
-                    <Route path='/' component={Home}/>
+                    <Route path='/Home' component={Home}/>
                     <Route path='/Shop' component={Shop}/>
                     <Route path='/Herstellung' component={Herstellung}/>
                     <Route path='/Materialien' component={Materialien}/>
                     <Route path='/Markttage' component={Markttage}/>
+                    <Route path='/Kurse' component={Kurse}/>
                     <Route path='/Kontakt' component={Kontakt}/>
                     <Route path='/Warenkorb' component={Warenkorb}/>
                     <Route path='/AGB' component={Agb}/>
