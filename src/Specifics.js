@@ -1,6 +1,5 @@
 import React from 'react';
 import './Specifics.css';
-import verkleinern from '../public/verkleinern.svg';
 import config from 'react-global-configuration';
 
 const ArticleExist = () => (
@@ -12,7 +11,8 @@ const ArticleExist = () => (
             <div>P 509</div>
         </div>
         <div className="detail-desc-de">
-            <p>Hier steht eine Beschreibung zum dem Artikel, sofern etwas in der Datenbank vorhanden ist im Feld article_desc.</p>
+            <p>Hier steht eine Beschreibung zum dem Artikel, sofern etwas in der Datenbank vorhanden ist im Feld
+                article_desc.</p>
         </div>
         <table className="tech-data">
             <tbody>
@@ -79,10 +79,6 @@ const ArticleExist = () => (
 );
 
 const Specifics = () => (
-    <div className="detail-wrap">
-        <div className="button-wrap">
-            <button type="submit" className="close"><img src={verkleinern} alt="verkleinern"/></button>
-        </div>
         <div className="detail">
             <div className="detail-img">
                 <div className="button-wrap">
@@ -101,7 +97,6 @@ const Specifics = () => (
                 <ArticleExist/>
             </div>
         </div>
-    </div>
 );
 
 export default Specifics;

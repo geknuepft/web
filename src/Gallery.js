@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import './Gallery.css';
 import axios from 'axios';
+import GalleryItem from './GalleryItem';
 import config from 'react-global-configuration';
 import InfiniteScroll from 'react-infinite-scroller';
-import {Chf, Mm, Cm} from "./Number";
+
 
 const GallerySorter = () => (
     <select className="inline">
@@ -34,48 +35,6 @@ class GalleryIntro extends Component {
                     </p>
                 </div>
             </div>
-        );
-    }
-}
-
-class GalleryItem extends Component {
-
-    static propTypes = {
-        instanceId: PropTypes.number.isRequired,
-        articleId: PropTypes.number.isRequired,
-        lengthMm: PropTypes.number.isRequired,
-        widthMm: PropTypes.number.isRequired,
-        picture0: PropTypes.string.isRequired,
-        priceCchf: PropTypes.number.isRequired,
-        discountCchf: PropTypes.number.isRequired,
-    };
-
-    render() {
-        const props = this.props;
-
-        return (
-            <li>
-                <div className="article-img">
-                    <img src={config.get('imageUrl') + '150p/' + props.picture0} alt="Makroaufnahme"/>
-                </div>
-                <div className="article-title">Artikel-Nr. {props.articleId}</div>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>Länge</td>
-                        <td className="article-desc"><Cm valueMm={props.lengthMm}/></td>
-                    </tr>
-                    <tr>
-                        <td>Breite</td>
-                        <td className="article-desc">&#126;<Mm valueMm={props.widthMm}/></td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div className="article-prize">
-                    <Chf value={(props.priceCchf - props.discountCchf) / 100}/>
-                    (<Chf value={props.discountCchf / 100}/> Rabatt)
-                </div>
-            </li>
         );
     }
 }
@@ -124,38 +83,36 @@ class Gallery extends Component {
         const loader = <li>Lade ...</li>;
 
         return (
-            <div>
+            <div className="gallery">
                 <GalleryIntro numberOfItems={this.state.instances.length}/>
-                <ul className="article">
-                    <InfiniteScroll
-                        pageStart={0}
-                        loadMore={this.loadItems.bind(this)}
-                        hasMore={this.state.hasMoreItems}
-                        loader={loader}
-                    >
-                        {this.state.items.map((instance) =>
-                            <GalleryItem
-                                key={instance.instanceId}
-                                {...instance}
-                            />
-                        )}
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                        <li className="empty"/>
-                    </InfiniteScroll>
-
-                </ul>
+                <InfiniteScroll
+                    element="ul"
+                    pageStart={0}
+                    loadMore={this.loadItems.bind(this)}
+                    hasMore={this.state.hasMoreItems}
+                    loader={loader}
+                >
+                    {this.state.items.map((instance) =>
+                        <GalleryItem
+                            key={instance.instanceId}
+                            {...instance}
+                        />
+                    )}
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                    <li className="empty"/>
+                </InfiniteScroll>
             </div>
         );
     }

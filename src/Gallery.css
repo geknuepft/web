@@ -1,4 +1,4 @@
-ul.article div {
+div.gallery ul {
     display: flex;
     text-align: center;
     flex-wrap: wrap;
@@ -6,9 +6,8 @@ ul.article div {
     justify-content: space-between;
 }
 
-ul.article li {
+div.gallery ul li {
     list-style: none;
-    width: 150px;
     margin: 0.2em 0.8em 0.2em 0.8em;
     padding: 0.9em;
     border-radius: 3px;
@@ -16,12 +15,21 @@ ul.article li {
     box-sizing: content-box;
 }
 
-ul.article li:hover {
-    cursor: pointer;
-    border: 2px solid #EEEEEE;
+div.gallery li.overview {
+    width: 150px;
 }
 
-ul.article li.empty {
+div.gallery li.overview:hover {
+    cursor: pointer;
+}
+
+div.gallery li.specifics {
+    width: 100%;
+    border: 2px solid #EEEEEE;
+
+}
+
+div.gallery li.empty {
     /* because of space-between to fix the last line */
     list-style: none;
     width: 181px;
@@ -29,34 +37,4 @@ ul.article li.empty {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-}
-
-ul.article table {
-    width: 100%;
-}
-
-ul.article tr {
-    text-align: left;
-}
-
-ul.article td.article-desc {
-    text-align: right;
-}
-
-div.article-img {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-}
-
-div.article-title {
-    font-weight: bold;
-    text-align: center;
-    padding: 0.5em 0 0.5em 0;
-}
-
-div.article-prize {
-    font-weight: bold;
-    text-align: right;
-    padding-top: 0.5em;
 }
