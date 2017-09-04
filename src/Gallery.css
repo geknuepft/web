@@ -21,12 +21,12 @@ div.gallery li.overview {
 
 div.gallery li.overview:hover {
     cursor: pointer;
+    border: 2px solid #EEEEEE;
 }
 
 div.gallery li.specifics {
     width: 100%;
     border: 2px solid #EEEEEE;
-
 }
 
 div.gallery li.empty {

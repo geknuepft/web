@@ -22,13 +22,12 @@ const GalleryItemDetails = (props) => (
             </tr>
             <tr>
                 <td>Breite</td>
-                <td className="article-desc">&#126;<Mm valueMm={props.widthMm}/></td>
+                <td className="article-desc"><Mm valueMm={props.widthMm}/></td>
             </tr>
             </tbody>
         </table>
         <div className="article-prize">
             <Chf value={(props.priceCchf - props.discountCchf) / 100}/>
-            (<Chf value={props.discountCchf / 100}/> Rabatt)
         </div>
     </div>
 );
