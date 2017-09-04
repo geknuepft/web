@@ -17,7 +17,7 @@ class NavigationImage extends Component {
         return (
             <div className="intro-desc navigationimage">
                 <Link to={this.props.target}>
-                    <img src={config.get('imageUrl') + '800p/content/navigationimage/' + this.props.imagePath}/>
+                    <img src={config.get('imageUrl') + '800p/content/navigationimage/' + this.props.imagePath} alt="" />
                     <div className="navigationimage-text">
                         <span className="additionaltext">{this.props.additionalText}</span>
                         <br/>

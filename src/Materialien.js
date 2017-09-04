@@ -1,7 +1,7 @@
 import React from 'react';
 import Page from './Page';
 import {Navigation, NavigationElement} from './Navigation';
-import {Route, Link} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import config from 'react-global-configuration';
 import NavigationImage from "./NavigationImage";
 
