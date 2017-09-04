@@ -69,7 +69,7 @@ class GalleryItem extends Component {
                         </button>
                     </div>
                     <div className="content">
-                      <Specifics/>
+                      <Specifics instanceId={this.props.instanceId} />
                     </div>
                 </li>
             );

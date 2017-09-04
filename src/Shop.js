@@ -15,7 +15,6 @@ import {
     DeleteFilter
 } from './Filter';
 import Gallery from './Gallery';
-import Specifics from './Specifics';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route, Link} from 'react-router-dom';
 import config from 'react-global-configuration';
@@ -126,7 +125,6 @@ const ShopArmbaender = () => (
             </div>
         </FilterContainer>
         <Gallery/>
-        <Specifics/>
     </div>
 );
 
@@ -160,7 +158,6 @@ const ShopBuchzeichen = () => (
             </div>
         </FilterContainer>
         <Gallery/>
-        <Specifics/>
     </div>
 );
 
@@ -195,7 +192,6 @@ const ShopSchluesselanhaenger = () => (
             </div>
         </FilterContainer>
         <Gallery/>
-        <Specifics/>
     </div>
 );
 
@@ -233,7 +229,6 @@ const ShopMarktplatz = () => (
             </div>
         </FilterContainer>
         <Gallery/>
-        <Specifics/>
     </div>
 );
 

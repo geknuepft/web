@@ -31,10 +31,14 @@ class Chf extends Component {
 class Mm extends Component {
 
     static propTypes = {
-        valueMm: PropTypes.number.isRequired,
+        valueMm: PropTypes.number,
     };
 
     render() {
+        if (this.props.valueMm === undefined) {
+            return null;
+        }
+
         return (
             <span>
                 <FormattedNumber value={this.props.valueMm} format="length"/> mm
@@ -46,10 +50,14 @@ class Mm extends Component {
 class Cm extends Component {
 
     static propTypes = {
-        valueMm: PropTypes.number.isRequired,
+        valueMm: PropTypes.number,
     };
 
     render() {
+        if (this.props.valueMm === undefined) {
+            return null;
+        }
+
         return (
             <span>
                 <FormattedNumber value={this.props.valueMm / 10} format="length"/> cm

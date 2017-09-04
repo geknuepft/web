@@ -153,6 +153,10 @@ table.tech-data td.article-desc {
     text-align: right;
 }
 
+table.tech-data td.price {
+    font-weight: bold;
+}
+
 table.tech-data td.spacer {
     padding-bottom: 0.6em;
 }
