@@ -38,7 +38,7 @@ class App extends Component {
                 <div id="line">
                 </div>
                 <div id="main">
-                    <Route path='/Home' component={Home}/>
+                    <Route path='/' component={Home}/>
                     <Route path='/Shop' component={Shop}/>
                     <Route path='/Herstellung' component={Herstellung}/>
                     <Route path='/Materialien' component={Materialien}/>
