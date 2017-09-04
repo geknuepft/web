@@ -11,7 +11,7 @@ const GalleryItemDetails = (props) => (
         <div className="article-img">
             <img src={config.get('imageUrl') + '150p/' + props.picture0} alt="Makroaufnahme"/>
         </div>
-        <div className="article-title">Artikel-Nr. {props.articleId}</div>
+        <div className="article-title">{props.articleName}</div>
         <table>
             <tbody>
             <tr>
@@ -34,7 +34,7 @@ class GalleryItem extends Component {
 
     static propTypes = {
         instanceId: PropTypes.number.isRequired,
-        articleId: PropTypes.number.isRequired,
+        articleName: PropTypes.string.isRequired,
         lengthMm: PropTypes.number.isRequired,
         widthMm: PropTypes.number.isRequired,
         picture0: PropTypes.string.isRequired,
