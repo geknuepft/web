@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import './ColorPix.css';
+import Tooltip from 'rc-tooltip';
+import 'rc-tooltip/assets/bootstrap.css';
 
 class ColorPix extends Component {
 
@@ -11,11 +13,9 @@ class ColorPix extends Component {
 
     render() {
         return (
-            <div className="color-pix tooltip" style={{backgroundColor: '#' + this.props.hex}}>
-                <span className="tooltiptext">
-                    {this.props.name}
-                </span>
-            </div>
+            <Tooltip overlay={this.props.name} placement="top">
+                <div className="color-pix" style={{backgroundColor: '#' + this.props.hex}}/>
+            </Tooltip>
         );
     }
 }

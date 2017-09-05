@@ -3,6 +3,7 @@ import config from 'react-global-configuration';
 import {ColorPixList, ColorPixListItem} from './ColorPix';
 import './Filter.css';
 import axios from 'axios';
+import Slider from './Slider';
 
 const FilterContainer = (props) => (
     <div className="filter-wrap">
@@ -14,7 +15,7 @@ const SliderFilter = (props) => (
     <div className="filter-slider">
         {props.children}
         <h4>{props.name_de}:</h4>
-        <p>Platz für den Slider</p>
+        <Slider/>
     </div>
 );
 

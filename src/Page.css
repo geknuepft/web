@@ -124,29 +124,3 @@ div.right {
     align-items: right;
     text-align: right;
 }
-
-/* design the tooltip */
-
-div.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    position: absolute;
-    top: 160%;
-    font-size: 100%;
-    color: #424242;
-    margin: 0.8em 0 0.8em 0;
-    padding: 3px;
-    box-shadow: none;
-    box-sizing: border-box;
-    background: white;
-    border: 1px solid #929497;
-    z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
