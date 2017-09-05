@@ -18,7 +18,7 @@ class InstanceProperty extends Component {
     };
 
     render() {
-        if (this.props.value === undefined) {
+        if (this.props.value === undefined || this.props.value === null) {
             return null;
         }
 
@@ -42,11 +42,11 @@ class Instance extends Component {
         patternId: PropTypes.number.isRequired,
         lengthMm: PropTypes.number,
         widthMm: PropTypes.number,
+        heightMm: PropTypes.number,
         priceCchf: PropTypes.number.isRequired,
         discountCchf: PropTypes.number.isRequired,
         articleName: PropTypes.string.isRequired,
         articleDesc: PropTypes.string,
-        heightMm: PropTypes.number,
         numbStrings: PropTypes.number,
         numbColors: PropTypes.number,
         garnType: PropTypes.string,
@@ -69,7 +69,7 @@ class Instance extends Component {
                     <InstanceProperty name="Länge" value={this.props.lengthMm}>
                         <Cm valueMm={this.props.lengthMm}/>
                     </InstanceProperty>
-                    <InstanceProperty name="Breite" value={this.props.widthhMm}>
+                    <InstanceProperty name="Breite" value={this.props.widthMm}>
                         <Mm valueMm={this.props.widthMm}/>
                     </InstanceProperty>
                     <InstanceProperty name="Höhe" value={this.props.heightMm}>
