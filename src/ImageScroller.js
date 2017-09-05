@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import config from 'react-global-configuration';
 import {ButtonNext, ButtonPrevious} from "./Button";
 import './ImageScroller.css';
+import SmartImage from './SmartImage';
 
 class ImageScroller extends Component {
 
@@ -27,7 +27,7 @@ class ImageScroller extends Component {
         const imageDiv =
             <div>
                 <span className="image-scroller-title">{image.imageType}</span>
-                <img src={config.get('imageUrl') + '600p/' + image.path} alt=""/>
+                <SmartImage path={image.path} height={600}/>
             </div>;
 
         let buttonPrevious = null;

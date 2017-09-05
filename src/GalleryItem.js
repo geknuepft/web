@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import config from 'react-global-configuration';
 import './GalleryItem.css';
 import {Chf, Mm, Cm} from "./Number";
 import Specifics from './Specifics';
 import {ButtonClose} from './Button';
+import SmartImage from './SmartImage';
 
 const GalleryItemDetails = (props) => (
     <div>
         <div className="article-img">
-            <img src={config.get('imageUrl') + '150p/' + props.picture0} alt="Makroaufnahme"/>
+            <SmartImage path={props.picture0} height={150} alt="Makroaufnahme"/>
         </div>
         <div className="article-title">{props.articleName}</div>
         <table>

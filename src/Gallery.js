@@ -6,7 +6,6 @@ import GalleryItem from './GalleryItem';
 import config from 'react-global-configuration';
 import InfiniteScroll from 'react-infinite-scroller';
 
-
 const GallerySorter = () => (
     <select className="inline">
         <option value="new">Neuste zuoberst</option>
