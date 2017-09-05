@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
+import config from 'react-global-configuration';
+import ColorPix from './ColorPix';
 import './Filter.css';
+import axios from 'axios';
 
 const FilterContainer = (props) => (
     <div className="filter-wrap">
-        { props.children }
+        {props.children}
     </div>
 );
 
 const SliderFilter = (props) => (
     <div className="filter-slider">
-        { props.children }
-        <h4>{ props.name_de }:</h4>
+        {props.children}
+        <h4>{props.name_de}:</h4>
         <p>Platz für den Slider</p>
     </div>
 );
@@ -37,16 +40,16 @@ const PriceFilter = () => (
 
 const MultiselectFilter = (props) => (
     <div className="filter-box">
-        <h4>{ props.name_de }:</h4>
+        <h4>{props.name_de}:</h4>
         <ul className="filter-list">
-            { props.children }
+            {props.children}
         </ul>
     </div>
 );
 
 const MultiselectFilterItem = (props) => (
     <li>
-        <div className="desc">{ props.name_de }</div>
+        <div className="desc">{props.name_de}</div>
     </li>
 );
 
@@ -89,61 +92,42 @@ const CollectionFilter = () => (
     </MultiselectFilter>
 );
 
-const ColorFilter = () => (
-    <div className="filter-box">
-        <h4>Farben:</h4>
-        <ul className="filter-list-color">
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#FFFFFF'}}><span
-                    className="tooltiptext">weiss</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip selected" style={{backgroundColor: '#808080'}}><span
-                    className="tooltiptext">grau</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#000000'}}><span
-                    className="tooltiptext">schwarz</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#802B00'}}><span
-                    className="tooltiptext">braun</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#990099'}}><span
-                    className="tooltiptext">violett</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#FF0066'}}><span
-                    className="tooltiptext">pink</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#0000FF'}}><span
-                    className="tooltiptext">blau</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#40E0D0'}}><span
-                    className="tooltiptext">türkis</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#009900'}}><span
-                    className="tooltiptext">grün</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#FFFF00'}}><span
-                    className="tooltiptext">gelb</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#FF9900'}}><span
-                    className="tooltiptext">orange</span></div>
-            </li>
-            <li>
-                <div className="color-pix tooltip" style={{backgroundColor: '#FF0000'}}><span
-                    className="tooltiptext">rot</span></div>
-            </li>
-        </ul>
-    </div>
-);
+class ColorFilter extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            colorCats: null,
+        }
+    }
+
+    componentDidMount() {
+        axios.get(config.get('apiUrl') + 'ColorCat')
+            .then(res => {
+                this.setState({colorCats: res.data});
+            });
+    }
+
+    render() {
+        if (this.state.colorCats === null) {
+            return null;
+        }
+
+        return (
+            <div className="filter-box">
+                <h4>Farben:</h4>
+                <ul className="filter-list-color">
+                    {this.state.colorCats.map(
+                        (colorCat) => (
+                            <li key={colorCat.colorCatId}><ColorPix {...colorCat}/></li>
+                        )
+                    )}
+                </ul>
+            </div>
+        );
+    }
+}
 
 const PatternFilter = () => (
     <div className="filter-box">
@@ -151,7 +135,7 @@ const PatternFilter = () => (
             <input type="number" name="pattern" value="" placeholder="Suche nach einem Muster"/>
         </form>
     </div>
-)
+);
 
 const DeleteFilter = () => (
     <div className="intro filter-delete">
