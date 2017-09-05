@@ -1,6 +1,7 @@
 import React from 'react';
 import Page from './Page';
 import config from 'react-global-configuration';
+import SmartImage from './SmartImage';
 
 const Markttage = () => (
     <Page
@@ -45,7 +46,12 @@ const Markttage = () => (
                     selbst hergestellen Produkte.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/khw.jpg'} alt="Marktstand Winterthur"/>
+                <SmartImage
+                    path="/content/box/khw.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Marktstand Winterthur"
+                />
             </div>
         </div>
         <div className="intro">
@@ -70,7 +76,12 @@ const Markttage = () => (
                     Bahnhofstrasse.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/wallisellen.jpg'} alt="Marktstand Wallisellen"/>
+                <SmartImage
+                    path="/content/box/wallisellen.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Marktstand Wallisellen"
+                />
             </div>
         </div>
         <div className="intro">
@@ -93,7 +104,12 @@ const Markttage = () => (
                 </table>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/khw_winter.jpg'} alt="Marktstand Winterthur im Winter"/>
+                <SmartImage
+                    path="/content/box/khw_winter.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Marktstand Winterthur im Winter"
+                />
             </div>
         </div>
     </Page>

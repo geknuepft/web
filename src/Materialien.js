@@ -4,6 +4,7 @@ import {Navigation, NavigationElement} from './Navigation';
 import {Route} from 'react-router-dom';
 import config from 'react-global-configuration';
 import NavigationImage from "./NavigationImage";
+import SmartImage from './SmartImage';
 
 const MaterialienDefault = () => (
     <div>
@@ -62,7 +63,12 @@ const MaterialienGarne = () => (
                     da sich die einzelnen Zwirngarne gerne voneinander trennen. </p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/garn.jpg'} alt="Garn"/>
+                <SmartImage
+                    path="/content/box/garn.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Garn"
+                />
             </div>
         </div>
         <div className="intro">
@@ -75,7 +81,12 @@ const MaterialienGarne = () => (
                 </p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/garn.jpg'} alt="Garn"/>
+                <SmartImage
+                    path="/content/box/garn.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Garn"
+                />
             </div>
         </div>
     </div>
@@ -97,7 +108,12 @@ const MaterialienPerlen = () => (
                 <p>Perlen aus Stein bieten einen wunderschönen Anblick. Es gib sie in allen Grössen und Farben.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/stein.jpg'} alt="Steinperlen"/>
+                <SmartImage
+                    path="/content/box/stein.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Steinperlen"
+                />
             </div>
         </div>
         <div className="intro">
@@ -106,7 +122,12 @@ const MaterialienPerlen = () => (
                 <p>Unter anderem verwenden wir Metallperlen aus Chirurgenstahl.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/metall.jpg'} alt="Steinperlen"/>
+                <SmartImage
+                    path="/content/box/metall.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Metallperlen"
+                />
             </div>
         </div>
         <div className="intro">
@@ -120,7 +141,12 @@ const MaterialienPerlen = () => (
                 </p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/holz.jpg'} alt="Holzperlen"/>
+                <SmartImage
+                    path="/content/box/holz.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Holzperlen"
+                />
             </div>
         </div>
         <div className="intro">
@@ -130,8 +156,12 @@ const MaterialienPerlen = () => (
                     und Formen.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/keramik.jpg'}
-                     alt="Keramik und andere Perlen"/>
+                <SmartImage
+                    path="/content/box/keramik.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Keramik und andere Perlen"
+                />
             </div>
         </div>
     </div>

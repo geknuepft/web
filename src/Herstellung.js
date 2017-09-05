@@ -4,6 +4,7 @@ import {Navigation, NavigationElement} from './Navigation';
 import {Route, Link} from 'react-router-dom';
 import config from 'react-global-configuration';
 import NavigationImage from "./NavigationImage";
+import SmartImage from './SmartImage';
 
 const HerstellungDefault = () => (
     <div>
@@ -47,7 +48,12 @@ const HerstellungArmband = () => (
                 </p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/muster.jpg'} alt="Muster"/>
+                <SmartImage
+                    path="/content/box/muster.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Muster"
+                />
             </div>
         </div>
         <div className="intro">
@@ -65,7 +71,12 @@ const HerstellungArmband = () => (
                     anschliessend die andersfarbigen Fäden am richtigen Ort hinzugefügt.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/herstellung1.jpg'} alt="Vorbereitung"/>
+                <SmartImage
+                    path="/content/box/herstellung1.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Vorbereitung"
+                />
             </div>
         </div>
         <div className="intro">
@@ -81,7 +92,12 @@ const HerstellungArmband = () => (
                     Knicke im Farbverlauf.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/herstellung2.jpg'} alt="Anfang"/>
+                <SmartImage
+                    path="/content/box/herstellung2.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Anfang"
+                />
             </div>
         </div>
         <div className="intro">
@@ -95,7 +111,12 @@ const HerstellungArmband = () => (
                     dem Öffnen von Knöpfen auf beiden Seiten den Rand aus, sodass er gerade wird.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/herstellung3.jpg'} alt="Knüpfen"/>
+                <SmartImage
+                    path="/content/box/herstellung3.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Knüpfen"
+                />
             </div>
         </div>
         <div className="intro">
@@ -111,7 +132,12 @@ const HerstellungArmband = () => (
                     ab.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/herstellung4.jpg'} alt="Abschluss"/>
+                <SmartImage
+                    path="/content/box/herstellung4.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Abschluss"
+                />
             </div>
         </div>
         <div className="intro">
@@ -123,7 +149,12 @@ const HerstellungArmband = () => (
                     möglich sind.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/herstellung5.jpg'} alt="Fertig"/>
+                <SmartImage
+                    path="/content/box/herstellung5.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Feritg"
+                />
             </div>
         </div>
     </div>
@@ -139,7 +170,12 @@ const HerstellungAbschluesse = () => (
                     erlaubt eine flexible Anpassung des Armbandes um jedes Handgelenk.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/armband.jpg'} alt="Zopf"/>
+                <SmartImage
+                    path="/content/box/armband.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Zopf"
+                />
             </div>
         </div>
         <div className="intro">
@@ -149,7 +185,12 @@ const HerstellungAbschluesse = () => (
                     aus bloss zwei Fäden eignet sich diese Variante.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/herstellung3.jpg'} alt="Lose Fäden"/>
+                <SmartImage
+                    path="/content/box/herstellung3.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Lose Fäden"
+                />
             </div>
         </div>
         <div className="intro">
@@ -160,7 +201,12 @@ const HerstellungAbschluesse = () => (
                     Schlüsselanhänger.</p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/schluessel.jpg'} alt="Anfang"/>
+                <SmartImage
+                    path="/content/box/schluessel.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Teppich"
+                />
             </div>
         </div>
     </div>
@@ -178,7 +224,12 @@ const HerstellungLaenge = () => (
             </p>
         </div>
         <div className="intro-desc">
-            <img src={config.get('imageUrl') + '800p/content/box/armband.jpg'} alt="Armband"/>
+            <SmartImage
+                path="/content/box/armband.jpg"
+                height="800"
+                fullscreen="true"
+                alt="Armband"
+            />
         </div>
     </div>
 );

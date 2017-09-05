@@ -3,6 +3,7 @@ import Page from './Page';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route} from 'react-router-dom';
 import config from 'react-global-configuration';
+import SmartImage from './SmartImage';
 
 const KurseDefault = () => (
     <div>
@@ -29,7 +30,12 @@ const KurseKnuepfen = () => (
                 <p></p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/herstellung5.jpg'} alt="Armband"/>
+                <SmartImage
+                    path="/content/box/herstellung5.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Armband"
+                />
             </div>
         </div>
 );
@@ -41,7 +47,12 @@ const KurseFalten = () => (
                 <p></p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/kraniche.jpg'} alt="Kraniche"/>
+                <SmartImage
+                    path="/content/box/kraniche.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Kraniche"
+                />
             </div>
         </div>
 );
@@ -53,7 +64,12 @@ const KurseKleben = () => (
                 <p></p>
             </div>
             <div className="intro-desc">
-                <img src={config.get('imageUrl') + '800p/content/box/schachtel.jpg'} alt="Schachteln"/>
+                <SmartImage
+                    path="/content/box/schachtel.jpg"
+                    height="800"
+                    fullscreen="true"
+                    alt="Schachteln"
+                />
             </div>
         </div>
 );
