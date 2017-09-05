@@ -4,7 +4,7 @@ div.gallery-button {
     position: relative;
     width: 1.3em;
     height: 2.1em;
-    margin: 0 0.6em 0 0.6em;
+    margin: 0 1em 0 0;
     padding: 0;
     z-index: 999;
 }
@@ -22,14 +22,14 @@ div.gallery-button button {
 }
 
 div.gallery-button button.next:after {
-    opacity: 0.5;
+    opacity: 0.7;
     content: '';
     position: absolute;
-    width: 1em;
-    height: 1em;
+    width: 0.8em;
+    height: 0.8em;
     background: transparent;
-    top: 0.4em;
-    left: -0.3em;
+    top: 0.3em;
+    left: 0.1em;
     border: 3px solid black;
     border-left: none;
     border-top: none;
@@ -41,14 +41,14 @@ div.gallery-button button.next:after {
 }
 
 div.gallery-button button.prev:after {
-    opacity: 0.5;
+    opacity: 0.7;
     content: '';
     position: absolute;
-    width: 1em;
-    height: 1em;
+    width: 0.8em;
+    height: 0.8em;
     background: transparent;
-    top: 0.4em;
-    left: 0.3em;
+    top: 0.3em;
+    left: 0.5em;
     border: 3px solid black;
     border-right: none;
     border-bottom: none;

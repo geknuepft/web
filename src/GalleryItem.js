@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './GalleryItem.css';
 import {Chf, Mm, Cm} from "./Number";
 import Specifics from './Specifics';
-import {ButtonClose} from './Button';
+import {ButtonClose, ButtonNext, ButtonPrevious} from './Button';
 import SmartImage from './SmartImage';
 
 const GalleryItemDetails = (props) => (
@@ -64,6 +64,8 @@ class GalleryItem extends Component {
             return (
                 <li className="specifics">
                     <div className="button-wrap">
+                        <ButtonPrevious/>
+                        <ButtonNext/>
                         <ButtonClose onClick={() => this.setState({open: false})}/>
                     </div>
                     <div className="content">
