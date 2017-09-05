@@ -63,7 +63,7 @@ class Gallery extends Component {
 
     loadItems(page) {
         let items = this.state.items;
-        for (let i = 0; i < 10 && this.state.instances.length > 0; ++i) {
+        for (let i = 0; i < 32 && this.state.instances.length > 0; ++i) {
             items.push(this.state.instances.pop());
         }
         this.setState({
