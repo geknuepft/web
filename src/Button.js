@@ -3,17 +3,39 @@ import PropTypes from 'prop-types';
 import './Button.css';
 import verkleinern from '../public/verkleinern.svg';
 
-const ButtonNext = () => (
-        <div className="gallery-button">
-            <button type="submit" className="next"/>
-        </div>
-);
 
-const ButtonPrevious = () => (
-    <div className="gallery-button">
-        <button type="submit" className="prev"/>
-    </div>
-);
+class ButtonNext extends Component {
+
+    static propTypes = {
+        onClick: PropTypes.func,
+    };
+
+    render() {
+        return (
+            <div className="gallery-button">
+                <button type="submit" className="next" onClick={this.props.onClick}/>
+            </div>
+        );
+    }
+
+}
+
+
+class ButtonPrevious extends Component {
+
+    static propTypes = {
+        onClick: PropTypes.func,
+    };
+
+    render() {
+        return (
+            <div className="gallery-button">
+                <button type="submit" className="prev" onClick={this.props.onClick}/>
+            </div>
+        );
+    }
+
+}
 
 class ButtonClose extends Component {
 

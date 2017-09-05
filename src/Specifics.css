@@ -12,19 +12,6 @@ div.detail-img {
     padding: 0.6em 0 0.6em 0;
 }
 
-span.detail-img-title {
-    display: block;
-    font-size: 100%;
-    padding: 0.6em 0 1.5em 0;
-}
-
-div.detail-img img {
-    position: relative;
-    height: 40vw;
-    max-height: 600px;
-    width: auto;
-}
-
 div.detail-desc {
     display: flex;
     flex-direction: column;

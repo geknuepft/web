@@ -3,19 +3,8 @@ import PropTypes from 'prop-types';
 import './Specifics.css';
 import axios from 'axios';
 import config from 'react-global-configuration';
-import {Chf, Mm, Cm} from "./Number";
-import {ButtonNext, ButtonPrevious} from "./Button";
-
-const ImageScroller = () => (
-    <div className="detail-img">
-        <div className="button-wrap">
-            <ButtonPrevious/>
-            <ButtonNext/>
-        </div>
-        <span className="detail-img-title">Nahaufnahme</span>
-        <img src={config.get('imageUrl') + '600p/cma0/161116_4/IMG_4080.JPG'} alt="Artikel"/>
-    </div>
-);
+import {Chf, Mm, Cm} from './Number';
+import ImageScroller from './ImageScroller';
 
 class InstanceProperty extends Component {
 
@@ -59,6 +48,7 @@ class Instance extends Component {
         heightMm: PropTypes.number,
         numbStrings: PropTypes.number,
         numbColors: PropTypes.number,
+        garnType: PropTypes.string,
     };
 
     render() {
@@ -94,10 +84,7 @@ class Instance extends Component {
                         </td>
                         <td className="article-desc">alle 4 cm</td>
                     </tr>
-                    <tr>
-                        <td>Garntyp</td>
-                        <td className="article-desc">Catania fine</td>
-                    </tr>
+                    <InstanceProperty name="garnType" value={this.props.garnType}/>
                     <InstanceProperty name="Anzahl Farben" value={this.props.numbColors}/>
                     <tr>
                         <td>Farbnamen</td>
@@ -163,7 +150,7 @@ class Specifics extends Component {
 
         return (
             <div className="detail">
-                <ImageScroller/>
+                <ImageScroller images={this.state.instanceData.images}/>
                 <div className="detail-desc">
                     <Instance {...this.state.instanceData} />
                 </div>
