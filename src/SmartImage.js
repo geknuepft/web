@@ -8,6 +8,7 @@ class SmartImage extends Component {
     static propTypes = {
         path: PropTypes.string.isRequired,
         height: PropTypes.number.isRequired,
+        fullscreen: PropTypes.bool,
         alt: PropTypes.string,
     };
 
