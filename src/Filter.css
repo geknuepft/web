@@ -72,24 +72,6 @@ ul.filter-list div.numb {
     text-align: right;
 }
 
-
-/* design the filter-list for the colors */
-
-ul.filter-list-color {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-}
-
-ul.filter-list-color li {
-    list-style: none;
-    margin: 0.3em;
-}
-
-ul.filter-list-color div.selected {
-    border: 2px solid #85C1E9;
-}
-
 /* design the button FilterContainer zurücksetzen */
 
 div.filter-delete {

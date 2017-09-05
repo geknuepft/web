@@ -1,4 +1,4 @@
-div.gallery ul {
+div.gallery ul.gallery {
     display: flex;
     text-align: center;
     flex-wrap: wrap;
@@ -6,7 +6,7 @@ div.gallery ul {
     justify-content: space-between;
 }
 
-div.gallery ul li {
+div.gallery ul.gallery li.gallery {
     list-style: none;
     margin: 0.2em 0.8em 0.2em 0.8em;
     padding: 0.9em;

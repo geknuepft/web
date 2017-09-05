@@ -5,6 +5,7 @@ import axios from 'axios';
 import config from 'react-global-configuration';
 import {Chf, Mm, Cm} from './Number';
 import ImageScroller from './ImageScroller';
+import {ColorPixList, ColorPixListItem} from './ColorPix';
 
 class InstanceProperty extends Component {
 
@@ -48,8 +49,8 @@ class Instance extends Component {
         articleName: PropTypes.string.isRequired,
         articleDesc: PropTypes.string,
         numbStrings: PropTypes.number,
-        numbColors: PropTypes.number,
         garnType: PropTypes.string,
+        colorss: PropTypes.array,
     };
 
     render() {
@@ -86,10 +87,18 @@ class Instance extends Component {
                         <td className="article-desc">alle 4 cm</td>
                     </tr>
                     <InstanceProperty name="garnType" value={this.props.garnType}/>
-                    <InstanceProperty name="Anzahl Farben" value={this.props.numbColors}/>
+                    <InstanceProperty name="Anzahl Farben" value={this.props.colors.length}/>
                     <tr>
-                        <td>Farbnamen</td>
-                        <td className="article-desc">mango, créme, weiss, schwarz</td>
+                        <td>Farben</td>
+                        <td className="article-desc">
+                            <ColorPixList>
+                                {this.props.colors.map(
+                                    (color) => (
+                                        <ColorPixListItem key={color.colorId} name={color.colorName} hex={color.hex}/>
+                                    )
+                                )}
+                            </ColorPixList>
+                        </td>
                     </tr>
                     <tr>
                         <td>Eingeknüpftes</td>

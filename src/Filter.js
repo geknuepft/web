@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import config from 'react-global-configuration';
-import ColorPix from './ColorPix';
+import {ColorPixList, ColorPixListItem} from './ColorPix';
 import './Filter.css';
 import axios from 'axios';
 
@@ -117,13 +117,13 @@ class ColorFilter extends Component {
         return (
             <div className="filter-box">
                 <h4>Farben:</h4>
-                <ul className="filter-list-color">
+                <ColorPixList>
                     {this.state.colorCats.map(
                         (colorCat) => (
-                            <li key={colorCat.colorCatId}><ColorPix {...colorCat}/></li>
+                            <ColorPixListItem key={colorCat.colorCatId} {...colorCat} />
                         )
                     )}
-                </ul>
+                </ColorPixList>
             </div>
         );
     }

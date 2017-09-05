@@ -22,6 +22,10 @@ div.detail-desc {
     border-left: 2px solid #EEEEEE;
 }
 
+div.detail-desc ul.color-pix-list {
+    justify-content: flex-end;
+}
+
 div.detail-desc-title {
     text-align: left;
     font-size: 1.8em;

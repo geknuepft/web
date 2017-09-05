@@ -10,3 +10,20 @@ div.color-pix:hover {
     cursor: pointer;
     border: 2px solid #EEEEEE;
 }
+
+/* design the filter-list for the colors */
+
+ul.color-pix-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+ul.color-pix-list li.color-pix-list {
+    list-style: none;
+    margin: 0.3em;
+}
+
+ul.color-pix-list div.selected {
+    border: 2px solid #85C1E9;
+}

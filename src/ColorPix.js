@@ -20,4 +20,16 @@ class ColorPix extends Component {
     }
 }
 
-export default ColorPix;
+const ColorPixList = (props) => (
+    <ul className="color-pix-list">
+        {props.children}
+    </ul>
+);
+
+const ColorPixListItem = (props) => (
+    <li className="color-pix-list">
+        <ColorPix {...props}/>
+    </li>
+);
+
+export {ColorPix, ColorPixList, ColorPixListItem};

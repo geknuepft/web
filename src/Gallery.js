@@ -86,6 +86,7 @@ class Gallery extends Component {
                 <GalleryIntro numberOfItems={this.state.instances.length}/>
                 <InfiniteScroll
                     element="ul"
+                    className="gallery"
                     pageStart={0}
                     loadMore={this.loadItems.bind(this)}
                     hasMore={this.state.hasMoreItems}

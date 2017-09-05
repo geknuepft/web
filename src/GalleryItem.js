@@ -56,13 +56,13 @@ class GalleryItem extends Component {
     render() {
         if (!this.state.open) {
             return (
-                <li className="overview" onClick={() => this.setState({open: true})}>
+                <li className="gallery overview" onClick={() => this.setState({open: true})}>
                     <GalleryItemDetails {...this.props} />
                 </li>
             );
         } else {
             return (
-                <li className="specifics">
+                <li className="gallery specifics">
                     <div className="button-wrap">
                         <ButtonPrevious/>
                         <ButtonNext/>
