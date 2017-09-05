@@ -11,7 +11,10 @@ const GalleryItemDetails = (props) => (
         <div className="article-img">
             <SmartImage path={props.picture0} height={150} alt="Makroaufnahme"/>
         </div>
-        <div className="article-title">{props.articleName}</div>
+        <div className="article-title">
+            <div>{props.articleName}</div>
+            <div className="article-ids">I {props.instanceId}</div>
+        </div>
         <table>
             <tbody>
             <tr>
@@ -64,7 +67,7 @@ class GalleryItem extends Component {
                         <ButtonClose onClick={() => this.setState({open: false})}/>
                     </div>
                     <div className="content">
-                      <Specifics instanceId={this.props.instanceId} />
+                        <Specifics instanceId={this.props.instanceId}/>
                     </div>
                 </li>
             );
