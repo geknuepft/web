@@ -133,15 +133,11 @@ class Specifics extends Component {
         }
     }
 
-    fetchDataFromApi = () => {
+    componentDidMount() {
         axios.get(config.get('apiUrl') + 'Instance/' + this.props.instanceId)
             .then(res => {
                 this.setState({instanceData: res.data});
             });
-    };
-
-    componentDidMount() {
-        this.fetchDataFromApi();
     }
 
     render() {
