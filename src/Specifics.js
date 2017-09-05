@@ -39,6 +39,7 @@ class Instance extends Component {
     static propTypes = {
         instanceId: PropTypes.number.isRequired,
         articleId: PropTypes.number.isRequired,
+        patternId: PropTypes.number.isRequired,
         lengthMm: PropTypes.number,
         widthMm: PropTypes.number,
         priceCchf: PropTypes.number.isRequired,
@@ -58,7 +59,7 @@ class Instance extends Component {
                 <div className="detail-desc-ids">
                     <div>A {this.props.articleId}</div>
                     <div>I {this.props.instanceId}</div>
-                    <div>P 509</div>
+                    <div>P {this.props.patternId}</div>
                 </div>
                 <div className="detail-desc-de">
                     <p>{this.props.articleDesc}</p>
