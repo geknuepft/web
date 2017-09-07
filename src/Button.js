@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 import verkleinern from '../public/verkleinern.svg';
+import Tooltip from 'rc-tooltip';
+
 
 
 class ButtonNext extends Component {
@@ -52,4 +54,19 @@ class ButtonClose extends Component {
     }
 }
 
-export {ButtonNext, ButtonPrevious, ButtonClose};
+class ButtonInfo extends Component {
+
+    static propTypes = {
+        text: PropTypes.string.isRequired,
+    };
+
+    render() {
+        return (
+            <Tooltip overlay={this.props.text} placement="top">
+                <button className="info">i</button>
+            </Tooltip>
+        )
+    }
+}
+
+export {ButtonNext, ButtonPrevious, ButtonClose, ButtonInfo};

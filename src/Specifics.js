@@ -6,6 +6,7 @@ import config from 'react-global-configuration';
 import {Chf, Mm, Cm} from './Number';
 import ImageScroller from './ImageScroller';
 import {ColorPixList, ColorPixListItem} from './ColorPix';
+import {ButtonInfo} from './Button';
 
 class InstanceProperty extends Component {
 
@@ -79,10 +80,7 @@ class Instance extends Component {
                     <InstanceProperty name="Anzahl Fäden" value={this.props.numbStrings}/>
                     <tr>
                         <td>Musterwiederholung
-                            <div className="tooltip">
-                                <button className="info">i</button>
-                                <span className="tooltiptext">Info</span>
-                            </div>
+                            <ButtonInfo text="Test"/>
                         </td>
                         <td className="article-desc">alle 4 cm</td>
                     </tr>
