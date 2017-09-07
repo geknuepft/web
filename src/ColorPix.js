@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './ColorPix.css';
 import Tooltip from 'rc-tooltip';
 import 'rc-tooltip/assets/bootstrap.css';
+import './Tooltip.css';
 
 class ColorPix extends Component {
 

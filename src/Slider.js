@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import RcSlider, {Range} from 'rc-slider';
 import Tooltip from 'rc-tooltip';
 import 'rc-slider/assets/index.css';
+import './Slider.css';
+import './Tooltip.css'
 import {range} from 'range';
 
 const TooltipHandle = (props) => {
@@ -23,11 +25,11 @@ class Slider extends Component {
 
     render() {
 
-        const min = 0;
+        const min = 10;
         const max = 16;
 
         let marks = {};
-        range(min, max + 1, 2).map((n) => {
+        range(min, max + 1).map((n) => {
             marks[n] = n;
         });
 

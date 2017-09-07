@@ -1,0 +1,12 @@
+/*design the tooltip, rc-tooltop/asets/botstrap.css*/
+
+.rc-tooltip-inner {
+    padding: 5px 5px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #373737;
+    border-radius: 3px;
+    box-shadow: 0 0 4px #d9d9d9;
+    min-height: 1.5em;
+}
