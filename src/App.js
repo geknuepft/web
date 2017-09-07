@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Navigation, NavigationElement} from './Navigation';
-import {Route} from 'react-router-dom';
+import {Route, Redirect} from 'react-router-dom';
 import logo from '../public/logo.png';
 import Home from './Home';
 import Shop from './Shop';
@@ -40,6 +40,9 @@ class App extends Component {
                 <div id="line">
                 </div>
                 <div id="main">
+                    <Route path='/'>
+                        <Redirect to="/Home" />
+                    </Route>
                     <Route path='/Home' component={Home}/>
                     <Route path='/Shop' component={Shop}/>
                     <Route path='/Herstellung' component={Herstellung}/>
