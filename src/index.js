@@ -12,8 +12,8 @@ import {IntlFormats} from "./Number"
 addLocaleData([...de]);
 
 config.set({
-    apiUrl: 'http://192.168.1.2:8002/v0/',
-    imageUrl: 'http://192.168.1.2:8002/v0/Image/',
+    apiUrl: 'http://api0.geknuepft.ch/v0/',
+    imageUrl: 'http://api0.geknuepft.ch/v0/Image/',
 });
 
 ReactDOM.render(
