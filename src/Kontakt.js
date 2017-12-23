@@ -1,6 +1,7 @@
 import React from 'react';
-import Page from './Page'
+import Page from './Page';
 import config from 'react-global-configuration';
+import FormContact from './Forms';
 
 const Kontakt = () => (
     <Page
@@ -26,29 +27,9 @@ const Kontakt = () => (
         </div>
         <div className="intro">
             <div className="intro-desc">
-                <div className="form-wrap">
-                    <h2>Kontaktformular</h2>
-                    <p>Bitte alle mit * gekennzeichneten Felder ausfüllen.</p>
-                    <form>
-                        <input type="text" name="firstname" value="" placeholder="Vorname*"/>
-                        <input type="text" name="name" value="" placeholder="Nachname*"/>
-                        <input type="text" name="mail" value="" placeholder="E-Mail-Adresse*"/>
-                        <input type="text" name="address" value="" placeholder="Adresse"/>
-                        <input type="number" name="phone" value="" placeholder="Telefonnummer"/>
-                        <textarea name="message" rows="8" cols="40" value=""
-                                  placeholder="Ihre Nachricht*">
-                                            </textarea>
-                        <p>Ihre Nachricht wird an info@geknüpft.ch gesendet. Sie erhalten auf
-                            Ihre angegebene E-Mail-Adresse eine Kopie.</p>
-                        <button type="submit">Nachricht senden</button>
-                    </form>
-                </div>
+                <FormContact/>
             </div>
-            <div className="intro-desc center">
-                <div> {/* todo: show/hide this */}
-                    <h4>Vielen Dank für Ihre Nachricht!</h4>
-                    <p>Wir werden Ihnen so bald wie möglich antworten.</p>
-                </div>
+            <div className="intro-desc">
             </div>
         </div>
     </Page>
