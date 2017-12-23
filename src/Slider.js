@@ -5,9 +5,10 @@ import 'rc-slider/assets/index.css';
 import './Slider.css';
 import './Tooltip.css'
 import {range} from 'range';
+import PropTypes from 'prop-types';
 
 const TooltipHandle = (props) => {
-    const { value, dragging, index, ...restProps } = props;
+    const {value, dragging, index, ...restProps} = props;
     return (
         <Tooltip
             prefixCls="rc-slider-tooltip"
@@ -23,31 +24,36 @@ const TooltipHandle = (props) => {
 
 class Slider extends Component {
 
+    static propTypes = {
+        min: PropTypes.number.isRequired,
+        max: PropTypes.number.isRequired,
+        step: PropTypes.number.isRequired,
+        mark: PropTypes.func,
+        defaultValueMin: PropTypes.number.isRequired,
+        defaultValueMax: PropTypes.number.isRequired,
+    };
+
     render() {
 
-        const min = 10;
-        const max = 16;
+        const min = this.props.min;
+        const max = this.props.max;
 
         let marks = {};
         range(min, max + 1).map((n) => {
             marks[n] = n;
         });
 
-        return (
-            <div>
-                <Range
-                    handle={TooltipHandle}
-                    min={min}
-                    max={max}
-                    marks={marks}
-                    step={0.5}
-                    dots
-                    defaultValue={[12, 14]}
-                />
-            </div>
-        );
+        return <Range
+            handle={TooltipHandle}
+            min={this.props.min}
+            max={this.props.max}
+            marks={marks}
+            step={this.props.step}
+            dots
+            defaultValue={[this.props.defaultValueMin, this.props.defaultValueMax]}
+        />
     }
 }
-;
+
 
 export default Slider;

@@ -15,16 +15,30 @@ const SliderFilter = (props) => (
     <div className="filter-slider">
         {props.children}
         <h4>{props.name_de}:</h4>
-        <Slider/>
+        <Slider {...props} />
     </div>
 );
 
 const LengthFilter = () => (
-    <SliderFilter name_de="Länge"/>
+    <SliderFilter
+        name_de="Länge"
+        min={7}
+        max={18}
+        step={0.5}
+        defaultValueMin={10}
+        defaultValueMax={16}
+    />
 );
 
 const OverlengthFilter = () => (
-    <SliderFilter name_de="Länge">
+    <SliderFilter
+        name_de="Länge"
+        min={7}
+        max={25}
+        step={0.5}
+        defaultValueMin={12}
+        defaultValueMax={16}
+    >
         <div className="tag">
             <button>Überlänge</button>
         </div>
@@ -32,11 +46,25 @@ const OverlengthFilter = () => (
 );
 
 const WidthFilter = () => (
-    <SliderFilter name_de="Breite"/>
+    <SliderFilter
+        name_de="Breite"
+        min={7}
+        max={10}
+        step={0.5}
+        defaultValueMin={10}
+        defaultValueMax={16}
+    />
 );
 
 const PriceFilter = () => (
-    <SliderFilter name_de="Preis"/>
+    <SliderFilter
+        name_de="Preis"
+        min={7}
+        max={18}
+        step={0.5}
+        defaultValueMin={10}
+        defaultValueMax={16}
+    />
 );
 
 const MultiselectFilter = (props) => (
