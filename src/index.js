@@ -12,8 +12,8 @@ import {IntlFormats} from "./Number"
 addLocaleData([...de]);
 
 config.set({
-    apiUrl: 'http://api0.geknuepft.ch/v0/',
-    imageUrl: 'http://api0.geknuepft.ch/v0/Image/',
+    apiUrl: process.env.REACT_APP_API_URL,
+    imageUrl: process.env.REACT_APP_IMAGE_URL,
 });
 
 ReactDOM.render(
