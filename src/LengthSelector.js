@@ -35,11 +35,12 @@ class LengthSelector extends Component {
 const LengthArmbandSelector = () => (
     <LengthSelector
         name_de="Länge"
-        min={10}
+        min={9}
         max={18}
         maxOverlength={25}
         step={0.5}
         markStep={1}
+        markLabel="cm"
         defaultValue={[14]}
     />
 );
@@ -47,10 +48,12 @@ const LengthArmbandSelector = () => (
 const LengthBuchzeichenSelector = () => (
     <LengthSelector
         name_de="Länge"
-        min={16}
-        max={35}
+        min={15}
+        max={29}
         maxOverlength={40}
         step={0.5}
+        markStep={1}
+        markLabel="cm"
         defaultValue={[20]}
     />
 );
@@ -60,8 +63,10 @@ const LengthSchluesselSelector = () => (
         name_de="Länge"
         min={3}
         max={12}
-        maxOverlength={20}
+        maxOverlength={18}
         step={0.5}
+        markStep={1}
+        markLabel="cm"
         defaultValue={[6]}
     />
 );

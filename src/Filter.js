@@ -25,6 +25,8 @@ const LengthFilter = () => (
         min={10}
         max={18}
         step={0.5}
+        markStep={1}
+        markLabel="cm"
         defaultValue={[12, 14]}
     >
     </SliderFilter>
@@ -38,7 +40,7 @@ const WidthFilter = () => (
         step={0.2}
         markStep={1}
         markLabel="cm"
-        defaultValue={[2, 4]}
+        defaultValue={[1, 6]}
     />
 );
 
@@ -46,10 +48,11 @@ const PriceFilter = () => (
     <SliderFilter
         name_de="Preis"
         min={2}
-        max={70}
+        max={80}
         step={2}
         markStep={10}
-        defaultValue={[10, 20]}
+        markLabel="CHF"
+        defaultValue={[2, 80]}
     />
 );
 
