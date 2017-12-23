@@ -36,6 +36,7 @@ class Slider extends Component {
         range(0, numbMarks).map((n) => {
             const s = secondMark + n * markStep;
             marks[s] = markLabel(s);
+            return null;
         });
         marks[max] = markLabel(max);
 
