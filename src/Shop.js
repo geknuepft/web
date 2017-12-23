@@ -2,9 +2,6 @@ import React from 'react';
 import Page from './Page';
 import {
     FilterContainer,
-    LengthArmbandSelector,
-    LengthBuchzeichenSelector,
-    LengthSchluesselSelector,
     LengthFilter,
     WidthFilter,
     PriceFilter,
@@ -16,6 +13,11 @@ import {
     ColorFilter,
     DeleteFilter
 } from './Filter';
+import {
+    LengthArmbandSelector,
+    LengthBuchzeichenSelector,
+    LengthSchluesselSelector,
+} from './LengthSelector'
 import Gallery from './Gallery';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route, Link} from 'react-router-dom';

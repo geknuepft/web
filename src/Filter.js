@@ -19,49 +19,6 @@ const SliderFilter = (props) => (
     </div>
 );
 
-const LengthArmbandSelector = () => (
-    <SliderFilter
-        name_de="Länge"
-        min={10}
-        max={18}
-        step={0.5}
-        markStep={1}
-        defaultValue={[14]}
-    >
-        <div className="tag">
-            <button>Überlänge</button>
-        </div>
-    </SliderFilter>
-);
-
-const LengthBuchzeichenSelector = () => (
-    <SliderFilter
-        name_de="Länge"
-        min={16}
-        max={35}
-        step={0.5}
-        defaultValue={[20]}
-    >
-        <div className="tag">
-            <button>Überlänge</button>
-        </div>
-    </SliderFilter>
-);
-
-const LengthSchluesselSelector = () => (
-    <SliderFilter
-        name_de="Länge"
-        min={3}
-        max={12}
-        step={0.5}
-        defaultValue={[6]}
-    >
-        <div className="tag">
-            <button>Überlänge</button>
-        </div>
-    </SliderFilter>
-);
-
 const LengthFilter = () => (
     <SliderFilter
         name_de="Länge"
@@ -70,9 +27,6 @@ const LengthFilter = () => (
         step={0.5}
         defaultValue={[12, 14]}
     >
-        <div className="tag">
-            <button>Überlänge</button>
-        </div>
     </SliderFilter>
 );
 
@@ -208,9 +162,6 @@ const DeleteFilter = () => (
 
 export {
     FilterContainer,
-    LengthArmbandSelector,
-    LengthBuchzeichenSelector,
-    LengthSchluesselSelector,
     LengthFilter,
     WidthFilter,
     PriceFilter,
@@ -221,4 +172,4 @@ export {
     ColorFilter,
     PatternFilter,
     DeleteFilter
-};
+}
