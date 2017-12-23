@@ -25,6 +25,7 @@ const LengthArmbandSelector = () => (
         min={10}
         max={18}
         step={0.5}
+        markStep={1}
         defaultValue={[14]}
     >
         <div className="tag">
@@ -81,6 +82,8 @@ const WidthFilter = () => (
         min={1}
         max={6}
         step={0.2}
+        markStep={1}
+        markLabel="cm"
         defaultValue={[2, 4]}
     />
 );
@@ -88,9 +91,10 @@ const WidthFilter = () => (
 const PriceFilter = () => (
     <SliderFilter
         name_de="Preis"
-        min={0}
+        min={2}
         max={70}
-        step={10}
+        step={2}
+        markStep={10}
         defaultValue={[10, 20]}
     />
 );
