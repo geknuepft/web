@@ -20,34 +20,34 @@ class ImageScroller extends Component {
         }
     }
 
+    handleSelect = (selectedIndex, e) => (
+        this.setState({
+            index: selectedIndex,
+            direction: e.direction,
+        })
+    );
+
+    onPrev = () => {
+        let index = this.state.index - 1;
+        if (index < 0) index = this.props.images.length - 1;
+        this.setState({index: index})
+    };
+
+    onNext = () => {
+        let index = this.state.index + 1;
+        if (index >= this.props.images.length) index = 0;
+        this.setState({index: index})
+    };
+
     render() {
         // empty gallery
         if (this.props.images.length < 1) return null;
-
-        const handleSelect = (selectedIndex, e) => (
-            this.setState({
-                index: selectedIndex,
-                direction: e.direction,
-            })
-        );
-
-        const onPrev = () => {
-            let index = this.state.index - 1;
-            if (index < 0) index = this.props.images.length - 1;
-            this.setState({index: index})
-        };
-
-        const onNext = () => {
-            let index = this.state.index + 1;
-            if (index >= this.props.images.length) index = 0;
-            this.setState({index: index})
-        };
 
         return <div className="image-scroller">
             <Carousel
                 activeIndex={this.state.index}
                 direction={this.state.direction}
-                onSelect={handleSelect}
+                onSelect={this.handleSelect}
                 interval={null}
                 slide={false}
 
@@ -67,8 +67,8 @@ class ImageScroller extends Component {
                 images={this.props.images}
                 index={this.state.index}
                 onClose={() => (this.setState({fullScreen: false}))}
-                onPrev={onPrev}
-                onNext={onNext}
+                onPrev={this.onPrev}
+                onNext={this.onNext}
             />
             }
         </div>
