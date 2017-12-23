@@ -19,25 +19,55 @@ const SliderFilter = (props) => (
     </div>
 );
 
+const LengthArmbandSelector = () => (
+    <SliderFilter
+        name_de="Länge"
+        min={10}
+        max={18}
+        step={0.5}
+        defaultValue={[14]}
+    >
+        <div className="tag">
+            <button>Überlänge</button>
+        </div>
+    </SliderFilter>
+);
+
+const LengthBuchzeichenSelector = () => (
+    <SliderFilter
+        name_de="Länge"
+        min={16}
+        max={35}
+        step={0.5}
+        defaultValue={[20]}
+    >
+        <div className="tag">
+            <button>Überlänge</button>
+        </div>
+    </SliderFilter>
+);
+
+const LengthSchluesselSelector = () => (
+    <SliderFilter
+        name_de="Länge"
+        min={3}
+        max={12}
+        step={0.5}
+        defaultValue={[6]}
+    >
+        <div className="tag">
+            <button>Überlänge</button>
+        </div>
+    </SliderFilter>
+);
+
 const LengthFilter = () => (
     <SliderFilter
         name_de="Länge"
-        min={7}
+        min={10}
         max={18}
         step={0.5}
-        defaultValueMin={10}
-        defaultValueMax={16}
-    />
-);
-
-const OverlengthFilter = () => (
-    <SliderFilter
-        name_de="Länge"
-        min={7}
-        max={25}
-        step={0.5}
-        defaultValueMin={12}
-        defaultValueMax={16}
+        defaultValue={[12, 14]}
     >
         <div className="tag">
             <button>Überlänge</button>
@@ -48,22 +78,20 @@ const OverlengthFilter = () => (
 const WidthFilter = () => (
     <SliderFilter
         name_de="Breite"
-        min={7}
-        max={10}
-        step={0.5}
-        defaultValueMin={10}
-        defaultValueMax={16}
+        min={1}
+        max={6}
+        step={0.2}
+        defaultValue={[2, 4]}
     />
 );
 
 const PriceFilter = () => (
     <SliderFilter
         name_de="Preis"
-        min={7}
-        max={18}
-        step={0.5}
-        defaultValueMin={10}
-        defaultValueMax={16}
+        min={0}
+        max={70}
+        step={10}
+        defaultValue={[10, 20]}
     />
 );
 
@@ -176,8 +204,10 @@ const DeleteFilter = () => (
 
 export {
     FilterContainer,
+    LengthArmbandSelector,
+    LengthBuchzeichenSelector,
+    LengthSchluesselSelector,
     LengthFilter,
-    OverlengthFilter,
     WidthFilter,
     PriceFilter,
     CategoryFilter,

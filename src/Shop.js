@@ -2,8 +2,10 @@ import React from 'react';
 import Page from './Page';
 import {
     FilterContainer,
+    LengthArmbandSelector,
+    LengthBuchzeichenSelector,
+    LengthSchluesselSelector,
     LengthFilter,
-    OverlengthFilter,
     WidthFilter,
     PriceFilter,
     CategoryFilter,
@@ -109,7 +111,7 @@ const ShopArmbaender = () => (
             <div className="intro">
                 <div className="intro-desc">
                     <div className="filter">
-                        <OverlengthFilter/>
+                        <LengthArmbandSelector/>
                         <WidthFilter/>
                         <PriceFilter/>
                     </div>
@@ -143,7 +145,7 @@ const ShopBuchzeichen = () => (
             <div className="intro">
                 <div className="intro-desc">
                     <div className="filter">
-                        <LengthFilter/>
+                        <LengthBuchzeichenSelector/>
                         <WidthFilter/>
                         <PriceFilter/>
                     </div>
@@ -176,7 +178,7 @@ const ShopSchluesselanhaenger = () => (
             <div className="intro">
                 <div className="intro-desc">
                     <div className="filter">
-                        <LengthFilter/>
+                        <LengthSchluesselSelector/>
                         <WidthFilter/>
                         <PriceFilter/>
                     </div>
