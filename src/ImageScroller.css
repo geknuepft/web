@@ -1,3 +1,7 @@
-.specifics .carousel {
+.image-scroller .specifics .carousel {
     max-width: 600px;
+}
+
+.image-scroller-modal {
+    width: 95% !important;
 }
