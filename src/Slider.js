@@ -28,9 +28,7 @@ class Slider extends Component {
         min: PropTypes.number.isRequired,
         max: PropTypes.number.isRequired,
         step: PropTypes.number.isRequired,
-        mark: PropTypes.func,
-        defaultValueMin: PropTypes.number.isRequired,
-        defaultValueMax: PropTypes.number.isRequired,
+        defaultValue: PropTypes.array.isRequired,
     };
 
     render() {
@@ -39,7 +37,7 @@ class Slider extends Component {
         const max = this.props.max;
 
         let marks = {};
-        range(min, max + 1).map((n) => {
+        range(min, max/5 ).map((n) => {
             marks[n] = n;
         });
 
@@ -47,10 +45,9 @@ class Slider extends Component {
             handle={TooltipHandle}
             min={this.props.min}
             max={this.props.max}
-            marks={marks}
             step={this.props.step}
-            dots
-            defaultValue={[this.props.defaultValueMin, this.props.defaultValueMax]}
+            dots={true}
+            defaultValue={this.props.defaultValue}
         />
     }
 }
