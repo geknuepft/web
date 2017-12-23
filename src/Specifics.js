@@ -127,7 +127,6 @@ class Instance extends Component {
 }
 
 class Specifics extends Component {
-
     static propTypes = {
         instanceId: PropTypes.number.isRequired,
     };
@@ -152,14 +151,12 @@ class Specifics extends Component {
             return null;
         }
 
-        return (
-            <div className="detail">
-                <ImageScroller images={this.state.instanceData.images}/>
-                <div className="detail-desc">
-                    <Instance {...this.state.instanceData} />
-                </div>
+        return <div className="detail">
+            <ImageScroller images={this.state.instanceData.images}/>
+            <div className="detail-desc">
+                <Instance {...this.state.instanceData} />
             </div>
-        );
+        </div>
     }
 }
 

@@ -1,12 +1,3 @@
-span.image-scroller-title {
-    display: block;
-    font-size: 100%;
-    padding: 0.6em 0 1.5em 0;
-}
-
-div.image-scroller img {
-    position: relative;
-    height: 40vw;
-    max-height: 600px;
-    width: auto;
+.specifics .carousel {
+    max-width: 600px;
 }
