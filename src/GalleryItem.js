@@ -1,10 +1,8 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import './GalleryItem.css';
-import {Chf, Mm, Cm} from "./Number";
-import Specifics from './Specifics';
-import {ButtonClose, ButtonNext, ButtonPrevious} from './Button';
-import SmartImage from './SmartImage';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import './GalleryItem.css'
+import { Chf, Mm, Cm } from './Number'
+import SmartImage from './SmartImage'
 
 const GalleryItemDetails = (props) => (
     <div>
@@ -31,7 +29,7 @@ const GalleryItemDetails = (props) => (
             <Chf value={(props.priceCchf - props.discountCchf) / 100}/>
         </div>
     </div>
-);
+)
 
 class GalleryItem extends Component {
 
@@ -43,38 +41,14 @@ class GalleryItem extends Component {
         picture0: PropTypes.string.isRequired,
         priceCchf: PropTypes.number.isRequired,
         discountCchf: PropTypes.number.isRequired,
-    };
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            open: false,
-        }
+        open: PropTypes.func,
     }
 
-    render() {
-        if (!this.state.open) {
-            return (
-                <li className="gallery overview" onClick={() => this.setState({open: true})}>
-                    <GalleryItemDetails {...this.props} />
-                </li>
-            );
-        } else {
-            return (
-                <li className="gallery specifics">
-                    <div className="button-wrap">
-                        <ButtonPrevious/>
-                        <ButtonNext/>
-                        <ButtonClose onClick={() => this.setState({open: false})}/>
-                    </div>
-                    <div className="content">
-                        <Specifics instanceId={this.props.instanceId}/>
-                    </div>
-                </li>
-            );
-        }
+    render () {
+        return <li className="gallery overview" onClick={this.props.open}>
+            <GalleryItemDetails {...this.props} />
+        </li>
     }
 }
 
-export default GalleryItem;
+export default GalleryItem

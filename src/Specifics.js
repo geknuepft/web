@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import './Specifics.css';
-import axios from 'axios';
-import config from 'react-global-configuration';
 import {Chf, Mm, Cm} from './Number';
-import ImageScroller from './ImageScroller';
 import {ColorPixList, ColorPixListItem} from './ColorPix';
 import {ButtonInfo} from './Button';
 
@@ -34,9 +31,8 @@ class InstanceProperty extends Component {
         );
     }
 }
-;
 
-class Instance extends Component {
+class InstanceSpecifics extends Component {
 
     static propTypes = {
         instanceId: PropTypes.number.isRequired,
@@ -56,6 +52,7 @@ class Instance extends Component {
 
     render() {
         return (
+          <div className="detail-desc">
             <div className="article-exist">
                 <div className="detail-desc-title">{this.props.articleName}</div>
                 <div className="detail-desc-ids">
@@ -122,42 +119,9 @@ class Instance extends Component {
                 </table>
                 <button type="submit">in den Warenkorb</button>
             </div>
+          </div>
         );
     }
 }
 
-class Specifics extends Component {
-    static propTypes = {
-        instanceId: PropTypes.number.isRequired,
-    };
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            instanceData: null,
-        }
-    }
-
-    componentDidMount() {
-        axios.get(config.get('apiUrl') + 'Instance/' + this.props.instanceId)
-            .then(res => {
-                this.setState({instanceData: res.data});
-            });
-    }
-
-    render() {
-        if (this.state.instanceData === null) {
-            return null;
-        }
-
-        return <div className="detail">
-            <ImageScroller images={this.state.instanceData.images}/>
-            <div className="detail-desc">
-                <Instance {...this.state.instanceData} />
-            </div>
-        </div>
-    }
-}
-
-export default Specifics;
+export {InstanceSpecifics}
