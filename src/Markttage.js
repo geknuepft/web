@@ -48,8 +48,8 @@ const Markttage = () => (
             <div className="intro-desc">
                 <SmartImage
                     path="/content/box/khw.jpg"
-                    height="800"
-                    fullscreen="true"
+                    height={800}
+                    fullscreen={true}
                     alt="Marktstand Winterthur"
                 />
             </div>
@@ -78,8 +78,8 @@ const Markttage = () => (
             <div className="intro-desc">
                 <SmartImage
                     path="/content/box/wallisellen.jpg"
-                    height="800"
-                    fullscreen="true"
+                    height={800}
+                    fullscreen={true}
                     alt="Marktstand Wallisellen"
                 />
             </div>
@@ -106,8 +106,8 @@ const Markttage = () => (
             <div className="intro-desc">
                 <SmartImage
                     path="/content/box/khw_winter.jpg"
-                    height="800"
-                    fullscreen="true"
+                    height={800}
+                    fullscreen={true}
                     alt="Marktstand Winterthur im Winter"
                 />
             </div>
