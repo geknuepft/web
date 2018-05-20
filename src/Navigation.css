@@ -2,6 +2,10 @@ div.navigation {
     width: 100%;
 }
 
+div.navigation ul {
+    margin-bottom: 0 !important;
+}
+
 div.navigation li {
     float: left;
     list-style: none;

@@ -20,11 +20,11 @@ class App extends Component {
     render() {
         return (
             <Container id="page">
-                <Row id="header">
-                    <Col xs={3} id="logo">
+                <Row className="align-items-end" id="header">
+                    <Col xs={2} id="logo">
                         <img src={logo} alt="geknüpft.ch"/>
                     </Col>
-                    <Col xs={3} id="navigation-main">
+                    <Col className="col-md-auto" id="navigation-main">
                         <Navigation>
                             <NavigationElement name="Home"/>
                             <NavigationElement name="Shop"/>
@@ -33,17 +33,13 @@ class App extends Component {
                             <NavigationElement name="Markttage"/>
                             <NavigationElement name="Kurse"/>
                             <NavigationElement name="Kontakt"/>
-                        </Navigation>
-                    </Col>
-                    <Col xs={3} id="cart">
-                        <Navigation>
                             <NavigationElement name="Warenkorb"/>
                         </Navigation>
                     </Col>
                 </Row>
                 <Col xs={12} id="line">
                 </Col>
-                <Row id="main">
+                <Col xs={12} id="main">
                     <Route exact path='/' component={Home}/>
                     <Route path='/Shop' component={Shop}/>
                     <Route path='/Herstellung' component={Herstellung}/>
@@ -54,11 +50,11 @@ class App extends Component {
                     <Route path='/Warenkorb' component={Warenkorb}/>
                     <Route path='/AGB' component={Agb}/>
                     <Route path='/Impressum' component={Impressum}/>
-                </Row>
+                </Col>
                 <Col xs={12} id="line">
                 </Col>
-                <Row>
-                    <Col xs={12} id="footer">
+                <Row className="align-items-start">
+                    <Col id="footer">
                         <Navigation>
                             <NavigationElement name="AGB"/>
                             <NavigationElement name="Impressum"/>
@@ -66,6 +62,7 @@ class App extends Component {
                     </Col>
                 </Row>
             </Container>
+
         );
     }
 }

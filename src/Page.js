@@ -8,15 +8,13 @@ class Page extends Component {
             backgroundImage: "url(" + this.props.headImagePath + ")"
         };
 
-        return (
-            <Container>
-                <Col xs={12} className="head" style={ headStyle }>
-                    <span>{ this.props.title }</span>
-                    { this.props.navigation }
-                </Col>
-                { this.props.children }
-            </Container>
-        );
+        return <div>
+            <Col xs={12} className="head" style={headStyle}>
+                <span>{this.props.title}</span>
+                {this.props.navigation}
+            </Col>
+            {this.props.children}
+        </div>
     }
 }
 
