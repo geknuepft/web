@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import SmartImage from './SmartImage'
-import { Carousel } from 'react-bootstrap'
+import { Carousel } from 'reactstrap'
 
 class ImageScroller extends Component {
     static propTypes = {

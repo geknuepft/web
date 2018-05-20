@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Grid, Row, Col} from 'react-bootstrap'
+import {Container, Row, Col} from 'reactstrap'
 import './Page.css'
 
 class Page extends Component {
@@ -9,13 +9,13 @@ class Page extends Component {
         };
 
         return (
-            <Grid fluid>
+            <Container>
                 <Col xs={12} className="head" style={ headStyle }>
                     <span>{ this.props.title }</span>
                     { this.props.navigation }
                 </Col>
                 { this.props.children }
-            </Grid>
+            </Container>
         );
     }
 }

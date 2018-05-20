@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup, FormControl} from 'react-bootstrap';
+import {FormGroup, FormControl} from 'reactstrap';
 import './Forms.css';
 
 

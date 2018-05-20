@@ -4,7 +4,7 @@ import axios from 'axios'
 import config from 'react-global-configuration'
 import ImageScroller from './ImageScroller'
 import { InstanceSpecifics } from './Specifics'
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Grid, Row, Col } from 'reactstrap'
 
 class Article extends Component {
 

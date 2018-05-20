@@ -3,7 +3,7 @@ import Page from './Page'
 import config from 'react-global-configuration'
 import {Link} from 'react-router-dom'
 import NavigationImage from "./NavigationImage"
-import {Row, Col} from 'react-bootstrap'
+import {Row, Col} from 'reactstrap'
 
 const Home = () => (
     <Page

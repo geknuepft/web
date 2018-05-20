@@ -3,7 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import {Navigation, NavigationElement} from './Navigation'
 import {Route} from 'react-router-dom'
-import {Grid, Row, Col} from 'react-bootstrap'
+import {Container, Row, Col} from 'reactstrap'
 import logo from '../public/logo.png'
 import Home from './Home'
 import Shop from './Shop'
@@ -19,7 +19,7 @@ import Impressum from './Impressum'
 class App extends Component {
     render() {
         return (
-            <Grid fluid id="page">
+            <Container id="page">
                 <Row id="header">
                     <Col xs={3} id="logo">
                         <img src={logo} alt="geknüpft.ch"/>
@@ -65,7 +65,7 @@ class App extends Component {
                         </Navigation>
                     </Col>
                 </Row>
-            </Grid>
+            </Container>
         );
     }
 }
