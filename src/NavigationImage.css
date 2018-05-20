@@ -25,14 +25,14 @@ div.navigationimage-text span.additionaltext {
     font-size: 75%;
 }
 
-img.navigationimage:hover img {
+div.navigationimage:hover img {
     opacity: 1;
 }
 
-img.navigationimage:hover span.caption {
+div.navigationimage:hover span.caption {
     display: none;
 }
 
-img.navigationimage:hover span.additionaltext {
+div.navigationimage:hover span.additionaltext {
     display: none;
 }
