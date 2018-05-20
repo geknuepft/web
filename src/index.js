@@ -8,6 +8,7 @@ import {addLocaleData} from 'react-intl';
 import de from 'react-intl/locale-data/de';
 import config from 'react-global-configuration';
 import {IntlFormats} from "./Number"
+import ReactModal from 'react-modal';
 
 addLocaleData([...de]);
 
@@ -15,6 +16,8 @@ config.set({
     apiUrl: process.env.REACT_APP_API_URL,
     imageUrl: process.env.REACT_APP_IMAGE_URL,
 });
+
+ReactModal.setAppElement('#root');
 
 ReactDOM.render(
     <IntlProvider locale="de-CH" formats={IntlFormats}>

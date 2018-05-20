@@ -3,15 +3,13 @@ import PropTypes from 'prop-types'
 import axios from 'axios'
 import config from 'react-global-configuration'
 import ImageScroller from './ImageScroller'
-import './Article.css'
-import './ArticleOverlay.css'
 import { InstanceSpecifics } from './Specifics'
 import { Grid, Row, Col } from 'react-bootstrap'
 
 class Article extends Component {
 
     static propTypes = {
-        instanceId: PropTypes.number.isRequired,
+        article: PropTypes.object,
         close: PropTypes.func,
         toPrev: PropTypes.func,
         toNext: PropTypes.func,
@@ -22,10 +20,13 @@ class Article extends Component {
     }
 
     static getDerivedStateFromProps (nextProps, prevState) {
-        if (nextProps.instanceId !== prevState.prevInstanceId) {
-            return {
-                instanceData: null,
-                prevInstanceId: nextProps.instanceId,
+        if (nextProps.article !== null) {
+            const nextInstanceId = nextProps.article.instanceId
+            if (nextInstanceId !== prevState.prevInstanceId) {
+                return {
+                    instanceData: null,
+                    prevInstanceId: nextInstanceId,
+                }
             }
         }
 
@@ -33,12 +34,14 @@ class Article extends Component {
     }
 
     componentDidMount () {
-        this._loadAsyncData(this.props.instanceId)
+        if (this.props.article !== null) {
+            this._loadAsyncData(this.props.article.instanceId)
+        }
     }
 
     componentDidUpdate (prevProps, prevState) {
-        if (this.state.instanceData === null) {
-            this._loadAsyncData(this.props.instanceId)
+        if (this.state.instanceData === null && this.props.article !== null) {
+            this._loadAsyncData(this.props.article.instanceId)
         }
     }
 
@@ -54,19 +57,16 @@ class Article extends Component {
             return null
         }
 
-        return <div className="overlay overlay-contentpush">
-            <button type="button" className="overlay-close" onClick={this.props.close}>Close</button>
-            <Grid>
-                <Row>
-                    <Col xs={6}>
-                        <ImageScroller images={this.state.instanceData.images}/>
-                    </Col>
-                    <Col cs={6}>
-                        <InstanceSpecifics {...this.state.instanceData} />
-                    </Col>
-                </Row>
-            </Grid>
-        </div>
+        return <Grid>
+            <Row>
+                <Col xs={6}>
+                    <ImageScroller images={this.state.instanceData.images}/>
+                </Col>
+                <Col cs={6}>
+                    <InstanceSpecifics {...this.state.instanceData} />
+                </Col>
+            </Row>
+        </Grid>
     }
 
 }

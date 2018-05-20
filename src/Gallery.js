@@ -5,7 +5,7 @@ import axios from 'axios'
 import GalleryItem from './GalleryItem'
 import config from 'react-global-configuration'
 import InfiniteScroll from 'react-infinite-scroller'
-import Article from './Article'
+import ArticleModal from './ArticleModal'
 
 const GallerySorter = () => (
     <select className="inline">
@@ -55,7 +55,7 @@ class Gallery extends Component {
     fetchDataFromApi = () => {
         axios.get(config.get('apiUrl') + 'Instance')
             .then(res => {
-                this.setState({instances: res.data.slice(0,10)})
+                this.setState({instances: res.data})
             })
     }
 
@@ -118,12 +118,10 @@ class Gallery extends Component {
                     <li className="empty"/>
                     <li className="empty"/>
                 </InfiniteScroll>
-                {activeItem && <Article
-                    instanceId={activeItem.instanceId}
-                    close={() => this.setState({activeItemIdx: null})}
-                    toPrev={() => this.setState({activeItemIdx: this.state.activeItemIdx - 1})}
-                    toNext={() => this.setState({activeItemIdx: this.state.activeItemIdx + 1})}
-                />}
+                <ArticleModal
+                    article={activeItem}
+                    onRequestClose={() => this.setState({activeItemIdx: null})}
+                />
             </div>
         )
     }

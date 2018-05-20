@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import SmartImage from './SmartImage'
-import { Carousel, Glyphicon, Button } from 'react-bootstrap'
-import { ButtonClose } from './Button'
+import { Carousel } from 'react-bootstrap'
 
 class ImageScroller extends Component {
     static propTypes = {
