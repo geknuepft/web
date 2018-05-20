@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+import {Grid, Row, Col} from 'react-bootstrap'
 import './Page.css'
 
 class Page extends Component {
@@ -8,13 +9,13 @@ class Page extends Component {
         };
 
         return (
-            <div>
-                <div className="head" style={ headStyle }>
+            <Grid fluid>
+                <Col xs={12} className="head" style={ headStyle }>
                     <span>{ this.props.title }</span>
                     { this.props.navigation }
-                </div>
+                </Col>
                 { this.props.children }
-            </div>
+            </Grid>
         );
     }
 }

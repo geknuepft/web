@@ -1,12 +1,11 @@
 /* design the navigation image */
 
 div.navigationimage {
-    flex: 1 1 auto;
-    width: 50%;
     position: relative;
 }
 
 div.navigationimage img {
+    width: 100%;
     opacity: 0.6;
 }
 
@@ -26,10 +25,14 @@ div.navigationimage-text span.additionaltext {
     font-size: 75%;
 }
 
-div.navigationimage:hover img {
+img.navigationimage:hover img {
     opacity: 1;
 }
 
-div.navigationimage:hover span {
+img.navigationimage:hover span.caption {
+    display: none;
+}
+
+img.navigationimage:hover span.additionaltext {
     display: none;
 }

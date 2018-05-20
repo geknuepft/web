@@ -1,27 +1,30 @@
-import React, {Component} from 'react';
-import './App.css';
+import React, {Component} from 'react'
+import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
-import {Navigation, NavigationElement} from './Navigation';
-import {Route} from 'react-router-dom';
-import logo from '../public/logo.png';
-import Home from './Home';
-import Shop from './Shop';
-import Herstellung from './Herstellung';
-import Materialien from './Materialien';
-import Markttage from './Markttage';
-import Kurse from './Kurse';
-import Kontakt from './Kontakt';
-import Warenkorb from './Warenkorb';
-import Agb from './Agb';
-import Impressum from './Impressum';
+import {Navigation, NavigationElement} from './Navigation'
+import {Route} from 'react-router-dom'
+import {Grid, Row, Col} from 'react-bootstrap'
+import logo from '../public/logo.png'
+import Home from './Home'
+import Shop from './Shop'
+import Herstellung from './Herstellung'
+import Materialien from './Materialien'
+import Markttage from './Markttage'
+import Kurse from './Kurse'
+import Kontakt from './Kontakt'
+import Warenkorb from './Warenkorb'
+import Agb from './Agb'
+import Impressum from './Impressum'
 
 class App extends Component {
     render() {
         return (
-            <div id="page">
-                <div id="header">
-                    <Logo/>
-                    <div id="navigation-main">
+            <Grid fluid id="page">
+                <Row id="header">
+                    <Col xs={3} id="logo">
+                        <img src={logo} alt="geknüpft.ch"/>
+                    </Col>
+                    <Col xs={3} id="navigation-main">
                         <Navigation>
                             <NavigationElement name="Home"/>
                             <NavigationElement name="Shop"/>
@@ -31,16 +34,16 @@ class App extends Component {
                             <NavigationElement name="Kurse"/>
                             <NavigationElement name="Kontakt"/>
                         </Navigation>
-                    </div>
-                    <div id="cart">
+                    </Col>
+                    <Col xs={3} id="cart">
                         <Navigation>
                             <NavigationElement name="Warenkorb"/>
                         </Navigation>
-                    </div>
-                </div>
-                <div id="line">
-                </div>
-                <div id="main">
+                    </Col>
+                </Row>
+                <Col xs={12} id="line">
+                </Col>
+                <Row id="main">
                     <Route exact path='/' component={Home}/>
                     <Route path='/Shop' component={Shop}/>
                     <Route path='/Herstellung' component={Herstellung}/>
@@ -51,24 +54,20 @@ class App extends Component {
                     <Route path='/Warenkorb' component={Warenkorb}/>
                     <Route path='/AGB' component={Agb}/>
                     <Route path='/Impressum' component={Impressum}/>
-                </div>
-                <div id="line">
-                </div>
-                <div id="footer">
-                    <Navigation>
-                        <NavigationElement name="AGB"/>
-                        <NavigationElement name="Impressum"/>
-                    </Navigation>
-                </div>
-            </div>
+                </Row>
+                <Col xs={12} id="line">
+                </Col>
+                <Row>
+                    <Col xs={12} id="footer">
+                        <Navigation>
+                            <NavigationElement name="AGB"/>
+                            <NavigationElement name="Impressum"/>
+                        </Navigation>
+                    </Col>
+                </Row>
+            </Grid>
         );
     }
 }
-
-const Logo = () => (
-    <div id="logo">
-        <img src={logo} alt="geknüpft.ch"/>
-    </div>
-);
 
 export default App;
