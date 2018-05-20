@@ -4,7 +4,16 @@ import axios from 'axios'
 import config from 'react-global-configuration'
 import ImageScroller from './ImageScroller'
 import { InstanceSpecifics } from './Specifics'
-import { Grid, Row, Col } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
+
+class ArticleTeaser extends Component {
+
+    static propTypes = {
+        items: PropTypes.array,
+        activeItemIdx: PropTypes.number
+    }
+
+}
 
 class Article extends Component {
 
@@ -57,7 +66,7 @@ class Article extends Component {
             return null
         }
 
-        return <Grid>
+        return <Container>
             <Row>
                 <Col xs={6}>
                     <ImageScroller images={this.state.instanceData.images}/>
@@ -66,7 +75,7 @@ class Article extends Component {
                     <InstanceSpecifics {...this.state.instanceData} />
                 </Col>
             </Row>
-        </Grid>
+        </Container>
     }
 
 }
