@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import config from 'react-global-configuration'
 import './NavigationImage.css'
+import {Row, Col} from 'reactstrap'
 
 class NavigationImage extends Component {
 
@@ -16,18 +17,22 @@ class NavigationImage extends Component {
 
     render() {
         return (
-            <div className="navigationimage">
-                <Link to={this.props.target}>
-                    <img
-                        src={config.get('imageUrl') + '800p/content/navigationimage/' + this.props.imagePath}
-                        alt=""/>
-                    <div className="navigationimage-text">
-                        <span className="additionaltext">{this.props.additionalText}</span>
-                        <br/>
-                        <span className="caption">{this.props.caption}</span>
+            <Row>
+                <Col xs={12}>
+                    <div className="navigationimage">
+                        <Link to={this.props.target}>
+                            <img
+                                src={config.get('imageUrl') + '800p/content/navigationimage/' + this.props.imagePath}
+                                alt=""/>
+                            <div className="navigationimage-text">
+                                <span className="additionaltext">{this.props.additionalText}</span>
+                                <br/>
+                                <span className="caption">{this.props.caption}</span>
+                            </div>
+                        </Link>
                     </div>
-                </Link>
-            </div>
+                </Col>
+            </Row>
 
         );
     }

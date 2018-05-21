@@ -27,6 +27,7 @@ import ContentLayouter from "./ContentLayouter"
 import NavigationImage from "./NavigationImage"
 import Textbox from './Textbox'
 
+
 const ShopDefault = () => (
     <div>
         <ContentLayouter>

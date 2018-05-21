@@ -1,14 +1,16 @@
-import React from 'react';
-import Page from './Page';
-import config from 'react-global-configuration';
+import React from 'react'
+import Page from './Page'
+import config from 'react-global-configuration'
+import ContentLayouter from "./ContentLayouter"
+import Textbox from "./Textbox"
 
 const Agb = () => (
     <Page
         title="Allgemeine Geschäftsbedingungen"
         headImagePath={config.get('imageUrl') + '800p/content/head/artikel_13.jpg'}
     >
-        <div className="intro">
-            <div className="intro-desc wide">
+        <ContentLayouter>
+            <Textbox>
                 <h2>Allgemeines</h2>
                 <p> Der Webshop geknüpft.ch bietet handverarbeitete Waren und Dienstleistungen an. Alle Verkäufe,
                     Lieferungen und sonstige Leistungen erfolgen ausschliesslich nach Massgaben dieser Allgemeinen
@@ -98,8 +100,8 @@ const Agb = () => (
                     unberührt. Für Streitigkeiten die über diese AGB hinausgehen, findet das Schweizerische
                     Obligationenrecht Anwendung.
                 </p>
-            </div>
-        </div>
+            </Textbox>
+        </ContentLayouter>
     </Page>
 );
 

@@ -38,8 +38,8 @@ const KurseKnuepfen = () => (
         </Textbox>
         <SmartImage
             path="/content/box/herstellung5.jpg"
-            height="800"
-            fullscreen="true"
+            height={800}
+            fullscreen={true}
             alt="Armband"
         />
     </ContentLayouter>
@@ -60,8 +60,8 @@ const KurseFalten = () => (
         </Textbox>
         <SmartImage
             path="/content/box/kraniche.jpg"
-            height="800"
-            fullscreen="true"
+            height={800}
+            fullscreen={true}
             alt="Kraniche"
         />
     </ContentLayouter>
@@ -83,8 +83,8 @@ const KurseKleben = () => (
         </Textbox>
         <SmartImage
             path="/content/box/schachtel.jpg"
-            height="800"
-            fullscreen="true"
+            height={800}
+            fullscreen={true}
             alt="Schachteln"
         />
     </ContentLayouter>
