@@ -20,6 +20,22 @@ class ImageScroller extends Component {
         this.setState({activeImageIndex: newImageIndex})
     }
 
+    handleKeyDown = (event) => {
+        if (event.key === 'ArrowDown') {
+            this.onImageSelect(this.state.activeImageIndex + 1)
+        } else if (event.key === 'ArrowUp') {
+            this.onImageSelect(this.state.activeImageIndex - 1)
+        }
+    }
+
+    componentWillMount () {
+        document.addEventListener('keydown', this.handleKeyDown)
+    }
+
+    componentWillUnmount () {
+        document.removeEventListener('keydown', this.handleKeyDown)
+    }
+
     render () {
         if (this.props.images.length < 1) return null
 

@@ -76,12 +76,26 @@ class Article extends Component {
         if (this.props.article !== null) {
             this._loadAsyncData(this.props.article.instanceId)
         }
+
+        document.addEventListener('keydown', this.handleKeyDown)
     }
 
     componentDidUpdate (prevProps, prevState) {
         if (this.state.instanceData === null && this.props.article !== null) {
             this._loadAsyncData(this.props.article.instanceId)
         }
+    }
+
+    handleKeyDown = (event) => {
+        if (event.key === 'ArrowLeft') {
+            this.props.onRequestPrev()
+        } else if (event.key === 'ArrowRight') {
+            this.props.onRequestNext()
+        }
+    }
+
+    componentWillUnmount () {
+        document.removeEventListener('keydown', this.handleKeyDown)
     }
 
     _loadAsyncData (instanceId) {
@@ -104,13 +118,16 @@ class Article extends Component {
             </Row>
         }
 
-        return <Container>
-            {content}
-            {this.props.onRequestClose && <ButtonClose className="close" onClick={this.props.onRequestClose}/>}
-            {this.props.onRequestPrev && <ButtonPrevious onClick={this.props.onRequestPrev}/>}
-            {this.props.teaser}
-            {this.props.onRequestNext && <ButtonNext onClick={this.props.onRequestNext}/>}
-        </Container>
+        return <div onKeyDown={
+            (e) => {console.log(e)}}>
+            <Container>
+                {content}
+                {this.props.onRequestClose && <ButtonClose className="close" onClick={this.props.onRequestClose}/>}
+                {this.props.onRequestPrev && <ButtonPrevious onClick={this.props.onRequestPrev}/>}
+                {this.props.teaser}
+                {this.props.onRequestNext && <ButtonNext onClick={this.props.onRequestNext}/>}
+            </Container>
+        </div>
     }
 
 }
