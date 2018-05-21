@@ -5,12 +5,38 @@ import config from 'react-global-configuration'
 import ImageScroller from './ImageScroller'
 import { InstanceSpecifics } from './Specifics'
 import { Container, Row, Col } from 'reactstrap'
+import SmartImage from './SmartImage'
+import './Article.css'
 
 class ArticleTeaser extends Component {
 
     static propTypes = {
         items: PropTypes.array,
-        activeItemIdx: PropTypes.number
+        activeItemIndex: PropTypes.number,
+        onItemSelect: PropTypes.func,
+    }
+
+    render () {
+        const numbPics = 3
+
+        if (this.props.items === undefined) return null
+        if (this.props.activeItemIndex === null) return null
+
+        const activeItemIndex = this.props.activeItemIndex
+        const startIndex = Math.max(0, activeItemIndex - numbPics)
+        const items = this.props.items.slice(startIndex, activeItemIndex + numbPics + 1)
+
+        return <ul className="article-teaser">
+            {items.map(
+                (item, slicedItemIndex) =>
+                    <li key={item.instanceId}
+                        className={startIndex + slicedItemIndex === activeItemIndex ? 'active' : ''}>
+                        <a onClick={() => this.props.onItemSelect(startIndex + slicedItemIndex)}>
+                            <SmartImage path={item.picture0} height={80}/>
+                        </a>
+                    </li>
+            )}
+        </ul>
     }
 
 }
@@ -22,6 +48,8 @@ class Article extends Component {
         close: PropTypes.func,
         toPrev: PropTypes.func,
         toNext: PropTypes.func,
+
+        teaser: PropTypes.object
     }
 
     state = {
@@ -75,9 +103,11 @@ class Article extends Component {
                     <InstanceSpecifics {...this.state.instanceData} />
                 </Col>
             </Row>
+            {this.props.teaser}
         </Container>
     }
 
 }
 
 export default Article
+export { ArticleTeaser }

@@ -6,6 +6,7 @@ import GalleryItem from './GalleryItem'
 import config from 'react-global-configuration'
 import InfiniteScroll from 'react-infinite-scroller'
 import ArticleModal from './ArticleModal'
+import { ArticleTeaser } from './Article'
 
 const GallerySorter = () => (
     <select className="inline">
@@ -48,7 +49,7 @@ class Gallery extends Component {
             instances: null,
             items: [],
             hasMoreItems: true,
-            activeItemIdx: null
+            activeItemIndex: null
         }
     }
 
@@ -75,6 +76,14 @@ class Gallery extends Component {
 
     }
 
+    onItemSelect(itemIndex) {
+        if (itemIndex === this.state.activeItemIndex) return;
+
+        this.setState({
+            activeItemIndex: Math.max(0, Math.min(this.state.items.length-1, itemIndex))
+        })
+    }
+
     render () {
         // render nothing if list is not loaded
         if (this.state.instances === null) {
@@ -82,8 +91,6 @@ class Gallery extends Component {
         }
 
         const loader = <li key="loading">Lade ...</li>
-
-        const activeItem = this.state.activeItemIdx !== null ? this.state.items[this.state.activeItemIdx] : null
 
         return (
             <div className="gallery">
@@ -96,11 +103,11 @@ class Gallery extends Component {
                     hasMore={this.state.hasMoreItems}
                     loader={loader}
                 >
-                    {this.state.items.map((instance, itemIdx) =>
+                    {this.state.items.map((instance, itemIndex) =>
                         <GalleryItem
                             key={instance.instanceId}
                             {...instance}
-                            open={() => {this.setState({activeItemIdx: itemIdx})}}
+                            open={() => this.setState({activeItemIndex: itemIndex})}
                         />
                     )}
                     <li className="empty"/>
@@ -119,8 +126,13 @@ class Gallery extends Component {
                     <li className="empty"/>
                 </InfiniteScroll>
                 <ArticleModal
-                    article={activeItem}
-                    onRequestClose={() => this.setState({activeItemIdx: null})}
+                    article={this.state.activeItemIndex !== null ? this.state.items[this.state.activeItemIndex] : null}
+                    onRequestClose={() => this.setState({activeItemIndex: null})}
+                    teaser={<ArticleTeaser items={this.state.items}
+                                           activeItemIndex={this.state.activeItemIndex}
+                                           onItemSelect={this.onItemSelect.bind(this)}
+                    />
+                    }
                 />
             </div>
         )
