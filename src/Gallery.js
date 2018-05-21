@@ -44,14 +44,10 @@ const itemsBatchSize = 32
 
 class Gallery extends Component {
 
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            items: null,
-            displayUpToItemIndex: itemsBatchSize,
-            activeItemIndex: null
-        }
+    state = {
+        items: null,
+        displayUpToItemIndex: itemsBatchSize,
+        activeItemIndex: null
     }
 
     fetchDataFromApi = () => {
@@ -71,11 +67,10 @@ class Gallery extends Component {
 
     onItemSelect (itemIndex) {
         if (this.state.items === null) return
-        if (itemIndex === this.state.activeItemIndex) return
 
-        this.setState({
-            activeItemIndex: Math.max(0, Math.min(this.state.items.length - 1, itemIndex))
-        })
+        const newItemIndex = Math.max(0, Math.min(this.state.items.length - 1, itemIndex))
+        if (newItemIndex === this.state.activeItemIndex) return
+        this.setState({activeItemIndex: newItemIndex})
     }
 
     render () {

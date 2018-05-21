@@ -1,0 +1,7 @@
+.image-scroller li.active {
+    border: 1px solid green;
+}
+
+.image-scroller li img {
+    height: 20px;
+}
