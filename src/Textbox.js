@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {Col} from 'reactstrap'
+import './Textbox.css'
 
-class Text extends Component {
+class Textbox extends Component {
 
     static propTypes = {
         text: PropTypes.object,
@@ -10,11 +11,11 @@ class Text extends Component {
 
     render() {
         return (
-            <Col xs={12} sm={6}>
-                <p>{this.props.text}</p>
+            <Col xs={12} sm={6} className="textbox">
+                {this.props.text}
             </Col>
         );
     }
 }
 
-export default Text;
+export default Textbox;

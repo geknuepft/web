@@ -1,6 +1,6 @@
 import React from 'react'
 import Page from './Page'
-import Text from './Text'
+import Textbox from './Textbox'
 import config from 'react-global-configuration'
 import {Link} from 'react-router-dom'
 import NavigationImage from "./NavigationImage"
@@ -13,12 +13,12 @@ const Home = () => (
     >
         <div>
             <Row>
-                <Text
+                <Textbox
                     text={<span>Über 1400 verschiedene Armänder, Schlüsselanhänger und Buchzeichen bieten wir an. Stöbern Sie
                         auf dem <Link to="/Shop/Marktplatz">Marktplatz</Link> oder suchen Sie gezielt nach einem Muster
                         und wir knüpfen es Ihnen in Ihrer gewünschten Länge.</span>}
                 />
-                <Text/>
+                <Textbox/>
             </Row>
             <Row>
                 <NavigationImage
@@ -33,12 +33,12 @@ const Home = () => (
                 />
             </Row>
             <Row>
-                <Text
+                <Textbox
                     text={<span>Knüpfen Sie selbst und kommen bei einem Muster nicht weiter? Oder möchten Sie selbst das Knüpfen
                         erlernen? Besuchen Sie einen unserer Knüpfkurse oder nehmen Sie unverbindlich mit uns Kontakt
                         auf.</span>}
                 />
-                <Text/>
+                <Textbox/>
             </Row>
             <Row>
                 <NavigationImage

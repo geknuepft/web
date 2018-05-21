@@ -1,0 +1,10 @@
+/* design the smart image */
+
+div.smartimage {
+    position: relative;
+    margin: 1em 0 1em 0;
+}
+
+div.smartimage img {
+    width: 100%;
+}

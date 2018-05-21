@@ -1,5 +1,5 @@
-import React from 'react';
-import Page from './Page';
+import React from 'react'
+import Page from './Page'
 import {
     FilterContainer,
     LengthFilter,
@@ -12,31 +12,32 @@ import {
     PatternFilter,
     ColorFilter,
     DeleteFilter
-} from './Filter';
+} from './Filter'
 import {
     LengthArmbandSelector,
     LengthBuchzeichenSelector,
     LengthSchluesselSelector,
 } from './LengthSelector'
-import Gallery from './Gallery';
-import {Navigation, NavigationElement} from './Navigation';
-import {Route, Link} from 'react-router-dom';
-import config from 'react-global-configuration';
-import './Shop.css';
-import NavigationImage from "./NavigationImage";
+import Gallery from './Gallery'
+import Textbox from './Textbox'
+import {Navigation, NavigationElement} from './Navigation'
+import {Route, Link} from 'react-router-dom'
+import config from 'react-global-configuration'
+import './Shop.css'
+import NavigationImage from "./NavigationImage"
+import {Row} from 'reactstrap'
 
 const ShopDefault = () => (
     <div>
-        <div className="intro">
-            <div className="intro-desc">
-                <p>Über 1400 verschiedene Armbänder, Schlüsselanhänger und Buchzeichen bieten wir an. Stöbern Sie auf
+        <Row>
+            <Textbox
+                text={<span>Über 1400 verschiedene Armbänder, Schlüsselanhänger und Buchzeichen bieten wir an. Stöbern Sie auf
                     dem <Link to="/Shop/Marktplatz">Marktplatz</Link> oder suchen Sie gezielt nach einem Muster und wir
-                    knüpfen es Ihnen in Ihrer gewünschten Länge.</p>
-            </div>
-            <div className="intro-desc">
-            </div>
-        </div>
-        <div className="intro">
+                    knüpfen es Ihnen in Ihrer gewünschten Länge.</span>}
+            />
+            <Textbox/>
+        </Row>
+        <Row>
             <NavigationImage
                 imagePath="herstellung5.jpg"
                 target="/Shop/Armbänder"
@@ -47,8 +48,8 @@ const ShopDefault = () => (
                 target="/Shop/Marktplatz"
                 caption="Marktplatz"
             />
-        </div>
-        <div className="intro">
+        </Row>
+        <Row>
             <NavigationImage
                 imagePath="buchzeichen.jpg"
                 target="/Shop/Buchzeichen"
@@ -59,15 +60,15 @@ const ShopDefault = () => (
                 target="/Shop/Schlüsselanhänger"
                 caption="Schlüsselanhänger"
             />
-        </div>
-        <div className="intro">
-            <div className="intro-desc wide">
-                <p>Finden sie hier unsere neusten Kollektionen auf einen Blick. Klicken Sie auf jene Farbkombination,
-                    die Ihnen am Besten gefällt, und sie gelangen direkt zu allen Artikel, die es mit diesen Farbe gibt.
-                </p>
-            </div>
-        </div>
-        <div className="intro">
+        </Row>
+        <Row>
+            <Textbox
+                text={<span>Finden sie hier unsere neusten Kollektionen auf einen Blick. Klicken Sie auf jene Farbkombination,
+                    die Ihnen am Besten gefällt, und sie gelangen direkt zu allen Artikel, die es mit diesen Farbe gibt.</span>}
+            />
+            <Textbox/>
+        </Row>
+        <Row>
             <NavigationImage
                 imagePath="coll_11.jpg"
                 target="/Shop/Armbänder"
@@ -79,8 +80,8 @@ const ShopDefault = () => (
                 target="/Shop/Armbänder"
                 caption="schwarz-weiss"
             />
-        </div>
-        <div className="intro">
+        </Row>
+        <Row>
             <NavigationImage
                 imagePath="coll_24.jpg"
                 target="/Shop/Armbänder"
@@ -92,22 +93,22 @@ const ShopDefault = () => (
                 caption="Rottöne"
                 additionalText="Der Klassiker:"
             />
-        </div>
+        </Row>
     </div>
 );
 
 const ShopArmbaender = () => (
     <div>
-        <div className="intro">
-            <div className="intro-desc">
-                <p>Hier finden Sie alle Muster und die passenden Suchfunktionen für ein Armband. Sind Sie unsicher,
-                    wie lange Ihr Armband sein soll? <a>Lesen Sie hier mehr darüber!</a></p>
-            </div>
-            <div className="intro-desc">
-                <p>Möchten Sie ein besonders langes Armand bzw. das Armband doppelt oder dreifach um das Handgelenk
-                    wickeln, wählen Sie die Überlänge aus.</p>
-            </div>
-        </div>
+        <Row>
+            <Textbox
+                text={<span>Hier finden Sie alle Muster und die passenden Suchfunktionen für ein Armband. Sind Sie unsicher,
+                    wie lange Ihr Armband sein soll? <a>Lesen Sie hier mehr darüber!</a></span>}
+            />
+            <Textbox
+                text={<span>Möchten Sie ein besonders langes Armand bzw. das Armband doppelt oder dreifach um das Handgelenk
+                    wickeln, wählen Sie die Überlänge aus.</span>}
+            />
+        </Row>
         <FilterContainer>
             <DeleteFilter/>
             <div className="intro">
@@ -134,14 +135,12 @@ const ShopArmbaender = () => (
 
 const ShopBuchzeichen = () => (
     <div>
-        <div className="intro">
-            <div className="intro-desc">
-                <p>Hier finden Sie alle Muster und die passenden Suchfunktionen für unsere Buchzeichen.</p>
-            </div>
-            <div className="intro-desc">
-                <p></p>
-            </div>
-        </div>
+        <Row>
+            <Textbox
+                text={<span>Hier finden Sie alle Muster und die passenden Suchfunktionen für unsere Buchzeichen.</span>}
+            />
+            <Textbox/>
+        </Row>
         <FilterContainer>
             <DeleteFilter/>
             <div className="intro">
@@ -167,14 +166,12 @@ const ShopBuchzeichen = () => (
 
 const ShopSchluesselanhaenger = () => (
     <div>
-        <div className="intro">
-            <div className="intro-desc">
-                <p>Hier finden Sie alle Muster und die passenden Suchfunktionen für unsere Schlüsselanhänger.</p>
-            </div>
-            <div className="intro-desc">
-                <p></p>
-            </div>
-        </div>
+        <Row>
+            <Textbox
+                text={<span>Hier finden Sie alle Muster und die passenden Suchfunktionen für unsere Schlüsselanhänger.</span>}
+            />
+            <Textbox/>
+        </Row>
         <FilterContainer>
             <DeleteFilter/>
             <div className="intro">
@@ -201,15 +198,13 @@ const ShopSchluesselanhaenger = () => (
 
 const ShopMarktplatz = () => (
     <div>
-        <div className="intro">
-            <div className="intro-desc">
-                <p>Stöbern Sie auf unserem Marktplatz. Sie finden hier alle Artikel, die wir bereits geknüpft haben und
-                    an Lager sind. Wir liefern innerhalb von 3-5 Werktagen.</p>
-            </div>
-            <div className="intro-desc">
-                <p></p>
-            </div>
-        </div>
+        <Row>
+            <Textbox
+                text={<span>Stöbern Sie auf unserem Marktplatz. Sie finden hier alle Artikel, die wir bereits geknüpft haben und
+                    an Lager sind. Wir liefern innerhalb von 3-5 Werktagen.</span>}
+            />
+            <Textbox/>
+        </Row>
         <FilterContainer>
             <DeleteFilter/>
             <div className="intro">
