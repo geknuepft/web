@@ -7,6 +7,7 @@ import { InstanceSpecifics } from './Specifics'
 import { Container, Row, Col } from 'reactstrap'
 import SmartImage from './SmartImage'
 import './Article.css'
+import { ButtonNext, ButtonPrevious, ButtonClose } from './Button'
 
 class ArticleTeaser extends Component {
 
@@ -45,9 +46,9 @@ class Article extends Component {
 
     static propTypes = {
         article: PropTypes.object,
-        close: PropTypes.func,
-        toPrev: PropTypes.func,
-        toNext: PropTypes.func,
+        onRequestClose: PropTypes.func,
+        onRequestPrev: PropTypes.func,
+        onRequestNext: PropTypes.func,
 
         teaser: PropTypes.object
     }
@@ -103,7 +104,10 @@ class Article extends Component {
                     <InstanceSpecifics {...this.state.instanceData} />
                 </Col>
             </Row>
+            <ButtonClose className="close" onClick={this.props.onRequestClose}/>
+            <ButtonPrevious onClick={this.props.onRequestPrev}/>
             {this.props.teaser}
+            <ButtonNext onClick={this.props.onRequestNext}/>
         </Container>
     }
 

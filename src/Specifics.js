@@ -21,7 +21,7 @@ class InstanceProperty extends Component {
             return null;
         }
 
-        const items = (this.props.items === undefined) ? this.props.value : this.props.items;
+        const items = (this.props.displayedItems === undefined) ? this.props.value : this.props.displayedItems;
 
         return (
             <tr>

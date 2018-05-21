@@ -40,15 +40,16 @@ class GalleryIntro extends Component {
     }
 }
 
+const itemsBatchSize = 32
+
 class Gallery extends Component {
 
     constructor (props) {
         super(props)
 
         this.state = {
-            instances: null,
-            items: [],
-            hasMoreItems: true,
+            items: null,
+            displayUpToItemIndex: itemsBatchSize,
             activeItemIndex: null
         }
     }
@@ -56,7 +57,7 @@ class Gallery extends Component {
     fetchDataFromApi = () => {
         axios.get(config.get('apiUrl') + 'Instance')
             .then(res => {
-                this.setState({instances: res.data})
+                this.setState({items: res.data})
             })
     }
 
@@ -65,77 +66,62 @@ class Gallery extends Component {
     }
 
     loadItems (page) {
-        let items = this.state.items
-        for (let i = 0; i < 32 && this.state.instances.length > 0; ++i) {
-            items.push(this.state.instances.pop())
-        }
-        this.setState({
-            items: items,
-            hasMoreItems: this.state.instances.length > 0,
-        })
-
+        this.setState({displayUpToItemIndex: this.state.displayUpToItemIndex + itemsBatchSize})
     }
 
-    onItemSelect(itemIndex) {
-        if (itemIndex === this.state.activeItemIndex) return;
+    onItemSelect (itemIndex) {
+        if (this.state.items === null) return
+        if (itemIndex === this.state.activeItemIndex) return
 
         this.setState({
-            activeItemIndex: Math.max(0, Math.min(this.state.items.length-1, itemIndex))
+            activeItemIndex: Math.max(0, Math.min(this.state.items.length - 1, itemIndex))
         })
     }
 
     render () {
         // render nothing if list is not loaded
-        if (this.state.instances === null) {
-            return null
+        if (this.state.items === null) return null
+
+        const hasMore = this.state.displayUpToItemIndex <= this.state.items.length
+
+        let displayedItems = this.state.items.slice(0, this.state.displayUpToItemIndex).map(
+            (instance, itemIndex) => <GalleryItem
+                key={instance.instanceId}
+                {...instance}
+                open={() => this.setState({activeItemIndex: itemIndex})}
+            />
+        )
+
+        if (!hasMore) {
+            displayedItems = displayedItems.concat(
+                Array.from(Array(14).keys()).map((v, k) => <li key={'empty_' + k} className="empty"/>)
+            )
         }
 
-        const loader = <li key="loading">Lade ...</li>
-
-        return (
-            <div className="gallery">
-                <GalleryIntro numberOfItems={this.state.instances.length}/>
-                <InfiniteScroll
-                    element="ul"
-                    className="gallery"
-                    pageStart={0}
-                    loadMore={this.loadItems.bind(this)}
-                    hasMore={this.state.hasMoreItems}
-                    loader={loader}
-                >
-                    {this.state.items.map((instance, itemIndex) =>
-                        <GalleryItem
-                            key={instance.instanceId}
-                            {...instance}
-                            open={() => this.setState({activeItemIndex: itemIndex})}
-                        />
-                    )}
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                    <li className="empty"/>
-                </InfiniteScroll>
-                <ArticleModal
-                    article={this.state.activeItemIndex !== null ? this.state.items[this.state.activeItemIndex] : null}
-                    onRequestClose={() => this.setState({activeItemIndex: null})}
-                    teaser={<ArticleTeaser items={this.state.items}
-                                           activeItemIndex={this.state.activeItemIndex}
-                                           onItemSelect={this.onItemSelect.bind(this)}
-                    />
-                    }
+        return <div className="gallery">
+            <GalleryIntro numberOfItems={this.state.items.length}/>
+            <InfiniteScroll
+                element="ul"
+                className="gallery"
+                pageStart={0}
+                loadMore={this.loadItems.bind(this)}
+                hasMore={hasMore}
+                loader={<li key="loading">Lade ...</li>}
+            >
+                {displayedItems}
+            </InfiniteScroll>
+            <ArticleModal
+                article={this.state.activeItemIndex !== null ? this.state.items[this.state.activeItemIndex] : null}
+                onRequestClose={() => this.setState({activeItemIndex: null})}
+                onRequestPrev={() => this.onItemSelect(this.state.activeItemIndex - 1)}
+                onRequestNext={() => this.onItemSelect(this.state.activeItemIndex + 1)}
+                teaser={<ArticleTeaser items={this.state.items}
+                                       activeItemIndex={this.state.activeItemIndex}
+                                       onItemSelect={this.onItemSelect.bind(this)}
                 />
-            </div>
-        )
+                }
+            />
+        </div>
     }
 }
 
