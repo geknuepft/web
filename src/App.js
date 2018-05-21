@@ -37,9 +37,9 @@ class App extends Component {
                         </Navigation>
                     </Col>
                 </Row>
-                <Col xs={12} id="line">
-                </Col>
-                <Col xs={12} id="main">
+                <Row id="line">
+                </Row>
+                <Row id="main">
                     <Route exact path='/' component={Home}/>
                     <Route path='/Shop' component={Shop}/>
                     <Route path='/Herstellung' component={Herstellung}/>
@@ -50,9 +50,9 @@ class App extends Component {
                     <Route path='/Warenkorb' component={Warenkorb}/>
                     <Route path='/AGB' component={Agb}/>
                     <Route path='/Impressum' component={Impressum}/>
-                </Col>
-                <Col xs={12} id="line">
-                </Col>
+                </Row>
+                <Row xs={12} id="line">
+                </Row>
                 <Row className="align-items-start">
                     <Col id="footer">
                         <Navigation>

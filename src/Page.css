@@ -10,6 +10,7 @@ div.head {
     justify-content: flex-end;
     height: 11em;
     border-radius: 2px;
+    padding: 0px;
 }
 
 div.head span {
