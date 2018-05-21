@@ -1,5 +1,6 @@
 import React from 'react'
 import Page from './Page'
+import Text from './Text'
 import config from 'react-global-configuration'
 import {Link} from 'react-router-dom'
 import NavigationImage from "./NavigationImage"
@@ -12,15 +13,12 @@ const Home = () => (
     >
         <div>
             <Row>
-                <Col xs={12} sm={6}>
-                    <p>Über 1400 verschiedene Armänder, Schlüsselanhänger und Buchzeichen bieten wir an. Stöbern Sie
+                <Text
+                    text={<span>Über 1400 verschiedene Armänder, Schlüsselanhänger und Buchzeichen bieten wir an. Stöbern Sie
                         auf dem <Link to="/Shop/Marktplatz">Marktplatz</Link> oder suchen Sie gezielt nach einem Muster
-                        und wir knüpfen es Ihnen in Ihrer gewünschten Länge.</p>
-                </Col>
-                <Col xs={12} sm={6}>
-                    <p>
-                    </p>
-                </Col>
+                        und wir knüpfen es Ihnen in Ihrer gewünschten Länge.</span>}
+                />
+                <Text/>
             </Row>
             <Row>
                 <NavigationImage
@@ -35,17 +33,12 @@ const Home = () => (
                 />
             </Row>
             <Row>
-                <Col xs={12} sm={6}>
-                    <p>
-                        Knüpfen Sie selbst und kommen bei einem Muster nicht weiter? Oder möchten Sie selbst das Knüpfen
+                <Text
+                    text={<span>Knüpfen Sie selbst und kommen bei einem Muster nicht weiter? Oder möchten Sie selbst das Knüpfen
                         erlernen? Besuchen Sie einen unserer Knüpfkurse oder nehmen Sie unverbindlich mit uns Kontakt
-                        auf.
-                    </p>
-                </Col>
-                <Col xs={12} sm={6}>
-                    <p>
-                    </p>
-                </Col>
+                        auf.</span>}
+                />
+                <Text/>
             </Row>
             <Row>
                 <NavigationImage
