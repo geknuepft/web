@@ -3,77 +3,92 @@ import Page from './Page';
 import {Navigation, NavigationElement} from './Navigation';
 import {Route} from 'react-router-dom';
 import config from 'react-global-configuration';
-import SmartImage from './SmartImage';
+import ContentLayouter from "./ContentLayouter"
+import SmartImage from './SmartImage'
+import Textbox from './Textbox'
 
 const KurseDefault = () => (
-    <div>
-        <div className="intro">
-            <div className="intro-desc">
-                <p>Unsere Kurse sind für Anfänger und Fortgeschrittene gleichermassen gedacht. Wir gehen gerne
-                    individuell auf Ihre Wünsche ein. Es wird an einem grossen Tisch geknüpft, gefaltet und geklebt.
-                </p>
-            </div>
-            <div className="intro-desc center">
-                <h2>Die nächsten Kursdaten</h2>
-                <p>Samstag, 13. Januar 2018</p>
-                <p>Samstag, 27. Januar 2018</p>
-                <p>andere oder weitere Daten gerne auf Anfrage</p>
-            </div>
-        </div>
-    </div>
+    <ContentLayouter>
+        <Textbox>
+            <p>Unsere Kurse sind für Anfänger und Fortgeschrittene gleichermassen gedacht. Wir gehen gerne
+                individuell auf Ihre Wünsche ein. Es wird an einem grossen Tisch geknüpft, gefaltet und geklebt.
+            </p>
+        </Textbox>
+        <Textbox>
+            <h2>Die nächsten Kursdaten</h2>
+            <p>Samstag, 13. Januar 2018</p>
+            <p>Samstag, 27. Januar 2018</p>
+            <p>andere oder weitere Daten gerne auf Anfrage</p>
+        </Textbox>
+    </ContentLayouter>
 );
 
 const KurseKnuepfen = () => (
-        <div className="intro">
-            <div className="intro-desc">
-                <h2>Der Knüpfkurs</h2>
-                <p></p>
-            </div>
-            <div className="intro-desc">
-                <SmartImage
-                    path="/content/box/herstellung5.jpg"
-                    height="800"
-                    fullscreen="true"
-                    alt="Armband"
-                />
-            </div>
-        </div>
+    <ContentLayouter>
+        <Textbox>
+            <h2>Der Knüpfkurs</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+        </Textbox>
+        <SmartImage
+            path="/content/box/herstellung5.jpg"
+            height="800"
+            fullscreen="true"
+            alt="Armband"
+        />
+    </ContentLayouter>
 );
 
 const KurseFalten = () => (
-        <div className="intro">
-            <div className="intro-desc">
-                <h2>Der Faltkurs</h2>
-                <p></p>
-            </div>
-            <div className="intro-desc">
-                <SmartImage
-                    path="/content/box/kraniche.jpg"
-                    height="800"
-                    fullscreen="true"
-                    alt="Kraniche"
-                />
-            </div>
-        </div>
+    <ContentLayouter>
+        <Textbox>
+            <h2>Der Faltkurs</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+        </Textbox>
+        <SmartImage
+            path="/content/box/kraniche.jpg"
+            height="800"
+            fullscreen="true"
+            alt="Kraniche"
+        />
+    </ContentLayouter>
 );
 
 const KurseKleben = () => (
-        <div className="intro">
-            <div className="intro-desc">
-                <h2>Der Klebkurs</h2>
-                <p></p>
-            </div>
-            <div className="intro-desc">
-                <SmartImage
-                    path="/content/box/schachtel.jpg"
-                    height="800"
-                    fullscreen="true"
-                    alt="Schachteln"
-                />
-            </div>
-        </div>
-);
 
+    <ContentLayouter>
+        <Textbox>
+            <h2>Der Klebekurs</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+        </Textbox>
+        <SmartImage
+            path="/content/box/schachtel.jpg"
+            height="800"
+            fullscreen="true"
+            alt="Schachteln"
+        />
+    </ContentLayouter>
+);
 
 
 const Kurse = () => (

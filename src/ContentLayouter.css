@@ -1,0 +1,17 @@
+/* design the smart image */
+
+div.contentlayouter div.col-12 {
+    margin: 1em 0 1em 0;
+}
+
+div.contentlayouter div.col-sm-6 {
+    margin: 1em 0 1em 0;
+}
+
+div.contentlayouter div.spacer {
+    display: none;
+}
+
+div.contentlayouter img {
+    width: 100%;
+}

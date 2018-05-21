@@ -23,6 +23,7 @@ const Kontakt = () => (
                 </a> oder nehmen Sie über das Formular mit uns Kontakt auf.
                     Wir antworten Ihnen so rasch wie möglich.
                 </p>
+                
             </div>
         </div>
         <div className="intro">

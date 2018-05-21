@@ -19,25 +19,24 @@ import {
     LengthSchluesselSelector,
 } from './LengthSelector'
 import Gallery from './Gallery'
-import Textbox from './Textbox'
 import {Navigation, NavigationElement} from './Navigation'
 import {Route, Link} from 'react-router-dom'
 import config from 'react-global-configuration'
 import './Shop.css'
+import ContentLayouter from "./ContentLayouter"
 import NavigationImage from "./NavigationImage"
-import {Row} from 'reactstrap'
+import Textbox from './Textbox'
 
 const ShopDefault = () => (
     <div>
-        <Row>
-            <Textbox
-                text={<span>Über 1400 verschiedene Armbänder, Schlüsselanhänger und Buchzeichen bieten wir an. Stöbern Sie auf
+        <ContentLayouter>
+            <Textbox>
+                <p>Über 1400 verschiedene Armbänder, Schlüsselanhänger und Buchzeichen bieten wir an. Stöbern Sie auf
                     dem <Link to="/Shop/Marktplatz">Marktplatz</Link> oder suchen Sie gezielt nach einem Muster und wir
-                    knüpfen es Ihnen in Ihrer gewünschten Länge.</span>}
-            />
-            <Textbox/>
-        </Row>
-        <Row>
+                    knüpfen es Ihnen in Ihrer gewünschten Länge.</p>
+            </Textbox>
+        </ContentLayouter>
+        <ContentLayouter>
             <NavigationImage
                 imagePath="herstellung5.jpg"
                 target="/Shop/Armbänder"
@@ -48,8 +47,8 @@ const ShopDefault = () => (
                 target="/Shop/Marktplatz"
                 caption="Marktplatz"
             />
-        </Row>
-        <Row>
+        </ContentLayouter>
+        <ContentLayouter>
             <NavigationImage
                 imagePath="buchzeichen.jpg"
                 target="/Shop/Buchzeichen"
@@ -60,15 +59,15 @@ const ShopDefault = () => (
                 target="/Shop/Schlüsselanhänger"
                 caption="Schlüsselanhänger"
             />
-        </Row>
-        <Row>
-            <Textbox
-                text={<span>Finden sie hier unsere neusten Kollektionen auf einen Blick. Klicken Sie auf jene Farbkombination,
-                    die Ihnen am Besten gefällt, und sie gelangen direkt zu allen Artikel, die es mit diesen Farbe gibt.</span>}
-            />
-            <Textbox/>
-        </Row>
-        <Row>
+        </ContentLayouter>
+        <ContentLayouter>
+            <Textbox>
+                <p>Finden sie hier unsere neusten Kollektionen auf einen Blick. Klicken Sie auf jene Farbkombination,
+                    die Ihnen am Besten gefällt, und sie gelangen direkt zu allen Artikel, die es mit diesen Farbe
+                    gibt.</p>
+            </Textbox>
+        </ContentLayouter>
+        <ContentLayouter>
             <NavigationImage
                 imagePath="coll_11.jpg"
                 target="/Shop/Armbänder"
@@ -80,8 +79,8 @@ const ShopDefault = () => (
                 target="/Shop/Armbänder"
                 caption="schwarz-weiss"
             />
-        </Row>
-        <Row>
+        </ContentLayouter>
+        <ContentLayouter>
             <NavigationImage
                 imagePath="coll_24.jpg"
                 target="/Shop/Armbänder"
@@ -93,22 +92,22 @@ const ShopDefault = () => (
                 caption="Rottöne"
                 additionalText="Der Klassiker:"
             />
-        </Row>
+        </ContentLayouter>
     </div>
 );
 
 const ShopArmbaender = () => (
     <div>
-        <Row>
-            <Textbox
-                text={<span>Hier finden Sie alle Muster und die passenden Suchfunktionen für ein Armband. Sind Sie unsicher,
-                    wie lange Ihr Armband sein soll? <a>Lesen Sie hier mehr darüber!</a></span>}
-            />
-            <Textbox
-                text={<span>Möchten Sie ein besonders langes Armand bzw. das Armband doppelt oder dreifach um das Handgelenk
-                    wickeln, wählen Sie die Überlänge aus.</span>}
-            />
-        </Row>
+        <ContentLayouter>
+            <Textbox>
+                <p>Hier finden Sie alle Muster und die passenden Suchfunktionen für ein Armband. Sind Sie unsicher,
+                    wie lange Ihr Armband sein soll? <a>Lesen Sie hier mehr darüber!</a></p>
+            </Textbox>
+            <Textbox>
+                <p>Möchten Sie ein besonders langes Armand bzw. das Armband doppelt oder dreifach um das Handgelenk
+                    wickeln, wählen Sie die Überlänge aus.</p>
+            </Textbox>
+        </ContentLayouter>
         <FilterContainer>
             <DeleteFilter/>
             <div className="intro">
@@ -135,12 +134,11 @@ const ShopArmbaender = () => (
 
 const ShopBuchzeichen = () => (
     <div>
-        <Row>
-            <Textbox
-                text={<span>Hier finden Sie alle Muster und die passenden Suchfunktionen für unsere Buchzeichen.</span>}
-            />
-            <Textbox/>
-        </Row>
+        <ContentLayouter>
+            <Textbox>
+                <p>Hier finden Sie alle Muster und die passenden Suchfunktionen für unsere Buchzeichen.</p>
+            </Textbox>
+        </ContentLayouter>
         <FilterContainer>
             <DeleteFilter/>
             <div className="intro">
@@ -166,12 +164,11 @@ const ShopBuchzeichen = () => (
 
 const ShopSchluesselanhaenger = () => (
     <div>
-        <Row>
-            <Textbox
-                text={<span>Hier finden Sie alle Muster und die passenden Suchfunktionen für unsere Schlüsselanhänger.</span>}
-            />
-            <Textbox/>
-        </Row>
+        <ContentLayouter>
+            <Textbox>
+                <p>Hier finden Sie alle Muster und die passenden Suchfunktionen für unsere Schlüsselanhänger.</p>
+            </Textbox>
+        </ContentLayouter>
         <FilterContainer>
             <DeleteFilter/>
             <div className="intro">
@@ -198,13 +195,12 @@ const ShopSchluesselanhaenger = () => (
 
 const ShopMarktplatz = () => (
     <div>
-        <Row>
-            <Textbox
-                text={<span>Stöbern Sie auf unserem Marktplatz. Sie finden hier alle Artikel, die wir bereits geknüpft haben und
-                    an Lager sind. Wir liefern innerhalb von 3-5 Werktagen.</span>}
-            />
-            <Textbox/>
-        </Row>
+        <ContentLayouter>
+            <Textbox>
+                <p>Stöbern Sie auf unserem Marktplatz. Sie finden hier alle Artikel, die wir bereits geknüpft haben und
+                    an Lager sind. Wir liefern innerhalb von 3-5 Werktagen.</p>
+            </Textbox>
+        </ContentLayouter>
         <FilterContainer>
             <DeleteFilter/>
             <div className="intro">
