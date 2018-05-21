@@ -83,6 +83,8 @@ class Gallery extends Component {
         if (this.state.items === null) return null
 
         const hasMore = this.state.displayUpToItemIndex <= this.state.items.length
+        const hasPrev = this.state.activeItemIndex > 0
+        const hasNext = this.state.activeItemIndex < this.state.items.length - 1
 
         let displayedItems = this.state.items.slice(0, this.state.displayUpToItemIndex).map(
             (instance, itemIndex) => <GalleryItem
@@ -113,8 +115,8 @@ class Gallery extends Component {
             <ArticleModal
                 article={this.state.activeItemIndex !== null ? this.state.items[this.state.activeItemIndex] : null}
                 onRequestClose={() => this.setState({activeItemIndex: null})}
-                onRequestPrev={() => this.onItemSelect(this.state.activeItemIndex - 1)}
-                onRequestNext={() => this.onItemSelect(this.state.activeItemIndex + 1)}
+                onRequestPrev={hasPrev ? () => this.onItemSelect(this.state.activeItemIndex - 1) : null}
+                onRequestNext={hasNext ? () => this.onItemSelect(this.state.activeItemIndex + 1) : null}
                 teaser={<ArticleTeaser items={this.state.items}
                                        activeItemIndex={this.state.activeItemIndex}
                                        onItemSelect={this.onItemSelect.bind(this)}

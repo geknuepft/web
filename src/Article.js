@@ -18,14 +18,15 @@ class ArticleTeaser extends Component {
     }
 
     render () {
-        const numbPics = 3
+        const numbPics = 7
 
         if (this.props.items === undefined) return null
         if (this.props.activeItemIndex === null) return null
 
         const activeItemIndex = this.props.activeItemIndex
-        const startIndex = Math.max(0, activeItemIndex - numbPics)
-        const items = this.props.items.slice(startIndex, activeItemIndex + numbPics + 1)
+        const startIndex = Math.max(0, activeItemIndex - Math.floor(numbPics / 2))
+        const endIndex = startIndex + numbPics
+        const items = this.props.items.slice(startIndex, endIndex)
 
         return <ul className="article-teaser">
             {items.map(
@@ -91,12 +92,9 @@ class Article extends Component {
     }
 
     render () {
-        if (this.state.instanceData === null) {
-            return null
-        }
-
-        return <Container>
-            <Row>
+        let content = null
+        if (this.state.instanceData !== null) {
+            content = <Row>
                 <Col xs={6}>
                     <ImageScroller images={this.state.instanceData.images}/>
                 </Col>
@@ -104,10 +102,14 @@ class Article extends Component {
                     <InstanceSpecifics {...this.state.instanceData} />
                 </Col>
             </Row>
-            <ButtonClose className="close" onClick={this.props.onRequestClose}/>
-            <ButtonPrevious onClick={this.props.onRequestPrev}/>
+        }
+
+        return <Container>
+            {content}
+            {this.props.onRequestClose && <ButtonClose className="close" onClick={this.props.onRequestClose}/>}
+            {this.props.onRequestPrev && <ButtonPrevious onClick={this.props.onRequestPrev}/>}
             {this.props.teaser}
-            <ButtonNext onClick={this.props.onRequestNext}/>
+            {this.props.onRequestNext && <ButtonNext onClick={this.props.onRequestNext}/>}
         </Container>
     }
 
