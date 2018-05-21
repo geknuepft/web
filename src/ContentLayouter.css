@@ -1,4 +1,4 @@
-/* design the smart image */
+/* design the content of the ContentLayouter image */
 
 div.contentlayouter div.col-12 {
     margin: 1em 0 1em 0;
@@ -12,6 +12,20 @@ div.contentlayouter div.spacer {
     display: none;
 }
 
+/* desgin an image in the ContentLayouter */
+
 div.contentlayouter img {
     width: 100%;
+}
+
+/* design a table in the ContentLayouter */
+
+div.contentlayouter table {
+    margin-bottom: 1em;
+}
+
+div.contentlayouter th {
+    width: 4.8em;
+    margin-bottom: 0.3em;
+    text-align: left;
 }
