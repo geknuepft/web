@@ -4,7 +4,7 @@ import Text from './Text'
 import config from 'react-global-configuration'
 import {Link} from 'react-router-dom'
 import NavigationImage from "./NavigationImage"
-import {Row, Col} from 'reactstrap'
+import {Row} from 'reactstrap'
 
 const Home = () => (
     <Page

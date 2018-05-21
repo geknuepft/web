@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import config from 'react-global-configuration'
 import './NavigationImage.css'
-import {Grid, Row, Col} from 'reactstrap'
+import {Row, Col} from 'reactstrap'
 
 class NavigationImage extends Component {
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Container, Row, Col} from 'reactstrap'
+import {Col} from 'reactstrap'
 import './Page.css'
 
 class Page extends Component {
