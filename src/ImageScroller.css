@@ -1,7 +1,27 @@
-.image-scroller li.active {
+.image-scroller .image-selector li.active {
     border: 1px solid green;
 }
 
-.image-scroller li img {
+.image-scroller .image-selector li img {
     height: 20px;
+}
+
+.image-scroller .carousel {
+    height: 700px;
+    border: 3px solid brown;
+    overflow: hidden;
+}
+
+.image-scroller .carousel-image {
+    transform: translateY(0px);
+}
+
+.image-scroller .carousel-image.move-down {
+    transform: translateY(-600px);
+    transition: transform 2s;
+}
+
+.image-scroller .carousel-image.move-up {
+    transform: translateY(600px);
+    transition: transform 2s;
 }

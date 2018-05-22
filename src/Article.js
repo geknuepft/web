@@ -108,9 +108,22 @@ class Article extends Component {
     render () {
         let content = null
         if (this.state.instanceData !== null) {
+
+            const images = this.state.instanceData.images.concat([
+                {'imageType': 'Nahaufnahme', 'path': 'square-narrow_white_single_plan_setup0/161116_4/IMG_4030.JPG'},
+                {'imageType': 'Nahaufnahme', 'path': 'square-narrow_white_single_plan_setup0/161116_2/IMG_3804.JPG'},
+                {'imageType': 'Nahaufnahme', 'path': 'square-narrow_white_single_plan_setup0/170810_3/IMG_4377.JPG'},
+                {'imageType': 'Nahaufnahme', 'path': 'square-narrow_white_single_plan_setup0/170809_5/IMG_4930.JPG'},
+                {'imageType': 'Nahaufnahme', 'path': 'square-narrow_white_single_plan_setup0/170809_5/IMG_4938.JPG'},
+                {'imageType': 'Nahaufnahme', 'path': 'square-narrow_white_single_plan_setup0/170810_1/IMG_4281.JPG'},
+                {'imageType': 'Nahaufnahme', 'path': 'square-narrow_white_single_plan_setup0/170809_2/IMG_4759.JPG'}
+            ])
+
+            //console.log(JSON.stringify(this.state.instanceData.images))
+
             content = <Row>
                 <Col xs={6}>
-                    <ImageScroller images={this.state.instanceData.images}/>
+                    <ImageScroller images={images}/>
                 </Col>
                 <Col cs={6}>
                     <InstanceSpecifics {...this.state.instanceData} />
@@ -118,15 +131,12 @@ class Article extends Component {
             </Row>
         }
 
-        return <div onKeyDown={
-            (e) => {console.log(e)}}>
-            <Container>
-                {content}
-                {this.props.onRequestClose && <ButtonClose className="close" onClick={this.props.onRequestClose}/>}
-                {this.props.onRequestPrev && <ButtonPrevious onClick={this.props.onRequestPrev}/>}
-                {this.props.teaser}
-                {this.props.onRequestNext && <ButtonNext onClick={this.props.onRequestNext}/>}
-            </Container>
+        return <div className="article" onKeyDown={(e) => {console.log(e)}}>
+            {content}
+            {this.props.onRequestClose && <ButtonClose className="close" onClick={this.props.onRequestClose}/>}
+            {this.props.onRequestPrev && <ButtonPrevious onClick={this.props.onRequestPrev}/>}
+            {this.props.teaser}
+            {this.props.onRequestNext && <ButtonNext onClick={this.props.onRequestNext}/>}
         </div>
     }
 
